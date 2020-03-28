@@ -1,0 +1,20 @@
+{
+  "FireBladeMod:NapalmFlask": {
+    "NAME": "Napalm Flask",
+    "DESCRIPTIONS": [
+      "Apply 5 fireblademod:Burning."
+    ]
+  },
+  "FireBladeMod:ProteinShake": {
+    "NAME": "Protein Shake",
+    "DESCRIPTIONS": [
+      "Gain 1 Strength, Dexterity, and fireblademod:Fervor."
+    ]
+  },
+  "FireBladeMod:LiquidSteroids": {
+    "NAME": "Liquid Steroids",
+    "DESCRIPTIONS": [
+      "Draw 2 cards and gain 2 energy."
+    ]
+  }
+}

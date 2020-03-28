@@ -1,0 +1,36 @@
+[
+  {
+    "PROPER_NAME": "Burning",
+    "NAMES": [
+      "burning",
+      "Burning"
+    ],
+    "DESCRIPTION": "A burning creature loses hp at the start of its turn."
+  },
+  {
+    "PROPER_NAME": "Fire\u00a0Shield",
+    "NAMES": [
+      "fire\u00a0shield",
+      "Fire\u00a0shield",
+      "Fire\u00a0Shield"
+    ],
+    "DESCRIPTION": "When you have Fire Shield, enemies take damage each time they attack you that turn."
+  },
+  {
+    "PROPER_NAME": "Fervor",
+    "NAMES": [
+      "Fervor",
+      "fervor"
+    ],
+    "DESCRIPTION": "Fervor increases the amount of burning applied by cards."
+  },
+  {
+    "PROPER_NAME": "Sudden\u00a0Strikes",
+    "NAMES": [
+      "Sudden\u00a0Strikes",
+      "Sudden\u00a0strikes",
+      "sudden\u00a0strikes"
+    ],
+    "DESCRIPTION": "At the end of your turn, deal 3 attack damage to a random enemy for each Sudden Strikes."
+  }
+]

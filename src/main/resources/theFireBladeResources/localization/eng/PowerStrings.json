@@ -1,0 +1,58 @@
+{
+  "FireBladeMod:BurningPower": {
+    "NAME": "Burning",
+    "DESCRIPTIONS": [
+      "Taking ",
+      " damage each turn."
+    ]
+  },
+  "FireBladeMod:PyroPower": {
+    "NAME": "Fervor",
+    "DESCRIPTIONS": [
+      "When you apply #yfireblademod:burning, you apply ",
+      " extra.",
+      " less."
+    ]
+  },
+  "FireBladeMod:IterationPower": {
+    "NAME": "Iteration",
+    "DESCRIPTIONS": [
+      "For ",
+      " turns, upgrade each card you play."
+    ]
+  },
+  "FireBladeMod:DefFlamesPower": {
+    "NAME": "Defensive Flames",
+    "DESCRIPTIONS": [
+      "Whenever you play a card that applies #yfireblademod:Burning, gain ",
+      " #yBlock."
+    ]
+  },
+  "FireBladeMod:GasolinePower": {
+    "NAME": "Consuming Flame",
+    "DESCRIPTIONS": [
+      "Cards that naturally apply #yfireblademod:Burning apply double, but also #yExhaust."
+    ]
+  },
+  "FireBladeMod:FlameFormPower": {
+    "NAME": "Flame Form",
+    "DESCRIPTIONS": [
+      "Your attacks apply ",
+      " #yfireblademod:Burning."
+    ]
+  },
+  "FireBladeMod:TungstenPower": {
+    "NAME": "Tungsten Skin",
+    "DESCRIPTIONS": [
+      "You receive ",
+      " less damage from each attack"
+    ]
+  },
+  "FireBladeMod:JabsPower": {
+    "NAME": "Sudden Strikes",
+    "DESCRIPTIONS": [
+      "At the end of your turn deal 3 attack damage to a random enemy ",
+      " times."
+    ]
+  }
+}
