@@ -132,11 +132,11 @@ public class TheFireBlade extends CustomPlayer {
     }
 
     public Color getCardRenderColor() {
-        return Color.ORANGE;
+        return Color.ORANGE.cpy();
     }
 
     public Color getCardTrailColor() {
-        return Color.ORANGE;
+        return Color.ORANGE.cpy();
     }
 
     public Texture getEnergyImage() {
@@ -214,7 +214,7 @@ public class TheFireBlade extends CustomPlayer {
     }
 
     public Color getSlashAttackColor() {
-        return Color.ORANGE;
+        return Color.ORANGE.cpy();
     }
 
     public String getVampireText() {

@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 
 public class GoldenStar extends CustomRelic {
     public static final String ID = "FireBladeMod:GoldenStar";
@@ -14,6 +15,7 @@ public class GoldenStar extends CustomRelic {
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/GoldenStar_outline.png";
     private static final RelicTier TIER = RelicTier.RARE;
     private static final LandingSound SOUND = LandingSound.SOLID;
+    private static final int goldAmount = 50;
 
     public GoldenStar() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
@@ -34,7 +36,8 @@ public class GoldenStar extends CustomRelic {
             flash();
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             this.pulse = false;
-            AbstractDungeon.player.gainGold(40);
+            AbstractDungeon.player.gainGold(goldAmount);
+            AbstractDungeon.effectList.add(new RainingGoldEffect(goldAmount));
         }
     }
 

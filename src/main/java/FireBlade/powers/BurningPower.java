@@ -48,5 +48,5 @@ public class BurningPower extends AbstractPower implements HealthBarRenderPower 
     }
     
     public int getHealthBarAmount() { return this.amount; }
-    public Color getColor() { return Color.ORANGE; }
+    public Color getColor() { return Color.YELLOW.cpy(); }
 }
