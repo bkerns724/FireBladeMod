@@ -9,7 +9,7 @@
   "FireBladeMod:PyroPower": {
     "NAME": "Fervor",
     "DESCRIPTIONS": [
-      "When you apply #yfireblademod:burning, you apply ",
+      "When you apply Burning, you apply ",
       " extra.",
       " less."
     ]
@@ -24,21 +24,21 @@
   "FireBladeMod:DefFlamesPower": {
     "NAME": "Defensive Flames",
     "DESCRIPTIONS": [
-      "Whenever you play a card that applies #yfireblademod:Burning, gain ",
-      " #yBlock."
+      "Whenever you play a card that applies Burning, gain ",
+      " Block."
     ]
   },
   "FireBladeMod:GasolinePower": {
     "NAME": "Consuming Flame",
     "DESCRIPTIONS": [
-      "Cards that naturally apply #yfireblademod:Burning apply double, but also #yExhaust."
+      "Cards that naturally apply Burning apply double, but also Exhaust."
     ]
   },
   "FireBladeMod:FlameFormPower": {
     "NAME": "Flame Form",
     "DESCRIPTIONS": [
       "Your attacks apply ",
-      " #yfireblademod:Burning."
+      " Burning."
     ]
   },
   "FireBladeMod:TungstenPower": {

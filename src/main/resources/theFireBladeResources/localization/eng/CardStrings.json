@@ -94,7 +94,8 @@
   },
   "FireBladeMod:WellPrepared": {
     "NAME": "Well Prepared",
-    "DESCRIPTION": "Draw !M! cards.  Discard !FireBladeMod:M2! card."
+    "DESCRIPTION": "Draw !M! cards.  Discard !FireBladeMod:M2! card.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards.  Discard !FireBladeMod:M2! cards."
   },
   "FireBladeMod:Punish": {
     "NAME": "Punish",
@@ -134,7 +135,8 @@
   },
   "FireBladeMod:QuickAttack": {
     "NAME": "Quick Attack",
-    "DESCRIPTION": "Deal !D! damage to an enemy. NL Draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage to an enemy. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to an enemy. NL Draw !M! cards."
   },
   "FireBladeMod:SteelEndurance": {
     "NAME": "Steel Endurance",
@@ -262,7 +264,8 @@
   },
   "FireBladeMod:Improvise": {
     "NAME": "Improvise",
-    "DESCRIPTION": "Put !M! cards from your discard pile into your hand. NL Exhaust."
+    "DESCRIPTION": "Put !M! card from your discard pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put !M! cards from your discard pile into your hand. NL Exhaust."
   },
   "FireBladeMod:Steroids": {
     "NAME": "Steroids",

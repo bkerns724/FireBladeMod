@@ -29,13 +29,13 @@ public class InnerFlame extends CustomRelic {
 
     public void atTurnStart() {
         this.counter++;
-        if (this.counter == 5) {
+        if (this.counter == 4) {
             beginLongPulse();
         }
     }
 
     public void onPlayerEndTurn() {
-        if (this.counter >= 5) {
+        if (this.counter >= 4) {
             flash();
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             AbstractPlayer p = AbstractDungeon.player;
@@ -43,8 +43,10 @@ public class InnerFlame extends CustomRelic {
         }
     }
 
-    public void onVictory() {
+    public void onVictory()
+    {
         stopPulse();
+        this.counter = -1;
     }
 
     public String getUpdatedDescription() { return this.DESCRIPTIONS[0]; }

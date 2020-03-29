@@ -3,21 +3,21 @@
     "NAME": "Red Star",
     "FLAVOR": "You feel a desire to feed on the powerful.",
     "DESCRIPTIONS": [
-      "Gain 3 max hp when defeating an elite."
+      "Gain 3 max hp when defeating an elite encounter."
     ]
   },
   "FireBladeMod:CrimsonStar": {
     "NAME": "Crimson Star",
     "FLAVOR": "Your hunger grows.",
     "DESCRIPTIONS": [
-      "Replaces #rRed #rStar. NL Gain 7 max hp when defeating an elite."
+      "Replaces #rRed #rStar. NL Gain 7 max hp when defeating an elite encounter."
     ]
   },
   "FireBladeMod:GoldenStar": {
     "NAME": "Golden Star",
     "FLAVOR": "You feel greedier just holding it.",
     "DESCRIPTIONS": [
-      "Gain 50 extra gold when defeating an elite."
+      "Gain 50 extra gold when defeating an elite encounter."
     ]
   },
   "FireBladeMod:Matches": {
@@ -59,7 +59,7 @@
     "NAME": "Inner Flame",
     "FLAVOR": "You burn with power inside.  This may not be a good thing.",
     "DESCRIPTIONS": [
-      "Gain 1 [R] at the start of each turn. NL Starting on turn 5, gain one #yfireblademod:Burning at the end of each turn."
+      "Gain 1 [R] at the start of each turn. NL Starting on turn 4, gain one #yfireblademod:Burning at the end of each turn."
     ]
   },
   "FireBladeMod:TigerClaw": {

@@ -37,6 +37,8 @@ public class Improvise extends CustomCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

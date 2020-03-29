@@ -14,7 +14,7 @@
       "Fire\u00a0shield",
       "Fire\u00a0Shield"
     ],
-    "DESCRIPTION": "When you have Fire Shield, enemies take damage each time they attack you that turn."
+    "DESCRIPTION": "Whenever you are attacked, deal damage back.  Lasts one turn."
   },
   {
     "PROPER_NAME": "Fervor",

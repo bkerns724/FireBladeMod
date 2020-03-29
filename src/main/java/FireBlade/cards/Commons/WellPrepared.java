@@ -40,6 +40,8 @@ public class WellPrepared extends CustomFireBladeCard {
             upgradeName();
             upgradeMagicNumber(1);
             upgradeMagicNumberTwo(1);
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

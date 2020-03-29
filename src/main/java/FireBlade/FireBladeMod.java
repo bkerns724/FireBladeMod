@@ -241,7 +241,8 @@ public class FireBladeMod implements
     
     @Override
     public void receivePostInitialize() {
-        BaseMod.addPotion(NapalmFlask.class, Color.RED.cpy(), Color.ORANGE.cpy(), null, NapalmFlask.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
+        // rgba -5963521 is the same as Color.ORANGE, but hopefully this will stop orange from disappearing from the base game potions.
+        BaseMod.addPotion(NapalmFlask.class, Color.RED.cpy(), new Color(-5963521), null, NapalmFlask.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
         BaseMod.addPotion(ProteinShake.class, Color.CHARTREUSE.cpy(), null, null, ProteinShake.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
         BaseMod.addPotion(LiquidSteroids.class, Color.BLACK.cpy(), Color.SCARLET.cpy(), null, LiquidSteroids.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
     }
