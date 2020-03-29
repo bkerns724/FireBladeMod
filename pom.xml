@@ -4,7 +4,7 @@
     <groupId>fireblademod</groupId>
     <artifactId>FireBladeMod</artifactId>
     <name>Fireblade Mod</name>
-    <version>0.1.4</version>
+    <version>0.1.5</version>
     <description>A mod that adds a simpler character, the Fireblade, to the spire.  For newer players.</description>
 
     <properties>

@@ -9,7 +9,7 @@
   "FireBladeMod:PyroPower": {
     "NAME": "Fervor",
     "DESCRIPTIONS": [
-      "When you apply Burning, you apply ",
+      "When you apply Burning, you apply #b",
       " extra.",
       " less."
     ]
@@ -17,14 +17,14 @@
   "FireBladeMod:IterationPower": {
     "NAME": "Iteration",
     "DESCRIPTIONS": [
-      "For ",
+      "For #b",
       " turns, upgrade each card you play."
     ]
   },
   "FireBladeMod:DefFlamesPower": {
     "NAME": "Defensive Flames",
     "DESCRIPTIONS": [
-      "Whenever you play a card that applies Burning, gain ",
+      "Whenever you play a card that applies Burning, gain #b",
       " Block."
     ]
   },
@@ -37,22 +37,29 @@
   "FireBladeMod:FlameFormPower": {
     "NAME": "Flame Form",
     "DESCRIPTIONS": [
-      "Your attacks apply ",
+      "Your attacks apply #b",
       " Burning."
     ]
   },
   "FireBladeMod:TungstenPower": {
     "NAME": "Tungsten Skin",
     "DESCRIPTIONS": [
-      "You receive ",
-      " less damage from each attack"
+      "You receive #b",
+      " less damage from each attack."
     ]
   },
   "FireBladeMod:JabsPower": {
     "NAME": "Sudden Strikes",
     "DESCRIPTIONS": [
-      "At the end of your turn deal 3 attack damage to a random enemy ",
+      "At the end of your turn deal 3 attack damage to a random enemy #b",
       " times."
+    ]
+  },
+  "FireBladeMod:ByrdBanePower": {
+    "NAME": "After Burn",
+    "DESCRIPTIONS": [
+      "Each time you play a card, gain #b",
+      " Fire Shield."
     ]
   }
 }

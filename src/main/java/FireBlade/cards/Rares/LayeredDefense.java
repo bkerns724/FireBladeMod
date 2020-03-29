@@ -38,7 +38,7 @@ public class LayeredDefense extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(7);
+            upgradeBlock(1);
         }
     }
 

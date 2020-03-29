@@ -27,7 +27,7 @@ public class BasicSmash extends CustomCard {
 
     public BasicSmash() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseDamage = 13;
+        this.baseDamage = 15;
         this.exhaust = true;
         this.tags.add(TheFireBladeCardTags.SMASH);
     }
@@ -41,7 +41,7 @@ public class BasicSmash extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(4);
+            upgradeDamage(5);
         }
     }
 

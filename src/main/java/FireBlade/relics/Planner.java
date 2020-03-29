@@ -13,6 +13,7 @@ public class Planner extends CustomRelic {
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/Planner_outline.png";
     private static final RelicTier TIER = RelicTier.SHOP;
     private static final LandingSound SOUND = LandingSound.FLAT;
+    private static final int dexLoss = 2;
 
     public Planner() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
@@ -21,7 +22,7 @@ public class Planner extends CustomRelic {
     public void atBattleStart() {
         for (AbstractCard card : AbstractDungeon.player.drawPile.group) {
             if (card.hasTag(TheFireBladeCardTags.ENDURANCE)) {
-                card.baseBlock -= 2;
+                card.baseBlock -= dexLoss;
                 card.selfRetain = true;
                 card.rawDescription = "Retain. NL " + card.rawDescription;
                 card.initializeDescription();
@@ -29,7 +30,7 @@ public class Planner extends CustomRelic {
         }
     }
 
-    public String getUpdatedDescription() { return this.DESCRIPTIONS[0]; }
+    public String getUpdatedDescription() { return this.DESCRIPTIONS[0] + dexLoss + this.DESCRIPTIONS[1]; }
 
     public AbstractRelic makeCopy() { return new Planner(); }
 }

@@ -28,7 +28,7 @@ public class FlamingSmash extends CustomCard {
 
     public FlamingSmash() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseDamage = 8;
+        this.baseDamage = 9;
         this.magicNumber = this.baseMagicNumber = 4;
         this.exhaust = true;
         this.tags.add(TheFireBladeCardTags.SMASH);
@@ -44,7 +44,7 @@ public class FlamingSmash extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(2);
+            upgradeDamage(3);
             upgradeMagicNumber(2);
         }
     }

@@ -30,7 +30,7 @@ public class ProteinShake extends CustomPotion {
     public ProteinShake() {
         super(NAME, POTION_ID, RARITY, SIZE, COLOR);
         this.potency = this.getPotency();
-        this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1];
         this.isThrown = false;
         this.targetRequired = false;
         this.tips.clear();

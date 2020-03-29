@@ -25,8 +25,8 @@ public class BarrierOfFlames extends CustomCard {
 
     public BarrierOfFlames() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseBlock = 6;
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.baseBlock = 7;
+        this.magicNumber = this.baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -39,7 +39,7 @@ public class BarrierOfFlames extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(2);
+            upgradeBlock(3);
             upgradeMagicNumber(1);
         }
     }

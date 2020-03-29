@@ -27,7 +27,7 @@ public class LiquidSteroids extends CustomPotion {
     public LiquidSteroids() {
         super(NAME, POTION_ID, RARITY, SIZE, COLOR);
         this.potency = this.getPotency();
-        this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1] + this.potency + DESCRIPTIONS[2];
         this.isThrown = false;
         this.targetRequired = false;
         this.tips.clear();

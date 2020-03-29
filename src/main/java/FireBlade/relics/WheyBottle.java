@@ -23,6 +23,7 @@ public class WheyBottle extends CustomRelic {
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/WheyBottle_outline.png";
     private static final RelicTier TIER = RelicTier.UNCOMMON;
     private static final LandingSound SOUND = LandingSound.HEAVY;
+    private static final int strengthGain = 4;
 
     public WheyBottle() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
@@ -35,13 +36,12 @@ public class WheyBottle extends CustomRelic {
         flash();
 
         AbstractPlayer p = AbstractDungeon.player;
-        int strengthGain = 4;
 
         addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, strengthGain), strengthGain));
         addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, strengthGain), strengthGain));
     }
 
-    public String getUpdatedDescription() { return this.DESCRIPTIONS[0]; }
+    public String getUpdatedDescription() { return this.DESCRIPTIONS[0] + strengthGain + this.DESCRIPTIONS[1]; }
 
     public AbstractRelic makeCopy() { return new WheyBottle(); }
 }

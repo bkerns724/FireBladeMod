@@ -26,7 +26,8 @@ public class Punish extends CustomCard {
 
     public Punish() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = this.baseMagicNumber = 5;
+        magicNumber = this.baseMagicNumber = 4;
+        this.selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

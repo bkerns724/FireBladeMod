@@ -24,6 +24,7 @@ public class BronzeKnuckles extends CustomRelic {
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/BronzeKnuckles_outline.png";
     private static final RelicTier TIER = RelicTier.UNCOMMON;
     private static final LandingSound SOUND = LandingSound.CLINK;
+    private static final int strengthLoss = 3;
 
     public BronzeKnuckles() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
@@ -38,7 +39,6 @@ public class BronzeKnuckles extends CustomRelic {
 
         AbstractCreature m = useCardAction.target;
         AbstractPlayer p = AbstractDungeon.player;
-        int strengthLoss = 3;
 
         if (!card.target.equals(AbstractCard.CardTarget.ALL_ENEMY)) {
             addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, -strengthLoss), -strengthLoss, true, AbstractGameAction.AttackEffect.NONE));
@@ -57,7 +57,7 @@ public class BronzeKnuckles extends CustomRelic {
         }
     }
 
-    public String getUpdatedDescription() { return this.DESCRIPTIONS[0]; }
+    public String getUpdatedDescription() { return this.DESCRIPTIONS[0] + strengthLoss + this.DESCRIPTIONS[1]; }
 
     public AbstractRelic makeCopy() { return new BronzeKnuckles(); }
 }

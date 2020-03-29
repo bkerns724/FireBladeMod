@@ -18,6 +18,7 @@ public class GymTowel extends CustomRelic {
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/GymTowel_outline.png";
     private static final RelicTier TIER = RelicTier.RARE;
     private static final LandingSound SOUND = LandingSound.FLAT;
+    private static final int strengthGain = 1;
 
     public GymTowel() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
@@ -31,12 +32,11 @@ public class GymTowel extends CustomRelic {
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 
         AbstractPlayer p = AbstractDungeon.player;
-        int strengthGain = 1;
 
         addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, strengthGain), strengthGain));
     }
 
-    public String getUpdatedDescription() { return this.DESCRIPTIONS[0]; }
+    public String getUpdatedDescription() { return this.DESCRIPTIONS[0] + strengthGain + this.DESCRIPTIONS[1]; }
 
     public AbstractRelic makeCopy() { return new GymTowel(); }
 }

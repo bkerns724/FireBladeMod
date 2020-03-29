@@ -1,5 +1,6 @@
 package FireBlade.cards.Rares;
 
+import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.enums.TheFireBladeEnum;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -11,10 +12,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
-public class ThirstForBlood extends CustomCard {
+public class ThirstForBlood extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:ThirstForBlood";
     public static final String NAME;
@@ -25,19 +27,18 @@ public class ThirstForBlood extends CustomCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 1;
-    private static final int frailAmount = 99;
 
     public ThirstForBlood() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseDamage = 12;
-        this.magicNumber = this.baseMagicNumber = 6;
-        this.exhaust = true;
+        this.baseDamage = 10;
+        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumberTwo = this.baseMagicNumberTwo = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-        addToBot(new ApplyPowerAction(p, p, new FrailPower(p, frailAmount, false), frailAmount));
+        addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, -this.magicNumberTwo), -this.magicNumberTwo));
     }
 
     public AbstractCard makeCopy() { return new ThirstForBlood(); }
@@ -45,8 +46,8 @@ public class ThirstForBlood extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(3);
-            upgradeMagicNumber(2);
+            upgradeDamage(2);
+            upgradeMagicNumber(1);
         }
     }
 

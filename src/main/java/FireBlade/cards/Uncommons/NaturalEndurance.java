@@ -24,7 +24,7 @@ public class NaturalEndurance extends CustomCard {
 
     public NaturalEndurance() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseBlock = 7;
+        this.baseBlock = 9;
         this.exhaust = true;
         this.tags.add(TheFireBladeCardTags.ENDURANCE);
     }

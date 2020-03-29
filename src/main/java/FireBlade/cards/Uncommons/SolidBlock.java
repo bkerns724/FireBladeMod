@@ -23,7 +23,7 @@ public class SolidBlock extends CustomCard {
 
     public SolidBlock() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseBlock = 18;
+        this.baseBlock = 16;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -35,7 +35,7 @@ public class SolidBlock extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(6);
+            upgradeBlock(5);
         }
     }
 

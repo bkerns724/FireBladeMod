@@ -29,7 +29,7 @@ public class TigerClaw extends CustomRelic {
         addToBot(new ApplyPowerAction(p, p, new JabsPower(p, jabsAmount), jabsAmount));
     }
 
-    public String getUpdatedDescription() { return this.DESCRIPTIONS[0]; }
+    public String getUpdatedDescription() { return this.DESCRIPTIONS[0] + jabsAmount + this.DESCRIPTIONS[1]; }
 
     public AbstractRelic makeCopy() { return new TigerClaw(); }
 }

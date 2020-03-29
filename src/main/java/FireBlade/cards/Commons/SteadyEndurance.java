@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 
 public class SteadyEndurance extends CustomCard {
 
-    public static final String ID = "FireBladeMod:SteelEndurance";
+    public static final String ID = "FireBladeMod:SteadyEndurance";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static final String IMG_PATH = "theFireBladeResources/images/cardImages/SteadyEndurance.png";

@@ -11,9 +11,10 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 public class RedStar extends CustomRelic {
     public static final String ID = "FireBladeMod:RedStar";
     public static final String IMG_PATH = "theFireBladeResources/images/relics/RedStar.png";
-    public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/RedStar_outline.png";
+    public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/Star_outline.png";
     private static final AbstractRelic.RelicTier TIER = AbstractRelic.RelicTier.STARTER;
     private static final AbstractRelic.LandingSound SOUND = LandingSound.SOLID;
+    private static final int hpGain = 3;
 
     public RedStar() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
@@ -34,11 +35,11 @@ public class RedStar extends CustomRelic {
             flash();
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             this.pulse = false;
-            AbstractDungeon.player.increaseMaxHp(3, true);
+            AbstractDungeon.player.increaseMaxHp(hpGain, true);
         }
     }
 
-    public String getUpdatedDescription() { return this.DESCRIPTIONS[0]; }
+    public String getUpdatedDescription() { return this.DESCRIPTIONS[0] + hpGain + this.DESCRIPTIONS[1]; }
 
     public AbstractRelic makeCopy() { return new RedStar(); }
 }

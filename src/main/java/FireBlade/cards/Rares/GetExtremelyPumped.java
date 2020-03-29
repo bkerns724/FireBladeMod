@@ -1,5 +1,6 @@
 package FireBlade.cards.Rares;
 
+import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.enums.TheFireBladeEnum;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -11,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
-public class GetExtremelyPumped extends CustomCard {
+public class GetExtremelyPumped extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:GetExtremelyPumped";
     public static final String NAME;
@@ -21,17 +22,17 @@ public class GetExtremelyPumped extends CustomCard {
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 3;
+    private static final int COST = 2;
 
     public GetExtremelyPumped() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 5;
-        this.isEthereal = true;
+        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumberTwo = this.baseMagicNumberTwo = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-        addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumberTwo), this.magicNumberTwo));
     }
 
     public AbstractCard makeCopy() { return new GetExtremelyPumped(); }
@@ -39,9 +40,8 @@ public class GetExtremelyPumped extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.isEthereal = false;
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(1);
+            upgradeMagicNumberTwo(1);
         }
     }
 

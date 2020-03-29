@@ -1,6 +1,7 @@
 package FireBlade.cards.Rares;
 
 import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.powers.ByrdBanePower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -20,15 +21,15 @@ public class ByrdBane extends CustomCard {
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     public ByrdBane() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 8;
+        this.magicNumber = this.baseMagicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new ByrdBanePower(p, this.magicNumber), this.magicNumber));
     }
 
     public AbstractCard makeCopy() { return new ByrdBane(); }
@@ -36,7 +37,7 @@ public class ByrdBane extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(3);
+            upgradeBaseCost(0);
         }
     }
 

@@ -99,7 +99,7 @@
   },
   "FireBladeMod:Punish": {
     "NAME": "Punish",
-    "DESCRIPTION": "Gain !M! fireblademod:Fire\u00a0Shield."
+    "DESCRIPTION": "Retain. NL Gain !M! fireblademod:Fire\u00a0Shield."
   },
   "FireBladeMod:ArmSmash": {
     "NAME": "Arm Smash",
@@ -155,7 +155,7 @@
     "DESCRIPTION": "Apply !M! fireblademod:Burning to all enemies."
   },
   "FireBladeMod:RegenerativeEndurance": {
-    "NAME": "Regenerative Endurance",
+    "NAME": "Healthy Endurance",
     "DESCRIPTION": "Gain !B! Block. NL At the end of combat, heal !M! HP. NL Exhaust."
   },
   "FireBladeMod:BackShrug": {
@@ -244,7 +244,7 @@
   },
   "FireBladeMod:ThirstForBlood": {
     "NAME": "Thirst For Blood",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL Gain 99 frail. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL Lose !FireBladeMod:M2! dexterity."
   },
   "FireBladeMod:Tempo": {
     "NAME": "Tempo",
@@ -252,7 +252,8 @@
   },
   "FireBladeMod:EternalEndurance": {
     "NAME": "Eternal Endurance",
-    "DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next !M! turns. NL Exhaust"
+    "DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next !M! turns. NL Exhaust."
   },
   "FireBladeMod:Maneuver": {
     "NAME": "Maneuver",
@@ -282,12 +283,11 @@
   },
   "FireBladeMod:ByrdBane": {
     "NAME": "Byrd Bane",
-    "DESCRIPTION": "Gain !M! Thorns."
+    "DESCRIPTION": "Gain !M! fireblademod:Fire\u00a0Shield for each card played."
   },
   "FireBladeMod:GetExtremelyPumped": {
     "NAME": "Get Really Pumped",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Strength and Dexterity.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Strength and Dexterity."
+    "DESCRIPTION": "Gain !M! Strength. NL Gain !FireBladeMod:M2! Dexterity."
   },
   "FireBladeMod:Gasoline": {
     "NAME": "Gasoline",

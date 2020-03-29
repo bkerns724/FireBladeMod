@@ -44,6 +44,8 @@ public class EternalEndurance extends CustomCard {
             upgradeName();
             upgradeBlock(10);
             upgradeMagicNumber(1);
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

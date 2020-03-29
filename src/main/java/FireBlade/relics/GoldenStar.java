@@ -3,8 +3,8 @@ package FireBlade.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
@@ -12,10 +12,10 @@ import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 public class GoldenStar extends CustomRelic {
     public static final String ID = "FireBladeMod:GoldenStar";
     public static final String IMG_PATH = "theFireBladeResources/images/relics/GoldenStar.png";
-    public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/GoldenStar_outline.png";
+    public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/Star_outline.png";
     private static final RelicTier TIER = RelicTier.RARE;
     private static final LandingSound SOUND = LandingSound.SOLID;
-    private static final int goldAmount = 50;
+    private static final int goldAmount = 100;
 
     public GoldenStar() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
@@ -41,7 +41,9 @@ public class GoldenStar extends CustomRelic {
         }
     }
 
-    public String getUpdatedDescription() { return this.DESCRIPTIONS[0]; }
+    public boolean canSpawn() { return (Settings.isEndless || AbstractDungeon.floorNum <= 45); }
+
+    public String getUpdatedDescription() { return this.DESCRIPTIONS[0] + goldAmount + this.DESCRIPTIONS[1]; }
 
     public AbstractRelic makeCopy() { return new GoldenStar(); }
 }

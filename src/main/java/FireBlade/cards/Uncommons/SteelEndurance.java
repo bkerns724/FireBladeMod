@@ -26,7 +26,7 @@ public class SteelEndurance extends CustomCard {
 
     public SteelEndurance() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseBlock = 8;
+        this.baseBlock = 16;
         this.magicNumber = this.baseMagicNumber = 1;
         this.exhaust = true;
         this.tags.add(TheFireBladeCardTags.ENDURANCE);
@@ -42,7 +42,7 @@ public class SteelEndurance extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(6);
+            upgradeBlock(8);
         }
     }
 

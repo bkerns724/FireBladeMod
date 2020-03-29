@@ -3,77 +3,89 @@
     "NAME": "Red Star",
     "FLAVOR": "You feel a desire to feed on the powerful.",
     "DESCRIPTIONS": [
-      "Gain 3 max hp when defeating an elite encounter."
+      "Gain #b",
+      " Max HP when defeating an Elite encounter."
     ]
   },
   "FireBladeMod:CrimsonStar": {
     "NAME": "Crimson Star",
     "FLAVOR": "Your hunger grows.",
     "DESCRIPTIONS": [
-      "Replaces #rRed #rStar. NL Gain 7 max hp when defeating an elite encounter."
+      "Replaces #rRed #rStar. NL Gain #b",
+      " Max HP when defeating an Elite encounter."
     ]
   },
   "FireBladeMod:GoldenStar": {
     "NAME": "Golden Star",
     "FLAVOR": "You feel greedier just holding it.",
     "DESCRIPTIONS": [
-      "Gain 50 extra gold when defeating an elite encounter."
+      "Gain #b",
+      " extra #yGold when defeating an Elite encounter."
     ]
   },
   "FireBladeMod:Matches": {
     "NAME": "Matches",
     "FLAVOR": "You could start a fire with these.",
     "DESCRIPTIONS": [
-      "Start each combat with 1 #yfireblademod:Fervor."
+      "Start each combat with #b",
+      " #yfireblademod:Fervor."
     ]
   },
   "FireBladeMod:FirePoi": {
     "NAME": "Fire Poi",
     "FLAVOR": "Swinging these around is rather fun, if a bit dangerous.",
     "DESCRIPTIONS": [
-      "If you play a card that applies #yfireblademod:Burning, gain 3 #yfireblademod:Fire\u00a0Shield."
+      "If you play a card that applies #yfireblademod:Burning, gain #b",
+      " #yfireblademod:Fire\u00a0Shield."
     ]
   },
   "FireBladeMod:WheyBottle": {
     "NAME": "Whey Bottle",
     "FLAVOR": "Keeps you healthy.",
     "DESCRIPTIONS": [
-      "Your #yEndurance cards grant you 4 #yStrength until end of turn."
+      "Your #yEndurance cards grant you #b",
+      " #yStrength until end of turn."
     ]
   },
   "FireBladeMod:BronzeKnuckles": {
     "NAME": "Bronze Knuckles",
     "FLAVOR": "Getting punched with these hurts.",
     "DESCRIPTIONS": [
-      "Your #ySmash cards remove 3 #yStrength from the enemy until end of turn."
+      "Your #ySmash cards remove #b",
+      " #yStrength from the enemy until end of turn."
     ]
   },
   "FireBladeMod:GymTowel": {
     "NAME": "Gym Towel",
     "FLAVOR": "It smells like dedication.",
     "DESCRIPTIONS": [
-      "Playing a #ySmash grants one #yStrength."
+      "Playing a #ySmash grants #b",
+      " #yStrength."
     ]
   },
   "FireBladeMod:InnerFlame": {
     "NAME": "Inner Flame",
     "FLAVOR": "You burn with power inside.  This may not be a good thing.",
     "DESCRIPTIONS": [
-      "Gain 1 [R] at the start of each turn. NL Starting on turn 4, gain one #yfireblademod:Burning at the end of each turn."
+      "Gain 1 [R] at the start of each turn. NL Starting on turn #b",
+      " gain #b",
+      " #yfireblademod:Burning at the end of each turn."
     ]
   },
   "FireBladeMod:TigerClaw": {
     "NAME": "Tiger Claw",
     "FLAVOR": "It's razor sharp.",
     "DESCRIPTIONS": [
-      "At the start of combat, gain 3 #yfireblademod:Sudden\u00a0Strikes."
+      "At the start of combat, gain #b",
+      " #yfireblademod:Sudden\u00a0Strikes."
     ]
   },
   "FireBladeMod:Planner": {
     "NAME": "Planner",
     "FLAVOR": "It's filled with meticulous... plans.",
     "DESCRIPTIONS": [
-      "At the start of battle your #yEndurance cards gain retain but lose 2 #yBlock."
+      "At the start of battle your #yEndurance cards gain retain but lose #b",
+      " #yBlock."
     ]
   }
 }

@@ -16,6 +16,7 @@ public class InnerFlame extends CustomRelic {
     private static final RelicTier TIER = RelicTier.BOSS;
     private static final LandingSound SOUND = LandingSound.FLAT;
     private static final int burnAmount = 1;
+    private static final int startTurn = 4;
 
     public InnerFlame() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
@@ -29,13 +30,13 @@ public class InnerFlame extends CustomRelic {
 
     public void atTurnStart() {
         this.counter++;
-        if (this.counter == 4) {
+        if (this.counter == startTurn) {
             beginLongPulse();
         }
     }
 
     public void onPlayerEndTurn() {
-        if (this.counter >= 4) {
+        if (this.counter >= startTurn) {
             flash();
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             AbstractPlayer p = AbstractDungeon.player;
@@ -49,7 +50,7 @@ public class InnerFlame extends CustomRelic {
         this.counter = -1;
     }
 
-    public String getUpdatedDescription() { return this.DESCRIPTIONS[0]; }
+    public String getUpdatedDescription() { return this.DESCRIPTIONS[0] + startTurn + this.DESCRIPTIONS[1] + burnAmount + this.DESCRIPTIONS[2]; }
 
     public AbstractRelic makeCopy() { return new InnerFlame(); }
 }

@@ -17,6 +17,7 @@ public class Matches extends CustomRelic {
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/Matches_outline.png";
     private static final RelicTier TIER = RelicTier.COMMON;
     private static final LandingSound SOUND = LandingSound.FLAT;
+    private static final int fervorAmount = 1;
 
     public Matches() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
@@ -27,12 +28,11 @@ public class Matches extends CustomRelic {
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 
         AbstractPlayer p = AbstractDungeon.player;
-        int pyroAmount = 1;
 
-        addToBot(new ApplyPowerAction(p, p, new PyroPower(p, pyroAmount), pyroAmount));
+        addToBot(new ApplyPowerAction(p, p, new PyroPower(p, fervorAmount), fervorAmount));
     }
 
-    public String getUpdatedDescription() { return this.DESCRIPTIONS[0]; }
+    public String getUpdatedDescription() { return this.DESCRIPTIONS[0] + fervorAmount + this.DESCRIPTIONS[1]; }
 
     public AbstractRelic makeCopy() { return new Matches(); }
 }

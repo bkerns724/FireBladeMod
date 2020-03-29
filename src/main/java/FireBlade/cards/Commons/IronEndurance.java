@@ -24,7 +24,7 @@ public class IronEndurance extends CustomCard {
 
     public IronEndurance() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseBlock = 11;
+        this.baseBlock = 12;
         this.exhaust = true;
         this.tags.add(TheFireBladeCardTags.ENDURANCE);
     }

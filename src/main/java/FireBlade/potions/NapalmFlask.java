@@ -29,7 +29,7 @@ public class NapalmFlask extends CustomPotion {
     public NapalmFlask() {
         super(NAME, POTION_ID, RARITY, SIZE, COLOR);
         this.potency = getPotency();
-        this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1];
         this.isThrown = true;
         this.targetRequired = true;
         this.tips.clear();
