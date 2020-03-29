@@ -23,7 +23,7 @@ public class NapalmFlask extends CustomPotion {
     public static final String NAME = potionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
     public static final AbstractPotion.PotionRarity RARITY = PotionRarity.COMMON;
-    public static final AbstractPotion.PotionSize SIZE = PotionSize.M;
+    public static final AbstractPotion.PotionSize SIZE = PotionSize.BOTTLE;
     public static final AbstractPotion.PotionColor COLOR = PotionColor.FIRE;
 
     public NapalmFlask() {
@@ -34,7 +34,7 @@ public class NapalmFlask extends CustomPotion {
         this.targetRequired = true;
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(BaseMod.getKeywordTitle("Burning"), BaseMod.getKeywordDescription("Burning")));
+        this.tips.add(new PowerTip(BaseMod.getKeywordTitle("fireblademod:Burning"), BaseMod.getKeywordDescription("fireblademod:Burning")));
         this.labOutlineColor = CardHelper.getColor(246.0F, 154.0F, 45.0F);
     }
 

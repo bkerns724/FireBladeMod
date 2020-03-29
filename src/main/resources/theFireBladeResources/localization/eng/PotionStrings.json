@@ -2,13 +2,13 @@
   "FireBladeMod:NapalmFlask": {
     "NAME": "Napalm Flask",
     "DESCRIPTIONS": [
-      "Apply 5 fireblademod:Burning."
+      "Apply 5 #yBurning."
     ]
   },
   "FireBladeMod:ProteinShake": {
     "NAME": "Protein Shake",
     "DESCRIPTIONS": [
-      "Gain 1 Strength, Dexterity, and fireblademod:Fervor."
+      "Gain 1 Strength, Dexterity, and #yFervor."
     ]
   },
   "FireBladeMod:LiquidSteroids": {

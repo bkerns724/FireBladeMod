@@ -35,7 +35,7 @@ public class ProteinShake extends CustomPotion {
         this.targetRequired = false;
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(BaseMod.getKeywordTitle("Fervor"), BaseMod.getKeywordDescription("Fervor")));
+        this.tips.add(new PowerTip(BaseMod.getKeywordTitle("fireblademod:Fervor"), BaseMod.getKeywordDescription("fireblademod:Fervor")));
         this.labOutlineColor = CardHelper.getColor(246.0F, 154.0F, 45.0F);
     }
 
