@@ -1,5 +1,6 @@
 package FireBlade.cards.Commons;
 
+import FireBlade.cards.FireBladeCardHelper;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -33,6 +34,7 @@ public class SpinningSmash extends CustomCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        FireBladeCardHelper.checkForSmashTip();
     }
 
     public AbstractCard makeCopy() { return new SpinningSmash(); }

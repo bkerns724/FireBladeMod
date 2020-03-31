@@ -1,0 +1,12 @@
+{
+  "FireBladeMod:ModSettingsPanel": {
+    "TEXT": [
+      "Golden Star relic available for other characters (may require restart)",
+      "Inner Flame relic available for other characters (may require restart)",
+      "Reset tutorial tips",
+      "Tutorial tips reset!",
+      "Unlock ascension 20 for FireBlade (may require restart)",
+      "Ascension 20 unlocked for FireBlade! (may require restart)"
+    ]
+  }
+}

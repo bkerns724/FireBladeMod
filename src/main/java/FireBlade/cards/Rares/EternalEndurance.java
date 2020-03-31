@@ -1,5 +1,6 @@
 package FireBlade.cards.Rares;
 
+import FireBlade.cards.FireBladeCardHelper;
 import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 import basemod.abstracts.CustomCard;
@@ -35,6 +36,7 @@ public class EternalEndurance extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, this.block));
         addToBot(new ApplyPowerAction(p, p, new BlurPower(p, this.magicNumber), this.magicNumber));
+        FireBladeCardHelper.checkForEnduranceTip();
     }
 
     public AbstractCard makeCopy() { return new EternalEndurance(); }

@@ -1,5 +1,6 @@
 package FireBlade.cards.Uncommons;
 
+import FireBlade.cards.FireBladeCardHelper;
 import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 import basemod.abstracts.CustomCard;
@@ -37,6 +38,7 @@ public class FlamingSmash extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new ApplyPowerAction(p, p, new FlameBarrierPower(p, this.magicNumber), this.magicNumber));
+        FireBladeCardHelper.checkForSmashTip();
     }
 
     public AbstractCard makeCopy() { return new FlamingSmash(); }

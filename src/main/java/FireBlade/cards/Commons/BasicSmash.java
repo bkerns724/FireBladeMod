@@ -1,5 +1,6 @@
 package FireBlade.cards.Commons;
 
+import FireBlade.cards.FireBladeCardHelper;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -34,6 +35,7 @@ public class BasicSmash extends CustomCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        FireBladeCardHelper.checkForSmashTip();
     }
 
     public AbstractCard makeCopy() { return new BasicSmash(); }

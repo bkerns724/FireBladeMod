@@ -1,5 +1,6 @@
 package FireBlade.cards.Commons;
 
+import FireBlade.cards.FireBladeCardHelper;
 import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 import basemod.abstracts.CustomCard;
@@ -31,6 +32,7 @@ public class IronEndurance extends CustomCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, this.block));
+        FireBladeCardHelper.checkForEnduranceTip();
     }
 
     public AbstractCard makeCopy() { return new IronEndurance(); }

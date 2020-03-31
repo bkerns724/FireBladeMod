@@ -3,14 +3,16 @@ package FireBlade.cards.Uncommons;
 import FireBlade.enums.TheFireBladeEnum;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
+import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 public class GasolineStrike extends CustomCard {
 
@@ -32,13 +34,20 @@ public class GasolineStrike extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int burnAmount = 0;
+        if (m.hasPower("FireBladeMod:BurningPower"))
+            burnAmount = (m.getPower("FireBladeMod:BurningPower")).amount;
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        if (burnAmount > 5 && burnAmount < 50)
+            addToBot(new VFXAction(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.FIRE), 0.1F));
+        if (burnAmount > 50)
+            addToBot(new VFXAction(new ExplosionSmallEffect(m.hb.cX, m.hb.cY), 0.1F));
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
         baseDamage = realBaseDamage;
         if (mo.hasPower("FireBladeMod:BurningPower"))
-            baseDamage += (mo.getPower("FireBladeMod:BurningPower")).amount;
+            baseDamage = (mo.getPower("FireBladeMod:BurningPower")).amount;
         super.calculateCardDamage(mo);
         baseDamage = realBaseDamage;
         if (mo.hasPower("FireBladeMod:BurningPower"))

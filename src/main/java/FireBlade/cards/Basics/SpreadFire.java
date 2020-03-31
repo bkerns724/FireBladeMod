@@ -1,6 +1,7 @@
 package FireBlade.cards.Basics;
 
 import FireBlade.actions.BurnAction;
+import FireBlade.cards.FireBladeCardHelper;
 import FireBlade.cards.TheFireBladeCardTags;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -31,6 +32,7 @@ public class SpreadFire extends CustomCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new BurnAction(p, m, this.baseMagicNumber));
+        FireBladeCardHelper.checkForBurnerTip();
     }
 
     public void applyPowers() {

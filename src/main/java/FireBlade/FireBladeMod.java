@@ -1,13 +1,17 @@
 package FireBlade;
 
+import FireBlade.other.FireBladeSettings;
+import FireBlade.other.FireBladeTipTracker;
 import FireBlade.potions.LiquidSteroids;
 import FireBlade.potions.NapalmFlask;
 import FireBlade.potions.ProteinShake;
 import FireBlade.variables.MagicNumberTwo;
 import basemod.BaseMod;
+import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
@@ -48,6 +52,11 @@ public class FireBladeMod implements
 
     public FireBladeMod() {
         BaseMod.subscribe(this);
+
+        logger.info("Adding mod settings");
+        FireBladeSettings.initialize();
+        FireBladeTipTracker.initialize();
+        logger.info("Done adding mod settings");
 
         BaseMod.addColor(TheFireBladeEnum.THE_FIREBLADE_ORANGE, CUSTOM_COLOR, CUSTOM_COLOR, CUSTOM_COLOR, CUSTOM_COLOR, CUSTOM_COLOR, CUSTOM_COLOR, CUSTOM_COLOR,
 
@@ -201,9 +210,15 @@ public class FireBladeMod implements
         BaseMod.addRelicToCustomPool(new BronzeKnuckles(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new WheyBottle(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new FirePoi(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new GoldenStar(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
+        if (!FireBladeSettings.isGoldenStarGlobal())
+            BaseMod.addRelicToCustomPool(new GoldenStar(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
+        else
+            BaseMod.addRelic(new GoldenStar(), RelicType.SHARED);
         BaseMod.addRelicToCustomPool(new GymTowel(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new InnerFlame(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
+        if (!FireBladeSettings.isInnerFlameGlobal())
+            BaseMod.addRelicToCustomPool(new InnerFlame(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
+        else
+            BaseMod.addRelic(new InnerFlame(), RelicType.SHARED);
         BaseMod.addRelicToCustomPool(new TigerClaw(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new Planner(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
         logger.info("Added FireBlade relics");
@@ -217,6 +232,8 @@ public class FireBladeMod implements
         BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.PowerStrings.class, "theFireBladeResources/localization/eng/PowerStrings.json");
         BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.PotionStrings.class, "theFireBladeResources/localization/eng/PotionStrings.json");
         BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.OrbStrings.class, "theFireBladeResources/localization/eng/OrbStrings.json");
+        BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.UIStrings.class, "theFireBladeResources/localization/eng/UiStrings.json");
+        BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.TutorialStrings.class, "theFireBladeResources/localization/eng/TutorialStrings.json");
         logger.info("Added FireBlade strings");
     }
 
@@ -245,5 +262,11 @@ public class FireBladeMod implements
         BaseMod.addPotion(NapalmFlask.class, Color.RED.cpy(), null, Color.ORANGE.cpy(), NapalmFlask.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
         BaseMod.addPotion(ProteinShake.class, Color.TAN.cpy(), Color.BROWN.cpy(), null, ProteinShake.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
         BaseMod.addPotion(LiquidSteroids.class, Color.RED.cpy(), Color.BLACK.cpy(), null, LiquidSteroids.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
+
+        logger.info("Load Badge Image and make settings panel");
+        Texture badgeTexture = new Texture("theFireBladeResources/images/Badge.png");
+        BaseMod.registerModBadge(badgeTexture, "The FireBlade", "Bryan", "This mod adds a new character, the FireBlade.",
+                FireBladeSettings.createSettingsPanel());
+        logger.info("Done loading badge Image");
     }
 }

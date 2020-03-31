@@ -1,5 +1,6 @@
 package FireBlade.cards.Rares;
 
+import FireBlade.cards.FireBladeCardHelper;
 import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 import basemod.abstracts.CustomCard;
@@ -34,6 +35,7 @@ public class FinalSmash extends CustomCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
+        FireBladeCardHelper.checkForSmashTip();
     }
 
     public AbstractCard makeCopy() { return new FinalSmash(); }

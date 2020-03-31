@@ -4,8 +4,8 @@
     <groupId>fireblademod</groupId>
     <artifactId>FireBladeMod</artifactId>
     <name>Fireblade Mod</name>
-    <version>0.1.6</version>
-    <description>A mod that adds a simpler character, the Fireblade, to the spire.  For newer players.</description>
+    <version>0.1.7</version>
+    <description>Adds the FireBlade, a swordsman with prowess in fire magic.  A fairly straightforward character for newer players.</description>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

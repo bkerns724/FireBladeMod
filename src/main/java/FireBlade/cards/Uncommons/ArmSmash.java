@@ -1,5 +1,6 @@
 package FireBlade.cards.Uncommons;
 
+import FireBlade.cards.FireBladeCardHelper;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -37,6 +38,7 @@ public class ArmSmash extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber));
+        FireBladeCardHelper.checkForSmashTip();
     }
 
     public AbstractCard makeCopy() { return new ArmSmash(); }

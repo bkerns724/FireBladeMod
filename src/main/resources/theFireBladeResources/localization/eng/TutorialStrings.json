@@ -1,0 +1,23 @@
+{
+  "FireBladeMod:SmashTip": {
+    "LABEL": ["Smash cards"],
+    "TEXT": [
+      "FireBlade cards with the word \"Smash\" in the name are powerful attack cards that exhaust.  ",
+      "A few character specific relics interact with these cards."
+    ]
+  },
+  "FireBladeMod:EnduranceTip": {
+    "LABEL": ["Endurance cards"],
+    "TEXT": [
+      "FireBlade cards with the word \"Endurance\" in the name are powerful defensive skill cards that exhaust.  ",
+      "A few character specific relics interact with these cards."
+    ]
+  },
+  "FireBladeMod:BurnerTip": {
+    "LABEL": ["Burning"],
+    "TEXT": [
+      "Several FireBlade cards inflict burning.  This damage is dealt every turn.  ",
+      "A few character specific relics interact with these cards."
+    ]
+  }
+}
