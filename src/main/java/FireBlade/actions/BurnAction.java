@@ -4,6 +4,7 @@ import FireBlade.powers.BurningPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -30,7 +31,8 @@ public class BurnAction extends AbstractGameAction {
         int burnAmount = GetEstimate(this.p, baseBurn, hellfire);
 
         if (burnAmount > 0) {
-            addToBot(new ApplyPowerAction(this.m, this.p, new BurningPower(this.m, this.p, burnAmount), burnAmount, AttackEffect.FIRE));
+            addToBot(new ApplyPowerAction(this.m, this.p, new BurningPower(this.m, this.p, burnAmount), burnAmount));
+            CardCrawlGame.sound.play("ATTACK_FIRE", 0.1F);
         }
 
         this.isDone = true;

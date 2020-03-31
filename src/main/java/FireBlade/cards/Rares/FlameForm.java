@@ -1,16 +1,17 @@
 package FireBlade.cards.Rares;
 
+import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.powers.FlameFormPower;
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class FlameForm extends CustomCard {
+public class FlameForm extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:FlameForm";
     public static final String NAME;
@@ -24,11 +25,13 @@ public class FlameForm extends CustomCard {
 
     public FlameForm() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumberTwo = this.baseMagicNumberTwo = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new FlameFormPower(p, this.magicNumber), this.magicNumber));
+        addToBot(new IncreaseMaxOrbAction(magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new FlameFormPower(p, magicNumberTwo), magicNumberTwo));
     }
 
     public AbstractCard makeCopy() { return new FlameForm(); }
@@ -36,7 +39,9 @@ public class FlameForm extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            this.isInnate = true;
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

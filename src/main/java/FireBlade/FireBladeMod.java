@@ -147,13 +147,13 @@ public class FireBladeMod implements
         BaseMod.addCard(new FeedTheFlame());
         BaseMod.addCard(new Fireball());
         BaseMod.addCard(new FireLance());
-        BaseMod.addCard(new Iteration());
+        BaseMod.addCard(new PyromanticFocus());
         BaseMod.addCard(new NaturalEndurance());
         BaseMod.addCard(new OffensiveFocus());
         BaseMod.addCard(new QuickParry());
         BaseMod.addCard(new RampingBlock());
         BaseMod.addCard(new RegenerativeEndurance());
-        BaseMod.addCard(new Repetition());
+        BaseMod.addCard(new Reposition());
         BaseMod.addCard(new SolidBlock());
         BaseMod.addCard(new SteelEndurance());
         BaseMod.addCard(new Unbalance());
@@ -216,6 +216,7 @@ public class FireBladeMod implements
         BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.CharacterStrings.class, "theFireBladeResources/localization/eng/CharacterStrings.json");
         BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.PowerStrings.class, "theFireBladeResources/localization/eng/PowerStrings.json");
         BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.PotionStrings.class, "theFireBladeResources/localization/eng/PotionStrings.json");
+        BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.OrbStrings.class, "theFireBladeResources/localization/eng/OrbStrings.json");
         logger.info("Added FireBlade strings");
     }
 
@@ -241,9 +242,8 @@ public class FireBladeMod implements
     
     @Override
     public void receivePostInitialize() {
-        // rgba -5963521 is the same as Color.ORANGE, but hopefully this will stop orange from disappearing from the base game potions.
-        BaseMod.addPotion(NapalmFlask.class, Color.RED.cpy(), new Color(-5963521), null, NapalmFlask.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
-        BaseMod.addPotion(ProteinShake.class, Color.CHARTREUSE.cpy(), null, null, ProteinShake.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
-        BaseMod.addPotion(LiquidSteroids.class, Color.BLACK.cpy(), Color.SCARLET.cpy(), null, LiquidSteroids.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
+        BaseMod.addPotion(NapalmFlask.class, Color.RED.cpy(), null, Color.ORANGE.cpy(), NapalmFlask.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
+        BaseMod.addPotion(ProteinShake.class, Color.TAN.cpy(), Color.BROWN.cpy(), null, ProteinShake.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
+        BaseMod.addPotion(LiquidSteroids.class, Color.RED.cpy(), Color.BLACK.cpy(), null, LiquidSteroids.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
     }
 }

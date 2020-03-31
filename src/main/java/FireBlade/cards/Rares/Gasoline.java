@@ -35,7 +35,6 @@ public class Gasoline extends CustomCard {
                 break;
             }
         }
-
         if (!powerExists) {
             addToBot(new ApplyPowerAction(p, p, new GasolinePower(p)));
         }

@@ -176,7 +176,7 @@
   },
   "FireBladeMod:FireLance": {
     "NAME": "Fire Lance",
-    "DESCRIPTION": "Apply !M! fireblademod:Burning."
+    "DESCRIPTION": "Apply !M! fireblademod:Burning. NL Gain 1 fireblademod:Fervor."
   },
   "FireBladeMod:FeedTheFlame": {
     "NAME": "Feed The Flame",
@@ -186,14 +186,13 @@
     "NAME": "Unbalance",
     "DESCRIPTION": "Gain !M! Block whenever you attack this enemy. NL Exhaust."
   },
-  "FireBladeMod:Iteration": {
-    "NAME": "Iteration",
-    "DESCRIPTION": "For one turn, upgrade each card you play."
+  "FireBladeMod:PyromanticFocus": {
+    "NAME": "Pyromantic Focus",
+    "DESCRIPTION": "Gain !M! fireblademod:Fervor."
   },
-  "FireBladeMod:Repetition": {
-    "NAME": "Repetition",
-    "DESCRIPTION": "Put the next card you play this turn on top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Put the next card you play this turn on top of your draw pile. NL Draw a card."
+  "FireBladeMod:Reposition": {
+    "NAME": "Reposition",
+    "DESCRIPTION": "Scry !M!."
   },
   "FireBladeMod:BarrierOfFlames": {
     "NAME": "Barrier Of Flames",
@@ -290,12 +289,13 @@
     "DESCRIPTION": "Gain !M! Strength. NL Gain !FireBladeMod:M2! Dexterity."
   },
   "FireBladeMod:Gasoline": {
-    "NAME": "Gasoline",
+    "NAME": "Consuming Flame",
     "DESCRIPTION": "Cards that apply fireblademod:Burning apply twice as much. NL Cards that apply fireblademod:Burning Exhaust."
   },
   "FireBladeMod:FlameForm": {
     "NAME": "Flame Form",
-    "DESCRIPTION": "Attacks apply !M! fireblademod:Burning."
+    "DESCRIPTION": "Gain !M! orb slots. NL When you play a card that applies fireblademod:Burning, channel a fireblademod:Flame.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! orb slots. NL When you play a card that applies fireblademod:Burning, channel a fireblademod:Flame."
   },
   "FireBladeMod:PrettyGoodPlans": {
     "NAME": "Pretty Good Plans",

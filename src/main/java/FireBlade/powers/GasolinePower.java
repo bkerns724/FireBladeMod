@@ -44,7 +44,7 @@ public class GasolinePower extends AbstractPower {
             if (tag == TheFireBladeCardTags.BURNER) {
                 flash();
                 action.exhaustCard = true;
-        }
+            }
     }
 
     public void updateDescription() { this.description = DESCRIPTIONS[0]; }

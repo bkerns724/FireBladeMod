@@ -23,7 +23,7 @@ public class NapalmFlask extends CustomPotion {
     public static final String NAME = potionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
     public static final AbstractPotion.PotionRarity RARITY = PotionRarity.COMMON;
-    public static final AbstractPotion.PotionSize SIZE = PotionSize.BOTTLE;
+    public static final AbstractPotion.PotionSize SIZE = PotionSize.M;
     public static final AbstractPotion.PotionColor COLOR = PotionColor.FIRE;
 
     public NapalmFlask() {

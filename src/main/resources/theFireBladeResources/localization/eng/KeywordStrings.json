@@ -5,7 +5,7 @@
       "burning",
       "Burning"
     ],
-    "DESCRIPTION": "A burning creature loses hp at the start of its turn."
+    "DESCRIPTION": "A #yBurning creature loses hp at the start of its turn."
   },
   {
     "PROPER_NAME": "Fire\u00a0Shield",
@@ -31,6 +31,14 @@
       "Sudden\u00a0strikes",
       "sudden\u00a0strikes"
     ],
-    "DESCRIPTION": "At the end of your turn, deal 3 attack damage to a random enemy for each Sudden Strikes."
+    "DESCRIPTION": "At the end of your turn, deal 3 attack damage to a random enemy for each #ySudden #yStrikes."
+  },
+  {
+    "PROPER_NAME": "Flame",
+    "NAMES": [
+      "Flame",
+      "flame"
+    ],
+    "DESCRIPTION": "Orb: Applies #yBurning to random enemies."
   }
 ]

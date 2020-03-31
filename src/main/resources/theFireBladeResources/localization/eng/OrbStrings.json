@@ -1,0 +1,10 @@
+{
+  "FireBladeMod:Flame": {
+    "NAME": "Flame",
+    "DESCRIPTION": [
+      "#yPassive: At the end of turn, apply #b",
+      " #yburning to a random enemy. NL #yEvoke: Apply #b",
+      " #yburning to a random enemy."
+    ]
+  }
+}

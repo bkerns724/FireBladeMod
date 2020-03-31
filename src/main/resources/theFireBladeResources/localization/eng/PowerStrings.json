@@ -37,8 +37,8 @@
   "FireBladeMod:FlameFormPower": {
     "NAME": "Flame Form",
     "DESCRIPTIONS": [
-      "Your attacks apply #b",
-      " Burning."
+      "When you play a card that applies burning, channel ",
+      " fireblademod:Flame."
     ]
   },
   "FireBladeMod:TungstenPower": {
