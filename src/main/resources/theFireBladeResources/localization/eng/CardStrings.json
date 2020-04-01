@@ -109,8 +109,8 @@
     "NAME": "Torso Smash",
     "DESCRIPTION": "Deal !D! damage to an enemy. NL Apply !M! vulnerable. NL Exhaust."
   },
-  "FireBladeMod:FlamingSmash": {
-    "NAME": "Flaming Smash",
+  "FireBladeMod:FlameTrail": {
+    "NAME": "Flame Trail",
     "DESCRIPTION": "Deal !D! damage to an enemy. NL Gain !M! fireblademod:Fire\u00a0Shield."
   },
   "FireBladeMod:SolidAttack": {
@@ -142,9 +142,9 @@
     "NAME": "Steel Endurance",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! artifact. NL Exhaust."
   },
-  "FireBladeMod:NaturalEndurance": {
-    "NAME": "Natural Endurance",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
+  "FireBladeMod:Feint": {
+    "NAME": "Feint",
+    "DESCRIPTION": "Gain !B! Block. NL Place a card from your discard on top of your deck."
   },
   "FireBladeMod:SolidBlock": {
     "NAME": "Solid Block",
@@ -174,9 +174,9 @@
     "NAME": "Defensive Focus",
     "DESCRIPTION": "Gain !M! Dexterity."
   },
-  "FireBladeMod:FireLance": {
-    "NAME": "Fire Lance",
-    "DESCRIPTION": "Apply !M! fireblademod:Burning. NL Gain 1 fireblademod:Fervor."
+  "FireBladeMod:FireWave": {
+    "NAME": "Fire Wave",
+    "DESCRIPTION": "Apply !M! fireblademod:Burning. NL Gain !FireBladeMod:M2! fireblademod:Fire\u00a0Shield."
   },
   "FireBladeMod:FeedTheFlame": {
     "NAME": "Feed The Flame",
@@ -254,9 +254,9 @@
     "DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next !M! turns. NL Exhaust."
   },
-  "FireBladeMod:Maneuver": {
-    "NAME": "Maneuver",
-    "DESCRIPTION": "Gain !M! energy next turn. NL Draw !M! cards next turn."
+  "FireBladeMod:PowerUp": {
+    "NAME": "Convert",
+    "DESCRIPTION": "Gain !M! fireblademod:Fervor. NL Lose !FireBladeMod:M2! Strength."
   },
   "FireBladeMod:LayeredDefense": {
     "NAME": "Layered Defense",
@@ -294,7 +294,7 @@
   },
   "FireBladeMod:FlameForm": {
     "NAME": "Flame Form",
-    "DESCRIPTION": "Gain !M! orb slots. NL When you play a card that applies fireblademod:Burning, channel a fireblademod:Flame.",
+    "DESCRIPTION": "Gain !M! orb slots. NL When you play a card that applies fireblademod:Burning or grants fireblademod:Fire\u00a0Shield, channel a fireblademod:Flame.",
     "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! orb slots. NL When you play a card that applies fireblademod:Burning, channel a fireblademod:Flame."
   },
   "FireBladeMod:PrettyGoodPlans": {

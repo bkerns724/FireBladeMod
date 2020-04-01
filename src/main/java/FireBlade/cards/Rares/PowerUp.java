@@ -1,46 +1,47 @@
-package FireBlade.cards.Uncommons;
+package FireBlade.cards.Rares;
 
-import FireBlade.cards.FireBladeCardHelper;
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.actions.PowerUpAction;
+import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.powers.PyroPower;
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
-public class NaturalEndurance extends CustomCard {
+public class PowerUp extends CustomFireBladeCard {
 
-    public static final String ID = "FireBladeMod:NaturalEndurance";
+    public static final String ID = "FireBladeMod:PowerUp";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/NaturalEndurance.png";
+    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/PowerUp.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 0;
+    private static final int COST = 1;
 
-    public NaturalEndurance() {
+    public PowerUp() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseBlock = 9;
-        this.exhaust = true;
-        this.tags.add(TheFireBladeCardTags.ENDURANCE);
+        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumberTwo = this.baseMagicNumberTwo = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainBlockAction(p, p, this.block));
-        FireBladeCardHelper.checkForEnduranceTip();
+        addToBot(new ApplyPowerAction(p, p, new PyroPower(p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, -magicNumberTwo), -magicNumberTwo));
     }
 
-    public AbstractCard makeCopy() { return new NaturalEndurance(); }
+    public AbstractCard makeCopy() { return new PowerUp(); }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(3);
+            upgradeMagicNumber(1);
         }
     }
 

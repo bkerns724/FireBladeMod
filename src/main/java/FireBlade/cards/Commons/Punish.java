@@ -1,16 +1,18 @@
 package FireBlade.cards.Commons;
 
+import FireBlade.actions.FireShieldAction;
 import FireBlade.enums.TheFireBladeEnum;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DiscardAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FlameBarrierPower;
+
+import static FireBlade.cards.TheFireBladeCardTags.FIRESHIELD;
 
 public class Punish extends CustomCard {
 
@@ -28,10 +30,22 @@ public class Punish extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = this.baseMagicNumber = 4;
         this.selfRetain = true;
+        this.tags.add(FIRESHIELD);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new FlameBarrierPower(p, magicNumber), magicNumber));
+        addToBot(new FireShieldAction(p, baseMagicNumber));
+    }
+
+    public void applyPowers() {
+        magicNumber = FireShieldAction.GetEstimate(AbstractDungeon.player, baseMagicNumber);
+        isMagicNumberModified = magicNumber != baseMagicNumber;
+        super.applyPowers();
+    }
+
+    public void onMoveToDiscard() {
+        this.magicNumber = this.baseMagicNumber;
+        isMagicNumberModified = false;
     }
 
     public AbstractCard makeCopy() { return new Punish(); }

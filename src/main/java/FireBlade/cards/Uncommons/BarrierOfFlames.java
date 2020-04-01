@@ -1,15 +1,19 @@
 package FireBlade.cards.Uncommons;
 
+import FireBlade.actions.FireShieldAction;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import FireBlade.enums.TheFireBladeEnum;
 import com.megacrit.cardcrawl.powers.FlameBarrierPower;
+
+import static FireBlade.cards.TheFireBladeCardTags.FIRESHIELD;
 
 public class BarrierOfFlames extends CustomCard {
 
@@ -27,11 +31,24 @@ public class BarrierOfFlames extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         this.baseBlock = 7;
         this.magicNumber = this.baseMagicNumber = 2;
+        this.tags.add(FIRESHIELD);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, this.block));
-        addToBot(new ApplyPowerAction(p, p, new FlameBarrierPower(p, this.magicNumber), this.magicNumber));
+        addToBot(new FireShieldAction(p, baseMagicNumber));
+    }
+
+    public void applyPowers() {
+        magicNumber = FireShieldAction.GetEstimate(AbstractDungeon.player, baseMagicNumber);
+        isMagicNumberModified = magicNumber != baseMagicNumber;
+
+        super.applyPowers();
+    }
+
+    public void onMoveToDiscard() {
+        this.magicNumber = this.baseMagicNumber;
+        isMagicNumberModified = false;
     }
 
     public AbstractCard makeCopy() { return new BarrierOfFlames(); }

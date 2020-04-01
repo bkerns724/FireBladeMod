@@ -12,4 +12,7 @@ public class TheFireBladeCardTags {
 
     @SpireEnum
     public static AbstractCard.CardTags BURNER;
+
+    @SpireEnum
+    public static AbstractCard.CardTags FIRESHIELD;
 }

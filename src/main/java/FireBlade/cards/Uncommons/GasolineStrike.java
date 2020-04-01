@@ -35,19 +35,20 @@ public class GasolineStrike extends CustomCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int burnAmount = 0;
+        addToBot(new VFXAction(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL), 0.1F));
         if (m.hasPower("FireBladeMod:BurningPower"))
             burnAmount = (m.getPower("FireBladeMod:BurningPower")).amount;
-        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         if (burnAmount > 5 && burnAmount < 50)
             addToBot(new VFXAction(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.FIRE), 0.1F));
         if (burnAmount > 50)
             addToBot(new VFXAction(new ExplosionSmallEffect(m.hb.cX, m.hb.cY), 0.1F));
+        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
         baseDamage = realBaseDamage;
         if (mo.hasPower("FireBladeMod:BurningPower"))
-            baseDamage = (mo.getPower("FireBladeMod:BurningPower")).amount;
+            baseDamage += (mo.getPower("FireBladeMod:BurningPower")).amount;
         super.calculateCardDamage(mo);
         baseDamage = realBaseDamage;
         if (mo.hasPower("FireBladeMod:BurningPower"))

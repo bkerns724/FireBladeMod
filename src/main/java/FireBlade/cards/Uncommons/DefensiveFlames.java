@@ -36,7 +36,7 @@ public class DefensiveFlames extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(8);
+            upgradeMagicNumber(2);
         }
     }
 

@@ -28,9 +28,3 @@ public abstract class CustomFireBladeCard extends CustomCard {
     }
 
  }
-
-
-/* Location:              C:\Program Files (x86)\Steam\steamapps\workshop\content\646570\1997053791\JorbsMod.jar!\stsjorbsmod\cards\CustomJorbsModCard.class
- * Java compiler version: 8 (52.0)
- * JD-Core Version:       1.0.7
- */

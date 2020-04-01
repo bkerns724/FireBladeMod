@@ -30,7 +30,7 @@ public class ThirstForBlood extends CustomFireBladeCard {
 
     public ThirstForBlood() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseDamage = 10;
+        this.baseDamage = 8;
         this.magicNumber = this.baseMagicNumber = 2;
         this.magicNumberTwo = this.baseMagicNumberTwo = 1;
     }
@@ -46,7 +46,6 @@ public class ThirstForBlood extends CustomFireBladeCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(2);
             upgradeMagicNumber(1);
         }
     }

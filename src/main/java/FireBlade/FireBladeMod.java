@@ -143,7 +143,7 @@ public class FireBladeMod implements
 
         BaseMod.addCard(new ArmSmash());
         BaseMod.addCard(new FlamingCleave());
-        BaseMod.addCard(new FlamingSmash());
+        BaseMod.addCard(new FlameTrail());
         BaseMod.addCard(new GasolineStrike());
         BaseMod.addCard(new IntenseFlailing());
         BaseMod.addCard(new QuickAttack());
@@ -155,9 +155,9 @@ public class FireBladeMod implements
         BaseMod.addCard(new DefensiveFocus());
         BaseMod.addCard(new FeedTheFlame());
         BaseMod.addCard(new Fireball());
-        BaseMod.addCard(new FireLance());
+        BaseMod.addCard(new FireWave());
         BaseMod.addCard(new PyromanticFocus());
-        BaseMod.addCard(new NaturalEndurance());
+        BaseMod.addCard(new Feint());
         BaseMod.addCard(new OffensiveFocus());
         BaseMod.addCard(new QuickParry());
         BaseMod.addCard(new RampingBlock());
@@ -185,7 +185,7 @@ public class FireBladeMod implements
         BaseMod.addCard(new CitrusTablets());
         BaseMod.addCard(new EternalEndurance());
         BaseMod.addCard(new HellFire());
-        BaseMod.addCard(new Maneuver());
+        BaseMod.addCard(new PowerUp());
         BaseMod.addCard(new Improvise());
         BaseMod.addCard(new LayeredDefense());
         BaseMod.addCard(new Steroids());

@@ -34,7 +34,7 @@ public class ShootFlames extends CustomCard {
     }
 
     public void applyPowers() {
-        magicNumber = FireBlade.actions.BurnAction.GetEstimate(AbstractDungeon.player, baseMagicNumber);
+        magicNumber = BurnAction.GetEstimate(AbstractDungeon.player, baseMagicNumber);
         isMagicNumberModified = magicNumber != baseMagicNumber;
         super.applyPowers();
     }
@@ -45,7 +45,7 @@ public class ShootFlames extends CustomCard {
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
-        magicNumber = FireBlade.actions.BurnAction.GetEstimate(AbstractDungeon.player, baseMagicNumber);
+        magicNumber = BurnAction.GetEstimate(AbstractDungeon.player, baseMagicNumber);
         isMagicNumberModified = magicNumber != baseMagicNumber;
         super.calculateCardDamage(mo);
     }

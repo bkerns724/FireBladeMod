@@ -35,14 +35,15 @@ public class FlameFormPower extends AbstractPower {
     }
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
-        for (AbstractCard.CardTags tag : card.tags)
-            if (tag == TheFireBladeCardTags.BURNER) {
+        for (AbstractCard.CardTags tag : card.tags) {
+            if (tag == TheFireBladeCardTags.BURNER || tag == TheFireBladeCardTags.FIRESHIELD) {
                 flash();
                 for (int i = 0; i < this.amount; i++) {
                     addToBot(new ChannelAction(new FlameOrb()));
                     addToBot(new WaitAction(0.4F));
                 }
             }
+        }
     }
 
     public void updateDescription() { this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]; }

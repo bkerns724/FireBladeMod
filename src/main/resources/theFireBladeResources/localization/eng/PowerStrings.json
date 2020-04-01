@@ -14,13 +14,6 @@
       " less."
     ]
   },
-  "FireBladeMod:IterationPower": {
-    "NAME": "Iteration",
-    "DESCRIPTIONS": [
-      "For #b",
-      " turns, upgrade each card you play."
-    ]
-  },
   "FireBladeMod:DefFlamesPower": {
     "NAME": "Defensive Flames",
     "DESCRIPTIONS": [
@@ -37,7 +30,7 @@
   "FireBladeMod:FlameFormPower": {
     "NAME": "Flame Form",
     "DESCRIPTIONS": [
-      "When you play a card that applies burning, channel ",
+      "When you play a card that applies burning or grants Fire Shield, channel ",
       " fireblademod:Flame."
     ]
   },
