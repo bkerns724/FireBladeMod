@@ -37,8 +37,7 @@ public class FireBladeMod implements
         EditKeywordsSubscriber,
         AddAudioSubscriber,
         PostInitializeSubscriber{
-    // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
-    // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
+
     public static final Logger logger = LogManager.getLogger(FireBladeMod.class.getName());
     private static String modID;
 
@@ -87,8 +86,6 @@ public class FireBladeMod implements
         logger.info("========================= /FireBlade Mod Initialized. Hello World./ =========================");
     }
 
-    // =============== LOAD THE CHARACTER =================
-    
     @Override
     public void receiveEditCharacters() {
         logger.info("Beginning to add FireBlade character");
@@ -192,9 +189,9 @@ public class FireBladeMod implements
         BaseMod.addCard(new Tempo());
         BaseMod.addCard(new ClingingFlames());
 
-        BaseMod.addCard(new ByrdBane());
+        BaseMod.addCard(new AfterBurn());
         BaseMod.addCard(new FlameForm());
-        BaseMod.addCard(new Encore());
+        BaseMod.addCard(new Reserves());
         BaseMod.addCard(new PrettyGoodPlans());
         BaseMod.addCard(new TungstenSkin());
         BaseMod.addCard(new UnexpectedStrikes());
@@ -255,8 +252,6 @@ public class FireBladeMod implements
         }
     }
 
-    // =============== POST-INITIALIZE =================
-    
     @Override
     public void receivePostInitialize() {
         BaseMod.addPotion(NapalmFlask.class, Color.RED.cpy(), null, Color.ORANGE.cpy(), NapalmFlask.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);

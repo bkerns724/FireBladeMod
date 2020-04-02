@@ -26,7 +26,7 @@ public class ComplexDefense extends CustomCard {
 
     public ComplexDefense() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseBlock = 5;
+        this.baseBlock = 6;
         this.magicNumber = this.baseMagicNumber = 2;
     }
 

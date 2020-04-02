@@ -21,11 +21,11 @@
       " Block."
     ]
   },
-  "FireBladeMod:EncorePower": {
-    "NAME": "Encore",
+  "FireBladeMod:ReservesPower": {
+    "NAME": "Reserves",
     "DESCRIPTIONS": [
-      "At the end of your turn, put #b",
-      " cards from your discard pile on top of your deck."
+      "At the end of your turn each [R] you have becomes #b",
+      " block."
     ]
   },
   "FireBladeMod:FlameFormPower": {
@@ -39,7 +39,7 @@
     "NAME": "Tungsten Skin",
     "DESCRIPTIONS": [
       "You receive #b",
-      " less damage from each attack."
+      " less damage each time you take damage."
     ]
   },
   "FireBladeMod:JabsPower": {
@@ -49,7 +49,7 @@
       " times."
     ]
   },
-  "FireBladeMod:ByrdBanePower": {
+  "FireBladeMod:AfterBurnPower": {
     "NAME": "After Burn",
     "DESCRIPTIONS": [
       "Each time you play a card, gain #b",

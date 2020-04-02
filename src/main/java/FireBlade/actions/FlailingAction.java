@@ -25,7 +25,7 @@ public class FlailingAction extends AbstractGameAction {
         this.p = p;
         this.freeToPlayOnce = freeToPlayOnce;
         this.duration = Settings.ACTION_DUR_XFAST;
-        this.actionType = AbstractGameAction.ActionType.SPECIAL;
+        this.actionType = AbstractGameAction.ActionType.DAMAGE;
         this.energyOnUse = energyOnUse;
         this.damage = damage;
         this.block = block;

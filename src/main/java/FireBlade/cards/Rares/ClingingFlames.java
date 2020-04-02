@@ -2,6 +2,7 @@ package FireBlade.cards.Rares;
 
 import FireBlade.actions.FireShieldAction;
 import FireBlade.cards.CustomFireBladeCard;
+import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.powers.ClingingFlamesPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -27,6 +28,7 @@ public class ClingingFlames extends CustomFireBladeCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = 3;
         this.magicNumberTwo = this.baseMagicNumberTwo = 2;
+        this.tags.add(TheFireBladeCardTags.FIRESHIELD);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

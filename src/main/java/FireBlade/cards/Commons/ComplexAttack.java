@@ -29,7 +29,7 @@ public class ComplexAttack extends CustomCard {
 
     public ComplexAttack() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseDamage = 6;
+        this.baseDamage = 8;
         this.magicNumber = this.baseMagicNumber = 2;
     }
 
@@ -44,7 +44,7 @@ public class ComplexAttack extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(2);
+            upgradeDamage(3);
             upgradeMagicNumber(1);
         }
     }

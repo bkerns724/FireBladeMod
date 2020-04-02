@@ -280,13 +280,13 @@
     "NAME": "Citrus Tablets",
     "DESCRIPTION": "Remove All Debuffs. NL Exhaust."
   },
-  "FireBladeMod:ByrdBane": {
-    "NAME": "Byrd Bane",
+  "FireBladeMod:AfterBurn": {
+    "NAME": "After Burn",
     "DESCRIPTION": "Gain !M! fireblademod:Fire\u00a0Shield for each card played."
   },
-  "FireBladeMod:Encore": {
-    "NAME": "Encore",
-    "DESCRIPTION": "At the end of each round, place a card from your discard on top of your draw pile."
+  "FireBladeMod:Reserves": {
+    "NAME": "Reserves",
+    "DESCRIPTION": "At the end of your turn, gain !M! block for each [R] you have and lose all [R]."
   },
   "FireBladeMod:ClingingFlames": {
     "NAME": "Clinging Flames",
