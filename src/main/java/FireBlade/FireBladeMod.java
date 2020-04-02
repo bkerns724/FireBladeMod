@@ -137,7 +137,6 @@ public class FireBladeMod implements
         BaseMod.addCard(new SimpleBlock());
         BaseMod.addCard(new SteadyEndurance());
         BaseMod.addCard(new WellPrepared());
-        BaseMod.addCard(new Punish());
 
         logger.info("Uncommon");
 
@@ -159,6 +158,7 @@ public class FireBladeMod implements
         BaseMod.addCard(new PyromanticFocus());
         BaseMod.addCard(new Feint());
         BaseMod.addCard(new OffensiveFocus());
+        BaseMod.addCard(new Punish());
         BaseMod.addCard(new QuickParry());
         BaseMod.addCard(new RampingBlock());
         BaseMod.addCard(new RegenerativeEndurance());
@@ -171,7 +171,7 @@ public class FireBladeMod implements
         BaseMod.addCard(new FireBladeBerserk());
         BaseMod.addCard(new Flexibility());
         BaseMod.addCard(new GetPumped());
-        BaseMod.addCard(new Shell());
+        BaseMod.addCard(new Dodge());
         BaseMod.addCard(new ThirdDegree());
 
         logger.info("Rare");
@@ -185,16 +185,16 @@ public class FireBladeMod implements
         BaseMod.addCard(new CitrusTablets());
         BaseMod.addCard(new EternalEndurance());
         BaseMod.addCard(new HellFire());
-        BaseMod.addCard(new PowerUp());
+        BaseMod.addCard(new Convert());
         BaseMod.addCard(new Improvise());
         BaseMod.addCard(new LayeredDefense());
         BaseMod.addCard(new Steroids());
         BaseMod.addCard(new Tempo());
+        BaseMod.addCard(new ClingingFlames());
 
         BaseMod.addCard(new ByrdBane());
         BaseMod.addCard(new FlameForm());
-        BaseMod.addCard(new Gasoline());
-        BaseMod.addCard(new GetExtremelyPumped());
+        BaseMod.addCard(new Encore());
         BaseMod.addCard(new PrettyGoodPlans());
         BaseMod.addCard(new TungstenSkin());
         BaseMod.addCard(new UnexpectedStrikes());

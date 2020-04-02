@@ -198,9 +198,9 @@
     "NAME": "Barrier Of Flames",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! fireblademod:Fire\u00a0Shield."
   },
-  "FireBladeMod:Shell": {
-    "NAME": "Shell",
-    "DESCRIPTION": "Gain !M! plated armor."
+  "FireBladeMod:Dodge": {
+    "NAME": "Dodge",
+    "DESCRIPTION": "Gain !M! dexterity."
   },
   "FireBladeMod:DefensiveFlames": {
     "NAME": "Defensive Flames",
@@ -212,7 +212,7 @@
   },
   "FireBladeMod:GetPumped": {
     "NAME": "Get Pumped",
-    "DESCRIPTION": "Gain 1 Strength. NL Gain 1 Dexterity."
+    "DESCRIPTION": "Gain !M! Strength."
   },
   "FireBladeMod:Flexibility": {
     "NAME": "Flexibility",
@@ -254,9 +254,9 @@
     "DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next !M! turns. NL Exhaust."
   },
-  "FireBladeMod:PowerUp": {
+  "FireBladeMod:Convert": {
     "NAME": "Convert",
-    "DESCRIPTION": "Gain !M! fireblademod:Fervor. NL Lose !FireBladeMod:M2! Strength."
+    "DESCRIPTION": "Gain !M! fireblademod:Fervor. NL Lose !M! Strength."
   },
   "FireBladeMod:LayeredDefense": {
     "NAME": "Layered Defense",
@@ -284,13 +284,13 @@
     "NAME": "Byrd Bane",
     "DESCRIPTION": "Gain !M! fireblademod:Fire\u00a0Shield for each card played."
   },
-  "FireBladeMod:GetExtremelyPumped": {
-    "NAME": "Get Really Pumped",
-    "DESCRIPTION": "Gain !M! Strength. NL Gain !FireBladeMod:M2! Dexterity."
+  "FireBladeMod:Encore": {
+    "NAME": "Encore",
+    "DESCRIPTION": "At the end of each round, place a card from your discard on top of your draw pile."
   },
-  "FireBladeMod:Gasoline": {
-    "NAME": "Consuming Flame",
-    "DESCRIPTION": "Cards that apply fireblademod:Burning apply twice as much. NL Cards that apply fireblademod:Burning Exhaust."
+  "FireBladeMod:ClingingFlames": {
+    "NAME": "Clinging Flames",
+    "DESCRIPTION": "Gain !M! fireblademod:Fire\u00a0Shield. NL When an enemy strikes your fireblademod:Fire\u00a0Shield they gain !FireBladeMod:M2! fireblademod:Burning."
   },
   "FireBladeMod:FlameForm": {
     "NAME": "Flame Form",

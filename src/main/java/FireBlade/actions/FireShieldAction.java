@@ -1,12 +1,11 @@
 package FireBlade.actions;
 
-import FireBlade.powers.BurningPower;
+import FireBlade.powers.FireShieldPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.powers.FlameBarrierPower;
 
 public class FireShieldAction extends AbstractGameAction {
     private AbstractPlayer p;
@@ -23,7 +22,7 @@ public class FireShieldAction extends AbstractGameAction {
         int fireAmount = GetEstimate(this.p, baseFireShield);
 
         if (fireAmount > 0) {
-            addToBot(new ApplyPowerAction(this.p, this.p, new FlameBarrierPower(this.p, fireAmount), fireAmount));
+            addToBot(new ApplyPowerAction(this.p, this.p, new FireShieldPower(this.p, fireAmount), fireAmount));
             CardCrawlGame.sound.play("ATTACK_FIRE", 0.1F);
         }
 

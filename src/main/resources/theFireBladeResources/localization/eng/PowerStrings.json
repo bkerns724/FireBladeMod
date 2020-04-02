@@ -21,10 +21,11 @@
       " Block."
     ]
   },
-  "FireBladeMod:GasolinePower": {
-    "NAME": "Consuming Flame",
+  "FireBladeMod:EncorePower": {
+    "NAME": "Encore",
     "DESCRIPTIONS": [
-      "Cards that naturally apply Burning apply double, but also Exhaust."
+      "At the end of your turn, put #b",
+      " cards from your discard pile on top of your deck."
     ]
   },
   "FireBladeMod:FlameFormPower": {
@@ -53,6 +54,20 @@
     "DESCRIPTIONS": [
       "Each time you play a card, gain #b",
       " Fire Shield."
+    ]
+  },
+  "FireBladeMod:FireShieldPower": {
+    "NAME": "Fire Shield",
+    "DESCRIPTIONS": [
+      "Each time you are attacked this turn, deal #b",
+      " damage back."
+    ]
+  },
+  "FireBladeMod:ClingingFlamesPower": {
+    "NAME": "Fire Shield",
+    "DESCRIPTIONS": [
+      "Each time you are attacked this turn, deal #b",
+      " burning to the attacker."
     ]
   }
 }

@@ -44,7 +44,7 @@ public class BurnAction extends AbstractGameAction {
         if (p.hasPower("FireBladeMod:PyroPower"))
             fireAmount += hell*(p.getPower("FireBladeMod:PyroPower").amount);
 
-        if (p.hasPower("FireBladeMod:GasolinePower"))
+        if (p.hasPower("FireBladeMod:EncorePower"))
             fireAmount *= 2;
 
         if (fireAmount < 0)

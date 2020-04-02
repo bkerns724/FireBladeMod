@@ -1,7 +1,7 @@
 package FireBlade.cards.Rares;
 
 import FireBlade.enums.TheFireBladeEnum;
-import FireBlade.powers.GasolinePower;
+import FireBlade.powers.PyroPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -9,43 +9,36 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
-public class Gasoline extends CustomCard {
+public class Convert extends CustomCard {
 
-    public static final String ID = "FireBladeMod:Gasoline";
+    public static final String ID = "FireBladeMod:Convert";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/ConsumingFlame.png";
+    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/Convert.png";
     private static final CardStrings cardStrings;
-    private static final CardType TYPE = CardType.POWER;
+    private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
+    private static final int COST = 0;
 
-    public Gasoline() {
+    public Convert() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        this.magicNumber = this.baseMagicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        boolean powerExists = false;
-        for (AbstractPower pow : p.powers) {
-            if (pow.ID.equals("FireBladeMod:GasolinePower")) {
-                powerExists = true;
-                break;
-            }
-        }
-        if (!powerExists) {
-            addToBot(new ApplyPowerAction(p, p, new GasolinePower(p)));
-        }
+        addToBot(new ApplyPowerAction(p, p, new PyroPower(p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, -magicNumber), -magicNumber));
     }
 
-    public AbstractCard makeCopy() { return new Gasoline(); }
+    public AbstractCard makeCopy() { return new Convert(); }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.upgradeBaseCost(1);
+            upgradeMagicNumber(1);
         }
     }
 
