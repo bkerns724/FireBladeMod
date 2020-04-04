@@ -45,7 +45,8 @@
   "FireBladeMod:JabsPower": {
     "NAME": "Sudden Strikes",
     "DESCRIPTIONS": [
-      "At the end of your turn deal 3 attack damage to a random enemy #b",
+      "At the end of your turn deal ",
+      " attack damage to a random enemy #b",
       " times."
     ]
   },

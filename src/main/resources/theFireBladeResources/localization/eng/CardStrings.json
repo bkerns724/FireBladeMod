@@ -1,4 +1,8 @@
 {
+  "FireBladeMod:OneDamageStrike": {
+    "NAME": "One Damage Strike",
+    "DESCRIPTION": "Can not spawn, used for Sudden Strikes."
+  },
   "FireBladeMod:StrikeFireBlade": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -243,7 +247,7 @@
   },
   "FireBladeMod:ThirstForBlood": {
     "NAME": "Thirst For Blood",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL Lose !FireBladeMod:M2! dexterity."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL Lose !FireBladeMod:M2! Dexterity and fireblademod:Fervor."
   },
   "FireBladeMod:Tempo": {
     "NAME": "Tempo",
@@ -256,7 +260,7 @@
   },
   "FireBladeMod:Convert": {
     "NAME": "Convert",
-    "DESCRIPTION": "Gain !M! fireblademod:Fervor. NL Lose !M! Strength."
+    "DESCRIPTION": "Gain !M! fireblademod:Fervor. NL Lose !FireBladeMod:M2! Strength and Dexterity."
   },
   "FireBladeMod:LayeredDefense": {
     "NAME": "Layered Defense",
@@ -269,8 +273,8 @@
   },
   "FireBladeMod:Steroids": {
     "NAME": "Steroids",
-    "DESCRIPTION": "Gain [R] [R] [R]. NL Draw 3 cards. NL Lose 1 Strength, Dexterity, and fireblademod:Fervor. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain [R] [R] [R]. NL Draw 3 cards. NL Lose 1 Strength, Dexterity, and fireblademod:Fervor."
+    "DESCRIPTION": "Gain [R] [R] [R]. NL Draw 3 cards. NL Lose 1 Strength and fireblademod:Fervor. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [R] [R] [R]. NL Draw 3 cards. NL Lose 1 Strength and fireblademod:Fervor."
   },
   "FireBladeMod:HellFire": {
     "NAME": "Hellfire",
@@ -303,7 +307,7 @@
   },
   "FireBladeMod:UnexpectedStrikes": {
     "NAME": "Unexpected Strikes",
-    "DESCRIPTION": "At the end of your turn, deal 3 attack damage to a random enemy !M! times."
+    "DESCRIPTION": "At the end of your turn, deal !D! attack damage to a random enemy !M! times."
   },
   "FireBladeMod:TungstenSkin": {
     "NAME": "Tungsten Skin",

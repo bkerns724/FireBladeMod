@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -24,11 +25,22 @@ public class UnexpectedStrikes extends CustomCard {
 
     public UnexpectedStrikes() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        this.baseDamage = 1;
         this.magicNumber = this.baseMagicNumber = 2;
+        this.tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new JabsPower(p, this.magicNumber), this.magicNumber));
+    }
+
+    public void applyPowers() {
+        super.applyPowers();
+        if (AbstractDungeon.player.hasPower("Pen Nib"))
+            damage /= 2;
+
+        if (damage == baseDamage)
+            isDamageModified = false;
     }
 
     public AbstractCard makeCopy() { return new UnexpectedStrikes(); }

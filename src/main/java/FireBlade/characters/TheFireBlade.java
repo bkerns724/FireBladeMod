@@ -119,7 +119,7 @@ public class TheFireBlade extends CustomPlayer {
     }
 
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo(NAMES[0], TEXT[0], 80, 80, 0, 99, 5, this,
+        return new CharSelectInfo(NAMES[0], TEXT[0], 70, 70, 0, 99, 5, this,
                 getStartingRelics(), getStartingDeck(), false);
     }
 

@@ -15,7 +15,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import FireBlade.cards.Basics.*;
@@ -36,7 +39,8 @@ public class FireBladeMod implements
         EditRelicsSubscriber,
         EditKeywordsSubscriber,
         AddAudioSubscriber,
-        PostInitializeSubscriber{
+        PostInitializeSubscriber,
+        OnPowersModifiedSubscriber {
 
     public static final Logger logger = LogManager.getLogger(FireBladeMod.class.getName());
     private static String modID;
@@ -263,5 +267,16 @@ public class FireBladeMod implements
         BaseMod.registerModBadge(badgeTexture, "The FireBlade", "Bryan", "This mod adds a new character, the FireBlade.",
                 FireBladeSettings.createSettingsPanel());
         logger.info("Done loading badge Image");
+    }
+
+    public void receivePowersModified() {
+        if ((AbstractDungeon.getCurrRoom()).phase == AbstractRoom.RoomPhase.COMBAT &&
+                !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                if (p instanceof OnPowersModifiedSubscriber) {
+                    ((OnPowersModifiedSubscriber)p).receivePowersModified();
+                }
+            }
+        }
     }
 }

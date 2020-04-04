@@ -35,7 +35,6 @@ public class Steroids extends CustomCard {
         addToBot(new DrawCardAction(p, 3));
         addToBot(new GainEnergyAction(3));
         addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, -1), -1));
-        addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, -1), -1));
         addToBot(new ApplyPowerAction(p, p, new PyroPower(p, -1), -1));
     }
 
