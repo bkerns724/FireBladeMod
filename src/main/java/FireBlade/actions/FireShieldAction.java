@@ -22,7 +22,7 @@ public class FireShieldAction extends AbstractGameAction {
         int fireAmount = GetEstimate(this.p, baseFireShield);
 
         if (fireAmount > 0) {
-            addToBot(new ApplyPowerAction(this.p, this.p, new FireShieldPower(this.p, fireAmount), fireAmount));
+            addToTop(new ApplyPowerAction(this.p, this.p, new FireShieldPower(this.p, fireAmount), fireAmount));
             CardCrawlGame.sound.play("ATTACK_FIRE", 0.1F);
         }
 

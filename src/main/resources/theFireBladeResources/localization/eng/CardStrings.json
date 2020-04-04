@@ -134,7 +134,7 @@
     "DESCRIPTION": "Deal !D! damage to an enemy !M! times."
   },
   "FireBladeMod:GasolineStrike": {
-    "NAME": "Gasoline Strike",
+    "NAME": "Catalyst Slash",
     "DESCRIPTION": "Deal !D! damage plus 1 per fireblademod:Burning to an enemy."
   },
   "FireBladeMod:QuickAttack": {
@@ -298,8 +298,7 @@
   },
   "FireBladeMod:FlameForm": {
     "NAME": "Flame Form",
-    "DESCRIPTION": "Gain !M! orb slots. NL When you play a card that applies fireblademod:Burning or grants fireblademod:Fire\u00a0Shield, channel a fireblademod:Flame.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! orb slots. NL When you play a card that applies fireblademod:Burning, channel a fireblademod:Flame."
+    "DESCRIPTION": "Ethereal.  Whenever you deal attack damage, apply !M! fireblademod:Burning."
   },
   "FireBladeMod:PrettyGoodPlans": {
     "NAME": "Pretty Good Plans",

@@ -45,8 +45,8 @@ public class FlailingAction extends AbstractGameAction {
 
         if (effect > 0) {
             for (int i = 0; i < effect; i++) {
-                addToBot(new DamageAction(this.m, new DamageInfo(p, this.damage, this.damageType), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-                addToBot(new GainBlockAction(this.p, this.block));
+                addToTop(new GainBlockAction(this.p, this.block));
+                addToTop(new DamageAction(this.m, new DamageInfo(p, this.damage, this.damageType), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
             }
 
             if (!this.freeToPlayOnce) {

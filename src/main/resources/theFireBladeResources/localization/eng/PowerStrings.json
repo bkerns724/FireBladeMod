@@ -2,14 +2,14 @@
   "FireBladeMod:BurningPower": {
     "NAME": "Burning",
     "DESCRIPTIONS": [
-      "Taking ",
-      " damage each turn."
+      "Losing ",
+      " HP each turn."
     ]
   },
   "FireBladeMod:PyroPower": {
     "NAME": "Fervor",
     "DESCRIPTIONS": [
-      "When you apply Burning, you apply #b",
+      "When you apply #yBurning, you apply #b",
       " extra.",
       " less."
     ]
@@ -18,21 +18,21 @@
     "NAME": "Defensive Flames",
     "DESCRIPTIONS": [
       "Whenever you play a card that applies Burning, gain #b",
-      " Block."
+      " #yBlock."
     ]
   },
   "FireBladeMod:ReservesPower": {
     "NAME": "Reserves",
     "DESCRIPTIONS": [
       "At the end of your turn each [R] you have becomes #b",
-      " block."
+      " #yBlock."
     ]
   },
   "FireBladeMod:FlameFormPower": {
     "NAME": "Flame Form",
     "DESCRIPTIONS": [
-      "When you play a card that applies burning or grants Fire Shield, channel ",
-      " fireblademod:Flame."
+      "Whenever you deal attack damage, also apply #b",
+      " #yBurning."
     ]
   },
   "FireBladeMod:TungstenPower": {
@@ -54,7 +54,7 @@
     "NAME": "After Burn",
     "DESCRIPTIONS": [
       "Each time you play a card, gain #b",
-      " Fire Shield."
+      " #yFire #yShield."
     ]
   },
   "FireBladeMod:FireShieldPower": {
@@ -68,7 +68,7 @@
     "NAME": "Fire Shield",
     "DESCRIPTIONS": [
       "Each time you are attacked this turn, deal #b",
-      " burning to the attacker."
+      " #yBurning to the attacker."
     ]
   }
 }

@@ -31,7 +31,7 @@ public class BurnAction extends AbstractGameAction {
         int burnAmount = GetEstimate(this.p, baseBurn, hellfire);
 
         if (burnAmount > 0) {
-            addToBot(new ApplyPowerAction(this.m, this.p, new BurningPower(this.m, this.p, burnAmount), burnAmount));
+            addToTop(new ApplyPowerAction(this.m, this.p, new BurningPower(this.m, this.p, burnAmount), burnAmount));
             CardCrawlGame.sound.play("ATTACK_FIRE", 0.1F);
         }
 

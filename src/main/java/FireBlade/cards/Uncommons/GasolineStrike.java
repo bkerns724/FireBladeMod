@@ -30,7 +30,6 @@ public class GasolineStrike extends CustomCard {
     public GasolineStrike() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         realBaseDamage = baseDamage = 3;
-        this.tags.add(AbstractCard.CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
