@@ -42,12 +42,20 @@
       " less damage each time you take damage."
     ]
   },
-  "FireBladeMod:JabsPower": {
+  "FireBladeMod:SuddenStrikesPower": {
     "NAME": "Sudden Strikes",
-    "DESCRIPTIONS": [
-      "At the end of your turn deal ",
-      " attack damage to a random enemy #b",
-      " times."
+    "DESCRIPTIONS": ["When you play an attack card, make #b",
+      " extra attack on a random enemy for ",
+      " extra attacks on a random enemy for ",
+      " damage."
+    ]
+  },
+  "FireBladeMod:SuddenStrikesPlusPower": {
+    "NAME": "Sudden Strikes Plus",
+    "DESCRIPTIONS": ["When you play an attack card, make #b",
+      " extra attack on all enemies for ",
+      " extra attacks on all enemies for ",
+      " damage."
     ]
   },
   "FireBladeMod:AfterBurnPower": {

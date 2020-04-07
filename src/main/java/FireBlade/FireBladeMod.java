@@ -1,5 +1,6 @@
 package FireBlade;
 
+import FireBlade.cards.Other.Swipe;
 import FireBlade.other.FireBladeSettings;
 import FireBlade.other.FireBladeTipTracker;
 import FireBlade.potions.LiquidSteroids;
@@ -85,9 +86,9 @@ public class FireBladeMod implements
     }
 
     public static void initialize() {
-        logger.info("========================= Initializing FireBlade Mod. Hi. =========================");
+        logger.info("========================= Initializing FireBlade Mod. =========================");
         FireBladeMod fireBladeMod = new FireBladeMod();
-        logger.info("========================= /FireBlade Mod Initialized. Hello World./ =========================");
+        logger.info("========================= /FireBlade Mod Initialized./ =========================");
     }
 
     @Override
@@ -107,6 +108,10 @@ public class FireBladeMod implements
         logger.info("Beginning to add FireBlade cards");
 
         BaseMod.addDynamicVariable(new MagicNumberTwo());
+
+        logger.info("Other");
+
+        BaseMod.addCard(new Swipe());
 
         logger.info("Starter");
 
@@ -198,7 +203,7 @@ public class FireBladeMod implements
         BaseMod.addCard(new Reserves());
         BaseMod.addCard(new PrettyGoodPlans());
         BaseMod.addCard(new TungstenSkin());
-        BaseMod.addCard(new UnexpectedStrikes());
+        BaseMod.addCard(new SuddenStrikes());
 
         logger.info("Added FireBlade cards");
     }

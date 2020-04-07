@@ -22,7 +22,7 @@ public class DefendFireBlade extends CustomCard
     private static final AbstractCard.CardTarget TARGET = CardTarget.SELF;
   
     private static final int COST = 1;
-  
+
     public DefendFireBlade() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
 
@@ -42,7 +42,7 @@ public class DefendFireBlade extends CustomCard
         upgradeBlock(3);
         }
     }
-  
+
     static  {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;

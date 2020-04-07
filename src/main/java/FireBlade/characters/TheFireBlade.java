@@ -168,15 +168,15 @@ public class TheFireBlade extends CustomPlayer {
     }
 
     public void doCharSelectScreenSelectEffect() {
-        CardCrawlGame.sound.playA("ATTACK_HEAVY", MathUtils.random(-0.2F, 0.2F));
+        CardCrawlGame.sound.playA("ATTACK_FIRE", 0.8F);
     }
 
     public String getCustomModeCharacterButtonSoundKey() {
-        return "ATTACK_HEAVY";
+        return "ATTACK_FIRE";
     }
 
     public Texture getCustomModeCharacterButtonImage() {
-        return ImageMaster.FILTER_IRONCLAD;
+        return new Texture("theFireBladeResources/images/charSelect/FireBladeCharacterButton.png");
     }
 
     public CharacterStrings getCharacterString() {

@@ -25,20 +25,21 @@
     "DESCRIPTION": "Fervor increases the amount of burning applied by cards."
   },
   {
-    "PROPER_NAME": "Sudden\u00a0Strikes",
-    "NAMES": [
-      "Sudden\u00a0Strikes",
-      "Sudden\u00a0strikes",
-      "sudden\u00a0strikes"
-    ],
-    "DESCRIPTION": "At the end of your turn, deal 3 attack damage to a random enemy for each Sudden Strikes."
-  },
-  {
     "PROPER_NAME": "Flame",
     "NAMES": [
       "Flame",
       "flame"
     ],
     "DESCRIPTION": "Orb: Applies Burning to random enemies."
+  },
+  {
+    "PROPER_NAME": "Swipe",
+    "NAMES": [
+      "Swipe",
+      "Swipes",
+      "swipe",
+      "swipes"
+    ],
+    "DESCRIPTION": "Card: 0 cost attack, deals 6 damage to all enemies."
   }
 ]

@@ -41,6 +41,7 @@ public class FlameFormPower extends AbstractPower {
 
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         AbstractPlayer p = AbstractDungeon.player;
+        if (info.type == DamageInfo.DamageType.NORMAL)
         addToBot(new ApplyPowerAction(target, p, new BurningPower(target, p, this.amount), this.amount));
     }
 
