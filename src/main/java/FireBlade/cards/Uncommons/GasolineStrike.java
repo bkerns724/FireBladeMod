@@ -37,9 +37,9 @@ public class GasolineStrike extends CustomCard {
         addToBot(new VFXAction(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL), 0.1F));
         if (m.hasPower("FireBladeMod:BurningPower"))
             burnAmount = (m.getPower("FireBladeMod:BurningPower")).amount;
-        if (burnAmount > 5 && burnAmount < 50)
+        if (burnAmount >= 5 && burnAmount < 50)
             addToBot(new VFXAction(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.FIRE), 0.1F));
-        if (burnAmount > 50)
+        if (burnAmount >= 50)
             addToBot(new VFXAction(new ExplosionSmallEffect(m.hb.cX, m.hb.cY), 0.1F));
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
     }
