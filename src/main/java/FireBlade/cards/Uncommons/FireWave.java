@@ -3,6 +3,7 @@ package FireBlade.cards.Uncommons;
 import FireBlade.actions.BurnAction;
 import FireBlade.actions.FireShieldAction;
 import FireBlade.cards.CustomFireBladeCard;
+import FireBlade.cards.FireBladeCardHelper;
 import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,6 +12,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static FireBlade.cards.TheFireBladeCardTags.FIRESHIELD;
 
 public class FireWave extends CustomFireBladeCard {
 
@@ -28,12 +31,14 @@ public class FireWave extends CustomFireBladeCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = 3;
         this.magicNumberTwo = this.baseMagicNumberTwo = 2;
-        this.tags.add(TheFireBladeCardTags.BURNER);
+        tags.add(TheFireBladeCardTags.FLAME);
+        tags.add(FIRESHIELD);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new BurnAction(p, m, baseMagicNumber));
         addToBot(new FireShieldAction(p, baseMagicNumberTwo));
+        FireBladeCardHelper.checkForBurnerTip();
     }
 
     public void applyPowers() {
@@ -53,7 +58,7 @@ public class FireWave extends CustomFireBladeCard {
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
-        magicNumber = FireBlade.actions.BurnAction.GetEstimate(AbstractDungeon.player, baseMagicNumber);
+        magicNumber = FireBlade.actions.BurnAction.GetEstimate(AbstractDungeon.player, mo, baseMagicNumber);
         isMagicNumberModified = magicNumber != baseMagicNumber;
         super.calculateCardDamage(mo);
     }

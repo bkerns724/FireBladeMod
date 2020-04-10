@@ -5,7 +5,7 @@
       "burning",
       "Burning"
     ],
-    "DESCRIPTION": "A Burning creature loses HP at the start of its turn."
+    "DESCRIPTION": "Burning creatures lose HP at the start of their turn."
   },
   {
     "PROPER_NAME": "Fire\u00a0Shield",
@@ -14,7 +14,7 @@
       "Fire\u00a0shield",
       "Fire\u00a0Shield"
     ],
-    "DESCRIPTION": "Whenever you are attacked, deal damage back.  Lasts one turn."
+    "DESCRIPTION": "When receiving attack damage, deals damage back.  Lasts one turn."
   },
   {
     "PROPER_NAME": "Fervor",
@@ -22,7 +22,7 @@
       "Fervor",
       "fervor"
     ],
-    "DESCRIPTION": "Fervor increases the amount of burning applied by cards."
+    "DESCRIPTION": "Fervor increases #yBurning applied by #yFlame cards. NL Fervor increases #yFire #yShield gained from #yFire #yThorns cards."
   },
   {
     "PROPER_NAME": "Flame",
@@ -30,7 +30,32 @@
       "Flame",
       "flame"
     ],
-    "DESCRIPTION": "Orb: Applies Burning to random enemies."
+    "DESCRIPTION": "Flame cards apply #yBurning."
+  },
+  {
+    "PROPER_NAME": "Fire\u00a0Thorns",
+    "NAMES": [
+      "Fire\u00a0Thorns",
+      "Fire\u00a0thorns",
+      "fire\u00a0thorns"
+    ],
+    "DESCRIPTION": "Fire Thorns cards grant #yFire #yShield."
+  },
+  {
+    "PROPER_NAME": "Smash",
+    "NAMES": [
+      "Smash",
+      "smash"
+    ],
+    "DESCRIPTION": "Smash cards are powerful attacks that exhaust."
+  },
+  {
+    "PROPER_NAME": "Endurance",
+    "NAMES": [
+      "Endurance",
+      "endurance"
+    ],
+    "DESCRIPTION": "Endurance cards are powerful Blocking skills that exhaust."
   },
   {
     "PROPER_NAME": "Swipe",
@@ -40,6 +65,15 @@
       "swipe",
       "swipes"
     ],
-    "DESCRIPTION": "Card: 0 cost attack, deals 6 damage to all enemies."
+    "DESCRIPTION": "Swipes are #b cost attack cards that hit ALL enemies and cannot be removed."
+  },
+  {
+    "PROPER_NAME": "Spirit\u00a0Rend",
+    "NAMES": [
+      "Spirit\u00a0Rend",
+      "Spirit\u00a0rend",
+      "spirit\u00a0rend"
+    ],
+    "DESCRIPTION": "Spirit Rent creatures take 25% more Burning per stack."
   }
 ]

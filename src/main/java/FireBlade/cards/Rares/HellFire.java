@@ -2,14 +2,10 @@ package FireBlade.cards.Rares;
 
 import FireBlade.actions.BurnAction;
 import FireBlade.cards.CustomFireBladeCard;
+import FireBlade.cards.FireBladeCardHelper;
 import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
-import FireBlade.powers.BurningPower;
-import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -32,11 +28,12 @@ public class HellFire extends CustomFireBladeCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = this.baseMagicNumber = 3;
         magicNumberTwo = baseMagicNumberTwo = 2;
-        this.tags.add(TheFireBladeCardTags.BURNER);
+        this.tags.add(TheFireBladeCardTags.FLAME);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new BurnAction(p, m, baseMagicNumber, baseMagicNumberTwo));
+        FireBladeCardHelper.checkForBurnerTip();
     }
 
     public void applyPowers() {
@@ -51,7 +48,7 @@ public class HellFire extends CustomFireBladeCard {
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
-        magicNumber = FireBlade.actions.BurnAction.GetEstimate(AbstractDungeon.player, baseMagicNumber, baseMagicNumberTwo);
+        magicNumber = FireBlade.actions.BurnAction.GetEstimate(AbstractDungeon.player, mo, baseMagicNumber, baseMagicNumberTwo);
         isMagicNumberModified = magicNumber != baseMagicNumber;
         super.calculateCardDamage(mo);
     }

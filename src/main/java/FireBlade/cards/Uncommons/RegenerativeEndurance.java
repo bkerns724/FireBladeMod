@@ -27,8 +27,8 @@ public class RegenerativeEndurance extends CustomCard {
 
     public RegenerativeEndurance() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseBlock = 10;
-        this.magicNumber = this.baseMagicNumber = 4;
+        this.baseBlock = 9;
+        this.magicNumber = this.baseMagicNumber = 6;
         this.exhaust = true;
         this.tags.add(TheFireBladeCardTags.ENDURANCE);
         this.tags.add(CardTags.HEALING);

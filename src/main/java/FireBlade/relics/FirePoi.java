@@ -25,7 +25,7 @@ public class FirePoi extends CustomRelic {
     }
 
     public void onPlayCard (AbstractCard card, AbstractMonster m) {
-        if (!card.hasTag(TheFireBladeCardTags.BURNER))
+        if (!card.hasTag(TheFireBladeCardTags.FLAME))
             return;
 
         flash();

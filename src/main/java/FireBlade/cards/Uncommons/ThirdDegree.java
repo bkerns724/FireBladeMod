@@ -1,7 +1,7 @@
 package FireBlade.cards.Uncommons;
 
 import FireBlade.enums.TheFireBladeEnum;
-import FireBlade.powers.PyroPower;
+import FireBlade.powers.FervorPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -28,7 +28,7 @@ public class ThirdDegree extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new PyroPower(p, this.magicNumber), this.magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new FervorPower(p, this.magicNumber), this.magicNumber));
     }
 
     public AbstractCard makeCopy() { return new ThirdDegree(); }

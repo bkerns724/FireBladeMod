@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.core.Settings;
 
 public class FireShieldAction extends AbstractGameAction {
     private AbstractPlayer p;
-    private int baseFireShield = 0;
+    private int baseFireShield;
 
     public FireShieldAction(AbstractPlayer p, int baseFireShield) {
         this.p = p;
@@ -32,8 +32,8 @@ public class FireShieldAction extends AbstractGameAction {
     public static int GetEstimate(AbstractPlayer p, int realMagicNumber) {
         int fireAmount = realMagicNumber;
 
-        if (p.hasPower("FireBladeMod:PyroPower"))
-            fireAmount += p.getPower("FireBladeMod:PyroPower").amount;
+        if (p.hasPower("FireBladeMod:FervorPower"))
+            fireAmount += p.getPower("FireBladeMod:FervorPower").amount;
 
         if (fireAmount < 0)
             fireAmount = 0;

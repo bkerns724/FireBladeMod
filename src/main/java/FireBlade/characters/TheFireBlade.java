@@ -6,7 +6,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -27,7 +26,7 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import FireBlade.cards.Basics.SpreadFire;
+import FireBlade.cards.Basics.Ember;
 
 import FireBlade.enums.*;
 import FireBlade.FireBladeMod;
@@ -56,7 +55,7 @@ public class TheFireBlade extends CustomPlayer {
             "theFireBladeResources/images/fireBladeCharacter/orb/layer5d.png",};
 
     public TheFireBlade(String playerName) {
-        super(playerName, TheFireBladeEnum.THE_FIREBLADE, orbTextures, "theFireBladeResources/images/fireBladeCharacter/orb/vfx.png", (String) null, (String) null);
+        super(playerName, TheFireBladeEnum.THE_FIREBLADE, orbTextures, "theFireBladeResources/images/fireBladeCharacter/orb/vfx.png", null, (String) null);
         logger.info("Start TheFireBlade constructor");
         this.charStat = new CharStat(this);
 
@@ -97,7 +96,7 @@ public class TheFireBlade extends CustomPlayer {
         retVal.add("FireBladeMod:DefendFireBlade");
         retVal.add("FireBladeMod:DefendFireBlade");
         retVal.add("FireBladeMod:IntricateCombo");
-        retVal.add("FireBladeMod:SpreadFire");
+        retVal.add("FireBladeMod:Ember");
 
         logger.info("End TheFireBlade getStartingDeck");
 
@@ -105,7 +104,7 @@ public class TheFireBlade extends CustomPlayer {
     }
 
     public AbstractCard getStartCardForEvent() {
-        return new SpreadFire();
+        return new Ember();
     }
 
     public ArrayList<String> getStartingRelics() {

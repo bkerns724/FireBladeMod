@@ -26,7 +26,7 @@ public class TigerClaw extends CustomRelic {
 
     public String getUpdatedDescription() { return this.DESCRIPTIONS[0]; }
 
-    public void obtain() {
+    public void onEquip() {
         AbstractPlayer p = AbstractDungeon.player;
         for (int i =  p.masterDeck.group.size() - 1; i >= 0; --i) {
             AbstractCard card = p.masterDeck.group.get(i);

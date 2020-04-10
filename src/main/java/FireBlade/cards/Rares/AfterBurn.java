@@ -15,7 +15,7 @@ public class AfterBurn extends CustomCard {
     public static final String ID = "FireBladeMod:AfterBurn";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/ByrdBane.png";
+    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/AfterBurn.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.RARE;

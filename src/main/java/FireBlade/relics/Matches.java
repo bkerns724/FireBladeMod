@@ -1,15 +1,13 @@
 package FireBlade.relics;
 
-import FireBlade.powers.PyroPower;
+import FireBlade.powers.FervorPower;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 public class Matches extends CustomRelic {
     public static final String ID = "FireBladeMod:Matches";
@@ -29,7 +27,7 @@ public class Matches extends CustomRelic {
 
         AbstractPlayer p = AbstractDungeon.player;
 
-        addToBot(new ApplyPowerAction(p, p, new PyroPower(p, fervorAmount), fervorAmount));
+        addToBot(new ApplyPowerAction(p, p, new FervorPower(p, fervorAmount), fervorAmount));
     }
 
     public String getUpdatedDescription() { return this.DESCRIPTIONS[0] + fervorAmount + this.DESCRIPTIONS[1]; }

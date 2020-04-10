@@ -29,7 +29,7 @@ public class TorsoSmash extends CustomCard {
 
     public TorsoSmash() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseDamage = 18;
+        this.baseDamage = 15;
         this.magicNumber = this.baseMagicNumber = 3;
         this.tags.add(TheFireBladeCardTags.SMASH);
         this.exhaust = true;
@@ -46,8 +46,7 @@ public class TorsoSmash extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(6);
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
         }
     }
 

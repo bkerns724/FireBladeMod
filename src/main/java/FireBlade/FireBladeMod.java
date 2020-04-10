@@ -115,95 +115,91 @@ public class FireBladeMod implements
 
         logger.info("Starter");
 
-        BaseMod.addCard(new StrikeFireBlade());
         BaseMod.addCard(new DefendFireBlade());
-        BaseMod.addCard(new SpreadFire());
+        BaseMod.addCard(new Ember());
         BaseMod.addCard(new IntricateCombo());
+        BaseMod.addCard(new StrikeFireBlade());
 
         logger.info("Common");
 
         BaseMod.addCard(new ArmorStrike());
         BaseMod.addCard(new BasicSmash());
-        BaseMod.addCard(new ButtHeads());
+        BaseMod.addCard(new CastAndSlash());
+        BaseMod.addCard(new ComboCleave());
+        BaseMod.addCard(new ComboSlashes());
         BaseMod.addCard(new ComplexAttack());
-        BaseMod.addCard(new Flailing());
-        BaseMod.addCard(new FlameStrike());
-        BaseMod.addCard(new NerveStrike());
-        BaseMod.addCard(new SimpleBlow());
-        BaseMod.addCard(new SneakAttack());
-        BaseMod.addCard(new SpinningSmash());
-        BaseMod.addCard(new SwordCleave());
-        BaseMod.addCard(new WaveOfIron());
-
-        BaseMod.addCard(new BackShrug());
+        BaseMod.addCard(new ComplexCasting());
         BaseMod.addCard(new ComplexDefense());
-        BaseMod.addCard(new DefensiveFlailing());
+        BaseMod.addCard(new FireBarrier());
+        BaseMod.addCard(new Flames());
         BaseMod.addCard(new IronEndurance());
-        BaseMod.addCard(new ShootFlames());
-        BaseMod.addCard(new SimpleBlock());
+        BaseMod.addCard(new NerveStrike());
+        BaseMod.addCard(new RapidDodges());
+        BaseMod.addCard(new ScorchingStrike());
+        BaseMod.addCard(new SetupSlash());
+        BaseMod.addCard(new Shove());
+        BaseMod.addCard(new SpinningSmash());
         BaseMod.addCard(new SteadyEndurance());
+        BaseMod.addCard(new Turtle());
         BaseMod.addCard(new WellPrepared());
 
         logger.info("Uncommon");
 
         BaseMod.addCard(new ArmSmash());
-        BaseMod.addCard(new FlamingCleave());
-        BaseMod.addCard(new FlameTrail());
-        BaseMod.addCard(new GasolineStrike());
-        BaseMod.addCard(new IntenseFlailing());
-        BaseMod.addCard(new QuickAttack());
-        BaseMod.addCard(new SneakFlurry());
-        BaseMod.addCard(new SolidAttack());
-        BaseMod.addCard(new TorsoSmash());
-
-        BaseMod.addCard(new BarrierOfFlames());
+        BaseMod.addCard(new Arson());
+        BaseMod.addCard(new BalancedCombo());
         BaseMod.addCard(new DefensiveFocus());
-        BaseMod.addCard(new FeedTheFlame());
+        BaseMod.addCard(new EruptionSlash());
+        BaseMod.addCard(new Feint());
         BaseMod.addCard(new Fireball());
         BaseMod.addCard(new FireWave());
-        BaseMod.addCard(new PyromanticFocus());
-        BaseMod.addCard(new Feint());
+        BaseMod.addCard(new FlashPoint());
+        BaseMod.addCard(new Flexibility());
         BaseMod.addCard(new OffensiveFocus());
+        BaseMod.addCard(new ProbingAttack());
         BaseMod.addCard(new Punish());
-        BaseMod.addCard(new QuickParry());
+        BaseMod.addCard(new PyromanticFocus());
+        BaseMod.addCard(new QuickCombo());
+        BaseMod.addCard(new QuickParries());
         BaseMod.addCard(new RampingBlock());
         BaseMod.addCard(new RegenerativeEndurance());
         BaseMod.addCard(new Reposition());
+        BaseMod.addCard(new ScorchingCleave());
+        BaseMod.addCard(new SmokeScreen());
+        BaseMod.addCard(new SmokySwing());
+        BaseMod.addCard(new SolidAttack());
         BaseMod.addCard(new SolidBlock());
+        BaseMod.addCard(new Speed());
+        BaseMod.addCard(new SpiritRend());
         BaseMod.addCard(new SteelEndurance());
-        BaseMod.addCard(new Unbalance());
-
-        BaseMod.addCard(new DefensiveFlames());
-        BaseMod.addCard(new FireBladeBerserk());
-        BaseMod.addCard(new Flexibility());
-        BaseMod.addCard(new GetPumped());
-        BaseMod.addCard(new Dodge());
+        BaseMod.addCard(new Muscle());
         BaseMod.addCard(new ThirdDegree());
+        BaseMod.addCard(new TorsoSmash());
+        BaseMod.addCard(new Vigor());
 
         logger.info("Rare");
 
-        BaseMod.addCard(new DashityDash());
-        BaseMod.addCard(new FinalSmash());
-        BaseMod.addCard(new GlassGreatsword());
-        BaseMod.addCard(new ThirstForBlood());
-        BaseMod.addCard(new TickleTorture());
-
-        BaseMod.addCard(new CitrusTablets());
-        BaseMod.addCard(new EternalEndurance());
-        BaseMod.addCard(new HellFire());
-        BaseMod.addCard(new Convert());
-        BaseMod.addCard(new Improvise());
-        BaseMod.addCard(new LayeredDefense());
-        BaseMod.addCard(new Steroids());
-        BaseMod.addCard(new Tempo());
-        BaseMod.addCard(new ClingingFlames());
 
         BaseMod.addCard(new AfterBurn());
+        BaseMod.addCard(new ClingingFlames());
+        BaseMod.addCard(new DebilitatingBlow());
+        BaseMod.addCard(new EternalEndurance());
+        BaseMod.addCard(new ExtraStrikes());
+        BaseMod.addCard(new FinalSmash());
         BaseMod.addCard(new FlameForm());
+        BaseMod.addCard(new GatherPower());
+        BaseMod.addCard(new GlassGreatsword());
+        BaseMod.addCard(new HealingCrystals());
+        BaseMod.addCard(new HellFire());
+        BaseMod.addCard(new Improvise());
+        BaseMod.addCard(new LayeredDefense());
+        BaseMod.addCard(new LightningCombo());
         BaseMod.addCard(new Reserves());
-        BaseMod.addCard(new PrettyGoodPlans());
+        BaseMod.addCard(new Steroids());
+        BaseMod.addCard(new Tempo());
+        BaseMod.addCard(new ThirstForBlood());
         BaseMod.addCard(new TungstenSkin());
-        BaseMod.addCard(new SuddenStrikes());
+        BaseMod.addCard(new Unbalance());
 
         logger.info("Added FireBlade cards");
     }
@@ -237,7 +233,6 @@ public class FireBladeMod implements
         BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.CharacterStrings.class, "theFireBladeResources/localization/eng/CharacterStrings.json");
         BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.PowerStrings.class, "theFireBladeResources/localization/eng/PowerStrings.json");
         BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.PotionStrings.class, "theFireBladeResources/localization/eng/PotionStrings.json");
-        BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.OrbStrings.class, "theFireBladeResources/localization/eng/OrbStrings.json");
         BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.UIStrings.class, "theFireBladeResources/localization/eng/UiStrings.json");
         BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.TutorialStrings.class, "theFireBladeResources/localization/eng/TutorialStrings.json");
         logger.info("Added FireBlade strings");

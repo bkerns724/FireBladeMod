@@ -11,12 +11,15 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
+import static org.apache.commons.lang3.math.NumberUtils.min;
+
 public class ReservesPower extends AbstractPower {
     public static PowerType POWER_TYPE = PowerType.BUFF;
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("FireBladeMod:ReservesPower");
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+    public static final int conversionAmount = 5;
 
     public ReservesPower(AbstractCreature owner, int amount) {
         this.ID = "FireBladeMod:ReservesPower";
@@ -37,12 +40,12 @@ public class ReservesPower extends AbstractPower {
             return;
 
         AbstractPlayer p = AbstractDungeon.player;
-        int effect = EnergyPanel.totalCount * this.amount;
-        if (effect > 0) {
-            addToBot(new GainBlockAction(p, effect));
-            p.energy.use(EnergyPanel.totalCount);
+        int energyConverted = min(EnergyPanel.totalCount, amount);
+        if (energyConverted > 0) {
+            addToBot(new GainBlockAction(p, energyConverted*conversionAmount));
+            p.energy.use(energyConverted);
         }
     }
 
-    public void updateDescription() { this.description = DESCRIPTIONS[0]; }
+    public void updateDescription() { this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + conversionAmount + DESCRIPTIONS[2]; }
 }

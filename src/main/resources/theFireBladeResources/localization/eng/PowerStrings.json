@@ -2,81 +2,115 @@
   "FireBladeMod:BurningPower": {
     "NAME": "Burning",
     "DESCRIPTIONS": [
-      "Losing ",
-      " HP each turn."
+      "At the start of your turn, lose #b",
+      " HP.",
+      "At the start of its turn, loses #b"
     ]
   },
-  "FireBladeMod:PyroPower": {
+  "FireBladeMod:FervorPower": {
     "NAME": "Fervor",
     "DESCRIPTIONS": [
-      "When you apply #yBurning, you apply #b",
-      " extra.",
-      " less."
+      "Whenever you play a #yFlame card, apply an additional #b",
+      " burning. NL ",
+      "Whenever you play a #yFire #yThorns card, gain an additional #b",
+      " #yFire #yShield.",
+      "Whenever you play a #yFlame card, apply #b",
+      " less burning. NL ",
+      "Whenever you play a #yFire #yThorns card, gain #b",
+      " less #yFire #yShield."
+    ]
+  },
+  "FireBladeMod:LoseFervorPower": {
+    "NAME": "Fervor Down",
+    "DESCRIPTIONS": [
+      "At the end of this turn, lose #b",
+      " #yFervor."
     ]
   },
   "FireBladeMod:DefFlamesPower": {
     "NAME": "Defensive Flames",
     "DESCRIPTIONS": [
-      "Whenever you play a card that applies Burning, gain #b",
+      "Whenever you play a card that applies #yBurning, gain #b",
       " #yBlock."
     ]
   },
   "FireBladeMod:ReservesPower": {
     "NAME": "Reserves",
     "DESCRIPTIONS": [
-      "At the end of your turn each [R] you have becomes #b",
+      "At the end of your turn up to #b",
+      " [R] you have becomes #b",
       " #yBlock."
     ]
   },
   "FireBladeMod:FlameFormPower": {
     "NAME": "Flame Form",
     "DESCRIPTIONS": [
-      "Whenever you deal attack damage, also apply #b",
+      "Whenever you deal attack damage, apply #b",
       " #yBurning."
     ]
   },
   "FireBladeMod:TungstenPower": {
     "NAME": "Tungsten Skin",
     "DESCRIPTIONS": [
-      "You receive #b",
-      " less damage each time you take damage."
+      "Whenever you would lose HP, lose #b",
+      " less."
     ]
   },
-  "FireBladeMod:SuddenStrikesPower": {
-    "NAME": "Sudden Strikes",
-    "DESCRIPTIONS": ["When you play an attack card, make #b",
-      " extra attack on a random enemy for ",
-      " extra attacks on a random enemy for ",
-      " damage."
+  "FireBladeMod:ExtraStrikesPower": {
+    "NAME": "Extra Strikes",
+    "DESCRIPTIONS": ["Whenever you play an attack card, deal ",
+      " damage to a random enemy #b",
+      " times."
     ]
   },
-  "FireBladeMod:SuddenStrikesPlusPower": {
-    "NAME": "Sudden Strikes Plus",
-    "DESCRIPTIONS": ["When you play an attack card, make #b",
-      " extra attack on all enemies for ",
-      " extra attacks on all enemies for ",
-      " damage."
+  "FireBladeMod:ExtraStrikesPlusPower": {
+    "NAME": "Extra Strikes Plus",
+    "DESCRIPTIONS": ["When you play an attack card, deal ",
+      " damage to ALL enemies #b",
+      " times."
     ]
   },
   "FireBladeMod:AfterBurnPower": {
     "NAME": "After Burn",
     "DESCRIPTIONS": [
-      "Each time you play a card, gain #b",
+      "Whenever you play a card, gain #b",
       " #yFire #yShield."
     ]
   },
   "FireBladeMod:FireShieldPower": {
     "NAME": "Fire Shield",
     "DESCRIPTIONS": [
-      "Each time you are attacked this turn, deal #b",
+      "Whenever you are attacked this turn, deal #b",
       " damage back."
     ]
   },
   "FireBladeMod:ClingingFlamesPower": {
     "NAME": "Fire Shield",
     "DESCRIPTIONS": [
-      "Each time you are attacked this turn, deal #b",
-      " #yBurning to the attacker."
+      "Whenever you are attacked this turn, apply #b",
+      " #yBurning back."
+    ]
+  },
+  "FireBladeMod:SpiritRendPower": {
+    "NAME": "Spirit Rend",
+    "DESCRIPTIONS": [
+      "Receive #b",
+      "% more #yBurning stacks."
+    ]
+  },
+  "FireBladeMod:SmokeScreenPower": {
+    "NAME": "Spirit Rend",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yBlock when you play a #yFire #yThorns card."
+    ]
+  },
+  "FireBladeMod:FlashPointPower": {
+    "NAME": "Flash Point",
+    "DESCRIPTIONS": [
+      "Your next #yFlame card is played twice this turn.",
+      "Your next #b",
+      " #yFlame cards are played twice this turn."
     ]
   }
 }

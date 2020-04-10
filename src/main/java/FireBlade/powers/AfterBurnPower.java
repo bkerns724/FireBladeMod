@@ -1,6 +1,5 @@
 package FireBlade.powers;
 
-import FireBlade.cards.TheFireBladeCardTags;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -12,7 +11,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.FlameBarrierPower;
 
 public class AfterBurnPower extends AbstractPower {
     public static PowerType POWER_TYPE = PowerType.BUFF;
@@ -28,8 +26,8 @@ public class AfterBurnPower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
 
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/ByrdBane32.png"), 0 ,0, 32, 32);
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/ByrdBane84.png"), 0, 0, 84, 84);
+        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/AfterBurn32.png"), 0 ,0, 32, 32);
+        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/AfterBurn84.png"), 0, 0, 84, 84);
 
         this.type = POWER_TYPE;
         this.name = (CardCrawlGame.languagePack.getPowerStrings(this.ID)).NAME;

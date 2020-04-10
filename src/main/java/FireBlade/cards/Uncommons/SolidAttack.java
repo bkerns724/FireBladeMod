@@ -37,7 +37,7 @@ public class SolidAttack extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(8);
+            upgradeDamage(7);
         }
     }
 

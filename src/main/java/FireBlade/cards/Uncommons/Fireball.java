@@ -1,6 +1,7 @@
 package FireBlade.cards.Uncommons;
 
 import FireBlade.actions.BurnAction;
+import FireBlade.cards.FireBladeCardHelper;
 import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 import basemod.abstracts.CustomCard;
@@ -26,13 +27,14 @@ public class Fireball extends CustomCard {
     public Fireball() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = this.baseMagicNumber = 7;
-        this.tags.add(TheFireBladeCardTags.BURNER);
+        this.tags.add(TheFireBladeCardTags.FLAME);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
             addToBot(new BurnAction(p, mo, baseMagicNumber));
         }
+        FireBladeCardHelper.checkForBurnerTip();
     }
 
     public void applyPowers() {
@@ -47,7 +49,7 @@ public class Fireball extends CustomCard {
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
-        magicNumber = FireBlade.actions.BurnAction.GetEstimate(AbstractDungeon.player, baseMagicNumber);
+        magicNumber = FireBlade.actions.BurnAction.GetEstimate(AbstractDungeon.player, mo, baseMagicNumber);
         isMagicNumberModified = magicNumber != baseMagicNumber;
         super.calculateCardDamage(mo);
     }

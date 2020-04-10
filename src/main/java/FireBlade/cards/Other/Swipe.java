@@ -1,13 +1,11 @@
 package FireBlade.cards.Other;
 
-import FireBlade.enums.TheFireBladeEnum;
 import basemod.abstracts.CustomCard;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.SoulboundField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -28,8 +26,9 @@ public class Swipe extends CustomCard {
 
     public Swipe() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-        this.baseDamage = 6;
-        this.isMultiDamage = true;
+        baseDamage = 6;
+        isMultiDamage = true;
+        SoulboundField.soulbound.set(this, true);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class SuddenStrikesHelper extends CustomCard {
     public static final String ID = "FireBladeMod:SuddenStrikesHelper";
-    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/StrikeFireBlade.png";
+    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/StrikeFireBlade.png";  // Should not be seen
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;

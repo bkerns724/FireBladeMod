@@ -11,7 +11,7 @@ public class TheFireBladeCardTags {
     public static AbstractCard.CardTags SMASH;
 
     @SpireEnum
-    public static AbstractCard.CardTags BURNER;
+    public static AbstractCard.CardTags FLAME;
 
     @SpireEnum
     public static AbstractCard.CardTags FIRESHIELD;

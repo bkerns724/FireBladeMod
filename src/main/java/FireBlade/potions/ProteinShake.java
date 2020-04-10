@@ -1,18 +1,15 @@
 package FireBlade.potions;
 
-import FireBlade.powers.PyroPower;
+import FireBlade.powers.FervorPower;
 import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
-import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
-import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -43,7 +40,7 @@ public class ProteinShake extends CustomPotion {
         AbstractPlayer p = AbstractDungeon.player;
         addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.getPotency()), this.getPotency()));
         addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, this.getPotency()), this.getPotency()));
-        addToBot(new ApplyPowerAction(p, p, new PyroPower(p, this.getPotency()), this.getPotency()));
+        addToBot(new ApplyPowerAction(p, p, new FervorPower(p, this.getPotency()), this.getPotency()));
     }
 
     public CustomPotion makeCopy() { return new ProteinShake();}

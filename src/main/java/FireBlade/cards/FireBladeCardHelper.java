@@ -14,7 +14,7 @@ public class FireBladeCardHelper {
     private static final TutorialStrings smashStrings =
             CardCrawlGame.languagePack.getTutorialString("FireBladeMod:SmashTip");
 
-    private static final TutorialStrings burnerStrings =
+    private static final TutorialStrings flameStrings =
             CardCrawlGame.languagePack.getTutorialString("FireBladeMod:BurnerTip");
 
     public static void checkForEnduranceTip() {
@@ -35,7 +35,7 @@ public class FireBladeCardHelper {
 
     public static void checkForBurnerTip() {
         if (FireBladeTipTracker.shouldShow(FireBladeTipTracker.TipKey.BurnerTip)) {
-            AbstractDungeon.ftue = new FtueTip(burnerStrings.LABEL[0], burnerStrings.TEXT[0]+burnerStrings.TEXT[1],
+            AbstractDungeon.ftue = new FtueTip(flameStrings.LABEL[0], flameStrings.TEXT[0]+flameStrings.TEXT[1],
                     Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, FtueTip.TipType.NO_FTUE);
             FireBladeTipTracker.neverShowAgain(FireBladeTipTracker.TipKey.BurnerTip);
         }

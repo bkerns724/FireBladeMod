@@ -26,7 +26,7 @@ public class SpinningSmash extends CustomCard {
 
     public SpinningSmash() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseDamage = 12;
+        this.baseDamage = 11;
         this.isMultiDamage = true;
         this.exhaust = true;
         this.tags.add(TheFireBladeCardTags.SMASH);
