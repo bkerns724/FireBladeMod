@@ -60,12 +60,10 @@ public class FervorPower extends AbstractPower {
 
     public void updateDescription() {
         if (this.amount > 0) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] +
-                    DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3];
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
             this.type = AbstractPower.PowerType.BUFF;
         } else {
-            this.description = DESCRIPTIONS[4] + -this.amount + DESCRIPTIONS[5] +
-                    DESCRIPTIONS[6] + -this.amount + DESCRIPTIONS[7];
+            this.description = DESCRIPTIONS[2] + -this.amount + DESCRIPTIONS[3];
             this.type = AbstractPower.PowerType.DEBUFF;
         }
     }

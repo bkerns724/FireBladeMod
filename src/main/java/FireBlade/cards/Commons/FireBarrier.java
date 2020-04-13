@@ -1,7 +1,9 @@
 package FireBlade.cards.Commons;
 
-import FireBlade.actions.FireShieldAction;
+import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.powers.BurningRetortPower;
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,8 +12,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import FireBlade.enums.TheFireBladeEnum;
-
-import static FireBlade.cards.TheFireBladeCardTags.FIRESHIELD;
 
 public class FireBarrier extends CustomCard {
 
@@ -27,20 +27,19 @@ public class FireBarrier extends CustomCard {
 
     public FireBarrier() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseBlock = 7;
-        this.magicNumber = this.baseMagicNumber = 2;
-        this.tags.add(FIRESHIELD);
+        baseBlock = 6;
+        magicNumber = baseMagicNumber = 3;
+        tags.add(TheFireBladeCardTags.FLAME);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, this.block));
-        addToBot(new FireShieldAction(p, baseMagicNumber));
+        addToBot(new ApplyPowerAction(p, p, new BurningRetortPower(p, magicNumber)));
     }
 
     public void applyPowers() {
-        magicNumber = FireShieldAction.GetEstimate(AbstractDungeon.player, baseMagicNumber);
+        magicNumber = FireBlade.actions.BurnAction.GetEstimate(AbstractDungeon.player, baseMagicNumber);
         isMagicNumberModified = magicNumber != baseMagicNumber;
-
         super.applyPowers();
     }
 
@@ -54,7 +53,7 @@ public class FireBarrier extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(3);
+            upgradeBlock(2);
             upgradeMagicNumber(1);
         }
     }

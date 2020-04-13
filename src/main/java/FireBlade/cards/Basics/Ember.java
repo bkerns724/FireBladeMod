@@ -1,9 +1,9 @@
 package FireBlade.cards.Basics;
 
 import FireBlade.actions.BurnAction;
+import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.cards.FireBladeCardHelper;
 import FireBlade.cards.TheFireBladeCardTags;
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import FireBlade.enums.TheFireBladeEnum;
 
-public class Ember extends CustomCard {
+public class Ember extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:Ember";
     public static final String NAME;

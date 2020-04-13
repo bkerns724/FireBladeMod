@@ -1,41 +1,44 @@
-package FireBlade.cards.Rares;
+package FireBlade.cards.Uncommons;
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import FireBlade.enums.TheFireBladeEnum;
+import com.megacrit.cardcrawl.powers.BerserkPower;
 
-public class HealingCrystals extends CustomCard {
+public class Vitality extends CustomCard {
 
-    public static final String ID = "FireBladeMod:HealingCrystals";
+    public static final String ID = "FireBladeMod:Vitality";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/HealingCrystals.png";
+    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/Vitality.png";
     private static final CardStrings cardStrings;
-    private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardType TYPE = CardType.POWER;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 2;
 
-    public HealingCrystals() {
+    public Vitality() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.exhaust = true;
+        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new RemoveDebuffsAction(p));
+        addToBot(new ApplyPowerAction(p, p, new BerserkPower(p, 1), 1));
     }
 
-    public AbstractCard makeCopy() { return new HealingCrystals(); }
+    public AbstractCard makeCopy() { return new Vitality(); }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            isEthereal = false;
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

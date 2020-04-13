@@ -11,13 +11,9 @@
     "NAME": "Fervor",
     "DESCRIPTIONS": [
       "Whenever you play a #yFlame card, apply an additional #b",
-      " burning. NL ",
-      "Whenever you play a #yFire #yThorns card, gain an additional #b",
-      " #yFire #yShield.",
+      " burning.",
       "Whenever you play a #yFlame card, apply #b",
-      " less burning. NL ",
-      "Whenever you play a #yFire #yThorns card, gain #b",
-      " less #yFire #yShield."
+      " less burning."
     ]
   },
   "FireBladeMod:LoseFervorPower": {
@@ -27,18 +23,11 @@
       " #yFervor."
     ]
   },
-  "FireBladeMod:DefFlamesPower": {
-    "NAME": "Defensive Flames",
-    "DESCRIPTIONS": [
-      "Whenever you play a card that applies #yBurning, gain #b",
-      " #yBlock."
-    ]
-  },
   "FireBladeMod:ReservesPower": {
     "NAME": "Reserves",
     "DESCRIPTIONS": [
       "At the end of your turn up to #b",
-      " [R] you have becomes #b",
+      " [E] you have becomes #b",
       " #yBlock."
     ]
   },
@@ -49,17 +38,11 @@
       " #yBurning."
     ]
   },
-  "FireBladeMod:TungstenPower": {
-    "NAME": "Tungsten Skin",
-    "DESCRIPTIONS": [
-      "Whenever you would lose HP, lose #b",
-      " less."
-    ]
-  },
   "FireBladeMod:ExtraStrikesPower": {
     "NAME": "Extra Strikes",
     "DESCRIPTIONS": ["Whenever you play an attack card, deal ",
       " damage to a random enemy #b",
+      " time.",
       " times."
     ]
   },
@@ -67,6 +50,7 @@
     "NAME": "Extra Strikes Plus",
     "DESCRIPTIONS": ["When you play an attack card, deal ",
       " damage to ALL enemies #b",
+      " time.",
       " times."
     ]
   },
@@ -74,18 +58,27 @@
     "NAME": "After Burn",
     "DESCRIPTIONS": [
       "Whenever you play a card, gain #b",
-      " #yFire #yShield."
+      " #yFlame #yBarrier."
     ]
   },
-  "FireBladeMod:FireShieldPower": {
-    "NAME": "Fire Shield",
+  "FireBladeMod:BlitzkreigPower": {
+    "NAME": "Blitzkreig",
     "DESCRIPTIONS": [
-      "Whenever you are attacked this turn, deal #b",
-      " damage back."
+      "Whenever you play a #ySmash or #yEndurance card, draw #b",
+      " card.",
+      " cards."
     ]
   },
-  "FireBladeMod:ClingingFlamesPower": {
-    "NAME": "Fire Shield",
+  "FireBladeMod:EternalFlamePower": {
+    "NAME": "Eternal Flame",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add #b",
+      " Ember into your hand.",
+      " Embers into your hand."
+    ]
+  },
+  "FireBladeMod:FlamingArmorPower": {
+    "NAME": "Flaming Armor",
     "DESCRIPTIONS": [
       "Whenever you are attacked this turn, apply #b",
       " #yBurning back."
@@ -94,15 +87,16 @@
   "FireBladeMod:SpiritRendPower": {
     "NAME": "Spirit Rend",
     "DESCRIPTIONS": [
-      "Receive #b",
-      "% more #yBurning stacks."
+      "Receives double #yBurning from the next #b",
+      " application.",
+      " applications."
     ]
   },
   "FireBladeMod:SmokeScreenPower": {
     "NAME": "Spirit Rend",
     "DESCRIPTIONS": [
       "Gain #b",
-      " #yBlock when you play a #yFire #yThorns card."
+      " #yBlock when you play a #yFlame card."
     ]
   },
   "FireBladeMod:FlashPointPower": {
@@ -111,6 +105,34 @@
       "Your next #yFlame card is played twice this turn.",
       "Your next #b",
       " #yFlame cards are played twice this turn."
+    ]
+  },
+  "FireBladeMod:BurningRetortPower": {
+    "NAME": "Burning Retort",
+    "DESCRIPTIONS": [
+      "The next time you are attacked this turn, apply #b",
+      " #yBurning back."
+    ]
+  },
+  "FireBladeMod:BuildUpPower": {
+    "NAME": "Build Up",
+    "DESCRIPTIONS": [
+      "Whenever you play a Skill card, gain #b",
+      " #yVigor."
+    ]
+  },
+  "FireBladeMod:BuildUpPlusPower": {
+    "NAME": "Build Up Plus",
+    "DESCRIPTIONS": [
+      "Whenever you play a non-Attack card, gain #b",
+      " #yVigor."
+    ]
+  },
+  "FireBladeMod:AbsorbEnergyPower": {
+    "NAME": "Absorb Energy",
+    "DESCRIPTIONS": [
+      "The next time you receive unblocked attack damage, gain #b",
+      " #yStrength."
     ]
   }
 }

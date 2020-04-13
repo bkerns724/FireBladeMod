@@ -1,44 +1,45 @@
 package FireBlade.cards.Uncommons;
 
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
+import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.powers.AbsorbEnergyPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import FireBlade.enums.TheFireBladeEnum;
-import com.megacrit.cardcrawl.powers.BerserkPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
-public class Vigor extends CustomCard {
+public class AbsorbEnergy extends CustomFireBladeCard {
 
-    public static final String ID = "FireBladeMod:Vigor";
+    public static final String ID = "FireBladeMod:AbsorbEnergy";
+    public static final String PowerID = "FireBladeMod:AbsorbEnergyPower";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/Vigor.png";
+    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/AbsorbEnergy.png";
     private static final CardStrings cardStrings;
-    private static final CardType TYPE = CardType.POWER;
+    private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
+    private static final CardTarget TARGET = CardTarget.NONE;
+    private static final int COST = 1;
 
-    public Vigor() {
+    public AbsorbEnergy() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        isEthereal = true;
+        this.magicNumber = this.baseMagicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new BerserkPower(p, 1), 1));
+        addToBot(new ApplyPowerAction(p, p, new AbsorbEnergyPower(p, magicNumber), magicNumber));
     }
 
-    public AbstractCard makeCopy() { return new Vigor(); }
+    public AbstractCard makeCopy() { return new AbsorbEnergy(); }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            isEthereal = false;
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(1);
         }
     }
 

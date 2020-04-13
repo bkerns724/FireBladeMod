@@ -3,50 +3,43 @@ package FireBlade.cards.Rares;
 import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.powers.FervorPower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
-public class Steroids extends CustomFireBladeCard {
+public class SelfConsumption extends CustomFireBladeCard {
 
-    public static final String ID = "FireBladeMod:Steroids";
+    public static final String ID = "FireBladeMod:SelfConsumption";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/Steroids.png";
+    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/SelfConsumption.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 0;
 
-    public Steroids() {
+    public SelfConsumption() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.exhaust = true;
-        magicNumber = baseMagicNumber = 2;
-        magicNumberTwo = baseMagicNumberTwo = 1;
+        magicNumber = baseMagicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DrawCardAction(p, magicNumber));
-        addToBot(new GainEnergyAction(magicNumber));
-        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, -1), -1));
-        addToBot(new ApplyPowerAction(p, p, new FervorPower(p, -1), -1));
+        addToBot(new ApplyPowerAction(p, p, new FervorPower(p, magicNumber), magicNumber));
+        addToBot(new LoseHPAction(p, p, magicNumber, AbstractGameAction.AttackEffect.FIRE));
     }
 
-    public AbstractCard makeCopy() { return new Steroids(); }
+    public AbstractCard makeCopy() { return new SelfConsumption(); }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.exhaust = false;
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(2);
         }
     }
 

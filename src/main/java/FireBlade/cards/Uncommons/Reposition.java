@@ -26,7 +26,7 @@ public class Reposition extends CustomCard {
 
     public Reposition() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -38,7 +38,7 @@ public class Reposition extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
         }
     }
 

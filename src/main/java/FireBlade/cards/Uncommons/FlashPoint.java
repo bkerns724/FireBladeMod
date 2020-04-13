@@ -43,6 +43,8 @@ public class FlashPoint extends CustomCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

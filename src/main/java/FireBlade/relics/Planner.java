@@ -24,7 +24,6 @@ public class Planner extends CustomRelic {
             if (card.hasTag(TheFireBladeCardTags.ENDURANCE)) {
                 card.baseBlock -= dexLoss;
                 card.selfRetain = true;
-                card.rawDescription = "Retain. NL " + card.rawDescription;
                 card.initializeDescription();
             }
         }

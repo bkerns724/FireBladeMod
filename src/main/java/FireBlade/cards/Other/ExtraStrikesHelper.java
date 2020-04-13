@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class SuddenStrikesHelper extends CustomCard {
-    public static final String ID = "FireBladeMod:SuddenStrikesHelper";
+public class ExtraStrikesHelper extends CustomCard {
+    public static final String ID = "FireBladeMod:ExtraStrikesHelper";
     public static final String IMG_PATH = "theFireBladeResources/images/cardImages/StrikeFireBlade.png";  // Should not be seen
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -22,7 +22,7 @@ public class SuddenStrikesHelper extends CustomCard {
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
     private static int COST = 1;
 
-    public SuddenStrikesHelper() {
+    public ExtraStrikesHelper() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         this.baseDamage = 2;
     }

@@ -1,6 +1,6 @@
 package FireBlade.powers;
 
-import FireBlade.cards.Other.SuddenStrikesHelper;
+import FireBlade.cards.Other.ExtraStrikesHelper;
 import basemod.interfaces.OnPowersModifiedSubscriber;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -22,7 +22,7 @@ public class ExtraStrikesPlusPower extends AbstractPower implements OnPowersModi
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("FireBladeMod:ExtraStrikesPlusPower");
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private SuddenStrikesHelper helperCard;
+    private ExtraStrikesHelper helperCard;
 
     public ExtraStrikesPlusPower(AbstractCreature owner, int amount) {
         this.ID = "FireBladeMod:ExtraStrikesPlusPower";
@@ -35,7 +35,7 @@ public class ExtraStrikesPlusPower extends AbstractPower implements OnPowersModi
         this.amount = amount;
         this.name = (CardCrawlGame.languagePack.getPowerStrings(this.ID)).NAME;
 
-        this.helperCard = new SuddenStrikesHelper();
+        this.helperCard = new ExtraStrikesHelper();
         this.helperCard.upgrade();
 
         updateDescription();
@@ -64,6 +64,9 @@ public class ExtraStrikesPlusPower extends AbstractPower implements OnPowersModi
         else
             colorString = "#r";
 
-        this.description = DESCRIPTIONS[0] + colorString + helperCard.damage + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+        if (amount == 1)
+            this.description = DESCRIPTIONS[0] + colorString + helperCard.damage + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+        else
+            this.description = DESCRIPTIONS[0] + colorString + helperCard.damage + DESCRIPTIONS[1] + amount + DESCRIPTIONS[3];
     }
 }

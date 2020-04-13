@@ -1,7 +1,6 @@
 package FireBlade.cards.Basics;
 
-import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,7 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import FireBlade.enums.TheFireBladeEnum;
 
-public class DefendFireBlade extends CustomCard
+public class DefendFireBlade extends CustomFireBladeCard
 {
     public static final String ID = "FireBladeMod:DefendFireBlade";
     public static final String NAME;

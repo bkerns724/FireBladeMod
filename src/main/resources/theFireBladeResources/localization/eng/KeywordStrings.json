@@ -8,13 +8,13 @@
     "DESCRIPTION": "Burning creatures lose HP at the start of their turn."
   },
   {
-    "PROPER_NAME": "Fire\u00a0Shield",
+    "PROPER_NAME": "Flame\u00a0Barrier",
     "NAMES": [
-      "fire\u00a0shield",
-      "Fire\u00a0shield",
-      "Fire\u00a0Shield"
+      "Flame\u00a0Barrier",
+      "Flame\u00a0barrier",
+      "flame\u00a0barrier"
     ],
-    "DESCRIPTION": "When receiving attack damage, deals damage back.  Lasts one turn."
+    "DESCRIPTION": "When receiving attack damage, deals damage back. NL Lasts one turn."
   },
   {
     "PROPER_NAME": "Fervor",
@@ -22,7 +22,7 @@
       "Fervor",
       "fervor"
     ],
-    "DESCRIPTION": "Fervor increases #yBurning applied by #yFlame cards. NL Fervor increases #yFire #yShield gained from #yFire #yThorns cards."
+    "DESCRIPTION": "Fervor increases #yBurning applied by #yFlame cards."
   },
   {
     "PROPER_NAME": "Flame",
@@ -31,15 +31,6 @@
       "flame"
     ],
     "DESCRIPTION": "Flame cards apply #yBurning."
-  },
-  {
-    "PROPER_NAME": "Fire\u00a0Thorns",
-    "NAMES": [
-      "Fire\u00a0Thorns",
-      "Fire\u00a0thorns",
-      "fire\u00a0thorns"
-    ],
-    "DESCRIPTION": "Fire Thorns cards grant #yFire #yShield."
   },
   {
     "PROPER_NAME": "Smash",
@@ -65,7 +56,7 @@
       "swipe",
       "swipes"
     ],
-    "DESCRIPTION": "Swipes are #b cost attack cards that hit ALL enemies and cannot be removed."
+    "DESCRIPTION": "Swipes are #b0 cost attack cards that hit ALL enemies and cannot be removed."
   },
   {
     "PROPER_NAME": "Spirit\u00a0Rend",
@@ -74,6 +65,23 @@
       "Spirit\u00a0rend",
       "spirit\u00a0rend"
     ],
-    "DESCRIPTION": "Spirit Rent creatures take 25% more Burning per stack."
+    "DESCRIPTION": "Spirit Rent creatures take receive double #yBurning."
+  },
+  {
+    "PROPER_NAME": "Vigor",
+    "NAMES": [
+      "Vigor",
+      "vigor"
+    ],
+    "DESCRIPTION": "Vigor adds damage to your next attack."
+  },
+  {
+    "PROPER_NAME": "Plated\u00a0Armor",
+    "NAMES": [
+      "Plated\u00a0Armor",
+      "Plated\u00a0armor",
+      "plated\u00a0armor"
+    ],
+    "DESCRIPTION": "Plated Armor grants block at the end of turn. NL It is reduced by 1 when receiving unblocked attack damage."
   }
 ]

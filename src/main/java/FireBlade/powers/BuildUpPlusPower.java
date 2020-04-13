@@ -11,22 +11,22 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.FlameBarrierPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 
-public class AfterBurnPower extends AbstractPower {
+public class BuildUpPlusPower extends AbstractPower {
     public static PowerType POWER_TYPE = PowerType.BUFF;
 
-    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("FireBladeMod:AfterBurnPower");
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("FireBladeMod:BuildUpPlusPower");
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public AfterBurnPower(AbstractCreature owner, int amount) {
-        this.ID = "FireBladeMod:AfterBurnPower";
+    public BuildUpPlusPower(AbstractCreature owner, int amount) {
+        this.ID = "FireBladeMod:BuildUpPlusPower";
         this.owner = owner;
         this.amount = amount;
 
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/AfterBurn32.png"), 0 ,0, 32, 32);
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/AfterBurn84.png"), 0, 0, 84, 84);
+        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/BuildUpPlus32.png"), 0 ,0, 32, 32);
+        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/BuildUpPlus84.png"), 0, 0, 84, 84);
 
         this.type = POWER_TYPE;
         this.name = (CardCrawlGame.languagePack.getPowerStrings(this.ID)).NAME;
@@ -36,7 +36,9 @@ public class AfterBurnPower extends AbstractPower {
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
         AbstractPlayer p = AbstractDungeon.player;
-        addToBot(new ApplyPowerAction(p, p, new FlameBarrierPower(p, this.amount), this.amount));
+        if (card.type != AbstractCard.CardType.ATTACK){
+            addToBot(new ApplyPowerAction(p, p, new VigorPower(p, amount), amount));
+        }
     }
 
     public void updateDescription() { this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]; }

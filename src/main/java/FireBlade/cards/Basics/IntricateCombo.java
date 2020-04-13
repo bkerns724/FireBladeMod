@@ -1,6 +1,6 @@
 package FireBlade.cards.Basics;
 
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import FireBlade.enums.TheFireBladeEnum;
 
-public class IntricateCombo extends CustomCard
+public class IntricateCombo extends CustomFireBladeCard
 {
     public static final String ID = "FireBladeMod:IntricateCombo";
     public static final String NAME;
@@ -42,8 +42,6 @@ public class IntricateCombo extends CustomCard
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         }
-
-
     }
 
     public AbstractCard makeCopy() { return new IntricateCombo(); }

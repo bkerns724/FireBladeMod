@@ -3,52 +3,64 @@ package FireBlade.actions;
 import FireBlade.powers.BurningPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class BurnAction extends AbstractGameAction {
-    private AbstractPlayer p;
-    private AbstractCreature m;
+    private AbstractCreature source;
+    private AbstractCreature target;
     private int baseBurn;
     private int hellfire;
     private boolean ignoreFervor;
+    private static final String RendID = "FireBladeMod:SpiritRendPower";
 
-    public BurnAction(AbstractPlayer p, AbstractCreature m, int baseBurn, int hellfire, boolean ignoreFervor) {
-        this.p = p;
-        this.duration = Settings.ACTION_DUR_XFAST;
-        this.actionType = ActionType.SPECIAL;
-        this.m = m;
+    public BurnAction(AbstractCreature source, AbstractCreature target, int baseBurn, int hellfire, boolean ignoreFervor) {
+        this.source = source;
+        duration = Settings.ACTION_DUR_XFAST;
+        actionType = ActionType.SPECIAL;
+        this.target = target;
         this.baseBurn = baseBurn;
         this.hellfire = hellfire;
         this.ignoreFervor = ignoreFervor;
     }
 
-    public BurnAction(AbstractPlayer p, AbstractCreature m, int baseBurn, int hellfire) {
-        this(p, m, baseBurn, hellfire, false);
+    public BurnAction(AbstractCreature source, AbstractCreature target, int baseBurn, int hellfire) {
+        this(source, target, baseBurn, hellfire, false);
     }
 
-    public BurnAction(AbstractPlayer p, AbstractCreature m, int baseBurn) {
-        this(p, m, baseBurn, 1, false);
+    public BurnAction(AbstractCreature source, AbstractCreature target, int baseBurn) {
+        this(source, target, baseBurn, 1, false);
     }
 
     public void update() {
-        int burnAmount = GetEstimate(p, m, baseBurn, hellfire, ignoreFervor);
+        int burnAmount = GetEstimate(source, target, baseBurn, hellfire, ignoreFervor);
 
         if (burnAmount > 0) {
-            addToTop(new ApplyPowerAction(m, p, new BurningPower(m, p, burnAmount), burnAmount));
+            addToTop(new ApplyPowerAction(target, source, new BurningPower(target, source, burnAmount), burnAmount));
             CardCrawlGame.sound.play("ATTACK_FIRE", 0.1F);
+
+            if (target.hasPower(RendID)) {
+                AbstractPower rendPower = target.getPower(RendID);
+                if (rendPower.amount > 1) {
+                    rendPower.reducePower(1);
+                    rendPower.updateDescription();
+                }
+                else
+                    addToTop(new RemoveSpecificPowerAction(target, source, RendID));
+            }
         }
 
         this.isDone = true;
     }
 
-    public static int GetEstimate(AbstractPlayer p, int realMagicNumber, int hell, boolean ignoreFervor) {
+    public static int GetEstimate(AbstractCreature source, int realMagicNumber, int hell, boolean ignoreFervor) {
         int fireAmount = realMagicNumber;
 
-        if (p.hasPower("FireBladeMod:FervorPower") && !ignoreFervor)
-            fireAmount += hell*(p.getPower("FireBladeMod:FervorPower").amount);
+        if (source.hasPower("FireBladeMod:FervorPower") && !ignoreFervor)
+            fireAmount += hell*(source.getPower("FireBladeMod:FervorPower").amount);
 
         if (fireAmount < 0)
             fireAmount = 0;
@@ -56,20 +68,17 @@ public class BurnAction extends AbstractGameAction {
         return fireAmount;
     }
 
-    public static int GetEstimate(AbstractPlayer p, AbstractCreature m, int realMagicNumber, int hell, boolean ignoreFervor) {
-        if (m == null)
-            return GetEstimate(p, realMagicNumber, hell, ignoreFervor);
+    public static int GetEstimate(AbstractCreature source, AbstractCreature target, int realMagicNumber, int hell, boolean ignoreFervor) {
+        if (target == null)
+            return GetEstimate(source, realMagicNumber, hell, ignoreFervor);
 
         int fireAmount = realMagicNumber;
 
-        if (p.hasPower("FireBladeMod:FervorPower") && !ignoreFervor)
-            fireAmount += hell*(p.getPower("FireBladeMod:FervorPower").amount);
+        if (source.hasPower("FireBladeMod:FervorPower") && !ignoreFervor)
+            fireAmount += hell*(source.getPower("FireBladeMod:FervorPower").amount);
 
-        if (m.hasPower("FireBladeMod:SpiritRendPower")) {
-            int rentAmount = m.getPower("FireBladeMod:SpiritRendPower").amount;
-            float burnMult = 1F + rentAmount*0.25F;
-            fireAmount *= burnMult;
-        }
+        if (target.hasPower(RendID))
+            fireAmount *= 2;
 
         if (fireAmount < 0)
             fireAmount = 0;
@@ -77,19 +86,19 @@ public class BurnAction extends AbstractGameAction {
         return fireAmount;
     }
 
-    public static int GetEstimate(AbstractPlayer p, int realMagicNumber) {
-        return GetEstimate(p, realMagicNumber, 1, false);
+    public static int GetEstimate(AbstractCreature source, int realMagicNumber) {
+        return GetEstimate(source, realMagicNumber, 1, false);
     }
 
-    public static int GetEstimate(AbstractPlayer p, int realMagicNumber, int hellfire) {
-        return GetEstimate(p, realMagicNumber, hellfire, false);
+    public static int GetEstimate(AbstractCreature source, int realMagicNumber, int hellfire) {
+        return GetEstimate(source, realMagicNumber, hellfire, false);
     }
 
-    public static int GetEstimate(AbstractPlayer p, AbstractCreature m, int realMagicNumber) {
-        return GetEstimate(p, m, realMagicNumber, 1, false);
+    public static int GetEstimate(AbstractCreature source, AbstractCreature target, int realMagicNumber) {
+        return GetEstimate(source, target, realMagicNumber, 1, false);
     }
 
-    public static int GetEstimate(AbstractPlayer p, AbstractCreature m, int realMagicNumber, int hellfire) {
-        return GetEstimate(p, m, realMagicNumber, hellfire, false);
+    public static int GetEstimate(AbstractCreature source, AbstractCreature target, int realMagicNumber, int hellfire) {
+        return GetEstimate(source, target, realMagicNumber, hellfire, false);
     }
 }

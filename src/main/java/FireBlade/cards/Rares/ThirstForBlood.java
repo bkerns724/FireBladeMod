@@ -29,16 +29,13 @@ public class ThirstForBlood extends CustomFireBladeCard {
 
     public ThirstForBlood() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseDamage = 15;
-        this.magicNumber = this.baseMagicNumber = 4;
-        this.magicNumberTwo = this.baseMagicNumberTwo = 1;
+        this.baseDamage = 12;
+        this.magicNumber = this.baseMagicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-        addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, -this.magicNumberTwo), -this.magicNumberTwo));
-        addToBot(new ApplyPowerAction(p, p, new FervorPower(p, -this.magicNumberTwo), -this.magicNumberTwo));
     }
 
     public AbstractCard makeCopy() { return new ThirstForBlood(); }
@@ -46,7 +43,7 @@ public class ThirstForBlood extends CustomFireBladeCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(5);
+            upgradeDamage(3);
             upgradeMagicNumber(1);
         }
     }

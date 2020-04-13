@@ -1,9 +1,9 @@
 package FireBlade.cards.Commons;
 
+import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.cards.FireBladeCardHelper;
 import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class IronEndurance extends CustomCard {
+public class IronEndurance extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:IronEndurance";
     public static final String NAME;

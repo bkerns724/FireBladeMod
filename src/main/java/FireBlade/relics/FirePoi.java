@@ -1,7 +1,6 @@
 package FireBlade.relics;
 
 import FireBlade.cards.TheFireBladeCardTags;
-import FireBlade.powers.FireShieldPower;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -10,6 +9,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.FlameBarrierPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class FirePoi extends CustomRelic {
@@ -32,7 +32,7 @@ public class FirePoi extends CustomRelic {
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 
         AbstractPlayer p = AbstractDungeon.player;
-        addToBot(new ApplyPowerAction(p, p, new FireShieldPower(p, fireThorns), fireThorns));
+        addToBot(new ApplyPowerAction(p, p, new FlameBarrierPower(p, fireThorns), fireThorns));
     }
 
     public String getUpdatedDescription() { return this.DESCRIPTIONS[0] + fireThorns + this.DESCRIPTIONS[1]; }
