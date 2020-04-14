@@ -26,7 +26,7 @@ public class PyromanticFocus extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new PyromanticFocusAction(p, freeToPlayOnce, energyOnUse));
+        addToBot(new PyromanticFocusAction(p, upgraded, freeToPlayOnce, energyOnUse));
     }
 
     public AbstractCard makeCopy() { return new PyromanticFocus(); }

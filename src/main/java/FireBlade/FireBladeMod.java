@@ -3,7 +3,7 @@ package FireBlade;
 import FireBlade.cards.Other.Swipe;
 import FireBlade.other.FireBladeSettings;
 import FireBlade.other.FireBladeTipTracker;
-import FireBlade.potions.LiquidSteroids;
+import FireBlade.potions.VigorPotion;
 import FireBlade.potions.NapalmFlask;
 import FireBlade.potions.ProteinShake;
 import FireBlade.variables.MagicNumberTwo;
@@ -43,7 +43,7 @@ public class FireBladeMod implements
         PostInitializeSubscriber,
         OnPowersModifiedSubscriber {
 
-    public static final Logger logger = LogManager.getLogger(FireBladeMod.class.getName());
+    private static final Logger logger = LogManager.getLogger(FireBladeMod.class.getName());
     private static String modID;
 
     private static final Color CUSTOM_COLOR = CardHelper.getColor(246.0F, 154.0F, 45.0F);
@@ -260,7 +260,7 @@ public class FireBladeMod implements
     public void receivePostInitialize() {
         BaseMod.addPotion(NapalmFlask.class, Color.RED.cpy(), null, Color.ORANGE.cpy(), NapalmFlask.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
         BaseMod.addPotion(ProteinShake.class, Color.TAN.cpy(), Color.BROWN.cpy(), null, ProteinShake.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
-        BaseMod.addPotion(LiquidSteroids.class, Color.RED.cpy(), Color.BLACK.cpy(), null, LiquidSteroids.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
+        BaseMod.addPotion(VigorPotion.class, Color.RED.cpy(), Color.BLACK.cpy(), null, VigorPotion.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
 
         logger.info("Load Badge Image and make settings panel");
         Texture badgeTexture = new Texture("theFireBladeResources/images/Badge.png");

@@ -205,7 +205,7 @@
   },
   "FireBladeMod:FireBarrier": {
     "NAME": "FireBarrier",
-    "DESCRIPTION": "fireblademod:Flame. NL Gain !B! Block. NL The next time you are attacked this turn, deal !M! fireblademod:Burning back."
+    "DESCRIPTION": "Gain !B! Block. NL The next time you are attacked this turn, deal !M! damage back."
   },
   "FireBladeMod:FlashPoint": {
     "NAME": "Flash Point",

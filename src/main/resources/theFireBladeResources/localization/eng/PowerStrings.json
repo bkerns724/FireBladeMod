@@ -107,13 +107,6 @@
       " #yFlame cards are played twice this turn."
     ]
   },
-  "FireBladeMod:BurningRetortPower": {
-    "NAME": "Burning Retort",
-    "DESCRIPTIONS": [
-      "The next time you are attacked this turn, apply #b",
-      " #yBurning back."
-    ]
-  },
   "FireBladeMod:BuildUpPower": {
     "NAME": "Build Up",
     "DESCRIPTIONS": [

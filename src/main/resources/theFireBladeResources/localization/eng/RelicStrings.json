@@ -3,7 +3,7 @@
     "NAME": "Red Star",
     "FLAVOR": "You feel a desire to feed on the powerful.",
     "DESCRIPTIONS": [
-      "Whenever you defeat an Elite encounter, gain #b",
+      "Whenever you defeat an Elite room, gain #b",
       " Max HP."
     ]
   },
@@ -11,7 +11,7 @@
     "NAME": "Crimson Star",
     "FLAVOR": "Your hunger grows.",
     "DESCRIPTIONS": [
-      "Replaces #rRed #rStar. Whenever you defeat an Elite encounter, gain #b",
+      "Replaces #rRed #rStar. Whenever you defeat an room, gain #b",
       " Max HP."
     ]
   },
@@ -19,7 +19,7 @@
     "NAME": "Golden Star",
     "FLAVOR": "You feel greedier just holding it.",
     "DESCRIPTIONS": [
-      "Whenever you defeat an Elite encounter, gain #b",
+      "Whenever you defeat an Elite room, gain #b",
       " #yGold."
     ]
   },

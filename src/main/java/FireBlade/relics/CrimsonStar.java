@@ -4,7 +4,6 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
@@ -43,7 +42,7 @@ public class CrimsonStar extends CustomRelic {
         // Below statement should always be true if this relic is being obtained.
         if (AbstractDungeon.player.hasRelic("FireBladeMod:RedStar")) {
             for (int i = 0; i < AbstractDungeon.player.relics.size(); i++) {
-                if (((AbstractRelic)AbstractDungeon.player.relics.get(i)).relicId.equals("FireBladeMod:RedStar")) {
+                if ((AbstractDungeon.player.relics.get(i)).relicId.equals("FireBladeMod:RedStar")) {
                     instantObtain(AbstractDungeon.player, i,true);
                     break;
                 }

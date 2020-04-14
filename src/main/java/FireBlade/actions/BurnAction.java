@@ -20,7 +20,7 @@ public class BurnAction extends AbstractGameAction {
     public BurnAction(AbstractCreature source, AbstractCreature target, int baseBurn, int hellfire, boolean ignoreFervor) {
         this.source = source;
         duration = Settings.ACTION_DUR_XFAST;
-        actionType = ActionType.SPECIAL;
+        actionType = ActionType.DEBUFF;
         this.target = target;
         this.baseBurn = baseBurn;
         this.hellfire = hellfire;

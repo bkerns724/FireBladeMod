@@ -13,12 +13,11 @@
       " #yStrength, #yDexterity, and #yFervor."
     ]
   },
-  "FireBladeMod:LiquidSteroids": {
-    "NAME": "Liquid Steroids",
+  "FireBladeMod:VigorPotion": {
+    "NAME": "Vigor Potion",
     "DESCRIPTIONS": [
-      "Draw #b",
-      " cards and gain #b",
-      " #yEnergy."
+      "Gain #b",
+      " #yVigor."
     ]
   }
 }
