@@ -1,7 +1,6 @@
 package FireBlade.cards.Rares;
 
 import FireBlade.enums.TheFireBladeEnum;
-import FireBlade.powers.ExtraStrikesPlusPower;
 import FireBlade.powers.ExtraStrikesPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -31,10 +30,7 @@ public class ExtraStrikes extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!upgraded)
-            addToBot(new ApplyPowerAction(p, p, new ExtraStrikesPower(p, this.magicNumber), this.magicNumber));
-        else
-            addToBot(new ApplyPowerAction(p, p, new ExtraStrikesPlusPower(p, this.magicNumber), this.magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new ExtraStrikesPower(p, this.magicNumber), this.magicNumber));
     }
 
     public AbstractCard makeCopy() { return new ExtraStrikes(); }
@@ -42,8 +38,7 @@ public class ExtraStrikes extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(0);
         }
     }
 

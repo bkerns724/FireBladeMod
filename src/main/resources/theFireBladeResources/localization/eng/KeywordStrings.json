@@ -83,5 +83,15 @@
       "plated\u00a0armor"
     ],
     "DESCRIPTION": "Plated Armor grants block at the end of turn. NL It is reduced by 1 when receiving unblocked attack damage."
+  },
+  {
+    "PROPER_NAME": "Swipe",
+    "NAMES": [
+      "Swipe",
+      "Swipes",
+      "swipe",
+      "swipes"
+    ],
+    "DESCRIPTION": "Swipes are 0 cost attack cards which deal 6 damage to ALL enemies."
   }
 ]

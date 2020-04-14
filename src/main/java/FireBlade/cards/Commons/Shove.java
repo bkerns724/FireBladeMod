@@ -1,6 +1,7 @@
 package FireBlade.cards.Commons;
 
 import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.powers.EnergizedFireBladePower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -9,10 +10,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.EnergizedPower;
 
 public class Shove extends CustomCard {
 
@@ -33,7 +32,7 @@ public class Shove extends CustomCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        addToBot(new ApplyPowerAction(p, p, new EnergizedPower(p, 1), 1));
+        addToBot(new ApplyPowerAction(p, p, new EnergizedFireBladePower(p, 1), 1));
     }
 
     public AbstractCard makeCopy() { return new Shove(); }

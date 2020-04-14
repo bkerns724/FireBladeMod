@@ -1,5 +1,7 @@
 package FireBlade.cards.Rares;
 
+import FireBlade.cards.FireBladeCardHelper;
+import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.powers.FlamingArmorPower;
 import basemod.abstracts.CustomCard;
@@ -7,6 +9,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -20,23 +23,44 @@ public class FlamingArmor extends CustomCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     public FlamingArmor() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 4;
+        tags.add(TheFireBladeCardTags.FLAME);
+        FireBladeCardHelper.checkForBurnerTip();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new FlamingArmorPower(p, this.magicNumber), this.magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new FlamingArmorPower(p, magicNumber), magicNumber));
+    }
+
+    public void applyPowers() {
+        magicNumber = FireBlade.actions.BurnAction.GetEstimate(AbstractDungeon.player, baseMagicNumber);
+        isMagicNumberModified = magicNumber != baseMagicNumber;
+        super.applyPowers();
+    }
+
+    public void onMoveToDiscard() {
+        magicNumber = baseMagicNumber;
+        isMagicNumberModified = false;
+    }
+
+    public void calculateCardDamage(AbstractMonster mo) {
+        magicNumber = FireBlade.actions.BurnAction.GetEstimate(AbstractDungeon.player, mo, baseMagicNumber);
+        isMagicNumberModified = magicNumber != baseMagicNumber;
+        super.calculateCardDamage(mo);
     }
 
     public AbstractCard makeCopy() { return new FlamingArmor(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            selfRetain = true;
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

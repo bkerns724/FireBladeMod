@@ -1,6 +1,6 @@
 package FireBlade.cards.Rares;
 
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,9 +8,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import FireBlade.enums.TheFireBladeEnum;
-import com.megacrit.cardcrawl.powers.PlatedArmorPower;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.MetallicizePower;
 
-public class Shell extends CustomCard {
+public class Shell extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:Shell";
     public static final String NAME;
@@ -25,10 +26,12 @@ public class Shell extends CustomCard {
     public Shell() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 6;
+        magicNumberTwo = baseMagicNumberTwo = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new MetallicizePower(p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, -magicNumberTwo), -magicNumberTwo));
     }
 
     public AbstractCard makeCopy() { return new Shell(); }

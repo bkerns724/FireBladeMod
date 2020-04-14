@@ -46,14 +46,6 @@
       " times."
     ]
   },
-  "FireBladeMod:ExtraStrikesPlusPower": {
-    "NAME": "Extra Strikes Plus",
-    "DESCRIPTIONS": ["When you play an attack card, deal ",
-      " damage to ALL enemies #b",
-      " time.",
-      " times."
-    ]
-  },
   "FireBladeMod:AfterBurnPower": {
     "NAME": "After Burn",
     "DESCRIPTIONS": [
@@ -93,7 +85,7 @@
     ]
   },
   "FireBladeMod:SmokeScreenPower": {
-    "NAME": "Spirit Rend",
+    "NAME": "Smoke Screen",
     "DESCRIPTIONS": [
       "Gain #b",
       " #yBlock when you play a #yFlame card."
@@ -114,18 +106,18 @@
       " #yVigor."
     ]
   },
-  "FireBladeMod:BuildUpPlusPower": {
-    "NAME": "Build Up Plus",
-    "DESCRIPTIONS": [
-      "Whenever you play a non-Attack card, gain #b",
-      " #yVigor."
-    ]
-  },
   "FireBladeMod:AbsorbEnergyPower": {
     "NAME": "Absorb Energy",
     "DESCRIPTIONS": [
       "The next time you receive unblocked attack damage, gain #b",
       " #yStrength."
+    ]
+  },
+  "FireBladeMod:EnergizedFireBladePower": {
+    "NAME": "Energized",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " [E] next turn."
     ]
   }
 }

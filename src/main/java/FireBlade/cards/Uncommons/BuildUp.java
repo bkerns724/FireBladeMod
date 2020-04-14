@@ -1,7 +1,6 @@
 package FireBlade.cards.Uncommons;
 
 import FireBlade.enums.TheFireBladeEnum;
-import FireBlade.powers.BuildUpPlusPower;
 import FireBlade.powers.BuildUpPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -21,18 +20,15 @@ public class BuildUp extends CustomCard {
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 1;
+    private static final int COST = 2;
 
     public BuildUp() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!upgraded)
-            addToBot(new ApplyPowerAction(p, p, new BuildUpPower(p, magicNumber), magicNumber));
-        else
-            addToBot(new ApplyPowerAction(p, p, new BuildUpPlusPower(p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new BuildUpPower(p, magicNumber), magicNumber));
     }
 
     public AbstractCard makeCopy() { return new BuildUp(); }
@@ -40,8 +36,7 @@ public class BuildUp extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(1);
         }
     }
 

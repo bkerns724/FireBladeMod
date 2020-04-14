@@ -4,7 +4,6 @@ import FireBlade.cards.Other.Swipe;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.colorless.Bite;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -34,7 +33,7 @@ public class TigerClaw extends CustomRelic {
                 p.masterDeck.removeCard(card);
         }
 
-        for(int i = 0; i < 5; ++i) {
+        for(int i = 0; i < swipeCount; ++i) {
             AbstractCard c = new Swipe();
             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
         }

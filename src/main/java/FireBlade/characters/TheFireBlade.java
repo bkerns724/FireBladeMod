@@ -86,7 +86,7 @@ public class TheFireBlade extends CustomPlayer {
     public ArrayList<String> getStartingDeck() {
         logger.info("Start TheFireBlade getStartingDeck");
 
-        ArrayList<String> retVal = new ArrayList<String>();
+        ArrayList<String> retVal = new ArrayList<>();
         retVal.add("FireBladeMod:StrikeFireBlade");
         retVal.add("FireBladeMod:StrikeFireBlade");
         retVal.add("FireBladeMod:StrikeFireBlade");
@@ -110,7 +110,7 @@ public class TheFireBlade extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         logger.info("Start TheFireBlade getStartingRelics");
 
-        ArrayList<String> retVal = new ArrayList<String>();
+        ArrayList<String> retVal = new ArrayList<>();
         retVal.add("FireBladeMod:RedStar");
 
         logger.info("End TheFireBlade getStartingRelics");
@@ -230,10 +230,10 @@ public class TheFireBlade extends CustomPlayer {
     }
 
     public List<CutscenePanel> getCutscenePanels() {
-        List<CutscenePanel> panels = new ArrayList<CutscenePanel>();
+        List<CutscenePanel> panels = new ArrayList<>();
         panels.add(new CutscenePanel("theFireBladeResources/images/fireBladeCharacter/victory/panel_1.png"));
         panels.add(new CutscenePanel("theFireBladeResources/images/fireBladeCharacter/victory/panel_2.png"));
-        panels.add(new CutscenePanel("theFireBladeResources/images/fireBladeCharacter/victory/panel_3.png", "PartyHorn"));
+        panels.add(new CutscenePanel("theFireBladeResources/images/fireBladeCharacter/victory/panel_3.png", "FireBladeMod:PartyHorn"));
         return panels;
     }
 

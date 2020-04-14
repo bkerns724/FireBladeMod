@@ -90,7 +90,7 @@
   },
   "FireBladeMod:Flames": {
     "NAME": "Flames",
-    "DESCRIPTION": "Apply !M! fireblademod:Burning."
+    "DESCRIPTION": "fireblademod:Flame. NL Apply !M! fireblademod:Burning."
   },
   "FireBladeMod:Turtle": {
     "NAME": "Turtle",
@@ -204,8 +204,8 @@
     "DESCRIPTION": "Scry !M!."
   },
   "FireBladeMod:FireBarrier": {
-    "NAME": "FireBarrier",
-    "DESCRIPTION": "Gain !B! Block. NL The next time you are attacked this turn, deal !M! damage back."
+    "NAME": "Fire Barrier",
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, deal !M! damage back."
   },
   "FireBladeMod:FlashPoint": {
     "NAME": "Flash Point",
@@ -226,8 +226,7 @@
   },
   "FireBladeMod:BuildUp": {
     "NAME": "Build Up",
-    "DESCRIPTION": "Whenever you play a Skill card, gain !M! fireblademod:Vigor.",
-    "UPGRADE_DESCRIPTION": "Whenever you play a non-Attack card, gain !M! fireblademod:Vigor."
+    "DESCRIPTION": "Whenever you play a Skill card, gain !M! fireblademod:Vigor."
   },
   "FireBladeMod:Blitzkreig": {
     "NAME": "Blitzkreig",
@@ -265,7 +264,7 @@
   "FireBladeMod:EternalEndurance": {
     "NAME": "Eternal Endurance",
     "DESCRIPTION": "fireblademod:Endurance. NL Gain !B! Block. NL Block is not removed at the start of your next turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next !M! turns. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "fireblademod:Endurance. NL Gain !B! Block. NL Block is not removed at the start of your next !M! turns. NL Exhaust."
   },
   "FireBladeMod:GatherPower": {
     "NAME": "Gather Power",
@@ -302,8 +301,9 @@
     "DESCRIPTION": "At the end of your turn, spend [E] to gain !M! Block."
   },
   "FireBladeMod:FlamingArmor": {
-    "NAME": "FlamingArmor",
-    "DESCRIPTION": "Whenever you are attacked this turn, apply !M! fireblademod:Burning back."
+    "NAME": "Flaming Armor",
+    "DESCRIPTION": "Whenever you are attacked this turn, apply !M! fireblademod:Burning back.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Whenever you are attacked this turn, apply !M! fireblademod:Burning back."
   },
   "FireBladeMod:FlameForm": {
     "NAME": "Flame Form",
@@ -311,11 +311,10 @@
   },
   "FireBladeMod:ExtraStrikes": {
     "NAME": "Extra Strikes",
-    "DESCRIPTION": "Whenever you play an attack card, deal !D! damage to a random enemy.",
-    "UPGRADE_DESCRIPTION": "Whenever you play an attack card, deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Whenever you play an attack card, deal !D! damage to a random enemy."
   },
   "FireBladeMod:Shell": {
     "NAME": "Shell",
-    "DESCRIPTION": "Gain !M! fireblademod:Plated\u00a0Armor."
+    "DESCRIPTION": "At the end of your turn, gain !M! Block. NL Lose !FireBladeMod:M2! Dexterity."
   }
 }

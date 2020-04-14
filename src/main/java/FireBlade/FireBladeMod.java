@@ -240,7 +240,8 @@ public class FireBladeMod implements
 
     @Override
     public void receiveAddAudio() {
-        BaseMod.addAudio("PartyHorn", "theFireBladeResources/audio/PartyHorn.ogg");
+        BaseMod.addAudio("FireBladeMod:PartyHorn", "theFireBladeResources/audio/PartyHorn.ogg");
+        BaseMod.addAudio("FireBladeMod:CounterRawr", "theFireBladeResources/audio/FireBladeRawr.ogg");
     }
 
     public void receiveEditKeywords() {

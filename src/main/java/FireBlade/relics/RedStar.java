@@ -1,9 +1,11 @@
 package FireBlade.relics;
 
+import FireBlade.actions.DelayedRoarAction;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
@@ -14,6 +16,7 @@ public class RedStar extends CustomRelic {
     private static final AbstractRelic.RelicTier TIER = AbstractRelic.RelicTier.STARTER;
     private static final AbstractRelic.LandingSound SOUND = LandingSound.SOLID;
     private static final int hpGain = 3;
+    private int turnCounter;
 
     public RedStar() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
@@ -35,6 +38,22 @@ public class RedStar extends CustomRelic {
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             this.pulse = false;
             AbstractDungeon.player.increaseMaxHp(hpGain, true);
+        }
+    }
+
+    @Override
+    public void atBattleStart() {
+        turnCounter = 0;
+    }
+
+    @Override
+    public void atTurnStartPostDraw() {
+        turnCounter++;
+        if (turnCounter == 2) {
+            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                if (m.id.equals("GremlinNob"))
+                    addToBot(new DelayedRoarAction());
+            }
         }
     }
 

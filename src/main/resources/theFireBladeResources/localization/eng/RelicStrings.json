@@ -11,7 +11,7 @@
     "NAME": "Crimson Star",
     "FLAVOR": "Your hunger grows.",
     "DESCRIPTIONS": [
-      "Replaces #rRed #rStar. Whenever you defeat an room, gain #b",
+      "Replaces #rRed #rStar. Whenever you defeat an Elite room, gain #b",
       " Max HP."
     ]
   },
@@ -36,7 +36,7 @@
     "FLAVOR": "Swinging these around is rather fun, if a bit dangerous.",
     "DESCRIPTIONS": [
       "Whenever you play a #yFlame card, gain #b",
-      " #yfireblademod:Fire\u00a0Shield."
+      " #yfireblademod:Flame\u00a0Barrier."
     ]
   },
   "FireBladeMod:WheyBottle": {
@@ -76,7 +76,7 @@
     "NAME": "Tiger Claw",
     "FLAVOR": "It's razor sharp.",
     "DESCRIPTIONS": [
-      "Remove all #yStrikes.  Gain 5 *Swipes."
+      "Remove all #yStrikes.  Gain 5 #ySoulbound #yfireblademod:Swipes."
     ]
   },
   "FireBladeMod:Planner": {
