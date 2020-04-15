@@ -43,7 +43,7 @@
     "NAME": "Whey Bottle",
     "FLAVOR": "Keeps you healthy.",
     "DESCRIPTIONS": [
-      "Whenever you play an #yEndurance card, gain #b",
+      "Whenever you play an #yfireblademod:Endurance card, gain #b",
       " #yStrength until the end of that turn."
     ]
   },
@@ -51,7 +51,7 @@
     "NAME": "Bronze Knuckles",
     "FLAVOR": "Getting punched with these hurts.",
     "DESCRIPTIONS": [
-      "Whenever you play a #ySmash card, the targets lose #b",
+      "Whenever you play a #yfireblademod:Smash card, the targets lose #b",
       " #yStrength that turn."
     ]
   },
@@ -59,8 +59,16 @@
     "NAME": "Gym Towel",
     "FLAVOR": "It smells like dedication.",
     "DESCRIPTIONS": [
-      "Whenever you play a #ySmash card, gain #b",
+      "Whenever you play a #yfireblademod:Smash card, gain #b",
       " #yStrength."
+    ]
+  },
+  "FireBladeMod:LegBrace": {
+    "NAME": "Leg Brace",
+    "FLAVOR": "It smells a bit.",
+    "DESCRIPTIONS": [
+      "Whenever you play an #yfireblademod:Endurance card, gain #b",
+      " #yfireblademod:Metallicize."
     ]
   },
   "FireBladeMod:InnerFlame": {
@@ -83,8 +91,7 @@
     "NAME": "Planner",
     "FLAVOR": "It's filled with meticulous... plans.",
     "DESCRIPTIONS": [
-      "At the start of combat your #yEndurance cards gain #yRetain but lose #b",
-      " #yBlock."
+      "At the end of your turn, you may #yRetain #b1 card."
     ]
   }
 }

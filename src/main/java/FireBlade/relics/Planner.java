@@ -1,9 +1,9 @@
 package FireBlade.relics;
 
-import FireBlade.cards.TheFireBladeCardTags;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.actions.unique.RetainCardsAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
@@ -19,17 +19,15 @@ public class Planner extends CustomRelic {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
     }
 
-    public void atBattleStart() {
-        for (AbstractCard card : AbstractDungeon.player.drawPile.group) {
-            if (card.hasTag(TheFireBladeCardTags.ENDURANCE)) {
-                card.baseBlock -= dexLoss;
-                card.selfRetain = true;
-                card.initializeDescription();
-            }
+    @Override
+    public void onPlayerEndTurn() {
+        AbstractPlayer p = AbstractDungeon.player;
+        if (!p.hand.isEmpty() && !p.hasRelic("Runic Pyramid") && !p.hasPower("Equilibrium")) {
+            this.addToBot(new RetainCardsAction(p, 1));
         }
     }
 
-    public String getUpdatedDescription() { return this.DESCRIPTIONS[0] + dexLoss + this.DESCRIPTIONS[1]; }
+    public String getUpdatedDescription() { return this.DESCRIPTIONS[0]; }
 
     public AbstractRelic makeCopy() { return new Planner(); }
 }

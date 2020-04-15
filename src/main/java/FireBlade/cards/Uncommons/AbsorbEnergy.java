@@ -27,7 +27,7 @@ public class AbsorbEnergy extends CustomFireBladeCard {
 
     public AbsorbEnergy() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

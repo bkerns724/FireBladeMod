@@ -76,6 +76,14 @@
     "DESCRIPTION": "Vigor adds damage to your next attack."
   },
   {
+    "PROPER_NAME": "Metallicize",
+    "NAMES": [
+      "Metallicize",
+      "metallicize"
+    ],
+    "DESCRIPTION": "Metallicize adds block at the end of your turn."
+  },
+  {
     "PROPER_NAME": "Accelerant",
     "NAMES": [
       "Accelerant",

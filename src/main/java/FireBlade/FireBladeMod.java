@@ -195,7 +195,7 @@ public class FireBladeMod implements
         BaseMod.addCard(new LayeredDefense());
         BaseMod.addCard(new LightningCombo());
         BaseMod.addCard(new Reserves());
-        BaseMod.addCard(new SelfConsumption());
+        BaseMod.addCard(new Punish());
         BaseMod.addCard(new Shell());
         BaseMod.addCard(new Tempo());
         BaseMod.addCard(new ThirstForBlood());
@@ -212,17 +212,21 @@ public class FireBladeMod implements
         BaseMod.addRelicToCustomPool(new BronzeKnuckles(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new WheyBottle(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new FirePoi(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new LegBrace(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new GymTowel(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new TigerClaw(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new Planner(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
+
         if (!FireBladeSettings.isGoldenStarGlobal())
             BaseMod.addRelicToCustomPool(new GoldenStar(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
         else
             BaseMod.addRelic(new GoldenStar(), RelicType.SHARED);
-        BaseMod.addRelicToCustomPool(new GymTowel(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
+
         if (!FireBladeSettings.isInnerFlameGlobal())
             BaseMod.addRelicToCustomPool(new InnerFlame(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
         else
             BaseMod.addRelic(new InnerFlame(), RelicType.SHARED);
-        BaseMod.addRelicToCustomPool(new TigerClaw(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new Planner(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
+
         logger.info("Added FireBlade relics");
     }
 

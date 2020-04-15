@@ -30,16 +30,15 @@ public class SpiritBurn extends CustomFireBladeCard {
 
     public SpiritBurn() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 2;
         magicNumberTwo = baseMagicNumberTwo = 1;
         this.tags.add(TheFireBladeCardTags.FLAME);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new BurnAction(p, m, this.baseMagicNumber));
-        FireBladeCardHelper.checkForBurnerTip();
-        addToBot(new ApplyPowerAction(p, p, new FervorPower(p, magicNumberTwo), magicNumberTwo));
         addToBot(new ApplyPowerAction(m, p, new SpiritRendPower(m, magicNumberTwo), magicNumberTwo));
+        FireBladeCardHelper.checkForBurnerTip();
     }
 
     public void applyPowers() {
@@ -64,7 +63,7 @@ public class SpiritBurn extends CustomFireBladeCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumberTwo(1);
+            upgradeMagicNumber(2);
         }
     }
 

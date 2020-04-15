@@ -21,15 +21,6 @@ public abstract class CustomFireBladeCard extends CustomCard {
         }
     }
 
-    @Override
-    public void initializeDescription() {
-        String tempDescription = rawDescription;
-        if (selfRetain)
-            rawDescription = "Retain. NL " + rawDescription;
-        super.initializeDescription();
-        rawDescription = tempDescription;
-    }
-
     public void upgradeMagicNumberTwo(int amount) {
         this.baseMagicNumberTwo += amount;
         this.magicNumberTwo = this.baseMagicNumberTwo;

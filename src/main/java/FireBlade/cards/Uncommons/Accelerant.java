@@ -27,6 +27,7 @@ public class Accelerant extends CustomFireBladeCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 1;
         magicNumberTwo = baseMagicNumberTwo = 1;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

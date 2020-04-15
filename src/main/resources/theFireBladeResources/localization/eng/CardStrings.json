@@ -281,9 +281,9 @@
     "DESCRIPTION": "Put !M! card from your discard pile into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Put !M! cards from your discard pile into your hand. NL Exhaust."
   },
-  "FireBladeMod:SelfConsumption": {
-    "NAME": "Self Consumption",
-    "DESCRIPTION": "Lose !M! HP. NL Gain !M! fireblademod:Fervor."
+  "FireBladeMod:Punish": {
+    "NAME": "Punish",
+    "DESCRIPTION": "Retain. NL Gain !M! fireblademod:Flame\u00a0Barrier."
   },
   "FireBladeMod:HellFire": {
     "NAME": "Hellfire",

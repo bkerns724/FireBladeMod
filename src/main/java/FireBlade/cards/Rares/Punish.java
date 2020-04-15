@@ -2,44 +2,42 @@ package FireBlade.cards.Rares;
 
 import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.enums.TheFireBladeEnum;
-import FireBlade.powers.FervorPower;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.FlameBarrierPower;
 
-public class SelfConsumption extends CustomFireBladeCard {
+public class Punish extends CustomFireBladeCard {
 
-    public static final String ID = "FireBladeMod:SelfConsumption";
+    public static final String ID = "FireBladeMod:Punish";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/SelfConsumption.png";
+    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/Punish.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 0;
+    private static final int COST = 1;
 
-    public SelfConsumption() {
+    public Punish() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 4;
+        magicNumber = baseMagicNumber = 8;
+        selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new FervorPower(p, magicNumber), magicNumber));
-        addToBot(new LoseHPAction(p, p, magicNumber, AbstractGameAction.AttackEffect.FIRE));
+        addToBot(new ApplyPowerAction(p, p, new FlameBarrierPower(p, magicNumber), magicNumber));
     }
 
-    public AbstractCard makeCopy() { return new SelfConsumption(); }
+    public AbstractCard makeCopy() { return new Punish(); }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(3);
         }
     }
 
