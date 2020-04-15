@@ -1,4 +1,4 @@
-package FireBlade.cards.Uncommons;
+package FireBlade.cards.Commons;
 
 import FireBlade.enums.TheFireBladeEnum;
 import basemod.abstracts.CustomCard;
@@ -9,35 +9,33 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class QuickParries extends CustomCard {
+public class SolidBlock extends CustomCard {
 
-    public static final String ID = "FireBladeMod:QuickParries";
+    public static final String ID = "FireBladeMod:SolidBlock";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/QuickParries.png";
+    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/SolidBlock.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 0;
+    private static final int COST = 2;
 
-    public QuickParries() {
+    public SolidBlock() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        baseBlock = 2;
-        magicNumber = baseMagicNumber = 2;
+        this.baseBlock = 16;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < magicNumber; i++)
-        addToBot(new GainBlockAction(p, p, block));
+        addToBot(new GainBlockAction(p, p, this.block));
     }
 
-    public AbstractCard makeCopy() { return new QuickParries(); }
+    public AbstractCard makeCopy() { return new SolidBlock(); }
 
     public void upgrade() {
-        if (!upgraded) {
+        if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(1);
+            upgradeBlock(6);
         }
     }
 

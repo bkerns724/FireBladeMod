@@ -1,41 +1,47 @@
 package FireBlade.cards.Uncommons;
 
+import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.enums.TheFireBladeEnum;
-import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import FireBlade.powers.AccelerantPower;
+import FireBlade.powers.FervorPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class SolidBlock extends CustomCard {
+public class Accelerant extends CustomFireBladeCard {
 
-    public static final String ID = "FireBladeMod:SolidBlock";
+    public static final String ID = "FireBladeMod:Accelerant";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/SolidBlock.png";
+    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/Accelerant.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final int COST = 1;
 
-    public SolidBlock() {
+    public Accelerant() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseBlock = 17;
+        magicNumber = baseMagicNumber = 1;
+        magicNumberTwo = baseMagicNumberTwo = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainBlockAction(p, p, this.block));
+        addToBot(new ApplyPowerAction(m, p, new AccelerantPower(m, p, magicNumber), magicNumber));
+        if (upgraded)
+            addToBot(new ApplyPowerAction(p, p, new FervorPower(p, magicNumberTwo), magicNumberTwo));
     }
 
-    public AbstractCard makeCopy() { return new SolidBlock(); }
+    public AbstractCard makeCopy() { return new Accelerant(); }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(5);
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

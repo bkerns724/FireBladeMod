@@ -76,7 +76,7 @@
     "NAME": "Tiger Claw",
     "FLAVOR": "It's razor sharp.",
     "DESCRIPTIONS": [
-      "Remove all #yStrikes.  Gain 5 #ySoulbound #yfireblademod:Swipes."
+      "Remove all #yStrikes.  Gain 5 #ySwipes."
     ]
   },
   "FireBladeMod:Planner": {

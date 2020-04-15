@@ -27,7 +27,7 @@ public class SpiritRend extends CustomCard {
 
     public SpiritRend() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseDamage = 10;
+        this.baseDamage = 15;
         this.magicNumber = this.baseMagicNumber = 2;
     }
 
@@ -41,7 +41,7 @@ public class SpiritRend extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(2);
+            upgradeDamage(3);
             upgradeMagicNumber(1);
         }
     }

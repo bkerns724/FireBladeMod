@@ -26,9 +26,11 @@ public class Arson extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
+    private static final int costLimit = 3;
 
     public Arson() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        magicNumber = baseMagicNumber = costLimit;
         this.exhaust = true;
     }
 
@@ -39,21 +41,21 @@ public class Arson extends CustomCard {
         Iterator var2 = srcCommonCardPool.group.iterator();
         while(var2.hasNext()) {
             c = (AbstractCard)var2.next();
-            if (c.hasTag(TheFireBladeCardTags.FLAME))
+            if (c.hasTag(TheFireBladeCardTags.FLAME) && c.cost <= costLimit)
                 list.add(c);
         }
 
         var2 = srcUncommonCardPool.group.iterator();
         while(var2.hasNext()) {
             c = (AbstractCard)var2.next();
-            if (c.hasTag(TheFireBladeCardTags.FLAME))
+            if (c.hasTag(TheFireBladeCardTags.FLAME) && c.cost <= costLimit)
                 list.add(c);
         }
 
         var2 = srcRareCardPool.group.iterator();
         while(var2.hasNext()) {
             c = (AbstractCard)var2.next();
-            if (c.hasTag(TheFireBladeCardTags.FLAME))
+            if (c.hasTag(TheFireBladeCardTags.FLAME) && c.cost <= costLimit)
                 list.add(c);
         }
 

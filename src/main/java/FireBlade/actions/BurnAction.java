@@ -1,6 +1,7 @@
 package FireBlade.actions;
 
 import FireBlade.powers.BurningPower;
+import FireBlade.powers.FervorPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -16,6 +17,7 @@ public class BurnAction extends AbstractGameAction {
     private int hellfire;
     private boolean ignoreFervor;
     private static final String RendID = "FireBladeMod:SpiritRendPower";
+    private static final String AccelerantID = "FireBladeMod:AccelerantPower";
 
     public BurnAction(AbstractCreature source, AbstractCreature target, int baseBurn, int hellfire, boolean ignoreFervor) {
         this.source = source;
@@ -47,9 +49,13 @@ public class BurnAction extends AbstractGameAction {
                 if (rendPower.amount > 1) {
                     rendPower.reducePower(1);
                     rendPower.updateDescription();
-                }
-                else
+                } else
                     addToTop(new RemoveSpecificPowerAction(target, source, RendID));
+            }
+
+            if (!ignoreFervor && target.hasPower(AccelerantID)) {
+                int accelerantAmount = target.getPower(AccelerantID).amount;
+                addToTop(new ApplyPowerAction(source, source, new FervorPower(source, accelerantAmount), accelerantAmount));
             }
         }
 

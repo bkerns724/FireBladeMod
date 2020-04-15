@@ -24,7 +24,7 @@ public class Reserves extends CustomFireBladeCard {
 
     public Reserves() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 5;
+        magicNumber = baseMagicNumber = 6;
         magicNumberTwo = baseMagicNumberTwo = 1;
     }
 

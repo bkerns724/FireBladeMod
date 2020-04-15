@@ -39,26 +39,29 @@ public class FlashPointPower extends AbstractPower {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (!card.purgeOnUse && card.hasTag(TheFireBladeCardTags.FLAME) && amount > 0) {
             flash();
-            AbstractMonster m = null;
-            if (action.target != null) {
-                m = (AbstractMonster)action.target;
+
+            for (int i = 0; i < amount; i++) {
+                AbstractMonster m = null;
+                if (action.target != null) {
+                    m = (AbstractMonster) action.target;
+                }
+
+                AbstractCard tmp = card.makeSameInstanceOf();
+                AbstractDungeon.player.limbo.addToBottom(tmp);
+                tmp.current_x = card.current_x;
+                tmp.current_y = card.current_y;
+                tmp.target_x = (float) Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
+                tmp.target_y = (float) Settings.HEIGHT / 2.0F;
+                if (m != null) {
+                    tmp.calculateCardDamage(m);
+                }
+
+                tmp.purgeOnUse = true;
+                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
             }
 
-            AbstractCard tmp = card.makeSameInstanceOf();
-            AbstractDungeon.player.limbo.addToBottom(tmp);
-            tmp.current_x = card.current_x;
-            tmp.current_y = card.current_y;
-            tmp.target_x = (float) Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
-            tmp.target_y = (float)Settings.HEIGHT / 2.0F;
-            if (m != null) {
-                tmp.calculateCardDamage(m);
-            }
-
-            tmp.purgeOnUse = true;
-            AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
-            --amount;
-            if (amount == 0)
-                addToBot(new RemoveSpecificPowerAction(owner, owner, ID));
+            amount = 0;
+            addToBot(new RemoveSpecificPowerAction(owner, owner, ID));
         }
     }
 
@@ -68,7 +71,7 @@ public class FlashPointPower extends AbstractPower {
 
     public void updateDescription() {
         if (amount == 1)
-            description = DESCRIPTIONS[0];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         else
-            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2]; }
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2]; }
 }

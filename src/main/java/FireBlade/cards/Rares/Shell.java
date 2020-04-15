@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import FireBlade.enums.TheFireBladeEnum;
-import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.MetallicizePower;
 
 public class Shell extends CustomFireBladeCard {
@@ -21,17 +20,15 @@ public class Shell extends CustomFireBladeCard {
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 1;
+    private static final int COST = 2;
 
     public Shell() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 6;
-        magicNumberTwo = baseMagicNumberTwo = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new MetallicizePower(p, magicNumber), magicNumber));
-        addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, -magicNumberTwo), -magicNumberTwo));
     }
 
     public AbstractCard makeCopy() { return new Shell(); }

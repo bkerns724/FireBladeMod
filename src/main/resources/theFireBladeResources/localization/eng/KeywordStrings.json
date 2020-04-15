@@ -76,22 +76,11 @@
     "DESCRIPTION": "Vigor adds damage to your next attack."
   },
   {
-    "PROPER_NAME": "Plated\u00a0Armor",
+    "PROPER_NAME": "Accelerant",
     "NAMES": [
-      "Plated\u00a0Armor",
-      "Plated\u00a0armor",
-      "plated\u00a0armor"
+      "Accelerant",
+      "accelerant"
     ],
-    "DESCRIPTION": "Plated Armor grants block at the end of turn. NL It is reduced by 1 when receiving unblocked attack damage."
-  },
-  {
-    "PROPER_NAME": "Swipe",
-    "NAMES": [
-      "Swipe",
-      "Swipes",
-      "swipe",
-      "swipes"
-    ],
-    "DESCRIPTION": "Swipes are 0 cost attack cards which deal 6 damage to ALL enemies."
+    "DESCRIPTION": "If a creature has Accelerant, applying #yBurning with a #yFlame card grants #yFervor."
   }
 ]

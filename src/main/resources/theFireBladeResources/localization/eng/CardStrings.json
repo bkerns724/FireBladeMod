@@ -52,9 +52,9 @@
     "DESCRIPTION": "Deal !D! damage. NL Deal !FireBladeMod:M2! damage. NL Deal !D! damage.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Deal !FireBladeMod:M2! damage. NL Deal !D! damage. NL Deal !FireBladeMod:M2! damage."
   },
-  "FireBladeMod:ComplexCasting": {
-    "NAME": "Complex Casting",
-    "DESCRIPTION": "fireblademod:Flame. NL Apply !M! fireblademod:Burning. NL Gain !FireBladeMod:M2! fireblademod:fervor. NL At the end of this turn, lose !FireBladeMod:M2! fireblademod:Fervor."
+  "FireBladeMod:SpiritBurn": {
+    "NAME": "Spirit Burn",
+    "DESCRIPTION": "fireblademod:Flame. NL Apply !M! fireblademod:Burning. NL Apply !FireBladeMod:M2! fireblademod:Spirit\u00a0Rend."
   },
   "FireBladeMod:Shove": {
     "NAME": "Shove",
@@ -84,9 +84,9 @@
     "NAME": "Iron Endurance",
     "DESCRIPTION": "fireblademod:Endurance. NL Gain !B! Block. NL Exhaust."
   },
-  "FireBladeMod:QuickParries": {
-    "NAME": "Quick Parries",
-    "DESCRIPTION": "Gain !B! Block !M! times."
+  "FireBladeMod:QuickCombo": {
+    "NAME": "Quick Combo",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
   },
   "FireBladeMod:Flames": {
     "NAME": "Flames",
@@ -125,12 +125,12 @@
     "NAME": "Scorching Cleave",
     "DESCRIPTION": "fireblademod:Flame. NL Deal !D! damage to ALL enemies. NL Apply !M! fireblademod:Burning to ALL enemies."
   },
-  "FireBladeMod:BalancedCombo": {
-    "NAME": "Balanced Combo",
-    "DESCRIPTION": "X times: NL Deal !D! damage. NL Gain !B! Block."
+  "FireBladeMod:WildSlashes": {
+    "NAME": "Wild Slashes",
+    "DESCRIPTION": "Deal !D! damage to a random enemy X times. NL This card gains !M! damage per enemy."
   },
-  "FireBladeMod:QuickCombo": {
-    "NAME": "Quick Combo",
+  "FireBladeMod:QuickJabs": {
+    "NAME": "Quick Jabs",
     "DESCRIPTION": "Deal !D! damage !M! times."
   },
   "FireBladeMod:EruptionSlash": {
@@ -172,19 +172,20 @@
   },
   "FireBladeMod:Arson": {
     "NAME": "Arson",
-    "DESCRIPTION": "Add a random fireblademod:Flame card into your hand. NL It costs 0 this turn. NL Exhaust."
+    "DESCRIPTION": "Add a random fireblademod:Flame card that costs !M! or less into your hand. NL It costs 0 this turn. NL Exhaust."
   },
-  "FireBladeMod:RampingBlock": {
-    "NAME": "Ramping Block",
-    "DESCRIPTION": "Gain !B! Block. NL Increase this card's Block by !M! this combat."
+  "FireBladeMod:RampingDefense": {
+    "NAME": "Ramping Defense",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Dexterity."
   },
   "FireBladeMod:AbsorbEnergy": {
     "NAME": "Absorb Energy",
     "DESCRIPTION": "Next time you lose HP, gain !M! Strength."
   },
-  "FireBladeMod:DefensiveFocus": {
-    "NAME": "Defensive Focus",
-    "DESCRIPTION": "Gain !M! Dexterity."
+  "FireBladeMod:AdrenalineBoost": {
+    "NAME": "Adrenaline Boost",
+    "DESCRIPTION": "Put a fireblademod:Smash or fireblademod:Endurance card from your draw pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Put a fireblademod:Smash or fireblademod:Endurance card from your draw pile into your hand. NL Exhaust."
   },
   "FireBladeMod:FireWave": {
     "NAME": "Fire Wave",
@@ -194,10 +195,10 @@
     "NAME": "Unbalance",
     "DESCRIPTION": "Whenever you attack this enemy, gain !M! Block. NL Exhaust."
   },
-  "FireBladeMod:PyromanticFocus": {
-    "NAME": "Pyromantic Focus",
-    "DESCRIPTION": "Gain X fireblademod:Fervor.",
-    "UPGRADE_DESCRIPTION": "Gain X+1 fireblademod:Fervor."
+  "FireBladeMod:Accelerant": {
+    "NAME": "Accelerant",
+    "DESCRIPTION": "Apply !M! fireblademod:Accelerant. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Apply !M! fireblademod:Accelerant. NL Gain !FireBladeMod:M2! fireblademod:Fervor. NL Exhaust."
   },
   "FireBladeMod:Reposition": {
     "NAME": "Reposition",
@@ -209,8 +210,8 @@
   },
   "FireBladeMod:FlashPoint": {
     "NAME": "Flash Point",
-    "DESCRIPTION": "This turn, your next fireblademod:Flame card is played twice.",
-    "UPGRADE_DESCRIPTION": "This turn, your next !M! fireblademod:Flame cards are played twice."
+    "DESCRIPTION": "This turn, your next fireblademod:Flame card is played !M! more time.",
+    "UPGRADE_DESCRIPTION": "This turn, your next fireblademod:Flame card is played !M! more times."
   },
   "FireBladeMod:SmokeScreen": {
     "NAME": "Smoke Screen",
@@ -247,7 +248,7 @@
   },
   "FireBladeMod:LightningCombo": {
     "NAME": "Lightning Combo",
-    "DESCRIPTION": "Do !D! damage !M! times."
+    "DESCRIPTION": "Do !D! damage !M! times. NL Deal !FireBladeMod:M2! damage to ALL enemies."
   },
   "FireBladeMod:DebilitatingBlow": {
     "NAME": "Debilitating Blow",
@@ -290,7 +291,7 @@
   },
   "FireBladeMod:EternalFlame": {
     "NAME": "EternalFlame",
-    "DESCRIPTION": "At the start of your turn, add !M! *Ember to your hand."
+    "DESCRIPTION": "fireblademod:Flame. NL At the end of your turn, apply !M! fireblademod:Burning to all enemies."
   },
   "FireBladeMod:AfterBurn": {
     "NAME": "After Burn",
@@ -300,14 +301,14 @@
     "NAME": "Reserves",
     "DESCRIPTION": "At the end of your turn, spend [E] to gain !M! Block."
   },
-  "FireBladeMod:FlamingArmor": {
-    "NAME": "Flaming Armor",
-    "DESCRIPTION": "Whenever you are attacked this turn, apply !M! fireblademod:Burning back.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Whenever you are attacked this turn, apply !M! fireblademod:Burning back."
+  "FireBladeMod:Armageddon": {
+    "NAME": "Armageddon",
+    "DESCRIPTION": "fireblademod:Flame. NL Apply !M! fireblademod:Burning to ALL enemies."
   },
   "FireBladeMod:FlameForm": {
     "NAME": "Flame Form",
-    "DESCRIPTION": "Ethereal. NL Whenever you deal attack damage, apply !M! fireblademod:Burning."
+    "DESCRIPTION": "Ethereal. NL Whenever you deal attack damage, apply !M! fireblademod:Burning. NL Ignores fireblademod:Fervor.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Ethereal. NL Whenever you deal attack damage, apply !M! fireblademod:Burning. NL Ignores fireblademod:Fervor."
   },
   "FireBladeMod:ExtraStrikes": {
     "NAME": "Extra Strikes",
@@ -315,6 +316,6 @@
   },
   "FireBladeMod:Shell": {
     "NAME": "Shell",
-    "DESCRIPTION": "At the end of your turn, gain !M! Block. NL Lose !FireBladeMod:M2! Dexterity."
+    "DESCRIPTION": "At the end of your turn, gain !M! Block."
   }
 }

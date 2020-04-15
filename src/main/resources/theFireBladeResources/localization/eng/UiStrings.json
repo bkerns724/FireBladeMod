@@ -8,5 +8,10 @@
       "Unlock ascension 20 for FireBlade (may require restart)",
       "Ascension 20 unlocked for FireBlade! (may require restart)"
     ]
+  },
+  "AdrenalineBoostAction": {
+    "TEXT": [
+      "Choose a Smash or Endurance Card to Add to Your Hand."
+    ]
   }
 }

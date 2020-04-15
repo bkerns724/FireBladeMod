@@ -26,9 +26,9 @@ public class HellFire extends CustomFireBladeCard {
 
     public HellFire() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = this.baseMagicNumber = 3;
-        magicNumberTwo = baseMagicNumberTwo = 2;
-        this.tags.add(TheFireBladeCardTags.FLAME);
+        magicNumber = this.baseMagicNumber = 2;
+        magicNumberTwo = baseMagicNumberTwo = 3;
+        tags.add(TheFireBladeCardTags.FLAME);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -37,7 +37,7 @@ public class HellFire extends CustomFireBladeCard {
     }
 
     public void applyPowers() {
-        magicNumber = FireBlade.actions.BurnAction.GetEstimate(AbstractDungeon.player, baseMagicNumber, baseMagicNumberTwo);
+        magicNumber = BurnAction.GetEstimate(AbstractDungeon.player, baseMagicNumber, baseMagicNumberTwo);
         isMagicNumberModified = magicNumber != baseMagicNumber;
         super.applyPowers();
     }
@@ -48,7 +48,7 @@ public class HellFire extends CustomFireBladeCard {
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
-        magicNumber = FireBlade.actions.BurnAction.GetEstimate(AbstractDungeon.player, mo, baseMagicNumber, baseMagicNumberTwo);
+        magicNumber = BurnAction.GetEstimate(AbstractDungeon.player, mo, baseMagicNumber, baseMagicNumberTwo);
         isMagicNumberModified = magicNumber != baseMagicNumber;
         super.calculateCardDamage(mo);
     }

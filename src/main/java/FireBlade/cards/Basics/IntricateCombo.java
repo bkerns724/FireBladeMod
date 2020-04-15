@@ -28,28 +28,25 @@ public class IntricateCombo extends CustomFireBladeCard
 
     public IntricateCombo() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseDamage = 2;
-        this.baseBlock = 2;
-        this.baseMagicNumber = 2;
+        baseDamage = 2;
+        baseBlock = 2;
+        baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        if (this.upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        }
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
     }
 
     public AbstractCard makeCopy() { return new IntricateCombo(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeDamage(1);
+            upgradeBlock(1);
         }
     }
 

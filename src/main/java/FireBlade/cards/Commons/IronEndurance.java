@@ -40,7 +40,7 @@ public class IronEndurance extends CustomFireBladeCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(4);
+            upgradeBlock(5);
         }
     }
 

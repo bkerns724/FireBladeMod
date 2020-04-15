@@ -19,7 +19,7 @@ public class ReservesPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("FireBladeMod:ReservesPower");
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final int conversionAmount = 5;
+    public static final int conversionAmount = 6;
 
     public ReservesPower(AbstractCreature owner, int amount) {
         this.ID = "FireBladeMod:ReservesPower";

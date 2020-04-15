@@ -1,18 +1,14 @@
 package FireBlade.potions;
 
-import FireBlade.powers.BurningPower;
+import FireBlade.actions.BurnAction;
 import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
-import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
-import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
-import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 
@@ -40,7 +36,7 @@ public class NapalmFlask extends CustomPotion {
 
     public void use(AbstractCreature target) {
         AbstractPlayer p = AbstractDungeon.player;
-        addToBot(new ApplyPowerAction(target, p, new BurningPower(target, p, this.getPotency()), this.getPotency()));
+        addToBot(new BurnAction(p, target, getPotency(), 1, true));
     }
 
     public CustomPotion makeCopy() { return new NapalmFlask();}

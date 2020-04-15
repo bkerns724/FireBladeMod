@@ -10,9 +10,9 @@
   "FireBladeMod:FervorPower": {
     "NAME": "Fervor",
     "DESCRIPTIONS": [
-      "Whenever you play a #yFlame card, apply an additional #b",
+      "#yFlame cards apply an additional #b",
       " burning.",
-      "Whenever you play a #yFlame card, apply #b",
+      "#yFlame cards apply #b",
       " less burning."
     ]
   },
@@ -64,16 +64,8 @@
   "FireBladeMod:EternalFlamePower": {
     "NAME": "Eternal Flame",
     "DESCRIPTIONS": [
-      "At the start of your turn, add #b",
-      " Ember into your hand.",
-      " Embers into your hand."
-    ]
-  },
-  "FireBladeMod:FlamingArmorPower": {
-    "NAME": "Flaming Armor",
-    "DESCRIPTIONS": [
-      "Whenever you are attacked this turn, apply #b",
-      " #yBurning back."
+      "At the end of your turn, apply #b",
+      " #yBurning to ALL enemies."
     ]
   },
   "FireBladeMod:SpiritRendPower": {
@@ -94,9 +86,9 @@
   "FireBladeMod:FlashPointPower": {
     "NAME": "Flash Point",
     "DESCRIPTIONS": [
-      "Your next #yFlame card is played twice this turn.",
-      "Your next #b",
-      " #yFlame cards are played twice this turn."
+      "Your next #yFlame card is played #b",
+      " more time this turn.",
+      " more times this turn."
     ]
   },
   "FireBladeMod:BuildUpPower": {
@@ -118,6 +110,13 @@
     "DESCRIPTIONS": [
       "Gain #b",
       " [E] next turn."
+    ]
+  },
+  "FireBladeMod:AccelerantPower": {
+    "NAME": "Accelerant",
+    "DESCRIPTIONS": [
+      "When you apply #yBurning to this creature with a #yFlame card, gain #b",
+      " #yFervor."
     ]
   }
 }
