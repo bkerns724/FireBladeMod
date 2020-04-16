@@ -2,10 +2,7 @@ package FireBlade.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DiscardAction;
-import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -39,8 +36,8 @@ public class AbsorbEnergyPower extends AbstractPower {
     @Override
     public int onLoseHp(int damageAmount) {
         AbstractPlayer p = AbstractDungeon.player;
-        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, amount), amount));
-        addToBot(new RemoveSpecificPowerAction(p, p, ID));
+        addToTop(new ApplyPowerAction(p, p, new StrengthPower(p, amount), amount));
+        addToTop(new RemoveSpecificPowerAction(p, p, ID));
         return super.onLoseHp(damageAmount);
     }
 
