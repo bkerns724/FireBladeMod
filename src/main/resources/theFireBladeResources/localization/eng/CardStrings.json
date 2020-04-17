@@ -197,8 +197,7 @@
   },
   "FireBladeMod:Accelerant": {
     "NAME": "Accelerant",
-    "DESCRIPTION": "Apply !M! fireblademod:Accelerant. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Apply !M! fireblademod:Accelerant. NL Gain !FireBladeMod:M2! fireblademod:Fervor. NL Exhaust."
+    "DESCRIPTION": "fireblademod:Flame. NL Apply !M! fireblademod:Burning. NL Gain !FireBladeMod:M2! fireblademod:Fervor."
   },
   "FireBladeMod:Reposition": {
     "NAME": "Reposition",
@@ -303,7 +302,7 @@
   },
   "FireBladeMod:Armageddon": {
     "NAME": "Armageddon",
-    "DESCRIPTION": "fireblademod:Flame. NL Apply !M! fireblademod:Burning to ALL enemies."
+    "DESCRIPTION": "fireblademod:Flame. NL Apply !M! fireblademod:Burning to ALL enemies. NL Exhaust."
   },
   "FireBladeMod:FlameForm": {
     "NAME": "Flame Form",

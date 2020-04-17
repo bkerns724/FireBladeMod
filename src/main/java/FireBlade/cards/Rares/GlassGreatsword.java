@@ -25,7 +25,7 @@ public class GlassGreatsword extends CustomCard {
 
     public GlassGreatsword() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseDamage = 15;
+        this.baseDamage = 12;
         this.isMultiDamage = true;
     }
 
@@ -39,7 +39,7 @@ public class GlassGreatsword extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            upgradeDamage(6);
         }
     }
 

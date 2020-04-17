@@ -6,11 +6,11 @@
       " #yBurning."
     ]
   },
-  "FireBladeMod:ProteinShake": {
+  "FireBladeMod:FervorPotion": {
     "NAME": "Protein Shake",
     "DESCRIPTIONS": [
       "Gain #b",
-      " #yStrength, #yDexterity, and #yFervor."
+      " #yFervor."
     ]
   },
   "FireBladeMod:VigorPotion": {

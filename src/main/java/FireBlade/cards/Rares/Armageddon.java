@@ -30,6 +30,7 @@ public class Armageddon extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 20;
         tags.add(TheFireBladeCardTags.FLAME);
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -111,12 +111,5 @@
       "Gain #b",
       " [E] next turn."
     ]
-  },
-  "FireBladeMod:AccelerantPower": {
-    "NAME": "Accelerant",
-    "DESCRIPTIONS": [
-      "When you apply #yBurning to this creature with a #yFlame card, gain #b",
-      " #yFervor."
-    ]
   }
 }

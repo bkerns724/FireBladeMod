@@ -5,7 +5,7 @@ import FireBlade.other.FireBladeSettings;
 import FireBlade.other.FireBladeTipTracker;
 import FireBlade.potions.VigorPotion;
 import FireBlade.potions.NapalmFlask;
-import FireBlade.potions.ProteinShake;
+import FireBlade.potions.FervorPotion;
 import FireBlade.variables.MagicNumberTwo;
 import basemod.BaseMod;
 import basemod.helpers.RelicType;
@@ -264,7 +264,7 @@ public class FireBladeMod implements
     @Override
     public void receivePostInitialize() {
         BaseMod.addPotion(NapalmFlask.class, Color.RED.cpy(), null, Color.ORANGE.cpy(), NapalmFlask.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
-        BaseMod.addPotion(ProteinShake.class, Color.TAN.cpy(), Color.BROWN.cpy(), null, ProteinShake.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
+        BaseMod.addPotion(FervorPotion.class, Color.PURPLE, null, Color.CYAN, FervorPotion.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
         BaseMod.addPotion(VigorPotion.class, Color.RED.cpy(), Color.BLACK.cpy(), null, VigorPotion.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
 
         logger.info("Load Badge Image and make settings panel");

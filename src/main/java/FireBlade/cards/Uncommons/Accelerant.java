@@ -1,13 +1,16 @@
 package FireBlade.cards.Uncommons;
 
+import FireBlade.actions.BurnAction;
 import FireBlade.cards.CustomFireBladeCard;
+import FireBlade.cards.FireBladeCardHelper;
+import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
-import FireBlade.powers.AccelerantPower;
 import FireBlade.powers.FervorPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -25,24 +28,40 @@ public class Accelerant extends CustomFireBladeCard {
 
     public Accelerant() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 2;
         magicNumberTwo = baseMagicNumberTwo = 1;
-        exhaust = true;
+        tags.add(TheFireBladeCardTags.FLAME);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(m, p, new AccelerantPower(m, p, magicNumber), magicNumber));
-        if (upgraded)
-            addToBot(new ApplyPowerAction(p, p, new FervorPower(p, magicNumberTwo), magicNumberTwo));
+        addToBot(new BurnAction(p, m, baseMagicNumber));
+        addToBot(new ApplyPowerAction(p, p, new FervorPower(p, magicNumberTwo), magicNumberTwo));
+        FireBladeCardHelper.checkForBurnerTip();
+    }
+
+    public void applyPowers() {
+        magicNumber = BurnAction.GetEstimate(AbstractDungeon.player, baseMagicNumber);
+        isMagicNumberModified = magicNumber != baseMagicNumber;
+        super.applyPowers();
+    }
+
+    public void onMoveToDiscard() {
+        magicNumber = baseMagicNumber;
+        isMagicNumberModified = false;
+    }
+
+    public void calculateCardDamage(AbstractMonster mo) {
+        magicNumber = BurnAction.GetEstimate(AbstractDungeon.player, mo, baseMagicNumber);
+        isMagicNumberModified = magicNumber != baseMagicNumber;
+        super.calculateCardDamage(mo);
     }
 
     public AbstractCard makeCopy() { return new Accelerant(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
-            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(2);
         }
     }
 
