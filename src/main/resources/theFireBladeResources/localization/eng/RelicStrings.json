@@ -65,7 +65,7 @@
   },
   "FireBladeMod:LegBrace": {
     "NAME": "Leg Brace",
-    "FLAVOR": "It smells a bit.",
+    "FLAVOR": "You feel sturdier.",
     "DESCRIPTIONS": [
       "Whenever you play an #yfireblademod:Endurance card, gain #b",
       " #yfireblademod:Metallicize."

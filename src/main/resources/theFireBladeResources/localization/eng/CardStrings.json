@@ -247,7 +247,7 @@
   },
   "FireBladeMod:LightningCombo": {
     "NAME": "Lightning Combo",
-    "DESCRIPTION": "Do !D! damage !M! times. NL Deal !FireBladeMod:M2! damage to ALL enemies."
+    "DESCRIPTION": "Do !D! damage to a random enemy !M! times. NL Deal !FireBladeMod:M2! damage to ALL enemies."
   },
   "FireBladeMod:DebilitatingBlow": {
     "NAME": "Debilitating Blow",
