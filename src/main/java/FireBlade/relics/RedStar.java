@@ -41,22 +41,6 @@ public class RedStar extends CustomRelic {
         }
     }
 
-    @Override
-    public void atBattleStart() {
-        turnCounter = 0;
-    }
-
-    @Override
-    public void atTurnStartPostDraw() {
-        turnCounter++;
-        if (turnCounter == 2) {
-            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                if (m.id.equals("GremlinNob"))
-                    addToBot(new DelayedRoarAction());
-            }
-        }
-    }
-
     public String getUpdatedDescription() { return this.DESCRIPTIONS[0] + hpGain + this.DESCRIPTIONS[1]; }
 
     public AbstractRelic makeCopy() { return new RedStar(); }

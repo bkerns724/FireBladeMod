@@ -1,5 +1,6 @@
 package FireBlade.characters;
 
+import FireBlade.actions.DelayedRoarAction;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -8,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,8 +17,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.saveAndContinue.SaveAndContinue;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.screens.stats.CharStat;
@@ -239,5 +243,18 @@ public class TheFireBlade extends CustomPlayer {
 
     public Texture getCutsceneBg() {
         return ImageMaster.loadImage("theFireBladeResources/images/fireBladeCharacter/victory/background.png");
+    }
+
+    @Override
+    public void applyStartOfTurnPostDrawRelics() {
+        super.applyStartOfTurnPostDrawRelics();
+        if (GameActionManager.turn == 2) {
+            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                if (m.id.equals("GremlinNob")) {
+                    AbstractDungeon.actionManager.addToBottom(new DelayedRoarAction());
+                    return;
+                }
+            }
+        }
     }
 }

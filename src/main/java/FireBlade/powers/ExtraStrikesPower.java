@@ -1,6 +1,7 @@
 package FireBlade.powers;
 
 import FireBlade.cards.Other.ExtraStrikesHelper;
+import basemod.BaseMod;
 import basemod.interfaces.OnPowersModifiedSubscriber;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -15,7 +16,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.exordium.LouseNormal;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class ExtraStrikesPower extends AbstractPower implements OnPowersModifiedSubscriber {
@@ -39,6 +39,8 @@ public class ExtraStrikesPower extends AbstractPower implements OnPowersModified
         this.name = (CardCrawlGame.languagePack.getPowerStrings(this.ID)).NAME;
 
         this.helperCard = new ExtraStrikesHelper();
+
+        BaseMod.subscribe(this);
 
         updateDescription();
     }
