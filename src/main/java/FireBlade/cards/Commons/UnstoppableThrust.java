@@ -1,7 +1,7 @@
 package FireBlade.cards.Commons;
 
 import FireBlade.enums.TheFireBladeEnum;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class UnstoppableThrust extends CustomCard {
+public class UnstoppableThrust extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:UnstoppableThrust";
     public static final String NAME;
@@ -32,7 +32,7 @@ public class UnstoppableThrust extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         if (m.currentBlock > 0) {
             addToBot(new GainEnergyAction(magicNumber));
             addToBot(new DrawCardAction(magicNumber));
@@ -42,7 +42,7 @@ public class UnstoppableThrust extends CustomCard {
     public AbstractCard makeCopy() { return new UnstoppableThrust(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeDamage(4);
         }

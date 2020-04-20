@@ -1,18 +1,15 @@
 package FireBlade.cards.Uncommons;
 
 import FireBlade.enums.TheFireBladeEnum;
-import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.ReboundPower;
 
-public class Reposition extends CustomCard {
+public class Reposition extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:Reposition";
     public static final String NAME;
@@ -36,7 +33,7 @@ public class Reposition extends CustomCard {
     public AbstractCard makeCopy() { return new Reposition(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(2);
         }

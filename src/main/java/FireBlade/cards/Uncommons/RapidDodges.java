@@ -1,7 +1,7 @@
 package FireBlade.cards.Uncommons;
 
 import FireBlade.enums.TheFireBladeEnum;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class RapidDodges extends CustomCard {
+public class RapidDodges extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:RapidDodges";
     public static final String NAME;
@@ -23,20 +23,20 @@ public class RapidDodges extends CustomCard {
 
     public RapidDodges() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseBlock = 4;
-        this.magicNumber = this.baseMagicNumber = 2;
+        baseBlock = 4;
+        magicNumber = baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < this.magicNumber; i++) {
-            addToBot(new GainBlockAction(p, p, this.block));
+        for (int i = 0; i < magicNumber; i++) {
+            addToBot(new GainBlockAction(p, p, block));
         }
     }
 
     public AbstractCard makeCopy() { return new RapidDodges(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeBlock(1);
         }

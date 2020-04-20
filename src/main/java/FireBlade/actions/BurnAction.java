@@ -1,7 +1,9 @@
 package FireBlade.actions;
 
+import FireBlade.powers.BattleMageFormPower;
 import FireBlade.powers.BurningPower;
 import FireBlade.powers.FervorPower;
+import FireBlade.powers.SpiritRendPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -9,6 +11,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class BurnAction extends AbstractGameAction {
     private AbstractCreature source;
@@ -16,8 +19,6 @@ public class BurnAction extends AbstractGameAction {
     private int baseBurn;
     private int hellfire;
     private boolean ignoreFervor;
-    private static final String RendID = "FireBladeMod:SpiritRendPower";
-    private static final String AccelerantID = "FireBladeMod:AccelerantPower";
 
     public BurnAction(AbstractCreature source, AbstractCreature target, int baseBurn, int hellfire, boolean ignoreFervor) {
         this.source = source;
@@ -44,18 +45,13 @@ public class BurnAction extends AbstractGameAction {
             addToTop(new ApplyPowerAction(target, source, new BurningPower(target, source, burnAmount), burnAmount));
             CardCrawlGame.sound.play("ATTACK_FIRE", 0.1F);
 
-            if (target.hasPower(RendID)) {
-                AbstractPower rendPower = target.getPower(RendID);
+            if (target.hasPower(SpiritRendPower.POWER_ID)) {
+                AbstractPower rendPower = target.getPower(SpiritRendPower.POWER_ID);
                 if (rendPower.amount > 1) {
                     rendPower.reducePower(1);
                     rendPower.updateDescription();
                 } else
-                    addToTop(new RemoveSpecificPowerAction(target, source, RendID));
-            }
-
-            if (!ignoreFervor && target.hasPower(AccelerantID)) {
-                int accelerantAmount = target.getPower(AccelerantID).amount;
-                addToTop(new ApplyPowerAction(source, source, new FervorPower(source, accelerantAmount), accelerantAmount));
+                    addToTop(new RemoveSpecificPowerAction(target, source, SpiritRendPower.POWER_ID));
             }
         }
 
@@ -65,8 +61,11 @@ public class BurnAction extends AbstractGameAction {
     public static int GetEstimate(AbstractCreature source, int realMagicNumber, int hell, boolean ignoreFervor) {
         int fireAmount = realMagicNumber;
 
-        if (source.hasPower("FireBladeMod:FervorPower") && !ignoreFervor)
-            fireAmount += hell*(source.getPower("FireBladeMod:FervorPower").amount);
+        if (source.hasPower(FervorPower.POWER_ID) && !ignoreFervor)
+            fireAmount += hell*(source.getPower(FervorPower.POWER_ID).amount);
+
+        if (!ignoreFervor && source.hasPower(BattleMageFormPower.POWER_ID) && source.hasPower(StrengthPower.POWER_ID))
+            fireAmount += hell*(source.getPower(StrengthPower.POWER_ID).amount);
 
         if (fireAmount < 0)
             fireAmount = 0;
@@ -80,10 +79,13 @@ public class BurnAction extends AbstractGameAction {
 
         int fireAmount = realMagicNumber;
 
-        if (source.hasPower("FireBladeMod:FervorPower") && !ignoreFervor)
-            fireAmount += hell*(source.getPower("FireBladeMod:FervorPower").amount);
+        if (source.hasPower(FervorPower.POWER_ID) && !ignoreFervor)
+            fireAmount += hell*(source.getPower(FervorPower.POWER_ID).amount);
 
-        if (target.hasPower(RendID))
+        if (!ignoreFervor && source.hasPower(BattleMageFormPower.POWER_ID) && source.hasPower(StrengthPower.POWER_ID))
+            fireAmount += hell*(source.getPower(StrengthPower.POWER_ID).amount);
+
+        if (target.hasPower(SpiritRendPower.POWER_ID))
             fireAmount *= 2;
 
         if (fireAmount < 0)

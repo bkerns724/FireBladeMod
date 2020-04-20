@@ -118,23 +118,22 @@ public class FireBladeMod implements
 
         logger.info("Common");
 
-        BaseMod.addCard(new ArmorStrike());
         BaseMod.addCard(new BackhandSwing());
         BaseMod.addCard(new BasicSmash());
         BaseMod.addCard(new ComboCleave());
         BaseMod.addCard(new ComboSlashes());
         BaseMod.addCard(new ComplexAttack());
-        BaseMod.addCard(new SpiritBurn());
         BaseMod.addCard(new ComplexDefense());
         BaseMod.addCard(new FireBarrier());
         BaseMod.addCard(new Flames());
+        BaseMod.addCard(new Indomitable());
         BaseMod.addCard(new IronEndurance());
-        BaseMod.addCard(new NerveStrike());
         BaseMod.addCard(new ScorchingStrike());
         BaseMod.addCard(new Shove());
-        BaseMod.addCard(new SolidBlock());
         BaseMod.addCard(new SpinningSmash());
+        BaseMod.addCard(new SpiritBurn());
         BaseMod.addCard(new SteadyEndurance());
+        BaseMod.addCard(new TacticalJab());
         BaseMod.addCard(new Turtle());
         BaseMod.addCard(new UnstoppableThrust());
         BaseMod.addCard(new WellPrepared());
@@ -142,59 +141,59 @@ public class FireBladeMod implements
         logger.info("Uncommon");
 
         BaseMod.addCard(new AbsorbEnergy());
+        BaseMod.addCard(new Accelerant());
+        BaseMod.addCard(new AfterBurn());
         BaseMod.addCard(new ArmSmash());
         BaseMod.addCard(new Arson());
-        BaseMod.addCard(new WildSlashes());
         BaseMod.addCard(new Blitzkreig());
         BaseMod.addCard(new BuildUp());
         BaseMod.addCard(new CleansingFlame());
         BaseMod.addCard(new AdrenalineBoost());
         BaseMod.addCard(new EruptionSlash());
         BaseMod.addCard(new Feint());
+        BaseMod.addCard(new FinishingBarrage());
         BaseMod.addCard(new Fireball());
-        BaseMod.addCard(new FireWave());
         BaseMod.addCard(new FlashPoint());
+        BaseMod.addCard(new GetPumped());
         BaseMod.addCard(new ProbingAttack());
-        BaseMod.addCard(new Accelerant());
+        BaseMod.addCard(new Punish());
         BaseMod.addCard(new QuickJabs());
         BaseMod.addCard(new QuickCombo());
         BaseMod.addCard(new RampingDefense());
         BaseMod.addCard(new RapidDodges());
+        BaseMod.addCard(new Refreshment());
         BaseMod.addCard(new RegenerativeEndurance());
         BaseMod.addCard(new Reposition());
         BaseMod.addCard(new ScorchingCleave());
+        BaseMod.addCard(new Shell());
         BaseMod.addCard(new SmokeScreen());
         BaseMod.addCard(new SmokySwing());
-        BaseMod.addCard(new SolidAttack());
-        BaseMod.addCard(new Speed());
         BaseMod.addCard(new SpiritRend());
         BaseMod.addCard(new SteelEndurance());
+        BaseMod.addCard(new Tempo());
         BaseMod.addCard(new ThirdDegree());
         BaseMod.addCard(new TorsoSmash());
         BaseMod.addCard(new Vitality());
+        BaseMod.addCard(new WildSlashes());
 
         logger.info("Rare");
 
-
-        BaseMod.addCard(new AfterBurn());
         BaseMod.addCard(new DebilitatingBlow());
         BaseMod.addCard(new EternalEndurance());
         BaseMod.addCard(new EternalFlame());
         BaseMod.addCard(new ExtraStrikes());
         BaseMod.addCard(new FinalSmash());
-        BaseMod.addCard(new FlameForm());
+        BaseMod.addCard(new BattleMageForm());
         BaseMod.addCard(new Armageddon());
         BaseMod.addCard(new GatherPower());
         BaseMod.addCard(new GlassGreatsword());
         BaseMod.addCard(new HellFire());
         BaseMod.addCard(new Improvise());
+        BaseMod.addCard(new IntimidatingDurability());
         BaseMod.addCard(new LayeredDefense());
         BaseMod.addCard(new LightningCombo());
         BaseMod.addCard(new Reserves());
-        BaseMod.addCard(new Punish());
-        BaseMod.addCard(new Shell());
-        BaseMod.addCard(new Tempo());
-        BaseMod.addCard(new ThirstForBlood());
+        BaseMod.addCard(new StunningBlows());
         BaseMod.addCard(new Unbalance());
 
         logger.info("Added FireBlade cards");
@@ -211,7 +210,12 @@ public class FireBladeMod implements
         BaseMod.addRelicToCustomPool(new LegBrace(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new GymTowel(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new TigerClaw(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new Planner(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new Chakram(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
+
+        if (!FireBladeSettings.isPlannerGlobal())
+            BaseMod.addRelicToCustomPool(new Planner(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
+        else
+            BaseMod.addRelic(new Planner(), RelicType.SHARED);
 
         if (!FireBladeSettings.isGoldenStarGlobal())
             BaseMod.addRelicToCustomPool(new GoldenStar(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);

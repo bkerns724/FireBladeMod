@@ -26,20 +26,20 @@ public class StrikeFireBlade extends CustomFireBladeCard
   
     public StrikeFireBlade() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseDamage = 6;
+        baseDamage = 6;
 
-        this.tags.add(AbstractCard.CardTags.STRIKE);
-        this.tags.add(AbstractCard.CardTags.STARTER_STRIKE);
+        tags.add(AbstractCard.CardTags.STRIKE);
+        tags.add(AbstractCard.CardTags.STARTER_STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 
     public AbstractCard makeCopy() { return new StrikeFireBlade(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
         upgradeName();
         upgradeDamage(3);
         }

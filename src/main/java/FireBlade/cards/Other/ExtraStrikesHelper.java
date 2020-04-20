@@ -1,7 +1,7 @@
 package FireBlade.cards.Other;
 
 import FireBlade.enums.TheFireBladeEnum;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class ExtraStrikesHelper extends CustomCard {
+public class ExtraStrikesHelper extends CustomFireBladeCard {
     public static final String ID = "FireBladeMod:ExtraStrikesHelper";
     public static final String IMG_PATH = "theFireBladeResources/images/cardImages/StrikeFireBlade.png";  // Should not be seen
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -34,6 +34,6 @@ public class ExtraStrikesHelper extends CustomCard {
 
     public void upgrade() {
         upgradeName();
-        this.isMultiDamage = true;
+        isMultiDamage = true;
     }
 }

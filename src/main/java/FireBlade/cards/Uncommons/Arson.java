@@ -2,7 +2,7 @@ package FireBlade.cards.Uncommons;
 
 import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,7 +15,7 @@ import java.util.Iterator;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.*;
 
-public class Arson extends CustomCard {
+public class Arson extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:Arson";
     public static final String NAME;
@@ -31,7 +31,7 @@ public class Arson extends CustomCard {
     public Arson() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = costLimit;
-        this.exhaust = true;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -61,13 +61,13 @@ public class Arson extends CustomCard {
 
         AbstractCard card = list.get(cardRandomRng.random(list.size() - 1));
         card.setCostForTurn(0);
-        this.addToBot(new MakeTempCardInHandAction(card, true));
+        addToBot(new MakeTempCardInHandAction(card, true));
     }
 
     public AbstractCard makeCopy() { return new Arson(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeBaseCost(0);
         }

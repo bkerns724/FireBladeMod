@@ -25,14 +25,13 @@ public class GatherPower extends CustomFireBladeCard {
 
     public GatherPower() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 2;
-        this.magicNumberTwo = this.baseMagicNumberTwo = 3;
-        exhaust = true;
+        magicNumber = baseMagicNumber = 2;
+        magicNumberTwo = baseMagicNumberTwo = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new EnergizedFireBladePower(p, magicNumber), magicNumber));
-        addToBot(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, magicNumberTwo), magicNumberTwo));
     }
 
     public AbstractCard makeCopy() { return new GatherPower(); }
@@ -40,9 +39,7 @@ public class GatherPower extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            exhaust = false;
-            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumberTwo(1);
         }
     }
 

@@ -4,7 +4,7 @@ import FireBlade.actions.BurnAction;
 import FireBlade.cards.FireBladeCardHelper;
 import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class ScorchingStrike extends CustomCard {
+public class ScorchingStrike extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:ScorchingStrike";
     public static final String NAME;
@@ -29,15 +29,15 @@ public class ScorchingStrike extends CustomCard {
 
     public ScorchingStrike() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseDamage = 6;
-        baseMagicNumber = this.magicNumber = 2;
-        this.tags.add(AbstractCard.CardTags.STRIKE);
-        this.tags.add(TheFireBladeCardTags.FLAME);
+        baseDamage = 6;
+        baseMagicNumber = magicNumber = 2;
+        tags.add(AbstractCard.CardTags.STRIKE);
+        tags.add(TheFireBladeCardTags.FLAME);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        addToBot(new BurnAction(p, m, this.baseMagicNumber));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        addToBot(new BurnAction(p, m, baseMagicNumber));
         FireBladeCardHelper.checkForBurnerTip();
     }
 
@@ -48,7 +48,7 @@ public class ScorchingStrike extends CustomCard {
     }
 
     public void onMoveToDiscard() {
-        this.magicNumber = this.baseMagicNumber;
+        magicNumber = baseMagicNumber;
         isMagicNumberModified = false;
     }
 
@@ -61,7 +61,7 @@ public class ScorchingStrike extends CustomCard {
     public AbstractCard makeCopy() { return new ScorchingStrike(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeDamage(2);
             upgradeMagicNumber(1);

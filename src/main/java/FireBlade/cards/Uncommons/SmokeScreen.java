@@ -2,7 +2,7 @@ package FireBlade.cards.Uncommons;
 
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.powers.SmokeScreenPower;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class SmokeScreen extends CustomCard {
+public class SmokeScreen extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:SmokeScreen";
     public static final String NAME;
@@ -40,7 +40,7 @@ public class SmokeScreen extends CustomCard {
     public AbstractCard makeCopy() { return new SmokeScreen(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(2);
         }

@@ -2,7 +2,7 @@ package FireBlade.cards.Rares;
 
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.powers.ExtraStrikesPower;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class ExtraStrikes extends CustomCard {
+public class ExtraStrikes extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:ExtraStrikes";
     public static final String NAME;
@@ -24,19 +24,19 @@ public class ExtraStrikes extends CustomCard {
 
     public ExtraStrikes() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseDamage = 2;
-        this.magicNumber = this.baseMagicNumber = 1;
-        this.tags.add(CardTags.STRIKE);
+        baseDamage = 2;
+        magicNumber = baseMagicNumber = 1;
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new ExtraStrikesPower(p, this.magicNumber), this.magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new ExtraStrikesPower(p, magicNumber), magicNumber));
     }
 
     public AbstractCard makeCopy() { return new ExtraStrikes(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeBaseCost(0);
         }

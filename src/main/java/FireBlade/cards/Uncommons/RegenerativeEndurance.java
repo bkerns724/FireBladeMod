@@ -4,14 +4,13 @@ import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.cards.FireBladeCardHelper;
 import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.RepairPower;
 
 public class RegenerativeEndurance extends CustomFireBladeCard {
 
@@ -27,23 +26,23 @@ public class RegenerativeEndurance extends CustomFireBladeCard {
 
     public RegenerativeEndurance() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseBlock = 9;
-        this.magicNumber = this.baseMagicNumber = 6;
-        this.exhaust = true;
-        this.tags.add(TheFireBladeCardTags.ENDURANCE);
-        this.tags.add(CardTags.HEALING);
+        baseBlock = 9;
+        magicNumber = baseMagicNumber = 6;
+        exhaust = true;
+        tags.add(TheFireBladeCardTags.ENDURANCE);
+        tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainBlockAction(p, p, this.block));
-        addToBot(new ApplyPowerAction(p, p, new RepairPower(p, this.magicNumber), this.magicNumber));
+        addToBot(new GainBlockAction(p, p, block));
+        addToBot(new HealAction(p, p, magicNumber));
         FireBladeCardHelper.checkForEnduranceTip();
     }
 
     public AbstractCard makeCopy() { return new RegenerativeEndurance(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeBlock(3);
             upgradeMagicNumber(2);

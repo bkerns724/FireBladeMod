@@ -4,7 +4,7 @@ import FireBlade.actions.BurnAction;
 import FireBlade.cards.FireBladeCardHelper;
 import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Fireball extends CustomCard {
+public class Fireball extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:Fireball";
     public static final String NAME;
@@ -26,8 +26,8 @@ public class Fireball extends CustomCard {
 
     public Fireball() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = this.baseMagicNumber = 7;
-        this.tags.add(TheFireBladeCardTags.FLAME);
+        magicNumber = baseMagicNumber = 6;
+        tags.add(TheFireBladeCardTags.FLAME);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -44,7 +44,7 @@ public class Fireball extends CustomCard {
     }
 
     public void onMoveToDiscard() {
-        this.magicNumber = this.baseMagicNumber;
+        magicNumber = baseMagicNumber;
         isMagicNumberModified = false;
     }
 
@@ -57,9 +57,9 @@ public class Fireball extends CustomCard {
     public AbstractCard makeCopy() { return new Fireball(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(3);
+            upgradeMagicNumber(2);
         }
     }
 

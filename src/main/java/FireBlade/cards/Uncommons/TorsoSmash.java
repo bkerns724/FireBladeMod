@@ -1,7 +1,7 @@
 package FireBlade.cards.Uncommons;
 
 import FireBlade.cards.FireBladeCardHelper;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 
-public class TorsoSmash extends CustomCard {
+public class TorsoSmash extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:TorsoSmash";
     public static final String NAME;
@@ -29,24 +29,25 @@ public class TorsoSmash extends CustomCard {
 
     public TorsoSmash() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseDamage = 18;
-        this.magicNumber = this.baseMagicNumber = 3;
-        this.tags.add(TheFireBladeCardTags.SMASH);
-        this.exhaust = true;
+        baseDamage = 17;
+        magicNumber = baseMagicNumber = 3;
+        tags.add(TheFireBladeCardTags.SMASH);
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false), magicNumber));
         FireBladeCardHelper.checkForSmashTip();
     }
 
     public AbstractCard makeCopy() { return new TorsoSmash(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeDamage(6);
+            upgradeMagicNumber(1);
         }
     }
 

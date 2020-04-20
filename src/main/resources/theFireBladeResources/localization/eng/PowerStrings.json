@@ -31,13 +31,6 @@
       " #yBlock."
     ]
   },
-  "FireBladeMod:FlameFormPower": {
-    "NAME": "Flame Form",
-    "DESCRIPTIONS": [
-      "Whenever you deal attack damage, apply #b",
-      " #yBurning."
-    ]
-  },
   "FireBladeMod:ExtraStrikesPower": {
     "NAME": "Extra Strikes",
     "DESCRIPTIONS": ["Whenever you play an attack card, deal ",
@@ -71,8 +64,8 @@
   "FireBladeMod:SpiritRendPower": {
     "NAME": "Spirit Rend",
     "DESCRIPTIONS": [
+      "Receives double #yBurning from the next application.",
       "Receives double #yBurning from the next #b",
-      " application.",
       " applications."
     ]
   },
@@ -86,9 +79,9 @@
   "FireBladeMod:FlashPointPower": {
     "NAME": "Flash Point",
     "DESCRIPTIONS": [
-      "Your next #yFlame card is played #b",
-      " more time this turn.",
-      " more times this turn."
+      "Your next #yFlame card is played twice this turn.",
+      "Your next #b",
+      " #yFlame cards are played twice this turn."
     ]
   },
   "FireBladeMod:BuildUpPower": {
@@ -110,6 +103,34 @@
     "DESCRIPTIONS": [
       "Gain #b",
       " [E] next turn."
+    ]
+  },
+  "FireBladeMod:StunningBlowsPower": {
+    "NAME": "Stunning Blows",
+    "DESCRIPTIONS": [
+      "When you play a #ySmash card, apply #b",
+      " #yVulnerable."
+    ]
+  },
+  "FireBladeMod:IntimidatingDurabilityPower": {
+    "NAME": "Initimidating Durability",
+    "DESCRIPTIONS": [
+      "When you play an #yEndurance card, apply #b",
+      " #yWeak to ALL enemies."
+    ]
+  },
+  "FireBladeMod:HealthyPower": {
+    "NAME": "Initimidating Durability",
+    "DESCRIPTIONS": [
+      "The next time you draw a #yStatus card, #yExhaust it and draw a card.",
+      "The next #b",
+      " times you draw a #yStatus card, #yExhaust it and draw a card."
+    ]
+  },
+  "FireBladeMod:BattleMageFormPower": {
+    "NAME": "Battle Mage Form",
+    "DESCRIPTIONS": [
+      "Your attack damage is increased by #yFervor. NL Your #yFlame cards are improved by #yStrength."
     ]
   }
 }

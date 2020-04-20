@@ -65,7 +65,7 @@
       "Spirit\u00a0rend",
       "spirit\u00a0rend"
     ],
-    "DESCRIPTION": "Spirit Rent creatures take receive double #yBurning."
+    "DESCRIPTION": "Spirit Rent creatures receive double #yBurning."
   },
   {
     "PROPER_NAME": "Vigor",
@@ -84,11 +84,11 @@
     "DESCRIPTION": "Metallicize adds block at the end of your turn."
   },
   {
-    "PROPER_NAME": "Accelerant",
+    "PROPER_NAME": "Healthy",
     "NAMES": [
-      "Accelerant",
-      "accelerant"
+      "Healthy",
+      "healthy"
     ],
-    "DESCRIPTION": "If a creature has Accelerant, applying #yBurning with a #yFlame card grants #yFervor."
+    "DESCRIPTION": "The next time you draw a #yStatus card, #yExhaust it and draw a card."
   }
 ]

@@ -20,16 +20,18 @@ public class BlitzkreigPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    public static final String POWER_ID = "FireBladeMod:BlitzkreigPower";
+
     public BlitzkreigPower(AbstractCreature owner, int amount) {
-        this.ID = "FireBladeMod:BlitzkreigPower";
+        ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
 
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/Blitzkreig32.png"), 0 ,0, 32, 32);
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/Blitzkreig84.png"), 0, 0, 84, 84);
+        region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/Blitzkreig32.png"), 0 ,0, 32, 32);
+        region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/Blitzkreig84.png"), 0, 0, 84, 84);
 
-        this.type = POWER_TYPE;
-        this.name = (CardCrawlGame.languagePack.getPowerStrings(this.ID)).NAME;
+        type = POWER_TYPE;
+        name = (CardCrawlGame.languagePack.getPowerStrings(ID)).NAME;
 
         updateDescription();
     }
@@ -43,8 +45,8 @@ public class BlitzkreigPower extends AbstractPower {
 
     public void updateDescription() {
         if (amount == 1)
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         else
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
     }
 }

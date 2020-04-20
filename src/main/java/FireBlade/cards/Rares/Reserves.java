@@ -21,10 +21,11 @@ public class Reserves extends CustomFireBladeCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
+    public static final int reservesAmount = 8;
 
     public Reserves() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 9;
+        magicNumber = baseMagicNumber = reservesAmount;
         magicNumberTwo = baseMagicNumberTwo = 1;
     }
 
@@ -35,7 +36,7 @@ public class Reserves extends CustomFireBladeCard {
     public AbstractCard makeCopy() { return new Reserves(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeBaseCost(0);
         }

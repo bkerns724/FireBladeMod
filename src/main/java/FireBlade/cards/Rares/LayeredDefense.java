@@ -1,7 +1,7 @@
 package FireBlade.cards.Rares;
 
 import FireBlade.enums.TheFireBladeEnum;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class LayeredDefense extends CustomCard {
+public class LayeredDefense extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:LayeredDefense";
     public static final String NAME;
@@ -23,20 +23,20 @@ public class LayeredDefense extends CustomCard {
 
     public LayeredDefense() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseBlock = 5;
-        this.magicNumber = this.baseMagicNumber = 3;
+        baseBlock = 5;
+        magicNumber = baseMagicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < this.magicNumber; i++) {
-            addToBot(new GainBlockAction(p, this.block));
+        for (int i = 0; i < magicNumber; i++) {
+            addToBot(new GainBlockAction(p, block));
         }
     }
 
     public AbstractCard makeCopy() { return new LayeredDefense(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeBlock(1);
         }

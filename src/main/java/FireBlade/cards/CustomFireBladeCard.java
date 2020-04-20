@@ -1,6 +1,11 @@
 package FireBlade.cards;
 
+import FireBlade.powers.BattleMageFormPower;
+import FireBlade.powers.FervorPower;
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public abstract class CustomFireBladeCard extends CustomCard {
     public int magicNumberTwo = 0;
@@ -27,4 +32,27 @@ public abstract class CustomFireBladeCard extends CustomCard {
         this.upgradedMagicNumberTwo = true;
     }
 
- }
+    @Override
+    public void applyPowers() {
+        AbstractPlayer p = AbstractDungeon.player;
+        int temp = baseDamage;
+        if (p.hasPower(BattleMageFormPower.POWER_ID) && p.hasPower(FervorPower.POWER_ID))
+            baseDamage += p.getPower(FervorPower.POWER_ID).amount;
+        super.applyPowers();
+        baseDamage = temp;
+        if (baseDamage != damage)
+            isDamageModified = true;
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        AbstractPlayer p = AbstractDungeon.player;
+        int temp = baseDamage;
+        if (p.hasPower(BattleMageFormPower.POWER_ID) && p.hasPower(FervorPower.POWER_ID))
+            baseDamage += p.getPower(FervorPower.POWER_ID).amount;
+        super.calculateCardDamage(mo);
+        baseDamage = temp;
+        if (baseDamage != damage)
+            isDamageModified = true;
+    }
+}

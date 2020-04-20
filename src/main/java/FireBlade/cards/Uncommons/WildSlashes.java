@@ -2,7 +2,7 @@ package FireBlade.cards.Uncommons;
 
 import FireBlade.actions.WildSlashesAction;
 import FireBlade.enums.TheFireBladeEnum;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class WildSlashes extends CustomCard {
+public class WildSlashes extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:WildSlashes";
     public static final String NAME;

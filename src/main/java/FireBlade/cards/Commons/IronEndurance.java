@@ -25,22 +25,22 @@ public class IronEndurance extends CustomFireBladeCard {
 
     public IronEndurance() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseBlock = 12;
-        this.exhaust = true;
-        this.tags.add(TheFireBladeCardTags.ENDURANCE);
+        baseBlock = 11;
+        exhaust = true;
+        tags.add(TheFireBladeCardTags.ENDURANCE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainBlockAction(p, p, this.block));
+        addToBot(new GainBlockAction(p, p, block));
         FireBladeCardHelper.checkForEnduranceTip();
     }
 
     public AbstractCard makeCopy() { return new IronEndurance(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
-            upgradeBlock(5);
+            upgradeBlock(4);
         }
     }
 

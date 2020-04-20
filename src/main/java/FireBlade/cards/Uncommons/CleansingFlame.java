@@ -1,7 +1,7 @@
 package FireBlade.cards.Uncommons;
 
 import FireBlade.enums.TheFireBladeEnum;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class CleansingFlame extends CustomCard {
+public class CleansingFlame extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:CleansingFlame";
     public static final String NAME;
@@ -24,8 +24,7 @@ public class CleansingFlame extends CustomCard {
 
     public CleansingFlame() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = this.baseMagicNumber = 3;
-        this.selfRetain = true;
+        magicNumber = baseMagicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -36,7 +35,7 @@ public class CleansingFlame extends CustomCard {
     public AbstractCard makeCopy() { return new CleansingFlame(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
         }

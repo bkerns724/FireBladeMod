@@ -2,7 +2,7 @@ package FireBlade.cards.Commons;
 
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.powers.EnergizedFireBladePower;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Shove extends CustomCard {
+public class Shove extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:Shove";
     public static final String NAME;
@@ -27,18 +27,18 @@ public class Shove extends CustomCard {
 
     public Shove() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseDamage = 2;
+        baseDamage = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new ApplyPowerAction(p, p, new EnergizedFireBladePower(p, 1), 1));
     }
 
     public AbstractCard makeCopy() { return new Shove(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeDamage(3);
         }

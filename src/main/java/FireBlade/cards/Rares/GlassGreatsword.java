@@ -1,7 +1,7 @@
 package FireBlade.cards.Rares;
 
 import FireBlade.enums.TheFireBladeEnum;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class GlassGreatsword extends CustomCard {
+public class GlassGreatsword extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:GlassGreatsword";
     public static final String NAME;
@@ -25,19 +25,19 @@ public class GlassGreatsword extends CustomCard {
 
     public GlassGreatsword() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseDamage = 12;
-        this.isMultiDamage = true;
+        baseDamage = 12;
+        isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        addToBot(new ModifyDamageAction(this.uuid, -3));
+        addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        addToBot(new ModifyDamageAction(uuid, -3));
     }
 
     public AbstractCard makeCopy() { return new GlassGreatsword(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeDamage(6);
         }

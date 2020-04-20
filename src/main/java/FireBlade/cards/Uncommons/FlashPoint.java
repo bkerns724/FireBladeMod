@@ -2,7 +2,7 @@ package FireBlade.cards.Uncommons;
 
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.powers.FlashPointPower;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class FlashPoint extends CustomCard {
+public class FlashPoint extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:FlashPoint";
     public static final String NAME;
@@ -40,7 +40,7 @@ public class FlashPoint extends CustomCard {
     public AbstractCard makeCopy() { return new FlashPoint(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
             rawDescription = cardStrings.UPGRADE_DESCRIPTION;

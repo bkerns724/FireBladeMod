@@ -3,7 +3,7 @@ package FireBlade.cards.Rares;
 import FireBlade.cards.FireBladeCardHelper;
 import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 
-public class FinalSmash extends CustomCard {
+public class FinalSmash extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:FinalSmash";
     public static final String NAME;
@@ -30,10 +30,10 @@ public class FinalSmash extends CustomCard {
 
     public FinalSmash() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseDamage = 40;
-        this.exhaust = true;
-        this.cost = 3;
-        this.tags.add(TheFireBladeCardTags.SMASH);
+        baseDamage = 40;
+        exhaust = true;
+        cost = 3;
+        tags.add(TheFireBladeCardTags.SMASH);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -41,14 +41,14 @@ public class FinalSmash extends CustomCard {
             addToBot(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
         }
         addToBot(new WaitAction(0.8F));
-        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
         FireBladeCardHelper.checkForSmashTip();
     }
 
     public AbstractCard makeCopy() { return new FinalSmash(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeDamage(10);
         }

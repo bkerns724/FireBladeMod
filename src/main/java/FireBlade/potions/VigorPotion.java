@@ -23,13 +23,13 @@ public class VigorPotion extends CustomPotion {
 
     public VigorPotion() {
         super(NAME, POTION_ID, RARITY, SIZE, COLOR);
-        this.potency = this.getPotency();
-        this.description = DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1];
-        this.isThrown = false;
-        this.targetRequired = false;
-        this.tips.clear();
-        this.tips.add(new PowerTip(this.name, this.description));
-        this.labOutlineColor = CardHelper.getColor(246.0F, 154.0F, 45.0F);
+        potency = getPotency();
+        description = DESCRIPTIONS[0] + potency + DESCRIPTIONS[1];
+        isThrown = false;
+        targetRequired = false;
+        tips.clear();
+        tips.add(new PowerTip(name, description));
+        labOutlineColor = CardHelper.getColor(246.0F, 154.0F, 45.0F);
     }
 
     public void use(AbstractCreature target) {

@@ -5,8 +5,6 @@ import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.cards.FireBladeCardHelper;
 import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
-import FireBlade.powers.FervorPower;
-import FireBlade.powers.LoseFervorPower;
 import FireBlade.powers.SpiritRendPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -32,11 +30,11 @@ public class SpiritBurn extends CustomFireBladeCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 2;
         magicNumberTwo = baseMagicNumberTwo = 1;
-        this.tags.add(TheFireBladeCardTags.FLAME);
+        tags.add(TheFireBladeCardTags.FLAME);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new BurnAction(p, m, this.baseMagicNumber));
+        addToBot(new BurnAction(p, m, baseMagicNumber));
         addToBot(new ApplyPowerAction(m, p, new SpiritRendPower(m, magicNumberTwo), magicNumberTwo));
         FireBladeCardHelper.checkForBurnerTip();
     }
@@ -48,7 +46,7 @@ public class SpiritBurn extends CustomFireBladeCard {
     }
 
     public void onMoveToDiscard() {
-        this.magicNumber = this.baseMagicNumber;
+        magicNumber = baseMagicNumber;
         isMagicNumberModified = false;
     }
 
@@ -61,7 +59,7 @@ public class SpiritBurn extends CustomFireBladeCard {
     public AbstractCard makeCopy() { return new SpiritBurn(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(2);
         }

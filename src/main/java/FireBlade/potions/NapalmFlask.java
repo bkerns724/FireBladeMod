@@ -24,14 +24,14 @@ public class NapalmFlask extends CustomPotion {
 
     public NapalmFlask() {
         super(NAME, POTION_ID, RARITY, SIZE, COLOR);
-        this.potency = getPotency();
-        this.description = DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1];
-        this.isThrown = true;
-        this.targetRequired = true;
-        this.tips.clear();
-        this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(BaseMod.getKeywordTitle("fireblademod:Burning"), BaseMod.getKeywordDescription("fireblademod:Burning")));
-        this.labOutlineColor = CardHelper.getColor(246.0F, 154.0F, 45.0F);
+        potency = getPotency();
+        description = DESCRIPTIONS[0] + potency + DESCRIPTIONS[1];
+        isThrown = true;
+        targetRequired = true;
+        tips.clear();
+        tips.add(new PowerTip(name, description));
+        tips.add(new PowerTip(BaseMod.getKeywordTitle("fireblademod:Burning"), BaseMod.getKeywordDescription("fireblademod:Burning")));
+        labOutlineColor = CardHelper.getColor(246.0F, 154.0F, 45.0F);
     }
 
     public void use(AbstractCreature target) {

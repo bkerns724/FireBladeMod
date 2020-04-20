@@ -1,7 +1,7 @@
 package FireBlade.cards.Uncommons;
 
 import FireBlade.enums.TheFireBladeEnum;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
-public class EruptionSlash extends CustomCard {
+public class EruptionSlash extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:EruptionSlash";
     public static final String NAME;
@@ -41,7 +41,7 @@ public class EruptionSlash extends CustomCard {
             addToBot(new VFXAction(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.FIRE), 0.1F));
         if (burnAmount >= 50)
             addToBot(new VFXAction(new ExplosionSmallEffect(m.hb.cX, m.hb.cY), 0.1F));
-        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
@@ -59,7 +59,7 @@ public class EruptionSlash extends CustomCard {
     public AbstractCard makeCopy() { return new EruptionSlash(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             selfRetain = true;
             rawDescription = cardStrings.UPGRADE_DESCRIPTION;

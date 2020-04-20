@@ -26,12 +26,12 @@ public class Ember extends CustomFireBladeCard {
 
     public Ember() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = this.baseMagicNumber = 2;
-        this.tags.add(TheFireBladeCardTags.FLAME);
+        magicNumber = baseMagicNumber = 2;
+        tags.add(TheFireBladeCardTags.FLAME);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new BurnAction(p, m, this.baseMagicNumber));
+        addToBot(new BurnAction(p, m, baseMagicNumber));
         FireBladeCardHelper.checkForBurnerTip();
     }
 
@@ -42,7 +42,7 @@ public class Ember extends CustomFireBladeCard {
     }
 
     public void onMoveToDiscard() {
-        this.magicNumber = this.baseMagicNumber;
+        magicNumber = baseMagicNumber;
         isMagicNumberModified = false;
     }
 
@@ -55,7 +55,7 @@ public class Ember extends CustomFireBladeCard {
     public AbstractCard makeCopy() { return new Ember(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
         }

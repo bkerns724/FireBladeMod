@@ -1,6 +1,6 @@
 package FireBlade.cards.Commons;
 
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import FireBlade.enums.TheFireBladeEnum;
 import com.megacrit.cardcrawl.powers.FlameBarrierPower;
 
-public class FireBarrier extends CustomCard {
+public class FireBarrier extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:FireBarrier";
     public static final String NAME;
@@ -30,14 +30,14 @@ public class FireBarrier extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainBlockAction(p, p, this.block));
+        addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(p, p, new FlameBarrierPower(p, magicNumber)));
     }
 
     public AbstractCard makeCopy() { return new FireBarrier(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeBlock(2);
             upgradeMagicNumber(1);

@@ -1,11 +1,9 @@
 package FireBlade.cards.Rares;
 
 import FireBlade.actions.BurnAction;
-import FireBlade.cards.Basics.Ember;
-import FireBlade.cards.FireBladeCardHelper;
 import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.powers.EternalFlamePower;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,7 +13,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import FireBlade.enums.TheFireBladeEnum;
 
-public class EternalFlame extends CustomCard {
+public class EternalFlame extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:EternalFlame";
     public static final String NAME;
@@ -44,7 +42,7 @@ public class EternalFlame extends CustomCard {
     }
 
     public void onMoveToDiscard() {
-        this.magicNumber = this.baseMagicNumber;
+        magicNumber = baseMagicNumber;
         isMagicNumberModified = false;
     }
 
@@ -57,7 +55,7 @@ public class EternalFlame extends CustomCard {
     public AbstractCard makeCopy() { return new EternalFlame(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
         }

@@ -19,16 +19,18 @@ public class AbsorbEnergyPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    public static final String POWER_ID = "FireBladeMod:AbsorbEnergyPower";
+
     public AbsorbEnergyPower(AbstractCreature owner, int amount) {
-        this.ID = "FireBladeMod:AbsorbEnergyPower";
+        ID = POWER_ID;
         this.owner = owner;
 
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/AbsorbEnergy32.png"), 0 ,0, 32, 32);
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/AbsorbEnergy84.png"), 0, 0, 84, 84);
+        region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/AbsorbEnergy32.png"), 0 ,0, 32, 32);
+        region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/AbsorbEnergy84.png"), 0, 0, 84, 84);
 
-        this.type = POWER_TYPE;
+        type = POWER_TYPE;
         this.amount = amount;
-        this.name = (CardCrawlGame.languagePack.getPowerStrings(this.ID)).NAME;
+        name = (CardCrawlGame.languagePack.getPowerStrings(ID)).NAME;
 
         updateDescription();
     }
@@ -42,7 +44,7 @@ public class AbsorbEnergyPower extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        this.type = PowerType.BUFF;
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        type = PowerType.BUFF;
     }
 }

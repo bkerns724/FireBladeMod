@@ -20,16 +20,18 @@ public class BuildUpPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    public static final String POWER_ID = "FireBladeMod:BuildUpPower";
+
     public BuildUpPower(AbstractCreature owner, int amount) {
-        this.ID = "FireBladeMod:BuildUpPower";
+        ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
 
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/BuildUp32.png"), 0 ,0, 32, 32);
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/BuildUp84.png"), 0, 0, 84, 84);
+        region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/BuildUp32.png"), 0 ,0, 32, 32);
+        region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/BuildUp84.png"), 0, 0, 84, 84);
 
-        this.type = POWER_TYPE;
-        this.name = (CardCrawlGame.languagePack.getPowerStrings(this.ID)).NAME;
+        type = POWER_TYPE;
+        name = (CardCrawlGame.languagePack.getPowerStrings(ID)).NAME;
 
         updateDescription();
     }
@@ -41,5 +43,5 @@ public class BuildUpPower extends AbstractPower {
         }
     }
 
-    public void updateDescription() { this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]; }
+    public void updateDescription() { description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1]; }
 }

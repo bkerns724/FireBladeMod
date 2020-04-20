@@ -1,9 +1,7 @@
 package FireBlade.cards.Uncommons;
 
-import FireBlade.cards.FireBladeCardHelper;
-import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -16,7 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
-public class SmokySwing extends CustomCard {
+public class SmokySwing extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:SmokySwing";
     public static final String NAME;
@@ -31,7 +29,7 @@ public class SmokySwing extends CustomCard {
     public SmokySwing() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         baseDamage = 2;
-        magicNumber = this.baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -43,7 +41,7 @@ public class SmokySwing extends CustomCard {
     public AbstractCard makeCopy() { return new SmokySwing(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeDamage(3);
         }

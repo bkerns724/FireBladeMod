@@ -9,12 +9,14 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class SpiritRendPower extends AbstractPower {
     public static PowerType POWER_TYPE = PowerType.DEBUFF;
-    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("FireBladeMod:SpiritRendPower");
+    public static final String POWER_ID = "FireBladeMod:SpiritRendPower";
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
     
     public SpiritRendPower(AbstractCreature owner, int amount) {
-        ID = "FireBladeMod:SpiritRendPower";
+        ID = POWER_ID;
         this.owner = owner;
 
         region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/SpiritRend32.png"), 0 ,0, 32, 32);
@@ -29,8 +31,8 @@ public class SpiritRendPower extends AbstractPower {
 
     public void updateDescription() {
         if (amount == 1)
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+            description = DESCRIPTIONS[0];
         else
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
     }
 }

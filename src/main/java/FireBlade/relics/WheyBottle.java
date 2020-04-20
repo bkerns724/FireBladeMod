@@ -21,7 +21,7 @@ public class WheyBottle extends CustomRelic {
     public static final String ID = "FireBladeMod:WheyBottle";
     public static final String IMG_PATH = "theFireBladeResources/images/relics/WheyBottle.png";
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/WheyBottle_outline.png";
-    private static final RelicTier TIER = RelicTier.UNCOMMON;
+    private static final RelicTier TIER = RelicTier.COMMON;
     private static final LandingSound SOUND = LandingSound.HEAVY;
     private static final int strengthGain = 4;
 

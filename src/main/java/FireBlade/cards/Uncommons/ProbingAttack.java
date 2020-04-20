@@ -38,7 +38,7 @@ public class ProbingAttack extends CustomFireBladeCard {
             if (m.getIntentBaseDmg() > 0)
                 blockAction = true;
 
-        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         if (blockAction)
             addToBot(new GainBlockAction(p, block));
         else
@@ -73,7 +73,7 @@ public class ProbingAttack extends CustomFireBladeCard {
     public AbstractCard makeCopy() { return new ProbingAttack(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(3);
             upgradeBlock(3);

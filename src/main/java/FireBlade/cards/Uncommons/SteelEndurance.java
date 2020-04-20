@@ -27,24 +27,25 @@ public class SteelEndurance extends CustomFireBladeCard {
 
     public SteelEndurance() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseBlock = 16;
-        this.magicNumber = this.baseMagicNumber = 1;
-        this.exhaust = true;
-        this.tags.add(TheFireBladeCardTags.ENDURANCE);
+        baseBlock = 15;
+        magicNumber = baseMagicNumber = 1;
+        exhaust = true;
+        tags.add(TheFireBladeCardTags.ENDURANCE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainBlockAction(p, p, this.block));
-        addToBot(new ApplyPowerAction(p, p, new ArtifactPower(p, this.magicNumber), this.magicNumber));
+        addToBot(new GainBlockAction(p, p, block));
+        addToBot(new ApplyPowerAction(p, p, new ArtifactPower(p, magicNumber), magicNumber));
         FireBladeCardHelper.checkForEnduranceTip();
     }
 
     public AbstractCard makeCopy() { return new SteelEndurance(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
-            upgradeBlock(8);
+            upgradeBlock(3);
+            upgradeMagicNumber(1);
         }
     }
 

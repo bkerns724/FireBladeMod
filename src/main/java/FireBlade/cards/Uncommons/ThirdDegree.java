@@ -2,7 +2,7 @@ package FireBlade.cards.Uncommons;
 
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.powers.FervorPower;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class ThirdDegree extends CustomCard {
+public class ThirdDegree extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:ThirdDegree";
     public static final String NAME;
@@ -24,17 +24,17 @@ public class ThirdDegree extends CustomCard {
 
     public ThirdDegree() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new FervorPower(p, this.magicNumber), this.magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new FervorPower(p, magicNumber), magicNumber));
     }
 
     public AbstractCard makeCopy() { return new ThirdDegree(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
         }

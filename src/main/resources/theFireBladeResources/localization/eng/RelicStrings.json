@@ -3,7 +3,7 @@
     "NAME": "Red Star",
     "FLAVOR": "You feel a desire to feed on the powerful.",
     "DESCRIPTIONS": [
-      "Whenever you defeat an Elite room, gain #b",
+      "Whenever you win an Elite combat, gain #b",
       " Max HP."
     ]
   },
@@ -11,7 +11,7 @@
     "NAME": "Crimson Star",
     "FLAVOR": "Your hunger grows.",
     "DESCRIPTIONS": [
-      "Replaces #rRed #rStar. Whenever you defeat an Elite room, gain #b",
+      "Replaces #rRed #rStar. Whenever you win an Elite combat, gain #b",
       " Max HP."
     ]
   },
@@ -19,7 +19,7 @@
     "NAME": "Golden Star",
     "FLAVOR": "You feel greedier just holding it.",
     "DESCRIPTIONS": [
-      "Whenever you defeat an Elite room, gain #b",
+      "Whenever you win an Elite combat, gain #b",
       " #yGold."
     ]
   },
@@ -92,6 +92,15 @@
     "FLAVOR": "It's filled with meticulous... plans.",
     "DESCRIPTIONS": [
       "At the end of your turn, you may #yRetain #b1 card."
+    ]
+  },
+  "FireBladeMod:Chakram": {
+    "NAME": "Chakram",
+    "FLAVOR": "Spinny and Deadly.",
+    "DESCRIPTIONS": [
+      "Every time you play #b",
+      " #yAttacks in a single turn, gain #b",
+      " #yFervor."
     ]
   }
 }

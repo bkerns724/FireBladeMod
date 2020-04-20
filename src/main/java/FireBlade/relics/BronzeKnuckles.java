@@ -22,7 +22,7 @@ public class BronzeKnuckles extends CustomRelic {
     public static final String ID = "FireBladeMod:BronzeKnuckles";
     public static final String IMG_PATH = "theFireBladeResources/images/relics/BronzeKnuckles.png";
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/BronzeKnuckles_outline.png";
-    private static final RelicTier TIER = RelicTier.UNCOMMON;
+    private static final RelicTier TIER = RelicTier.COMMON;
     private static final LandingSound SOUND = LandingSound.CLINK;
     private static final int strengthLoss = 3;
 

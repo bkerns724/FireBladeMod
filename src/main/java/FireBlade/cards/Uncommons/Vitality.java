@@ -1,6 +1,6 @@
 package FireBlade.cards.Uncommons;
 
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import FireBlade.enums.TheFireBladeEnum;
 import com.megacrit.cardcrawl.powers.BerserkPower;
 
-public class Vitality extends CustomCard {
+public class Vitality extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:Vitality";
     public static final String NAME;
@@ -34,10 +34,10 @@ public class Vitality extends CustomCard {
     public AbstractCard makeCopy() { return new Vitality(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             isEthereal = false;
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

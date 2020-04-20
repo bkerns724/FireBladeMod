@@ -61,10 +61,10 @@ public class TheFireBlade extends CustomPlayer {
     public TheFireBlade(String playerName) {
         super(playerName, TheFireBladeEnum.THE_FIREBLADE, orbTextures, "theFireBladeResources/images/fireBladeCharacter/orb/vfx.png", null, (String) null);
         logger.info("Start TheFireBlade constructor");
-        this.charStat = new CharStat(this);
+        charStat = new CharStat(this);
 
-        this.dialogX = this.drawX + 0.0F * Settings.scale;
-        this.dialogY = this.drawY + 220.0F * Settings.scale;
+        dialogX = drawX + 0.0F * Settings.scale;
+        dialogY = drawY + 220.0F * Settings.scale;
 
         logger.info("Start TheFireBlade initializeClass");
         initializeClass(null, "theFireBladeResources/images/fireBladeCharacter/shoulder2.png",
@@ -74,14 +74,14 @@ public class TheFireBlade extends CustomPlayer {
 
         logger.info("Start TheFireBlade animation");
         loadAnimation("theFireBladeResources/images/fireBladeCharacter/idle/skeleton.atlas", "theFireBladeResources/images/fireBladeCharacter/idle/skeleton.json", 1.0F);
-        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
-        this.stateData.setMix("Hit", "Idle", 0.1F);
+        AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
+        stateData.setMix("Hit", "Idle", 0.1F);
         e.setTimeScale(0.6F);
 
         logger.info("Start TheFireBlade modHelper");
         if (ModHelper.enabledMods.size() > 0 && (ModHelper.isModEnabled("Diverse") || ModHelper.isModEnabled("Chimera") ||
                 ModHelper.isModEnabled("Blue Cards"))) {
-            this.masterMaxOrbs = 1;
+            masterMaxOrbs = 1;
         }
 
         logger.info("End TheFireBlade constructor");
@@ -155,15 +155,15 @@ public class TheFireBlade extends CustomPlayer {
     }
 
     public void renderOrb(SpriteBatch sb, boolean enabled, float current_x, float current_y) {
-        this.energyOrb.renderOrb(sb, enabled, current_x, current_y);
+        energyOrb.renderOrb(sb, enabled, current_x, current_y);
     }
 
     public void updateOrb(int orbCount) {
-        this.energyOrb.updateOrb(orbCount);
+        energyOrb.updateOrb(orbCount);
     }
 
     public CharStat getCharStat() {
-        return this.charStat;
+        return charStat;
     }
 
     public boolean saveFileExists() {
@@ -191,11 +191,11 @@ public class TheFireBlade extends CustomPlayer {
     }
 
     public void refreshCharStat() {
-        this.charStat = new CharStat(this);
+        charStat = new CharStat(this);
     }
 
     public AbstractPlayer newInstance() {
-        return new TheFireBlade(this.name);
+        return new TheFireBlade(name);
     }
 
     public TextureAtlas.AtlasRegion getOrb() {
@@ -203,9 +203,9 @@ public class TheFireBlade extends CustomPlayer {
     }
 
     public void damage(DamageInfo info) {
-        if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output - this.currentBlock > 0) {
-            AnimationState.TrackEntry e = this.state.setAnimation(0, "Hit", false);
-            this.state.addAnimation(0, "Idle", true, 0.0F);
+        if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output - currentBlock > 0) {
+            AnimationState.TrackEntry e = state.setAnimation(0, "Hit", false);
+            state.addAnimation(0, "Idle", true, 0.0F);
             e.setTimeScale(0.6F);
         }
 

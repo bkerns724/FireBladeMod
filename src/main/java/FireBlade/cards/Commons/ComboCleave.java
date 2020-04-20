@@ -30,22 +30,22 @@ public class ComboCleave extends CustomFireBladeCard {
 
     public ComboCleave() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.damage = this.baseDamage = realBaseDamage;
-        this.magicNumberTwo = this.baseMagicNumberTwo = 4;
-        this.isMultiDamage = true;
+        damage = baseDamage = realBaseDamage;
+        magicNumberTwo = baseMagicNumberTwo = 4;
+        isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_WHIRLWIND"));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new WhirlwindEffect(), 0.1F));
 
-        this.addToBot(new SFXAction("ATTACK_IRON_1"));
-        this.addToBot(new VFXAction(p, new CleaveEffect(), 0.0F));
-        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+        addToBot(new SFXAction("ATTACK_IRON_1"));
+        addToBot(new VFXAction(p, new CleaveEffect(), 0.0F));
+        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
 
-        this.addToBot(new SFXAction("ATTACK_IRON_2"));
-        this.addToBot(new VFXAction(p, new CleaveEffect(), 0.0F));
-        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.magicNumberTwo, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+        addToBot(new SFXAction("ATTACK_IRON_2"));
+        addToBot(new VFXAction(p, new CleaveEffect(), 0.0F));
+        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, magicNumberTwo, damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
     }
 
     public void applyPowers() {
@@ -66,7 +66,7 @@ public class ComboCleave extends CustomFireBladeCard {
     public AbstractCard makeCopy() { return new ComboCleave(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeDamage(1);
             realBaseDamage += 1;

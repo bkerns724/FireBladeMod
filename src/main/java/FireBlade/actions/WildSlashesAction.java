@@ -25,13 +25,13 @@ public class WildSlashesAction extends AbstractGameAction {
 
     public void update() {
         int effect = EnergyPanel.totalCount;
-        if (this.energyOnUse != -1) {
-            effect = this.energyOnUse;
+        if (energyOnUse != -1) {
+            effect = energyOnUse;
         }
 
-        if (this.p.hasRelic("Chemical X")) {
+        if (p.hasRelic("Chemical X")) {
             effect += 2;
-            this.p.getRelic("Chemical X").flash();
+            p.getRelic("Chemical X").flash();
         }
 
         if (effect > 0) {
@@ -42,10 +42,10 @@ public class WildSlashesAction extends AbstractGameAction {
                     addToTop(new DamageRandomEnemyAction(damageInfo, AttackEffect.SLASH_HEAVY));
             }
 
-            if (!this.freeToPlayOnce) {
-                this.p.energy.use(EnergyPanel.totalCount);
+            if (!freeToPlayOnce) {
+                p.energy.use(EnergyPanel.totalCount);
                 }
             }
-        this.isDone = true;
+        isDone = true;
     }
 }

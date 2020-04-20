@@ -25,18 +25,18 @@ public class DefendFireBlade extends CustomFireBladeCard
     public DefendFireBlade() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
 
-        this.baseBlock = 5;
-        this.tags.add(CardTags.STARTER_DEFEND);
+        baseBlock = 5;
+        tags.add(CardTags.STARTER_DEFEND);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainBlockAction(p, p, this.block));
+        addToBot(new GainBlockAction(p, p, block));
     }
 
     public AbstractCard makeCopy() { return new DefendFireBlade(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
         upgradeName();
         upgradeBlock(3);
         }

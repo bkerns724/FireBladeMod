@@ -1,5 +1,6 @@
 package FireBlade.powers;
 
+import FireBlade.cards.Rares.Reserves;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -19,7 +20,6 @@ public class ReservesPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("FireBladeMod:ReservesPower");
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final int conversionAmount = 9;
 
     public ReservesPower(AbstractCreature owner, int amount) {
         this.ID = "FireBladeMod:ReservesPower";
@@ -42,10 +42,11 @@ public class ReservesPower extends AbstractPower {
         AbstractPlayer p = AbstractDungeon.player;
         int energyConverted = min(EnergyPanel.totalCount, amount);
         if (energyConverted > 0) {
-            addToBot(new GainBlockAction(p, energyConverted*conversionAmount));
+            addToBot(new GainBlockAction(p, energyConverted* Reserves.reservesAmount));
             p.energy.use(energyConverted);
         }
     }
 
-    public void updateDescription() { this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + conversionAmount + DESCRIPTIONS[2]; }
+    public void updateDescription() { this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]
+            + Reserves.reservesAmount + DESCRIPTIONS[2]; }
 }

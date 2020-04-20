@@ -1,7 +1,7 @@
 package FireBlade.cards.Commons;
 
 import FireBlade.cards.FireBladeCardHelper;
-import basemod.abstracts.CustomCard;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import FireBlade.cards.TheFireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 
-public class SpinningSmash extends CustomCard {
+public class SpinningSmash extends CustomFireBladeCard {
 
     public static final String ID = "FireBladeMod:SpinningSmash";
     public static final String NAME;
@@ -26,21 +26,21 @@ public class SpinningSmash extends CustomCard {
 
     public SpinningSmash() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseDamage = 11;
-        this.isMultiDamage = true;
-        this.exhaust = true;
-        this.tags.add(TheFireBladeCardTags.SMASH);
+        baseDamage = 10;
+        isMultiDamage = true;
+        exhaust = true;
+        tags.add(TheFireBladeCardTags.SMASH);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         FireBladeCardHelper.checkForSmashTip();
     }
 
     public AbstractCard makeCopy() { return new SpinningSmash(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeDamage(4);
         }

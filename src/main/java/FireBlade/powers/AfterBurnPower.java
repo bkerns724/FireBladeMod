@@ -20,24 +20,26 @@ public class AfterBurnPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    public static final String POWER_ID = "FireBladeMod:AfterBurnPower";
+
     public AfterBurnPower(AbstractCreature owner, int amount) {
-        this.ID = "FireBladeMod:AfterBurnPower";
+        ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
 
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/AfterBurn32.png"), 0 ,0, 32, 32);
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/AfterBurn84.png"), 0, 0, 84, 84);
+        region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/AfterBurn32.png"), 0 ,0, 32, 32);
+        region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/AfterBurn84.png"), 0, 0, 84, 84);
 
-        this.type = POWER_TYPE;
-        this.name = (CardCrawlGame.languagePack.getPowerStrings(this.ID)).NAME;
+        type = POWER_TYPE;
+        name = (CardCrawlGame.languagePack.getPowerStrings(ID)).NAME;
 
         updateDescription();
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
         AbstractPlayer p = AbstractDungeon.player;
-        addToBot(new ApplyPowerAction(p, p, new FlameBarrierPower(p, this.amount), this.amount));
+        addToBot(new ApplyPowerAction(p, p, new FlameBarrierPower(p, amount), amount));
     }
 
-    public void updateDescription() { this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]; }
+    public void updateDescription() { description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1]; }
 }

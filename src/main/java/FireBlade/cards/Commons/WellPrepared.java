@@ -24,23 +24,22 @@ public class WellPrepared extends CustomFireBladeCard {
 
     public WellPrepared() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = this.baseMagicNumber = 2;
-        magicNumberTwo = baseMagicNumberTwo = 1;
+        magicNumber = baseMagicNumber = 2;
+        magicNumberTwo = baseMagicNumberTwo = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DrawCardAction(p, this.magicNumber));
+        addToBot(new DrawCardAction(p, magicNumber));
         addToBot(new DiscardAction(p, p, magicNumberTwo, false));
     }
 
     public AbstractCard makeCopy() { return new WellPrepared(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-            upgradeMagicNumberTwo(1);
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            upgradeMagicNumberTwo(-1);
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

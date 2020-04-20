@@ -27,26 +27,26 @@ public class EternalEndurance extends CustomFireBladeCard {
 
     public EternalEndurance() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        this.baseBlock = 30;
-        this.magicNumber = this.baseMagicNumber = 1;
-        this.exhaust = true;
-        this.tags.add(TheFireBladeCardTags.ENDURANCE);
+        baseBlock = 32;
+        magicNumber = baseMagicNumber = 1;
+        exhaust = true;
+        tags.add(TheFireBladeCardTags.ENDURANCE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainBlockAction(p, this.block));
-        addToBot(new ApplyPowerAction(p, p, new BlurPower(p, this.magicNumber), this.magicNumber));
+        addToBot(new GainBlockAction(p, block));
+        addToBot(new ApplyPowerAction(p, p, new BlurPower(p, magicNumber), magicNumber));
         FireBladeCardHelper.checkForEnduranceTip();
     }
 
     public AbstractCard makeCopy() { return new EternalEndurance(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
-            upgradeBlock(10);
+            upgradeBlock(8);
             upgradeMagicNumber(1);
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

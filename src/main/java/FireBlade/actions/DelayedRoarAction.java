@@ -10,14 +10,14 @@ import com.megacrit.cardcrawl.vfx.SpeechBubble;
 public class DelayedRoarAction extends AbstractGameAction {
 
     public DelayedRoarAction() {
-        this.duration = Settings.ACTION_DUR_MED;
-        this.actionType = ActionType.TEXT;
+        duration = Settings.ACTION_DUR_MED;
+        actionType = ActionType.TEXT;
     }
 
     public void update() {
         AbstractPlayer p = AbstractDungeon.player;
         AbstractDungeon.effectList.add(new SpeechBubble(p.dialogX, p.dialogY,"RRRAAAAWWWWRRR!!", true));
         addToTop(new SFXAction("FireBladeMod:CounterRawr"));
-        this.isDone = true;
+        isDone = true;
     }
 }

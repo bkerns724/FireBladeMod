@@ -26,7 +26,7 @@ public class HellFire extends CustomFireBladeCard {
 
     public HellFire() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = this.baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 2;
         magicNumberTwo = baseMagicNumberTwo = 2;
         tags.add(TheFireBladeCardTags.FLAME);
     }
@@ -43,7 +43,7 @@ public class HellFire extends CustomFireBladeCard {
     }
 
     public void onMoveToDiscard() {
-        this.magicNumber = this.baseMagicNumber;
+        magicNumber = baseMagicNumber;
         isMagicNumberModified = false;
     }
 
@@ -56,7 +56,7 @@ public class HellFire extends CustomFireBladeCard {
     public AbstractCard makeCopy() { return new HellFire(); }
 
     public void upgrade() {
-        if (!this.upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
             upgradeMagicNumberTwo(1);
