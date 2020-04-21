@@ -120,7 +120,7 @@
     ]
   },
   "FireBladeMod:HealthyPower": {
-    "NAME": "Initimidating Durability",
+    "NAME": "Healthy",
     "DESCRIPTIONS": [
       "The next time you draw a #yStatus card, #yExhaust it and draw a card.",
       "The next #b",

@@ -2,12 +2,16 @@ package FireBlade.cards.Rares;
 
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.cards.CustomFireBladeCard;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.defect.DiscardPileToHandAction;
+import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static org.apache.commons.lang3.math.NumberUtils.min;
 
 public class Improvise extends CustomFireBladeCard {
 
@@ -23,12 +27,21 @@ public class Improvise extends CustomFireBladeCard {
 
     public Improvise() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 1;
+        magicNumberTwo = baseMagicNumberTwo = 1;
         exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DiscardPileToHandAction(magicNumber));
+        addToBot(new GainEnergyAction(magicNumberTwo));
+        int discardSize = p.discardPile.group.size();
+        if (discardSize == 0)
+            return;
+        if (discardSize <= magicNumber)
+            for (AbstractCard c : p.discardPile.group)
+                addToBot(new DiscardToHandAction(c));
+        else
+            addToBot(new DiscardPileToHandAction(magicNumber));
     }
 
     public AbstractCard makeCopy() { return new Improvise(); }

@@ -240,7 +240,7 @@
   },
   "FireBladeMod:GatherPower": {
     "NAME": "Gather Power",
-    "DESCRIPTION": "Next turn, gain !M! [E] and draw !FireBladeMod:M2! cards."
+    "DESCRIPTION": "Next turn, gain !M! [E] and draw !FireBladeMod:M2! cards. NL Exhaust."
   },
   "FireBladeMod:LayeredDefense": {
     "NAME": "Layered Defense",
@@ -248,8 +248,8 @@
   },
   "FireBladeMod:Improvise": {
     "NAME": "Improvise",
-    "DESCRIPTION": "Put !M! card from your discard pile into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Put !M! cards from your discard pile into your hand. NL Exhaust."
+    "DESCRIPTION": "Put !M! card from your discard pile into your hand. NL Gain [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put !M! cards from your discard pile into your hand. NL Gain [E]. NL Exhaust."
   },
   "FireBladeMod:Punish": {
     "NAME": "Punish",

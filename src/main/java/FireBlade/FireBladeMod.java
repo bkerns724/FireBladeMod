@@ -142,7 +142,6 @@ public class FireBladeMod implements
 
         BaseMod.addCard(new AbsorbEnergy());
         BaseMod.addCard(new Accelerant());
-        BaseMod.addCard(new AfterBurn());
         BaseMod.addCard(new ArmSmash());
         BaseMod.addCard(new Arson());
         BaseMod.addCard(new Blitzkreig());
@@ -178,13 +177,14 @@ public class FireBladeMod implements
 
         logger.info("Rare");
 
+        BaseMod.addCard(new AfterBurn());
+        BaseMod.addCard(new Armageddon());
+        BaseMod.addCard(new BattleMageForm());
         BaseMod.addCard(new DebilitatingBlow());
         BaseMod.addCard(new EternalEndurance());
         BaseMod.addCard(new EternalFlame());
         BaseMod.addCard(new ExtraStrikes());
         BaseMod.addCard(new FinalSmash());
-        BaseMod.addCard(new BattleMageForm());
-        BaseMod.addCard(new Armageddon());
         BaseMod.addCard(new GatherPower());
         BaseMod.addCard(new GlassGreatsword());
         BaseMod.addCard(new HellFire());

@@ -1,4 +1,4 @@
-package FireBlade.cards.Uncommons;
+package FireBlade.cards.Rares;
 
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.powers.AfterBurnPower;
@@ -18,7 +18,7 @@ public class AfterBurn extends CustomFireBladeCard {
     public static final String IMG_PATH = "theFireBladeResources/images/cardImages/AfterBurn.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.POWER;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
 
