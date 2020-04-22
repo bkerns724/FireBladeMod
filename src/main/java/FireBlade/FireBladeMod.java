@@ -47,8 +47,8 @@ public class FireBladeMod implements
     private static TheFireBlade theFireBladeCharacter;
 
     // Character assets
-    private static final String THE_FIREBLADE_BUTTON = "theFireBladeResources/images/charSelect/FireBladeCharacterButton.png";
-    private static final String THE_FIREBLADE_PORTRAIT = "theFireBladeResources/images/charSelect/FireBladeCharacterPortrait.png";
+    public static final String THE_FIREBLADE_BUTTON = "theFireBladeResources/images/charSelect/FireBladeCharacterButton.png";
+    public static final String THE_FIREBLADE_PORTRAIT = "theFireBladeResources/images/charSelect/FireBladeCharacterPortrait.png";
 
     public FireBladeMod() {
         BaseMod.subscribe(this);
@@ -93,8 +93,7 @@ public class FireBladeMod implements
 
         theFireBladeCharacter = new TheFireBlade("The FireBlade");
 
-        BaseMod.addCharacter(theFireBladeCharacter,
-                THE_FIREBLADE_BUTTON,
+        BaseMod.addCharacter(theFireBladeCharacter, THE_FIREBLADE_BUTTON,
                 THE_FIREBLADE_PORTRAIT, TheFireBladeEnum.THE_FIREBLADE);
 
         logger.info("Added FireBlade character.");
@@ -142,14 +141,14 @@ public class FireBladeMod implements
 
         BaseMod.addCard(new AbsorbEnergy());
         BaseMod.addCard(new Accelerant());
+        BaseMod.addCard(new AdrenalineBoost());
         BaseMod.addCard(new ArmSmash());
         BaseMod.addCard(new Arson());
         BaseMod.addCard(new Blitzkreig());
         BaseMod.addCard(new BuildUp());
         BaseMod.addCard(new CleansingFlame());
-        BaseMod.addCard(new AdrenalineBoost());
+        BaseMod.addCard(new DoubleDash());
         BaseMod.addCard(new EruptionSlash());
-        BaseMod.addCard(new Feint());
         BaseMod.addCard(new FinishingBarrage());
         BaseMod.addCard(new Fireball());
         BaseMod.addCard(new FlashPoint());

@@ -3,19 +3,13 @@ package FireBlade.relics;
 import FireBlade.cards.TheFireBladeCardTags;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.GainStrengthPower;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 public class WheyBottle extends CustomRelic {
     public static final String ID = "FireBladeMod:WheyBottle";
@@ -23,7 +17,7 @@ public class WheyBottle extends CustomRelic {
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/WheyBottle_outline.png";
     private static final RelicTier TIER = RelicTier.COMMON;
     private static final LandingSound SOUND = LandingSound.HEAVY;
-    private static final int strengthGain = 4;
+    private static final int vigorAmount = 4;
 
     public WheyBottle() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
@@ -37,11 +31,10 @@ public class WheyBottle extends CustomRelic {
 
         AbstractPlayer p = AbstractDungeon.player;
 
-        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, strengthGain), strengthGain));
-        addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, strengthGain), strengthGain));
+        addToBot(new ApplyPowerAction(p, p, new VigorPower(p, vigorAmount), vigorAmount));
     }
 
-    public String getUpdatedDescription() { return this.DESCRIPTIONS[0] + strengthGain + this.DESCRIPTIONS[1]; }
+    public String getUpdatedDescription() { return this.DESCRIPTIONS[0] + vigorAmount + this.DESCRIPTIONS[1]; }
 
     public AbstractRelic makeCopy() { return new WheyBottle(); }
 }

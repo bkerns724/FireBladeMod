@@ -178,12 +178,8 @@ public class TheFireBlade extends CustomPlayer {
         return "ATTACK_FIRE";
     }
 
-    public Texture getCustomModeCharacterButtonImage() {
-        return new Texture("theFireBladeResources/images/charSelect/FireBladeCharacterButton.png");
-    }
-
     public CharacterStrings getCharacterString() {
-        return CardCrawlGame.languagePack.getCharacterString("FireBlade");
+        return this.characterStrings;
     }
 
     public String getLocalizedCharacterName() {

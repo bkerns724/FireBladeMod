@@ -16,7 +16,7 @@ public class InnerFlame extends CustomRelic {
     private static final RelicTier TIER = RelicTier.BOSS;
     private static final LandingSound SOUND = LandingSound.FLAT;
     private static final int burnAmount = 1;
-    private static final int startTurn = 4;
+    private static final int startTurn = 3;
 
     public InnerFlame() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);

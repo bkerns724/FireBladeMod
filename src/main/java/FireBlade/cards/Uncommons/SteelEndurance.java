@@ -44,8 +44,7 @@ public class SteelEndurance extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(3);
-            upgradeMagicNumber(1);
+            upgradeBlock(7);
         }
     }
 

@@ -57,7 +57,7 @@
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL At the end of this turn, lose !M! Strength."
   },
   "FireBladeMod:ScorchingStrike": {
-    "NAME": "Flame Strike",
+    "NAME": "Scorching Strike",
     "DESCRIPTION": "fireblademod:Flame. NL Deal !D! damage. NL Apply !M! fireblademod:Burning."
   },
   "FireBladeMod:BackhandSwing": {
@@ -142,9 +142,10 @@
     "NAME": "Steel Endurance",
     "DESCRIPTION": "fireblademod:Endurance. NL Gain !B! Block. NL Gain !M! Artifact. NL Exhaust."
   },
-  "FireBladeMod:Feint": {
-    "NAME": "Feint",
-    "DESCRIPTION": "Gain !B! Block. NL Place a card from your discard pile on top of your draw pile."
+  "FireBladeMod:DoubleDash": {
+    "NAME": "Double Dash",
+    "DESCRIPTION": "Draw !M! cards. NL Next turn, draw !FireBladeMod:M2! cards.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Draw !M! cards. NL Next turn, draw !FireBladeMod:M2! cards."
   },
   "FireBladeMod:Fireball": {
     "NAME": "Fireball",

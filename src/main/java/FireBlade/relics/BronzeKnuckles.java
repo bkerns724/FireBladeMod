@@ -24,7 +24,7 @@ public class BronzeKnuckles extends CustomRelic {
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/BronzeKnuckles_outline.png";
     private static final RelicTier TIER = RelicTier.COMMON;
     private static final LandingSound SOUND = LandingSound.CLINK;
-    private static final int strengthLoss = 3;
+    private static final int strengthLoss = 2;
 
     public BronzeKnuckles() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
