@@ -145,7 +145,7 @@
   },
   "FireBladeMod:Arson": {
     "NAME": "Arson",
-    "DESCRIPTION": "Add a random fireblademod:Flame card that costs !M! or less into your hand. NL It costs 0 this turn. NL Exhaust."
+    "DESCRIPTION": "Add a random fireblademod:Flame card into your hand. NL It costs 1 less this turn. NL Exhaust."
   },
   "FireBladeMod:RampingDefense": {
     "NAME": "Ramping Defense",
@@ -217,7 +217,7 @@
   },
   "FireBladeMod:Tempo": {
     "NAME": "Tempo",
-    "DESCRIPTION": "Innate. NL Draw !M! cards. NL Exhaust."
+    "DESCRIPTION": "Draw !M! cards. NL Exhaust."
   },
   "FireBladeMod:EternalEndurance": {
     "NAME": "Eternal Endurance",
@@ -320,8 +320,7 @@
   },
   "FireBladeMod:BodyAsFuel": {
     "NAME": "Body As Fuel",
-    "DESCRIPTION": "Choose a card in your draw pile. NL Play the chosen card. NL Lose HP equal to !M! times its cost.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Choose a card in your draw pile. NL Play the chosen card. NL Lose HP equal to !M! times its cost."
+    "DESCRIPTION": "Choose a card in your draw pile. NL Play the chosen card. NL Lose HP equal to !M! times its cost."
   },
   "FireBladeMod:Wildfire": {
     "NAME": "Wildfire",

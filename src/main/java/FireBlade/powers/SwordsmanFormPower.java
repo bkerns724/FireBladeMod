@@ -35,6 +35,8 @@ public class SwordsmanFormPower extends TwoAmountPower {
     }
 
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+        if (info.type != DamageInfo.DamageType.NORMAL)
+            return;
         amount2--;
         if (amount2 <= 0) { // Should never be < 0
             amount2 = SwordsmanForm.attacksToProc;

@@ -30,7 +30,7 @@ public class ComboCleave extends CustomFireBladeCard {
 
     public ComboCleave() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        damage = baseDamage = realBaseDamage;
+        baseDamage = realBaseDamage;
         magicNumberTwo = baseMagicNumberTwo = 4;
         isMultiDamage = true;
     }
@@ -45,7 +45,7 @@ public class ComboCleave extends CustomFireBladeCard {
 
         addToBot(new SFXAction("ATTACK_IRON_2"));
         addToBot(new VFXAction(p, new CleaveEffect(), 0.0F));
-        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, magicNumberTwo, damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, baseMagicNumberTwo, damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
     }
 
     public void applyPowers() {

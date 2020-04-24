@@ -44,9 +44,9 @@ public class LightningCombo extends CustomFireBladeCard {
                 atkEffect = AbstractGameAction.AttackEffect.SLASH_VERTICAL;
             addToBot(new AttackDamageRandomEnemyAction(this, atkEffect));
         }
-        addToBot(new DamageAllEnemiesAction(p, magicNumberTwo, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        addToBot(new DamageAllEnemiesAction(p, baseMagicNumberTwo, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.SLASH_HEAVY));
         if (upgraded)
-            addToBot(new DamageAllEnemiesAction(p, magicNumberTwo, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+            addToBot(new DamageAllEnemiesAction(p, baseMagicNumberTwo, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }
 
     public void applyPowers() {

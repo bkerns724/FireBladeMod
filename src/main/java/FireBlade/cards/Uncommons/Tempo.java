@@ -24,7 +24,6 @@ public class Tempo extends CustomFireBladeCard {
     public Tempo() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 2;
-        isInnate = true;
         exhaust = true;
     }
 
