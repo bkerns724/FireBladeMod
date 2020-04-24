@@ -45,7 +45,7 @@ public class Flames extends CustomFireBladeCard {
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
-        magicNumber = BurnAction.GetEstimate(AbstractDungeon.player, baseMagicNumber);
+        magicNumber = BurnAction.GetEstimate(AbstractDungeon.player, mo, baseMagicNumber);
         isMagicNumberModified = magicNumber != baseMagicNumber;
         super.calculateCardDamage(mo);
     }

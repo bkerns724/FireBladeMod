@@ -24,12 +24,13 @@ public class CleansingFlame extends CustomFireBladeCard {
 
     public CleansingFlame() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 2;
+        magicNumberTwo = baseMagicNumberTwo = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DrawCardAction(magicNumber));
-        addToBot(new ExhaustAction(2, false));
+        addToBot(new ExhaustAction(magicNumberTwo, false));
     }
 
     public AbstractCard makeCopy() { return new CleansingFlame(); }

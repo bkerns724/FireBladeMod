@@ -1,8 +1,8 @@
 package FireBlade.cards.Rares;
 
-import FireBlade.enums.TheFireBladeEnum;
-import FireBlade.powers.BuildUpPower;
 import FireBlade.cards.CustomFireBladeCard;
+import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.powers.SpreadingFlamesPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,33 +10,35 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class BuildUp extends CustomFireBladeCard {
+public class SpreadingFlames extends CustomFireBladeCard {
 
-    public static final String ID = "FireBladeMod:BuildUp";
+    public static final String ID = "FireBladeMod:SpreadingFlames";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/BuildUp.png";
+    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/SpreadingFlames.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
+    private static final int COST = 1;
 
-    public BuildUp() {
+    public SpreadingFlames() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 20;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new BuildUpPower(p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new SpreadingFlamesPower(p, magicNumber), magicNumber));
     }
 
-    public AbstractCard makeCopy() { return new BuildUp(); }
+    public AbstractCard makeCopy() { return new SpreadingFlames(); }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(10);
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

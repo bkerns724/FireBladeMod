@@ -144,7 +144,7 @@ public class FireBladeMod implements
         BaseMod.addCard(new AdrenalineBoost());
         BaseMod.addCard(new ArmSmash());
         BaseMod.addCard(new Arson());
-        BaseMod.addCard(new BuildUp());
+        BaseMod.addCard(new SwordsmanForm());
         BaseMod.addCard(new CleansingFlame());
         BaseMod.addCard(new DoubleDash());
         BaseMod.addCard(new EruptionSlash());
@@ -172,6 +172,7 @@ public class FireBladeMod implements
         BaseMod.addCard(new ThirstForBlood());
         BaseMod.addCard(new TorsoSmash());
         BaseMod.addCard(new Vitality());
+        BaseMod.addCard(new Wildfire());
         BaseMod.addCard(new WildSlashes());
 
         logger.info("Rare");
@@ -191,9 +192,9 @@ public class FireBladeMod implements
         BaseMod.addCard(new LayeredDefense());
         BaseMod.addCard(new LightningCombo());
         BaseMod.addCard(new PyromancerForm());
+        BaseMod.addCard(new SpreadingFlames());
         BaseMod.addCard(new SwordsmanForm());
         BaseMod.addCard(new Unbalance());
-        BaseMod.addCard(new Wildfire());
 
         logger.info("Added FireBlade cards");
     }

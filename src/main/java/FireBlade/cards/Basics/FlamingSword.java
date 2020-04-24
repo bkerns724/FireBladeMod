@@ -30,7 +30,7 @@ public class FlamingSword extends CustomFireBladeCard
     public FlamingSword() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         baseDamage = 12;
-        magicNumber = baseMagicNumber = 4;
+        magicNumber = baseMagicNumber = 3;
         tags.add(FireBladeCardTags.FLAME);
     }
 
@@ -62,7 +62,7 @@ public class FlamingSword extends CustomFireBladeCard
         if (!upgraded) {
             upgradeName();
             upgradeDamage(4);
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
         }
     }
 

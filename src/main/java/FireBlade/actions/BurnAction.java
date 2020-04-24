@@ -1,5 +1,6 @@
 package FireBlade.actions;
 
+import FireBlade.cards.Rares.SpreadingFlames;
 import FireBlade.powers.*;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -90,6 +91,11 @@ public class BurnAction extends AbstractGameAction {
 
         if (target.hasPower(SpiritRendPower.POWER_ID))
             fireAmount *= 2;
+
+        if (source.hasPower(SpreadingFlamesPower.POWER_ID) && target.hasPower(BurningPower.POWER_ID)) {
+            fireAmount += source.getPower(SpreadingFlamesPower.POWER_ID).amount*
+                    target.getPower(BurningPower.POWER_ID).amount/100;
+        }
 
         if (fireAmount < 0)
             fireAmount = 0;

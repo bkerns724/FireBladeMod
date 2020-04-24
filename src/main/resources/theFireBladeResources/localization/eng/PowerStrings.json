@@ -61,8 +61,8 @@
       " #yFlame cards are played twice this turn."
     ]
   },
-  "FireBladeMod:BuildUpPower": {
-    "NAME": "Build Up",
+  "FireBladeMod:SwordsmanFormPower": {
+    "NAME": "Swordsman Form",
     "DESCRIPTIONS": [
       "Whenever you play a Skill card, gain #b",
       " #yVigor."
@@ -96,15 +96,6 @@
       "Your attack damage is increased by #yFervor. NL Your #yFlame cards are improved by #yStrength."
     ]
   },
-  "FireBladeMod:SwordsmanFormPower": {
-    "NAME": "Swordsman Form",
-    "DESCRIPTIONS": [
-      "Whenever you deal attack damage #b",
-      " times, gain #b",
-      " #yStrength.  #b",
-      " attacks left."
-    ]
-  },
   "FireBladeMod:PyromancerFormPower": {
     "NAME": "Pyromancer Form",
     "DESCRIPTIONS": [
@@ -117,6 +108,13 @@
     "DESCRIPTIONS": [
       "When your HP is at or below 50%, you have #b",
       " additional #yDexterity."
+    ]
+  },
+  "FireBladeMod:SpreadingFlamesPower": {
+    "NAME": "Spreading Flames",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yFlame card, the targets receive extra #yBurning equal to #b",
+      "% of their existing Burning."
     ]
   }
 }

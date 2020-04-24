@@ -82,7 +82,8 @@ public class BodyAsFuelAction extends AbstractGameAction {
         card.drawScale = 0.12F;
         card.targetDrawScale = 0.75F;
         card.applyPowers();
-        addToTop(new LoseHPAction(player, player, card.cost*hpCost));
+        if (card.cost*hpCost > 0)
+            addToTop(new LoseHPAction(player, player, card.cost*hpCost));
         this.addToTop(new NewQueueCardAction(card, true, false, true));
         this.addToTop(new UnlimboAction(card));
         if (!Settings.FAST_MODE) {

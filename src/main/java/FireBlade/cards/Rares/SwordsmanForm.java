@@ -1,8 +1,8 @@
 package FireBlade.cards.Rares;
 
-import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.powers.SwordsmanFormPower;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,12 +22,9 @@ public class SwordsmanForm extends CustomFireBladeCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 3;
 
-    public static final int attacksToProc = 5;
-
     public SwordsmanForm() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 3;
-        magicNumberTwo = baseMagicNumberTwo = attacksToProc;
+        magicNumber = baseMagicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -39,7 +36,7 @@ public class SwordsmanForm extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
         }
     }
 

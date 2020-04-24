@@ -91,7 +91,7 @@
   },
   "FireBladeMod:CleansingFlame": {
     "NAME": "Cleansing Flame",
-    "DESCRIPTION": "Draw !M! cards. NL Exhaust 2 cards."
+    "DESCRIPTION": "Draw !M! cards. NL Exhaust !FireBladeMod:M2! cards."
   },
   "FireBladeMod:ArmSmash": {
     "NAME": "Arm Smash",
@@ -189,8 +189,8 @@
     "NAME": "Third Degree",
     "DESCRIPTION": "Gain !M! fireblademod:Fervor."
   },
-  "FireBladeMod:BuildUp": {
-    "NAME": "Build Up",
+  "FireBladeMod:SwordsmanForm": {
+    "NAME": "Swordsman Form",
     "DESCRIPTION": "Whenever you play a Skill card, gain !M! fireblademod:Vigor."
   },
   "FireBladeMod:Vitality": {
@@ -208,8 +208,7 @@
   },
   "FireBladeMod:LightningCombo": {
     "NAME": "Lightning Combo",
-    "DESCRIPTION": "Do !D! damage to a random enemy !M! times. NL Deal !FireBladeMod:M2! damage to ALL enemies.",
-    "UPGRADE_DESCRIPTION": "Do !D! damage to a random enemy !M! times. NL Deal !FireBladeMod:M2! damage to ALL enemies twice."
+    "DESCRIPTION": "Do !D! damage !M! times."
   },
   "FireBladeMod:DebilitatingBlow": {
     "NAME": "Debilitating Blow",
@@ -289,10 +288,6 @@
     "NAME": "Smoke In The Eyes",
     "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak. NL Apply !M! Vulnerable."
   },
-  "FireBladeMod:SwordsmanForm": {
-    "NAME": "Swordsman Form",
-    "DESCRIPTION": "Every time you deal attack damage !FireBladeMod:M2! times, gain !M! Strength."
-  },
   "FireBladeMod:PyromancerForm": {
     "NAME": "Pyromancer Form",
     "DESCRIPTION": "Your fireblademod:Flame cards apply !FireBladeMod:M2! % more fireblademod:Burning, NL but Exhaust."
@@ -325,5 +320,10 @@
   "FireBladeMod:Wildfire": {
     "NAME": "Wildfire",
     "DESCRIPTION": "Apply !M! fireblademod:Burning. NL Add a burn to your discard pile."
+  },
+  "FireBladeMod:SpreadingFlames": {
+    "NAME": "Spreading Flames",
+    "DESCRIPTION": "Whenever you play a fireblademod:Flame card, the targets receive extra fireblademod:Burning equal to 20% of their existing Burning.",
+    "UPGRADE_DESCRIPTION": "Whenever you play a fireblademod:Flame card, the targets receive extra fireblademod:Burning equal to 30% of their existing Burning."
   }
 }
