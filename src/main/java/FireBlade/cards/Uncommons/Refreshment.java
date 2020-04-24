@@ -1,6 +1,6 @@
 package FireBlade.cards.Uncommons;
 
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.cards.FireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.common.HealAction;
@@ -32,9 +32,9 @@ public class Refreshment extends CustomFireBladeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int enduranceCount = 0;
         for (AbstractCard c : p.exhaustPile.group)
-            if (c.hasTag(TheFireBladeCardTags.ENDURANCE))
+            if (c.hasTag(FireBladeCardTags.ENDURANCE))
                 enduranceCount++;
-        for (int i = 1; i < enduranceCount; i++)
+        for (int i = 0; i < enduranceCount; i++)
             addToBot(new HealAction(p, p, magicNumber));
     }
 

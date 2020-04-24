@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.cards.FireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 
 public class SpinningSmash extends CustomFireBladeCard {
@@ -29,7 +29,7 @@ public class SpinningSmash extends CustomFireBladeCard {
         baseDamage = 10;
         isMultiDamage = true;
         exhaust = true;
-        tags.add(TheFireBladeCardTags.SMASH);
+        tags.add(FireBladeCardTags.SMASH);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

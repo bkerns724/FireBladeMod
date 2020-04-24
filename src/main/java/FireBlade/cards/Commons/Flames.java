@@ -1,7 +1,7 @@
 package FireBlade.cards.Commons;
 
 import FireBlade.actions.BurnAction;
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.cards.FireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -26,7 +26,7 @@ public class Flames extends CustomFireBladeCard {
     public Flames() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 4;
-        tags.add(TheFireBladeCardTags.FLAME);
+        tags.add(FireBladeCardTags.FLAME);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

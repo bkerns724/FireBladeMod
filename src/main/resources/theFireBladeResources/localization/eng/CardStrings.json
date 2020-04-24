@@ -15,14 +15,6 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
-  "FireBladeMod:IntricateCombo": {
-    "NAME": "Intricate Combo",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Gain !B! Block !M! times."
-  },
-  "FireBladeMod:Ember": {
-    "NAME": "Ember",
-    "DESCRIPTION": "fireblademod:Flame. NL Apply !M! fireblademod:Burning."
-  },
   "FireBladeMod:BasicSmash": {
     "NAME": "Basic Smash",
     "DESCRIPTION": "fireblademod:Smash. NL Deal !D! damage. NL Exhaust."
@@ -37,7 +29,7 @@
   },
   "FireBladeMod:UnstoppableThrust": {
     "NAME": "Unstoppable Thrust",
-    "DESCRIPTION": "If the enemy has Block, gain [E] and Draw !M! card. NL Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy had Block, gain [E] and Draw !M! card."
   },
   "FireBladeMod:ComboSlashes": {
     "NAME": "Combo Slashes",
@@ -109,10 +101,6 @@
     "NAME": "Torso Smash",
     "DESCRIPTION": "fireblademod:Smash. NL Deal !D! damage. NL Apply !M! Vulnerable. NL Exhaust."
   },
-  "FireBladeMod:ScorchingCleave": {
-    "NAME": "Scorching Cleave",
-    "DESCRIPTION": "fireblademod:Flame. NL Deal !D! damage to ALL enemies. NL Apply !M! fireblademod:Burning to ALL enemies."
-  },
   "FireBladeMod:WildSlashes": {
     "NAME": "Wild Slashes",
     "DESCRIPTION": "Deal !D! damage to a random enemy X times. NL This card gains !M! damage per enemy."
@@ -130,8 +118,8 @@
     "NAME": "Probing Attack",
     "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, gain !B! Block. NL Else, deal !M! damage."
   },
-  "FireBladeMod:SpiritRend": {
-    "NAME": "Spirit Rend",
+  "FireBladeMod:SoulCut": {
+    "NAME": "Soul Cut",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! fireblademod:Spirit\u00a0Rend."
   },
   "FireBladeMod:SmokySwing": {
@@ -205,10 +193,6 @@
     "NAME": "Build Up",
     "DESCRIPTION": "Whenever you play a Skill card, gain !M! fireblademod:Vigor."
   },
-  "FireBladeMod:Blitzkreig": {
-    "NAME": "Blitzkreig",
-    "DESCRIPTION": "Innate. NL Whenever you play a fireblademod:Smash or fireblademod:Endurance card, draw a card."
-  },
   "FireBladeMod:Vitality": {
     "NAME": "Vitality",
     "DESCRIPTION": "Ethereal. NL At the start of your turn, gain [E].",
@@ -224,7 +208,8 @@
   },
   "FireBladeMod:LightningCombo": {
     "NAME": "Lightning Combo",
-    "DESCRIPTION": "Do !D! damage to a random enemy !M! times. NL Deal !FireBladeMod:M2! damage to ALL enemies."
+    "DESCRIPTION": "Do !D! damage to a random enemy !M! times. NL Deal !FireBladeMod:M2! damage to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Do !D! damage to a random enemy !M! times. NL Deal !FireBladeMod:M2! damage to ALL enemies twice."
   },
   "FireBladeMod:DebilitatingBlow": {
     "NAME": "Debilitating Blow",
@@ -252,29 +237,13 @@
     "DESCRIPTION": "Put !M! card from your discard pile into your hand. NL Gain [E]. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Put !M! cards from your discard pile into your hand. NL Gain [E]. NL Exhaust."
   },
-  "FireBladeMod:Punish": {
-    "NAME": "Punish",
-    "DESCRIPTION": "Retain. NL Gain !M! fireblademod:Flame\u00a0Barrier."
-  },
   "FireBladeMod:HellFire": {
     "NAME": "Hellfire",
     "DESCRIPTION": "fireblademod:Flame. NL Apply !M! fireblademod:Burning. NL fireblademod:Fervor affects this card !FireBladeMod:M2! times."
   },
-  "FireBladeMod:EternalFlame": {
-    "NAME": "Eternal Flame",
-    "DESCRIPTION": "fireblademod:Flame. NL At the end of your turn, apply !M! fireblademod:Burning to all enemies."
-  },
   "FireBladeMod:AfterBurn": {
     "NAME": "After Burn",
     "DESCRIPTION": "Whenever you play a card, gain !M! fireblademod:Flame\u00a0Barrier."
-  },
-  "FireBladeMod:Reserves": {
-    "NAME": "Reserves",
-    "DESCRIPTION": "At the end of your turn, spend [E] to gain !M! Block."
-  },
-  "FireBladeMod:Armageddon": {
-    "NAME": "Armageddon",
-    "DESCRIPTION": "fireblademod:Flame. NL Apply !M! fireblademod:Burning to ALL enemies. NL Exhaust."
   },
   "FireBladeMod:ExtraStrikes": {
     "NAME": "Extra Strikes",
@@ -300,30 +269,62 @@
   },
   "FireBladeMod:Refreshment": {
     "NAME": "Refreshment",
-    "DESCRIPTION": "Heal !M! HP for each fireblademod:Endurance in your exhaust pile.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Heal !M! HP for each fireblademod:Endurance in your exhaust pile."
-  },
-  "FireBladeMod:GetPumped": {
-    "NAME": "Get Pumped",
-    "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity."
-  },
-  "FireBladeMod:StunningBlows": {
-    "NAME": "Stunning Blows",
-    "DESCRIPTION": "Innate. NL fireblademod:Smash cards apply !M! Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Innate. NL fireblademod:Smash cards apply !M! Vulnerable. NL Draw a card."
-  },
-  "FireBladeMod:IntimidatingDurability": {
-    "NAME": "Intimidating Durability",
-    "DESCRIPTION": "Innate. NL Endurance cards apply !M! Weak to ALL enemies.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Endurance cards apply !M! Weak to ALL enemies. NL Draw a card."
+    "DESCRIPTION": "Heal !M! HP for each fireblademod:Endurance in your exhaust pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Heal !M! HP for each fireblademod:Endurance in your exhaust pile. NL Exhaust."
   },
   "FireBladeMod:Indomitable": {
     "NAME": "Indomitable",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! fireblademod:Healthy."
+    "DESCRIPTION": "Deal !D! damage. NL The next !M! times you draw a Status card, Exhaust it and draw a card."
   },
-  "FireBladeMod:BattleMageForm": {
-    "NAME": "Battle Mage Form",
+  "FireBladeMod:BattleMage": {
+    "NAME": "Battle Mage",
     "DESCRIPTION": "Your attack damage is increased by fireblademod:Fervor. NL Your fireblademod:Flame cards are improved by Strength.",
     "UPGRADE_DESCRIPTION": "Your attack damage is increased by fireblademod:Fervor. NL Your fireblademod:Flame cards are improved by Strength. NL Gain 1 fireblademod:Fervor. NL Gain 1 Strength."
+  },
+  "FireBladeMod:FlamingSword": {
+    "NAME": "Flaming Sword",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! fireblademod:Burning."
+  },
+  "FireBladeMod:SmokeInTheEyes": {
+    "NAME": "Smoke In The Eyes",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak. NL Apply !M! Vulnerable."
+  },
+  "FireBladeMod:SwordsmanForm": {
+    "NAME": "Swordsman Form",
+    "DESCRIPTION": "Every time you deal attack damage !FireBladeMod:M2! times, gain !M! Strength."
+  },
+  "FireBladeMod:PyromancerForm": {
+    "NAME": "Pyromancer Form",
+    "DESCRIPTION": "Your fireblademod:Flame cards apply !FireBladeMod:M2! % more fireblademod:Burning, NL but Exhaust."
+  },
+  "FireBladeMod:DesperateDefense": {
+    "NAME": "Desperate Defense",
+    "DESCRIPTION": "When your HP is at or below 50%, you have !M! additional Dexterity."
+  },
+  "FireBladeMod:Flexibility": {
+    "NAME": "Flexibility",
+    "DESCRIPTION": "At the start of your turn, draw !M! additional card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw !M! additional card."
+  },
+  "FireBladeMod:Speed": {
+    "NAME": "Speed",
+    "DESCRIPTION": "Gain !M! Dexterity."
+  },
+  "FireBladeMod:ThirstForBlood": {
+    "NAME": "Thirst For Blood",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength."
+  },
+  "FireBladeMod:MomentumStrike": {
+    "NAME": "MomentumStrike",
+    "DESCRIPTION": "Deal !D! damage. NL If this kills the target, gain [E] and draw a card."
+  },
+  "FireBladeMod:BodyAsFuel": {
+    "NAME": "Body As Fuel",
+    "DESCRIPTION": "Choose a card in your draw pile. NL Play the chosen card. NL Lose HP equal to !M! times its cost.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Choose a card in your draw pile. NL Play the chosen card. NL Lose HP equal to !M! times its cost."
+  },
+  "FireBladeMod:Wildfire": {
+    "NAME": "Wildfire",
+    "DESCRIPTION": "Apply !M! fireblademod:Burning. NL Add a burn to your discard pile."
   }
 }

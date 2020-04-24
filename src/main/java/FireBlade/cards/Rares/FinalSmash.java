@@ -1,7 +1,7 @@
 package FireBlade.cards.Rares;
 
 import FireBlade.cards.FireBladeCardHelper;
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.cards.FireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -33,7 +33,7 @@ public class FinalSmash extends CustomFireBladeCard {
         baseDamage = 40;
         exhaust = true;
         cost = 3;
-        tags.add(TheFireBladeCardTags.SMASH);
+        tags.add(FireBladeCardTags.SMASH);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

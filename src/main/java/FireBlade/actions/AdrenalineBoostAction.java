@@ -1,6 +1,6 @@
 package FireBlade.actions;
 
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.cards.FireBladeCardTags;
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -32,7 +32,7 @@ public class AdrenalineBoostAction extends AbstractGameAction {
                 Iterator iter1 = player.drawPile.group.iterator();
                 while (iter1.hasNext()) {
                     c = (AbstractCard) iter1.next();
-                    if (c.hasTag(TheFireBladeCardTags.ENDURANCE) || c.hasTag(TheFireBladeCardTags.SMASH))
+                    if (c.hasTag(FireBladeCardTags.ENDURANCE) || c.hasTag(FireBladeCardTags.SMASH))
                         tmp.addToRandomSpot(c);
                 }
             }

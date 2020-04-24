@@ -2,7 +2,7 @@ package FireBlade.cards.Rares;
 
 import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.cards.FireBladeCardHelper;
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.cards.FireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -30,7 +30,7 @@ public class EternalEndurance extends CustomFireBladeCard {
         baseBlock = 32;
         magicNumber = baseMagicNumber = 1;
         exhaust = true;
-        tags.add(TheFireBladeCardTags.ENDURANCE);
+        tags.add(FireBladeCardTags.ENDURANCE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

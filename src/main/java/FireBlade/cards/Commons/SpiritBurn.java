@@ -3,7 +3,7 @@ package FireBlade.cards.Commons;
 import FireBlade.actions.BurnAction;
 import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.cards.FireBladeCardHelper;
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.cards.FireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.powers.SpiritRendPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -30,7 +30,7 @@ public class SpiritBurn extends CustomFireBladeCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 2;
         magicNumberTwo = baseMagicNumberTwo = 1;
-        tags.add(TheFireBladeCardTags.FLAME);
+        tags.add(FireBladeCardTags.FLAME);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

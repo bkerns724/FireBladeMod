@@ -1,6 +1,6 @@
 package FireBlade.cards.Uncommons;
 
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.cards.FireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -41,21 +41,21 @@ public class Arson extends CustomFireBladeCard {
         Iterator var2 = srcCommonCardPool.group.iterator();
         while(var2.hasNext()) {
             c = (AbstractCard)var2.next();
-            if (c.hasTag(TheFireBladeCardTags.FLAME) && c.cost <= costLimit)
+            if (c.hasTag(FireBladeCardTags.FLAME) && c.cost <= costLimit)
                 list.add(c);
         }
 
         var2 = srcUncommonCardPool.group.iterator();
         while(var2.hasNext()) {
             c = (AbstractCard)var2.next();
-            if (c.hasTag(TheFireBladeCardTags.FLAME) && c.cost <= costLimit)
+            if (c.hasTag(FireBladeCardTags.FLAME) && c.cost <= costLimit)
                 list.add(c);
         }
 
         var2 = srcRareCardPool.group.iterator();
         while(var2.hasNext()) {
             c = (AbstractCard)var2.next();
-            if (c.hasTag(TheFireBladeCardTags.FLAME) && c.cost <= costLimit)
+            if (c.hasTag(FireBladeCardTags.FLAME) && c.cost <= costLimit)
                 list.add(c);
         }
 

@@ -2,7 +2,7 @@ package FireBlade.cards.Commons;
 
 import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.cards.FireBladeCardHelper;
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.cards.FireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -27,9 +27,9 @@ public class SteadyEndurance extends CustomFireBladeCard {
 
     public SteadyEndurance() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        baseBlock = 5;
+        baseBlock = 6;
         exhaust = true;
-        tags.add(TheFireBladeCardTags.ENDURANCE);
+        tags.add(FireBladeCardTags.ENDURANCE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

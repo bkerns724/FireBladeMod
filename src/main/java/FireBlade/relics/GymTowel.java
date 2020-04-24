@@ -1,6 +1,6 @@
 package FireBlade.relics;
 
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.cards.FireBladeCardTags;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -25,7 +25,7 @@ public class GymTowel extends CustomRelic {
     }
 
     public void onUseCard (AbstractCard card, UseCardAction useCardAction) {
-        if (!card.hasTag(TheFireBladeCardTags.SMASH))
+        if (!card.hasTag(FireBladeCardTags.SMASH))
             return;
 
         flash();

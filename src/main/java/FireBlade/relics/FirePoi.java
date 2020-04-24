@@ -1,6 +1,6 @@
 package FireBlade.relics;
 
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.cards.FireBladeCardTags;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -25,7 +25,7 @@ public class FirePoi extends CustomRelic {
     }
 
     public void onPlayCard (AbstractCard card, AbstractMonster m) {
-        if (!card.hasTag(TheFireBladeCardTags.FLAME))
+        if (!card.hasTag(FireBladeCardTags.FLAME))
             return;
 
         flash();

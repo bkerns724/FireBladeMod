@@ -1,6 +1,7 @@
 package FireBlade.characters;
 
 import FireBlade.actions.DelayedRoarAction;
+import FireBlade.cards.Basics.FlamingSword;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -29,8 +30,6 @@ import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import FireBlade.cards.Basics.Ember;
 
 import FireBlade.enums.*;
 import FireBlade.FireBladeMod;
@@ -99,8 +98,8 @@ public class TheFireBlade extends CustomPlayer {
         retVal.add("FireBladeMod:DefendFireBlade");
         retVal.add("FireBladeMod:DefendFireBlade");
         retVal.add("FireBladeMod:DefendFireBlade");
-        retVal.add("FireBladeMod:IntricateCombo");
-        retVal.add("FireBladeMod:Ember");
+        retVal.add("FireBladeMod:FlamingSword");
+        retVal.add("FireBladeMod:FireBarrier");
 
         logger.info("End TheFireBlade getStartingDeck");
 
@@ -108,7 +107,7 @@ public class TheFireBlade extends CustomPlayer {
     }
 
     public AbstractCard getStartCardForEvent() {
-        return new Ember();
+        return new FlamingSword();
     }
 
     public ArrayList<String> getStartingRelics() {

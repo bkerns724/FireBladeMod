@@ -2,7 +2,7 @@ package FireBlade.cards.Uncommons;
 
 import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.cards.FireBladeCardHelper;
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.cards.FireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
@@ -29,7 +29,7 @@ public class RegenerativeEndurance extends CustomFireBladeCard {
         baseBlock = 9;
         magicNumber = baseMagicNumber = 6;
         exhaust = true;
-        tags.add(TheFireBladeCardTags.ENDURANCE);
+        tags.add(FireBladeCardTags.ENDURANCE);
         tags.add(CardTags.HEALING);
     }
 

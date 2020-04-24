@@ -22,14 +22,14 @@ public class LightningCombo extends CustomFireBladeCard {
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
-    private static final int COST = 4;
-    private int realBaseDamage = 4;
+    private static final int COST = 1;
+    private int realBaseDamage = 2;
 
     public LightningCombo() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         baseDamage = realBaseDamage;
-        magicNumber = baseMagicNumber = 6;
-        magicNumberTwo = baseMagicNumberTwo = 10;
+        magicNumber = baseMagicNumber = 5;
+        magicNumberTwo = baseMagicNumberTwo = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -45,6 +45,8 @@ public class LightningCombo extends CustomFireBladeCard {
             addToBot(new AttackDamageRandomEnemyAction(this, atkEffect));
         }
         addToBot(new DamageAllEnemiesAction(p, magicNumberTwo, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        if (upgraded)
+            addToBot(new DamageAllEnemiesAction(p, magicNumberTwo, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }
 
     public void applyPowers() {
@@ -77,11 +79,9 @@ public class LightningCombo extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(1);
-            realBaseDamage += 1;
             upgradeMagicNumber(2);
-            upgradeMagicNumberTwo(8);
-            upgradeBaseCost(5);
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

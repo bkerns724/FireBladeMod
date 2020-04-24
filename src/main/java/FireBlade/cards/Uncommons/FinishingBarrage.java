@@ -1,6 +1,6 @@
 package FireBlade.cards.Uncommons;
 
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.cards.FireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
@@ -23,19 +23,24 @@ public class FinishingBarrage extends CustomFireBladeCard {
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     public FinishingBarrage() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        baseDamage = 7;
+        baseDamage = 5;
         exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int smashCount = 0;
-        for (AbstractCard c : p.exhaustPile.group)
-            if (c.hasTag(TheFireBladeCardTags.SMASH))
+        for (AbstractCard c : p.exhaustPile.group) {
+            if (c.hasTag(FireBladeCardTags.SMASH))
                 smashCount++;
+        }
+
+        if (smashCount == 0)
+            return;
+
         for (int i = 1; i < smashCount; i++)
             addToBot(new PummelDamageAction(m, new DamageInfo(p, damage, damageTypeForTurn)));
         addToBot(new DamageAction(m, new DamageInfo(p, damage), AttackEffect.BLUNT_HEAVY));

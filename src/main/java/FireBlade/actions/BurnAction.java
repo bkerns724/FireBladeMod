@@ -1,9 +1,6 @@
 package FireBlade.actions;
 
-import FireBlade.powers.BattleMageFormPower;
-import FireBlade.powers.BurningPower;
-import FireBlade.powers.FervorPower;
-import FireBlade.powers.SpiritRendPower;
+import FireBlade.powers.*;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -64,8 +61,11 @@ public class BurnAction extends AbstractGameAction {
         if (source.hasPower(FervorPower.POWER_ID) && !ignoreFervor)
             fireAmount += hell*(source.getPower(FervorPower.POWER_ID).amount);
 
-        if (!ignoreFervor && source.hasPower(BattleMageFormPower.POWER_ID) && source.hasPower(StrengthPower.POWER_ID))
+        if (!ignoreFervor && source.hasPower(BattleMagePower.POWER_ID) && source.hasPower(StrengthPower.POWER_ID))
             fireAmount += hell*(source.getPower(StrengthPower.POWER_ID).amount);
+
+        if (source.hasPower(PyromancerFormPower.POWER_ID))
+            fireAmount *= (1 + source.getPower(PyromancerFormPower.POWER_ID).amount);
 
         if (fireAmount < 0)
             fireAmount = 0;
@@ -82,8 +82,11 @@ public class BurnAction extends AbstractGameAction {
         if (source.hasPower(FervorPower.POWER_ID) && !ignoreFervor)
             fireAmount += hell*(source.getPower(FervorPower.POWER_ID).amount);
 
-        if (!ignoreFervor && source.hasPower(BattleMageFormPower.POWER_ID) && source.hasPower(StrengthPower.POWER_ID))
+        if (!ignoreFervor && source.hasPower(BattleMagePower.POWER_ID) && source.hasPower(StrengthPower.POWER_ID))
             fireAmount += hell*(source.getPower(StrengthPower.POWER_ID).amount);
+
+        if (source.hasPower(PyromancerFormPower.POWER_ID))
+            fireAmount *= (1 + source.getPower(PyromancerFormPower.POWER_ID).amount);
 
         if (target.hasPower(SpiritRendPower.POWER_ID))
             fireAmount *= 2;

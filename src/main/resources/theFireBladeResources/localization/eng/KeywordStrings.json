@@ -82,13 +82,5 @@
       "metallicize"
     ],
     "DESCRIPTION": "Metallicize adds block at the end of your turn."
-  },
-  {
-    "PROPER_NAME": "Healthy",
-    "NAMES": [
-      "Healthy",
-      "healthy"
-    ],
-    "DESCRIPTION": "The next time you draw a #yStatus card, #yExhaust it and draw a card."
   }
 ]

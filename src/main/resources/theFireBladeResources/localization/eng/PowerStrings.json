@@ -11,9 +11,9 @@
     "NAME": "Fervor",
     "DESCRIPTIONS": [
       "#yFlame cards apply an additional #b",
-      " burning.",
+      " #yBurning.",
       "#yFlame cards apply #b",
-      " less burning."
+      " less #yBurning."
     ]
   },
   "FireBladeMod:LoseFervorPower": {
@@ -21,14 +21,6 @@
     "DESCRIPTIONS": [
       "At the end of this turn, lose #b",
       " #yFervor."
-    ]
-  },
-  "FireBladeMod:ReservesPower": {
-    "NAME": "Reserves",
-    "DESCRIPTIONS": [
-      "At the end of your turn up to #b",
-      " [E] you have becomes #b",
-      " #yBlock."
     ]
   },
   "FireBladeMod:ExtraStrikesPower": {
@@ -44,21 +36,6 @@
     "DESCRIPTIONS": [
       "Whenever you play a card, gain #b",
       " #yFlame #yBarrier."
-    ]
-  },
-  "FireBladeMod:BlitzkreigPower": {
-    "NAME": "Blitzkreig",
-    "DESCRIPTIONS": [
-      "Whenever you play a #ySmash or #yEndurance card, draw #b",
-      " card.",
-      " cards."
-    ]
-  },
-  "FireBladeMod:EternalFlamePower": {
-    "NAME": "Eternal Flame",
-    "DESCRIPTIONS": [
-      "At the end of your turn, apply #b",
-      " #yBurning to ALL enemies."
     ]
   },
   "FireBladeMod:SpiritRendPower": {
@@ -105,20 +82,6 @@
       " [E] next turn."
     ]
   },
-  "FireBladeMod:StunningBlowsPower": {
-    "NAME": "Stunning Blows",
-    "DESCRIPTIONS": [
-      "When you play a #ySmash card, apply #b",
-      " #yVulnerable."
-    ]
-  },
-  "FireBladeMod:IntimidatingDurabilityPower": {
-    "NAME": "Initimidating Durability",
-    "DESCRIPTIONS": [
-      "When you play an #yEndurance card, apply #b",
-      " #yWeak to ALL enemies."
-    ]
-  },
   "FireBladeMod:HealthyPower": {
     "NAME": "Healthy",
     "DESCRIPTIONS": [
@@ -127,10 +90,33 @@
       " times you draw a #yStatus card, #yExhaust it and draw a card."
     ]
   },
-  "FireBladeMod:BattleMageFormPower": {
-    "NAME": "Battle Mage Form",
+  "FireBladeMod:BattleMagePower": {
+    "NAME": "Battle Mage",
     "DESCRIPTIONS": [
       "Your attack damage is increased by #yFervor. NL Your #yFlame cards are improved by #yStrength."
+    ]
+  },
+  "FireBladeMod:SwordsmanFormPower": {
+    "NAME": "Swordsman Form",
+    "DESCRIPTIONS": [
+      "Whenever you deal attack damage #b",
+      " times, gain #b",
+      " #yStrength.  #b",
+      " attacks left."
+    ]
+  },
+  "FireBladeMod:PyromancerFormPower": {
+    "NAME": "Pyromancer Form",
+    "DESCRIPTIONS": [
+      "Your #yFlame cards apply #b",
+      "% more #yBurning, but #yExhaust."
+    ]
+  },
+  "FireBladeMod:DesperateDefensePower": {
+    "NAME": "Desperate Defense",
+    "DESCRIPTIONS": [
+      "When your HP is at or below 50%, you have #b",
+      " additional #yDexterity."
     ]
   }
 }

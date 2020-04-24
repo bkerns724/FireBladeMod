@@ -2,7 +2,7 @@ package FireBlade.cards.Commons;
 
 import FireBlade.actions.BurnAction;
 import FireBlade.cards.FireBladeCardHelper;
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.cards.FireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -32,7 +32,7 @@ public class ScorchingStrike extends CustomFireBladeCard {
         baseDamage = 6;
         baseMagicNumber = magicNumber = 2;
         tags.add(AbstractCard.CardTags.STRIKE);
-        tags.add(TheFireBladeCardTags.FLAME);
+        tags.add(FireBladeCardTags.FLAME);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

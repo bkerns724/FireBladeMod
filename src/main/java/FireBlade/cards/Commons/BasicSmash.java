@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.cards.FireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 
 public class BasicSmash extends CustomFireBladeCard {
@@ -30,7 +30,7 @@ public class BasicSmash extends CustomFireBladeCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         baseDamage = 13;
         exhaust = true;
-        tags.add(TheFireBladeCardTags.SMASH);
+        tags.add(FireBladeCardTags.SMASH);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

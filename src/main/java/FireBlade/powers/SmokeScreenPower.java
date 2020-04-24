@@ -1,6 +1,6 @@
 package FireBlade.powers;
 
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.cards.FireBladeCardTags;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -33,7 +33,7 @@ public class SmokeScreenPower extends AbstractPower {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.hasTag(TheFireBladeCardTags.FLAME)) {
+        if (card.hasTag(FireBladeCardTags.FLAME)) {
             flash();
             addToBot(new GainBlockAction(owner, amount));
         }

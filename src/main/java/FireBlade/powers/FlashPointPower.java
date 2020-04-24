@@ -1,6 +1,6 @@
 package FireBlade.powers;
 
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.cards.FireBladeCardTags;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -37,7 +37,7 @@ public class FlashPointPower extends AbstractPower {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!card.purgeOnUse && card.hasTag(TheFireBladeCardTags.FLAME) && amount > 0) {
+        if (!card.purgeOnUse && card.hasTag(FireBladeCardTags.FLAME) && amount > 0) {
             flash();
 
             AbstractMonster m = null;

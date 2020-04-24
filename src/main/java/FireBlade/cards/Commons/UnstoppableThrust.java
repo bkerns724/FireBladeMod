@@ -32,11 +32,11 @@ public class UnstoppableThrust extends CustomFireBladeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         if (m.currentBlock > 0) {
             addToBot(new GainEnergyAction(magicNumber));
             addToBot(new DrawCardAction(magicNumber));
         }
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
     }
 
     public AbstractCard makeCopy() { return new UnstoppableThrust(); }

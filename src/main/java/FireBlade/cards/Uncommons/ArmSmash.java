@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.cards.FireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
 
 public class ArmSmash extends CustomFireBladeCard {
@@ -31,7 +31,7 @@ public class ArmSmash extends CustomFireBladeCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         baseDamage = 17;
         magicNumber = baseMagicNumber = 3;
-        tags.add(TheFireBladeCardTags.SMASH);
+        tags.add(FireBladeCardTags.SMASH);
         exhaust = true;
     }
 

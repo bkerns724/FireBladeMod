@@ -3,14 +3,16 @@ package FireBlade.cards.Rares;
 import FireBlade.actions.BurnAction;
 import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.cards.FireBladeCardHelper;
-import FireBlade.cards.TheFireBladeCardTags;
+import FireBlade.cards.FireBladeCardTags;
 import FireBlade.enums.TheFireBladeEnum;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
 
 public class HellFire extends CustomFireBladeCard {
 
@@ -26,12 +28,14 @@ public class HellFire extends CustomFireBladeCard {
 
     public HellFire() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 2;
-        magicNumberTwo = baseMagicNumberTwo = 2;
-        tags.add(TheFireBladeCardTags.FLAME);
+        magicNumber = baseMagicNumber = 3;
+        magicNumberTwo = baseMagicNumberTwo = 3;
+        tags.add(FireBladeCardTags.FLAME);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (BurnAction.GetEstimate(p, m, baseMagicNumber, baseMagicNumberTwo) >= 50)
+            addToBot(new VFXAction(new ScreenOnFireEffect(), 0.6F));
         addToBot(new BurnAction(p, m, baseMagicNumber, baseMagicNumberTwo));
         FireBladeCardHelper.checkForBurnerTip();
     }
