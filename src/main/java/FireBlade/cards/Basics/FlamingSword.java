@@ -36,7 +36,7 @@ public class FlamingSword extends CustomFireBladeCard
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        addToBot(new BurnAction(p, m, magicNumber));
+        addToBot(new BurnAction(p, m, baseMagicNumber));
     }
 
     public void applyPowers() {
