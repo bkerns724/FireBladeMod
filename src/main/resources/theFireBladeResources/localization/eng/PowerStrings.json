@@ -64,7 +64,7 @@
   "FireBladeMod:SwordsmanFormPower": {
     "NAME": "Swordsman Form",
     "DESCRIPTIONS": [
-      "Whenever you play a Skill card, gain #b",
+      "At the start of your turn, gain #b",
       " #yVigor."
     ]
   },

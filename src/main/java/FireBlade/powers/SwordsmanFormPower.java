@@ -2,8 +2,6 @@ package FireBlade.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -36,11 +34,10 @@ public class SwordsmanFormPower extends AbstractPower {
         updateDescription();
     }
 
-    public void onUseCard(AbstractCard card, UseCardAction action) {
+    @Override
+    public void atStartOfTurn() {
         AbstractPlayer p = AbstractDungeon.player;
-        if (card.type == AbstractCard.CardType.SKILL){
-            addToBot(new ApplyPowerAction(p, p, new VigorPower(p, amount), amount));
-        }
+        addToBot(new ApplyPowerAction(p, p, new VigorPower(p, amount), amount));
     }
 
     public void updateDescription() { description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1]; }

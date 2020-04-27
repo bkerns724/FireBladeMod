@@ -189,7 +189,7 @@
   },
   "FireBladeMod:SwordsmanForm": {
     "NAME": "Swordsman Form",
-    "DESCRIPTION": "Whenever you play a Skill card, gain !M! fireblademod:Vigor."
+    "DESCRIPTION": "At the start of your turn, gain !M! fireblademod:Vigor."
   },
   "FireBladeMod:Vitality": {
     "NAME": "Vitality",
@@ -300,9 +300,9 @@
     "DESCRIPTION": "At the start of your turn, draw !M! additional card.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, draw !M! additional card."
   },
-  "FireBladeMod:Speed": {
-    "NAME": "Speed",
-    "DESCRIPTION": "Gain !M! Dexterity."
+  "FireBladeMod:FlashBang": {
+    "NAME": "FlashBang",
+    "DESCRIPTION": "Apply !M! Weak. NL Enemy loses !FireBladeMod:M2! Strength this turn."
   },
   "FireBladeMod:ThirstForBlood": {
     "NAME": "Thirst For Blood",

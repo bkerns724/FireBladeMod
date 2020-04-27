@@ -24,7 +24,7 @@ public class SwordsmanForm extends CustomFireBladeCard {
 
     public SwordsmanForm() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 4;
+        magicNumber = baseMagicNumber = 7;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -36,7 +36,7 @@ public class SwordsmanForm extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
         }
     }
 

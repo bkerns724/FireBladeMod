@@ -150,6 +150,7 @@ public class FireBladeMod implements
         BaseMod.addCard(new EruptionSlash());
         BaseMod.addCard(new FinishingBarrage());
         BaseMod.addCard(new Fireball());
+        BaseMod.addCard(new FlashBang());
         BaseMod.addCard(new FlashPoint());
         BaseMod.addCard(new Flexibility());
         BaseMod.addCard(new LearnTells());
@@ -165,7 +166,6 @@ public class FireBladeMod implements
         BaseMod.addCard(new SmokeScreen());
         BaseMod.addCard(new SmokySwing());
         BaseMod.addCard(new SoulCut());
-        BaseMod.addCard(new Speed());
         BaseMod.addCard(new SteelEndurance());
         BaseMod.addCard(new Tempo());
         BaseMod.addCard(new ThirdDegree());
