@@ -30,16 +30,17 @@ public class EruptionSlash extends CustomFireBladeCard {
     public EruptionSlash() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         realBaseDamage = baseDamage = 3;
+        magicNumber = baseMagicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int burnAmount = 0;
+        int bonusAmount = 0;
         addToBot(new VFXAction(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.SLASH_VERTICAL), 0.1F));
         if (m.hasPower("FireBladeMod:BurningPower"))
-            burnAmount = (m.getPower("FireBladeMod:BurningPower")).amount;
-        if (burnAmount >= 5 && burnAmount < 50)
+            bonusAmount = magicNumber*(m.getPower("FireBladeMod:BurningPower")).amount;
+        if (bonusAmount >= 5 && bonusAmount < 50)
             addToBot(new VFXAction(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.FIRE), 0.1F));
-        if (burnAmount >= 50)
+        if (bonusAmount >= 50)
             addToBot(new VFXAction(new ExplosionSmallEffect(m.hb.cX, m.hb.cY), 0.1F));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
     }
@@ -47,7 +48,7 @@ public class EruptionSlash extends CustomFireBladeCard {
     public void calculateCardDamage(AbstractMonster mo) {
         baseDamage = realBaseDamage;
         if (mo.hasPower("FireBladeMod:BurningPower")) {
-            baseDamage += (mo.getPower("FireBladeMod:BurningPower")).amount;
+            baseDamage += magicNumber*(mo.getPower("FireBladeMod:BurningPower")).amount;
         }
         super.calculateCardDamage(mo);
         baseDamage = realBaseDamage;
@@ -61,9 +62,7 @@ public class EruptionSlash extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            selfRetain = true;
-            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(1);
         }
     }
 

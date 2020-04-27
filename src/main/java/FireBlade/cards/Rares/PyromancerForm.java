@@ -24,8 +24,7 @@ public class PyromancerForm extends CustomFireBladeCard {
 
     public PyromancerForm() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 2;
-        magicNumberTwo = baseMagicNumberTwo = magicNumber*100;
+        magicNumber = baseMagicNumber = 100;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -37,9 +36,9 @@ public class PyromancerForm extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-            magicNumberTwo += 100;
-            baseMagicNumberTwo += 100;
+            upgradeMagicNumber(50);
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

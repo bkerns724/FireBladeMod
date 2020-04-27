@@ -24,7 +24,7 @@ public class Shell extends CustomFireBladeCard {
 
     public Shell() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 5;
+        magicNumber = baseMagicNumber = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

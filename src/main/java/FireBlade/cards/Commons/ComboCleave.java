@@ -27,6 +27,7 @@ public class ComboCleave extends CustomFireBladeCard {
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final int COST = 1;
     private int realBaseDamage = 3;
+    public int[] multiDamage2;
 
     public ComboCleave() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
@@ -45,7 +46,7 @@ public class ComboCleave extends CustomFireBladeCard {
 
         addToBot(new SFXAction("ATTACK_IRON_2"));
         addToBot(new VFXAction(p, new CleaveEffect(), 0.0F));
-        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, baseMagicNumberTwo, damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, multiDamage2, damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
     }
 
     public void applyPowers() {
@@ -56,6 +57,17 @@ public class ComboCleave extends CustomFireBladeCard {
             isMagicNumberTwoModified = true;
         baseDamage = realBaseDamage;
         super.applyPowers();
+    }
+
+    public void calculateCardDamage(AbstractMonster m) {
+        baseDamage = baseMagicNumberTwo;
+        super.calculateCardDamage(m);
+        multiDamage2 = multiDamage;
+        magicNumberTwo = damage;
+        if (magicNumberTwo != baseMagicNumberTwo)
+            isMagicNumberTwoModified = true;
+        baseDamage = realBaseDamage;
+        super.calculateCardDamage(m);
     }
 
     public void onMoveToDiscard() {

@@ -50,7 +50,7 @@ public class FinalSmash extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(10);
+            upgradeDamage(12);
         }
     }
 

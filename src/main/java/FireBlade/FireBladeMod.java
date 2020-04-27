@@ -125,6 +125,7 @@ public class FireBladeMod implements
         BaseMod.addCard(new ComplexDefense());
         BaseMod.addCard(new Flames());
         BaseMod.addCard(new Indomitable());
+        BaseMod.addCard(new IntricateCombo());
         BaseMod.addCard(new IronEndurance());
         BaseMod.addCard(new ScorchingStrike());
         BaseMod.addCard(new Shove());
@@ -132,7 +133,6 @@ public class FireBladeMod implements
         BaseMod.addCard(new SpinningSmash());
         BaseMod.addCard(new SpiritBurn());
         BaseMod.addCard(new SteadyEndurance());
-        BaseMod.addCard(new TacticalJab());
         BaseMod.addCard(new Turtle());
         BaseMod.addCard(new UnstoppableThrust());
         BaseMod.addCard(new WellPrepared());
@@ -152,11 +152,11 @@ public class FireBladeMod implements
         BaseMod.addCard(new Fireball());
         BaseMod.addCard(new FlashPoint());
         BaseMod.addCard(new Flexibility());
+        BaseMod.addCard(new LearnTells());
         BaseMod.addCard(new MomentumStrike());
         BaseMod.addCard(new ProbingAttack());
         BaseMod.addCard(new QuickJabs());
         BaseMod.addCard(new QuickCombo());
-        BaseMod.addCard(new RampingDefense());
         BaseMod.addCard(new RapidDodges());
         BaseMod.addCard(new Refreshment());
         BaseMod.addCard(new RegenerativeEndurance());

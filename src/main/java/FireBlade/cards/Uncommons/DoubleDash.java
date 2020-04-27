@@ -26,7 +26,7 @@ public class DoubleDash extends CustomFireBladeCard {
     public DoubleDash() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 2;
-        magicNumberTwo = baseMagicNumberTwo = 2;
+        magicNumberTwo = baseMagicNumberTwo = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -39,9 +39,7 @@ public class DoubleDash extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            selfRetain = true;
-            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumberTwo(1);
         }
     }
 

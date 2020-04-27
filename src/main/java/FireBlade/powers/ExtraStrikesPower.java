@@ -1,5 +1,6 @@
 package FireBlade.powers;
 
+import FireBlade.actions.ExtraStrikesAction;
 import FireBlade.cards.Other.ExtraStrikesHelper;
 import basemod.BaseMod;
 import basemod.interfaces.OnPowersModifiedSubscriber;
@@ -53,9 +54,7 @@ public class ExtraStrikesPower extends AbstractPower implements OnPowersModified
 
         AbstractPlayer p = AbstractDungeon.player;
         for (int i = 0; i < this.amount; i++) {
-            AbstractMonster mo = AbstractDungeon.getRandomMonster();
-            helperCard.calculateCardDamage(mo);
-            addToBot(new DamageAction(mo, new DamageInfo(p, helperCard.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+            addToBot(new ExtraStrikesAction(p, helperCard));
         }
     }
 

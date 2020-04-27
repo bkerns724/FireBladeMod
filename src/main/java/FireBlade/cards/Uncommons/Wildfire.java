@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.SearingBlowEffect;
+import static java.lang.Math.max;
 
 public class Wildfire extends CustomFireBladeCard {
 
@@ -37,7 +38,10 @@ public class Wildfire extends CustomFireBladeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int effectSize = BurnAction.GetEstimate(p, m, baseMagicNumber);
+        int effectSize = BurnAction.GetEstimate(p, m, baseMagicNumber) - 8;
+        effectSize /= 2;
+        if (effectSize < 1)
+            effectSize = 1;
             addToBot(new VFXAction(new SearingBlowEffect(m.hb.cX, m.hb.cY, effectSize)));
         addToBot(new BurnAction(p, m, baseMagicNumber));
         addToBot(new MakeTempCardInDiscardAction(new Burn(), burnAmount));

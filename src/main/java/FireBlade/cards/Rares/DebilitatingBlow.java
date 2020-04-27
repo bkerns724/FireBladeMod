@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 public class DebilitatingBlow extends CustomFireBladeCard {
@@ -29,16 +28,15 @@ public class DebilitatingBlow extends CustomFireBladeCard {
 
     public DebilitatingBlow() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        baseDamage = 8;
-        baseBlock = 8;
-        magicNumber = baseMagicNumber = 1;
+        baseDamage = 9;
+        baseBlock = 9;
+        magicNumber = baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        addToBot(new GainBlockAction(p, baseBlock));
+        addToBot(new GainBlockAction(p, block));
         addToBot(new ApplyPowerAction(m, p, new WeakPower(m, magicNumber, false), magicNumber));
-        addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false), magicNumber));
     }
 
     public AbstractCard makeCopy() { return new DebilitatingBlow(); }
@@ -46,8 +44,8 @@ public class DebilitatingBlow extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(2);
-            upgradeBlock(2);
+            upgradeDamage(3);
+            upgradeBlock(3);
             upgradeMagicNumber(1);
         }
     }

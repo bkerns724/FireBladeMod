@@ -4,7 +4,7 @@
     <groupId>fireblademod</groupId>
     <artifactId>FireBladeMod</artifactId>
     <name>Fireblade Mod</name>
-    <version>0.2.14</version>
+    <version>0.2.15</version>
     <description>Adds the FireBlade, a swordsman with prowess in fire magic.  A fairly straightforward character for newer players.</description>
 
     <properties>
@@ -14,6 +14,7 @@
         <ModTheSpire.version>3.15.0</ModTheSpire.version>
         <!--CHANGE THIS TO YOUR STEAM INSTALLATION-->
         <Steam.path>C:/Program Files (x86)/Steam/steamapps</Steam.path>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>

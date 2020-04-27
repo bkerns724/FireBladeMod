@@ -61,7 +61,7 @@ public class Accelerant extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeMagicNumberTwo(1);
         }
     }
 

@@ -24,7 +24,7 @@ public class BodyAsFuel extends CustomFireBladeCard {
     public BodyAsFuel() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         exhaust = true;
-        magicNumber = baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,4 +1,4 @@
-package FireBlade.cards.Uncommons;
+package FireBlade.cards.Commons;
 
 import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.enums.TheFireBladeEnum;
@@ -20,7 +20,7 @@ public class ProbingAttack extends CustomFireBladeCard {
     public static final String IMG_PATH = "theFireBladeResources/images/cardImages/ProbingAttack.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 1;
     private int realBaseDamage = 3;

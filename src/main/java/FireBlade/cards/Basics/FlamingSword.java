@@ -2,6 +2,7 @@ package FireBlade.cards.Basics;
 
 import FireBlade.actions.BurnAction;
 import FireBlade.cards.CustomFireBladeCard;
+import FireBlade.cards.FireBladeCardHelper;
 import FireBlade.cards.FireBladeCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -37,6 +38,7 @@ public class FlamingSword extends CustomFireBladeCard
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         addToBot(new BurnAction(p, m, baseMagicNumber));
+        FireBladeCardHelper.checkForBurnerTip();
     }
 
     public void applyPowers() {
@@ -51,7 +53,7 @@ public class FlamingSword extends CustomFireBladeCard
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
-        magicNumber = BurnAction.GetEstimate(AbstractDungeon.player, baseMagicNumber);
+        magicNumber = BurnAction.GetEstimate(AbstractDungeon.player, mo, baseMagicNumber);
         isMagicNumberModified = magicNumber != baseMagicNumber;
         super.calculateCardDamage(mo);
     }

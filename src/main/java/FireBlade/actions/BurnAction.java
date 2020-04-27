@@ -66,7 +66,7 @@ public class BurnAction extends AbstractGameAction {
             fireAmount += hell*(source.getPower(StrengthPower.POWER_ID).amount);
 
         if (source.hasPower(PyromancerFormPower.POWER_ID))
-            fireAmount *= (1 + source.getPower(PyromancerFormPower.POWER_ID).amount);
+            fireAmount *= (1 + source.getPower(PyromancerFormPower.POWER_ID).amount/100F);
 
         if (fireAmount < 0)
             fireAmount = 0;
@@ -87,7 +87,7 @@ public class BurnAction extends AbstractGameAction {
             fireAmount += hell*(source.getPower(StrengthPower.POWER_ID).amount);
 
         if (source.hasPower(PyromancerFormPower.POWER_ID))
-            fireAmount *= (1 + source.getPower(PyromancerFormPower.POWER_ID).amount);
+            fireAmount *= (1 + source.getPower(PyromancerFormPower.POWER_ID).amount/100F);
 
         if (target.hasPower(SpiritRendPower.POWER_ID))
             fireAmount *= 2;

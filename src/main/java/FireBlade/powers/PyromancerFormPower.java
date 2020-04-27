@@ -39,7 +39,6 @@ public class PyromancerFormPower extends AbstractPower {
         }
     }
     public void updateDescription() {
-        int stringAmount = amount*100;
-        description = DESCRIPTIONS[0] + stringAmount + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 }

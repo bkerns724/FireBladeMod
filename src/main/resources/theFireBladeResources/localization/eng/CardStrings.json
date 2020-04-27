@@ -111,8 +111,7 @@
   },
   "FireBladeMod:EruptionSlash": {
     "NAME": "Eruption Slash",
-    "DESCRIPTION": "Deal !D! damage plus 1 per fireblademod:Burning.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage plus 1 per fireblademod:Burning."
+    "DESCRIPTION": "Deal !D! damage plus !M! per fireblademod:Burning."
   },
   "FireBladeMod:ProbingAttack": {
     "NAME": "Probing Attack",
@@ -124,7 +123,7 @@
   },
   "FireBladeMod:SmokySwing": {
     "NAME": "Smoky Swing",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak and Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
   },
   "FireBladeMod:SteelEndurance": {
     "NAME": "Steel Endurance",
@@ -132,8 +131,7 @@
   },
   "FireBladeMod:DoubleDash": {
     "NAME": "Double Dash",
-    "DESCRIPTION": "Draw !M! cards. NL Next turn, draw !FireBladeMod:M2! cards.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Draw !M! cards. NL Next turn, draw !FireBladeMod:M2! cards."
+    "DESCRIPTION": "Draw !M! cards. NL Next turn, draw !FireBladeMod:M2! cards."
   },
   "FireBladeMod:Fireball": {
     "NAME": "Fireball",
@@ -147,9 +145,9 @@
     "NAME": "Arson",
     "DESCRIPTION": "Add a random fireblademod:Flame card into your hand. NL It costs 1 less this turn. NL Exhaust."
   },
-  "FireBladeMod:RampingDefense": {
-    "NAME": "Ramping Defense",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Dexterity."
+  "FireBladeMod:LearnTells": {
+    "NAME": "Learn Tells",
+    "DESCRIPTION": "If the enemy intends to attack, gain !M! Dexterity."
   },
   "FireBladeMod:AbsorbEnergy": {
     "NAME": "Absorb Energy",
@@ -212,7 +210,7 @@
   },
   "FireBladeMod:DebilitatingBlow": {
     "NAME": "Debilitating Blow",
-    "DESCRIPTION": "Do !D! damage. NL Gain !B! Block. NL Apply !M! Weak and Vulnerable."
+    "DESCRIPTION": "Do !D! damage. NL Gain !B! Block. NL Apply !M! Weak."
   },
   "FireBladeMod:Tempo": {
     "NAME": "Tempo",
@@ -257,9 +255,9 @@
     "DESCRIPTION": "Deal !D! damage. NL Existing Weak and Vulnerable on the enemy are increased by !M!.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Existing Weak, Vulnerable, and fireblademod:Spirit\u00a0Rend on the enemy are increased by !M!."
   },
-  "FireBladeMod:TacticalJab": {
-    "NAME": "Tactical Jab",
-    "DESCRIPTION": "Deal !D! damage. NL Scry !M!."
+  "FireBladeMod:IntricateCombo": {
+    "NAME": "Intricate Combo",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Gain !B! Block !M! times."
   },
   "FireBladeMod:FinishingBarrage": {
     "NAME": "Finishing Barrage",
@@ -282,15 +280,16 @@
   },
   "FireBladeMod:FlamingSword": {
     "NAME": "Flaming Sword",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! fireblademod:Burning."
+    "DESCRIPTION": "fireblademod:Flame. NL Deal !D! damage. NL Apply !M! fireblademod:Burning."
   },
   "FireBladeMod:SmokeInTheEyes": {
     "NAME": "Smoke In The Eyes",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak. NL Apply !M! Vulnerable."
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Vulnerable."
   },
   "FireBladeMod:PyromancerForm": {
     "NAME": "Pyromancer Form",
-    "DESCRIPTION": "Your fireblademod:Flame cards apply !FireBladeMod:M2! % more fireblademod:Burning, NL but Exhaust."
+    "DESCRIPTION": "Your fireblademod:Flame cards apply 100% more fireblademod:Burning, NL but Exhaust.",
+    "UPGRADE_DESCRIPTION": "Your fireblademod:Flame cards apply 150% more fireblademod:Burning, NL but Exhaust."
   },
   "FireBladeMod:DesperateDefense": {
     "NAME": "Desperate Defense",
