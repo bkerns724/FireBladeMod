@@ -198,7 +198,7 @@
   },
   "FireBladeMod:FinalSmash": {
     "NAME": "Final Smash",
-    "DESCRIPTION": "fireblademod:Smash. NL Do !D! damage. NL Exhaust."
+    "DESCRIPTION": "fireblademod:Smash. NL Do !D! damage. NL Enemy loses !M! Strength. NL Exhaust."
   },
   "FireBladeMod:GlassGreatsword": {
     "NAME": "Glass Greatsword",
@@ -302,7 +302,7 @@
   },
   "FireBladeMod:FlashBang": {
     "NAME": "FlashBang",
-    "DESCRIPTION": "Apply !M! Weak. NL Enemy loses !FireBladeMod:M2! Strength this turn."
+    "DESCRIPTION": "Enemy loses !M! Strength this turn."
   },
   "FireBladeMod:ThirstForBlood": {
     "NAME": "Thirst For Blood",
