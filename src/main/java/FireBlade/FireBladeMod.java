@@ -127,9 +127,9 @@ public class FireBladeMod implements
         BaseMod.addCard(new Indomitable());
         BaseMod.addCard(new IntricateCombo());
         BaseMod.addCard(new IronEndurance());
+        BaseMod.addCard(new Reserves());
         BaseMod.addCard(new ScorchingStrike());
         BaseMod.addCard(new Shove());
-        BaseMod.addCard(new SmokeInTheEyes());
         BaseMod.addCard(new SpinningSmash());
         BaseMod.addCard(new SpiritBurn());
         BaseMod.addCard(new SteadyEndurance());
@@ -153,9 +153,7 @@ public class FireBladeMod implements
         BaseMod.addCard(new FlashBang());
         BaseMod.addCard(new FlashPoint());
         BaseMod.addCard(new Flexibility());
-        BaseMod.addCard(new LearnTells());
         BaseMod.addCard(new MomentumStrike());
-        BaseMod.addCard(new ProbingAttack());
         BaseMod.addCard(new QuickJabs());
         BaseMod.addCard(new QuickCombo());
         BaseMod.addCard(new RapidDodges());
@@ -163,9 +161,11 @@ public class FireBladeMod implements
         BaseMod.addCard(new RegenerativeEndurance());
         BaseMod.addCard(new Reposition());
         BaseMod.addCard(new Shell());
+        BaseMod.addCard(new SmokeInTheEyes());
         BaseMod.addCard(new SmokeScreen());
         BaseMod.addCard(new SmokySwing());
         BaseMod.addCard(new SoulCut());
+        BaseMod.addCard(new Speed());
         BaseMod.addCard(new SteelEndurance());
         BaseMod.addCard(new Tempo());
         BaseMod.addCard(new ThirdDegree());

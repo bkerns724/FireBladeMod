@@ -1,42 +1,41 @@
-package FireBlade.cards.Rares;
+package FireBlade.cards.Uncommons;
 
-import FireBlade.actions.BodyAsFuelAction;
-import FireBlade.cards.CustomFireBladeCard;
+import FireBlade.actions.SpeedAction;
 import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class BodyAsFuel extends CustomFireBladeCard {
+public class Speed extends CustomFireBladeCard {
 
-    public static final String ID = "FireBladeMod:BodyAsFuel";
+    public static final String ID = "FireBladeMod:Speed";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/BodyAsFuel.png";
+    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/Speed.png";
     private static final CardStrings cardStrings;
-    private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardType TYPE = CardType.POWER;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 0;
+    private static final int COST = -1;
 
-    public BodyAsFuel() {
+    public Speed() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        exhaust = true;
-        magicNumber = baseMagicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new BodyAsFuelAction(magicNumber));
+        addToBot(new SpeedAction(p, upgraded, freeToPlayOnce, energyOnUse));
     }
 
-    public AbstractCard makeCopy() { return new BodyAsFuel(); }
+    public AbstractCard makeCopy() { return new Speed(); }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(-1);
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

@@ -21,12 +21,12 @@ public class SmokeInTheEyes extends CustomFireBladeCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     public SmokeInTheEyes() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        baseBlock = 12;
-        magicNumber = baseMagicNumber = 2;
+        baseBlock = 7;
+        magicNumber = baseMagicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -39,7 +39,7 @@ public class SmokeInTheEyes extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(3);
+            upgradeBlock(2);
             upgradeMagicNumber(1);
         }
     }

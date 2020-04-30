@@ -82,6 +82,14 @@
       " [E] next turn."
     ]
   },
+  "FireBladeMod:ReservesPower": {
+    "NAME": "Energy Reserves",
+    "DESCRIPTIONS": [
+      "Add #b",
+      " #yMiracle to your hand next turn.",
+      " #yMiracles to your hand next turn."
+    ]
+  },
   "FireBladeMod:HealthyPower": {
     "NAME": "Healthy",
     "DESCRIPTIONS": [

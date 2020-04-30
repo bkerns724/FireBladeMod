@@ -51,9 +51,7 @@ public class FinishingBarrage extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            selfRetain = true;
-            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeDamage(2);
         }
     }
 

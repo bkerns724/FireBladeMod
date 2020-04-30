@@ -21,12 +21,12 @@ public class WildSlashes extends CustomFireBladeCard {
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
-    private static final int COST = -1; // What you do for x type cards
-    public int realBaseDamage = 4;
+    private static final int COST = -1;  // X cost
+    public int realBaseDamage = 3;
 
     public WildSlashes() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 3;
         baseDamage = realBaseDamage;
     }
 

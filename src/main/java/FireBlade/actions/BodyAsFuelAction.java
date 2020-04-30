@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import java.util.Iterator;
 
@@ -82,7 +83,9 @@ public class BodyAsFuelAction extends AbstractGameAction {
         card.drawScale = 0.12F;
         card.targetDrawScale = 0.75F;
         card.applyPowers();
-        if (card.cost*hpCost > 0)
+        if (card.cost == -1)        // X Costs
+            addToTop(new LoseHPAction(player, player, EnergyPanel.totalCount*hpCost));
+        else if (card.cost*hpCost > 0)
             addToTop(new LoseHPAction(player, player, card.cost*hpCost));
         this.addToTop(new NewQueueCardAction(card, true, false, true));
         this.addToTop(new UnlimboAction(card));

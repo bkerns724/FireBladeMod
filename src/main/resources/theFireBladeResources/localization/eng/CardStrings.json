@@ -113,10 +113,6 @@
     "NAME": "Eruption Slash",
     "DESCRIPTION": "Deal !D! damage plus !M! per fireblademod:Burning."
   },
-  "FireBladeMod:ProbingAttack": {
-    "NAME": "Probing Attack",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, gain !B! Block. NL Else, deal !M! damage."
-  },
   "FireBladeMod:SoulCut": {
     "NAME": "Soul Cut",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! fireblademod:Spirit\u00a0Rend."
@@ -145,9 +141,10 @@
     "NAME": "Arson",
     "DESCRIPTION": "Add a random fireblademod:Flame card into your hand. NL It costs 1 less this turn. NL Exhaust."
   },
-  "FireBladeMod:LearnTells": {
-    "NAME": "Learn Tells",
-    "DESCRIPTION": "If the enemy intends to attack, gain !M! Dexterity."
+  "FireBladeMod:Speed": {
+    "NAME": "Speed",
+    "DESCRIPTION": "Gain X Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain X+1 Dexterity."
   },
   "FireBladeMod:AbsorbEnergy": {
     "NAME": "Absorb Energy",
@@ -198,19 +195,19 @@
   },
   "FireBladeMod:FinalSmash": {
     "NAME": "Final Smash",
-    "DESCRIPTION": "fireblademod:Smash. NL Do !D! damage. NL Enemy loses !M! Strength. NL Exhaust."
+    "DESCRIPTION": "fireblademod:Smash. NL Deal !D! damage. NL Enemy loses !M! Strength. NL Exhaust."
   },
   "FireBladeMod:GlassGreatsword": {
     "NAME": "Glass Greatsword",
-    "DESCRIPTION": "Do !D! damage to ALL enemies. NL Decrease the damage of this card by 3 this combat."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Decrease the damage of this card by 3 this combat."
   },
   "FireBladeMod:LightningCombo": {
     "NAME": "Lightning Combo",
-    "DESCRIPTION": "Do !D! damage !M! times."
+    "DESCRIPTION": "Deal !D! damage !M! times."
   },
   "FireBladeMod:DebilitatingBlow": {
     "NAME": "Debilitating Blow",
-    "DESCRIPTION": "Do !D! damage. NL Gain !B! Block. NL Apply !M! Weak."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Apply !M! Weak."
   },
   "FireBladeMod:Tempo": {
     "NAME": "Tempo",
@@ -261,13 +258,11 @@
   },
   "FireBladeMod:FinishingBarrage": {
     "NAME": "Finishing Barrage",
-    "DESCRIPTION": "Deal !D! damage for each fireblademod:Smash in your exhaust pile.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage for each fireblademod:Smash in your exhaust pile."
+    "DESCRIPTION": "Deal !D! damage for each fireblademod:Smash in your exhaust pile."
   },
   "FireBladeMod:Refreshment": {
     "NAME": "Refreshment",
-    "DESCRIPTION": "Heal !M! HP for each fireblademod:Endurance in your exhaust pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Heal !M! HP for each fireblademod:Endurance in your exhaust pile. NL Exhaust."
+    "DESCRIPTION": "Heal !M! HP for each fireblademod:Endurance in your exhaust pile. NL Exhaust."
   },
   "FireBladeMod:Indomitable": {
     "NAME": "Indomitable",
@@ -318,11 +313,15 @@
   },
   "FireBladeMod:Wildfire": {
     "NAME": "Wildfire",
-    "DESCRIPTION": "Apply !M! fireblademod:Burning. NL Add a burn to your discard pile."
+    "DESCRIPTION": "Apply !M! fireblademod:Burning. NL Add a burn into your discard pile."
   },
   "FireBladeMod:SpreadingFlames": {
     "NAME": "Spreading Flames",
     "DESCRIPTION": "Whenever you play a fireblademod:Flame card, the targets receive extra fireblademod:Burning equal to 20% of their existing Burning.",
     "UPGRADE_DESCRIPTION": "Whenever you play a fireblademod:Flame card, the targets receive extra fireblademod:Burning equal to 30% of their existing Burning."
+  },
+  "FireBladeMod:Reserves": {
+    "NAME": "Reserves",
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, add a *Miracle into your hand."
   }
 }
