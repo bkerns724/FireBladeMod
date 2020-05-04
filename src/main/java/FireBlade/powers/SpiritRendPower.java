@@ -1,6 +1,7 @@
 package FireBlade.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -13,7 +14,7 @@ public class SpiritRendPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-
+    public static int bonusAmount = 100;
     
     public SpiritRendPower(AbstractCreature owner, int amount) {
         ID = POWER_ID;
@@ -29,10 +30,14 @@ public class SpiritRendPower extends AbstractPower {
         updateDescription();
     }
 
+    public void atEndOfRound() {
+        this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
+    }
+
     public void updateDescription() {
         if (amount == 1)
-            description = DESCRIPTIONS[0];
+            description = DESCRIPTIONS[0] + bonusAmount + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
         else
-            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[0] + bonusAmount + DESCRIPTIONS[1] + amount + DESCRIPTIONS[3];
     }
 }

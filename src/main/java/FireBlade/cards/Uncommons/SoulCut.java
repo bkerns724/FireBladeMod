@@ -27,8 +27,8 @@ public class SoulCut extends CustomFireBladeCard {
 
     public SoulCut() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        baseDamage = 16;
-        magicNumber = baseMagicNumber = 1;
+        baseDamage = 14;
+        magicNumber = baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -41,7 +41,7 @@ public class SoulCut extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(2);
+            upgradeDamage(4);
             upgradeMagicNumber(1);
         }
     }

@@ -26,7 +26,7 @@ public class GatherPower extends CustomFireBladeCard {
     public GatherPower() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 2;
-        magicNumberTwo = baseMagicNumberTwo = 2;
+        magicNumberTwo = baseMagicNumberTwo = 3;
         exhaust = true;
     }
 

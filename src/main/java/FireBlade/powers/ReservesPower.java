@@ -1,9 +1,9 @@
 package FireBlade.powers;
 
+import FireBlade.cards.Other.MiracleFireBlade;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -33,7 +33,7 @@ public class ReservesPower extends AbstractPower {
     @Override
     public void atStartOfTurn() {
         this.flash();
-        addToBot(new MakeTempCardInHandAction(new Miracle(), amount));
+        addToBot(new MakeTempCardInHandAction(new MiracleFireBlade(), amount));
         addToBot(new RemoveSpecificPowerAction(owner, owner, ID));
     }
 

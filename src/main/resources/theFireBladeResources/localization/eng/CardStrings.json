@@ -91,7 +91,7 @@
   },
   "FireBladeMod:CleansingFlame": {
     "NAME": "Cleansing Flame",
-    "DESCRIPTION": "Draw !M! cards. NL Exhaust !FireBladeMod:M2! cards."
+    "DESCRIPTION": "Draw !M! cards. NL Exhaust !FireBladeMod:M2! card."
   },
   "FireBladeMod:ArmSmash": {
     "NAME": "Arm Smash",
@@ -127,15 +127,16 @@
   },
   "FireBladeMod:DoubleDash": {
     "NAME": "Double Dash",
-    "DESCRIPTION": "Draw !M! cards. NL Next turn, draw !FireBladeMod:M2! cards."
+    "DESCRIPTION": "Draw !M! cards. NL Next turn, draw !FireBladeMod:M2! card.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Next turn, draw !FireBladeMod:M2! cards."
   },
   "FireBladeMod:Fireball": {
     "NAME": "Fireball",
     "DESCRIPTION": "fireblademod:Flame. NL Apply !M! fireblademod:Burning to ALL enemies."
   },
-  "FireBladeMod:RegenerativeEndurance": {
+  "FireBladeMod:HealthyEndurance": {
     "NAME": "Healthy Endurance",
-    "DESCRIPTION": "fireblademod:Endurance. NL Gain !B! Block. NL Heal !M! HP. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL fireblademod:Endurance. NL Gain !B! Block. NL Heal !M! HP. NL Exhaust."
   },
   "FireBladeMod:Arson": {
     "NAME": "Arson",
@@ -143,12 +144,11 @@
   },
   "FireBladeMod:Speed": {
     "NAME": "Speed",
-    "DESCRIPTION": "Gain X Dexterity.",
-    "UPGRADE_DESCRIPTION": "Gain X+1 Dexterity."
+    "DESCRIPTION": "Gain !M! Dexterity."
   },
-  "FireBladeMod:AbsorbEnergy": {
-    "NAME": "Absorb Energy",
-    "DESCRIPTION": "Next time you lose HP, gain !M! Strength."
+  "FireBladeMod:GetPumped": {
+    "NAME": "Get Pumped",
+    "DESCRIPTION": "Gain !M! Strength."
   },
   "FireBladeMod:AdrenalineBoost": {
     "NAME": "Adrenaline Boost",
@@ -241,7 +241,7 @@
   },
   "FireBladeMod:ExtraStrikes": {
     "NAME": "Extra Strikes",
-    "DESCRIPTION": "Whenever you play an attack card, deal !D! damage to a random enemy."
+    "DESCRIPTION": "Your attack cards gain an extra hit. NL It deals !D! damage to a random enemy."
   },
   "FireBladeMod:Shell": {
     "NAME": "Shell",
@@ -258,11 +258,11 @@
   },
   "FireBladeMod:FinishingBarrage": {
     "NAME": "Finishing Barrage",
-    "DESCRIPTION": "Deal !D! damage for each fireblademod:Smash in your exhaust pile."
+    "DESCRIPTION": "fireblademod:Unnate. NL Deal !D! damage for each fireblademod:Smash in your exhaust pile. NL Exhaust."
   },
   "FireBladeMod:Refreshment": {
     "NAME": "Refreshment",
-    "DESCRIPTION": "Heal !M! HP for each fireblademod:Endurance in your exhaust pile. NL Exhaust."
+    "DESCRIPTION": "fireblademod:Unnate. NL Ethereal. NL Heal !M! HP for each fireblademod:Endurance in your exhaust pile. NL Exhaust."
   },
   "FireBladeMod:Indomitable": {
     "NAME": "Indomitable",
@@ -283,8 +283,8 @@
   },
   "FireBladeMod:PyromancerForm": {
     "NAME": "Pyromancer Form",
-    "DESCRIPTION": "Your fireblademod:Flame cards apply 100% more fireblademod:Burning, NL but Exhaust.",
-    "UPGRADE_DESCRIPTION": "Your fireblademod:Flame cards apply 150% more fireblademod:Burning, NL but Exhaust."
+    "DESCRIPTION": "Your fireblademod:Flame cards apply 150% more fireblademod:Burning, NL but Exhaust.",
+    "UPGRADE_DESCRIPTION": "Your fireblademod:Flame cards apply 200% more fireblademod:Burning, NL but Exhaust."
   },
   "FireBladeMod:DesperateDefense": {
     "NAME": "Desperate Defense",
@@ -309,11 +309,11 @@
   },
   "FireBladeMod:BodyAsFuel": {
     "NAME": "Body As Fuel",
-    "DESCRIPTION": "Choose a card in your draw pile. NL Play the chosen card. NL Lose HP equal to !M! times its cost."
+    "DESCRIPTION": "Choose a card in your draw pile. NL Play the chosen card. NL Lose HP equal to !M! times its cost. NL Exhaust."
   },
   "FireBladeMod:Wildfire": {
     "NAME": "Wildfire",
-    "DESCRIPTION": "Apply !M! fireblademod:Burning. NL Add a burn into your discard pile."
+    "DESCRIPTION": "Apply !M! fireblademod:Burning. NL Add !FireBladeMod:M2! *burns into your discard pile."
   },
   "FireBladeMod:SpreadingFlames": {
     "NAME": "Spreading Flames",
@@ -323,5 +323,9 @@
   "FireBladeMod:Reserves": {
     "NAME": "Reserves",
     "DESCRIPTION": "Gain !B! Block. NL Next turn, add a *Miracle into your hand."
+  },
+  "FireBladeMod:MiracleFireBlade": {
+    "NAME": "Miracle",
+    "DESCRIPTION": "Retain. NL Gain [E]."
   }
 }

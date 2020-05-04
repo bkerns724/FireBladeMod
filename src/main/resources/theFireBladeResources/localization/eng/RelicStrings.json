@@ -75,7 +75,7 @@
     "NAME": "Inner Flame",
     "FLAVOR": "You burn with power inside.  This may not be a good thing.",
     "DESCRIPTIONS": [
-      "Gain 1 [E] at the start of your turn. NL Starting on turn #b",
+      "Gain 1 [E] at the start of your turn. Starting on turn #b",
       " gain #b",
       " #yfireblademod:Burning at the end of your turn."
     ]

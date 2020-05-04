@@ -15,7 +15,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.SearingBlowEffect;
-import static java.lang.Math.max;
 
 public class Wildfire extends CustomFireBladeCard {
 
@@ -28,11 +27,12 @@ public class Wildfire extends CustomFireBladeCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 2;
-    private static int burnAmount = 1;
+    private static int burnAmount = 2;
 
     public Wildfire() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 10;
+        magicNumber = baseMagicNumber = 12;
+        magicNumberTwo = baseMagicNumberTwo = burnAmount;
         tags.add(FireBladeCardTags.FLAME);
         cardsToPreview = new Burn();
     }
@@ -44,7 +44,7 @@ public class Wildfire extends CustomFireBladeCard {
             effectSize = 1;
             addToBot(new VFXAction(new SearingBlowEffect(m.hb.cX, m.hb.cY, effectSize)));
         addToBot(new BurnAction(p, m, baseMagicNumber));
-        addToBot(new MakeTempCardInDiscardAction(new Burn(), burnAmount));
+        addToBot(new MakeTempCardInDiscardAction(new Burn(), magicNumberTwo));
         FireBladeCardHelper.checkForBurnerTip();
     }
 
@@ -70,7 +70,7 @@ public class Wildfire extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(3);
+            upgradeMagicNumber(4);
         }
     }
 

@@ -82,5 +82,14 @@
       "metallicize"
     ],
     "DESCRIPTION": "Metallicize adds block at the end of your turn."
+  },
+  {
+    "PROPER_NAME": "Unnate",
+    "NAMES": [
+      "Unnate",
+      "unnate"
+    ],
+    "DESCRIPTION": "Start each combat with this card at the bottom of your draw pile."
+
   }
 ]

@@ -40,6 +40,8 @@ public class DoubleDash extends CustomFireBladeCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumberTwo(1);
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

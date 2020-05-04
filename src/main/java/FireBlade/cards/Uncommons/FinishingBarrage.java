@@ -27,8 +27,9 @@ public class FinishingBarrage extends CustomFireBladeCard {
 
     public FinishingBarrage() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        baseDamage = 7;
+        baseDamage = 8;
         exhaust = true;
+        isUnnate = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -51,7 +52,7 @@ public class FinishingBarrage extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(2);
+            upgradeDamage(3);
         }
     }
 

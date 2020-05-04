@@ -51,7 +51,7 @@ public class LightningCombo extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(2);
+            upgradeMagicNumber(2);
         }
     }
 

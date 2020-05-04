@@ -13,7 +13,7 @@ public class CrimsonStar extends CustomRelic {
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/Star_outline.png";
     private static final AbstractRelic.RelicTier TIER = RelicTier.BOSS;
     private static final AbstractRelic.LandingSound SOUND = LandingSound.MAGICAL;
-    private static final int hpGain = 7;
+    private static final int hpGain = 9;
 
     public CrimsonStar() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);

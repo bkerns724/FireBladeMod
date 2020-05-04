@@ -12,23 +12,24 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class RegenerativeEndurance extends CustomFireBladeCard {
+public class HealthyEndurance extends CustomFireBladeCard {
 
-    public static final String ID = "FireBladeMod:RegenerativeEndurance";
+    public static final String ID = "FireBladeMod:HealthyEndurance";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/RegenerativeEndurance.png";
+    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/HealthyEndurance.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 2;
 
-    public RegenerativeEndurance() {
+    public HealthyEndurance() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        baseBlock = 9;
-        magicNumber = baseMagicNumber = 6;
+        baseBlock = 10;
+        magicNumber = baseMagicNumber = 7;
         exhaust = true;
+        isEthereal = true;
         tags.add(FireBladeCardTags.ENDURANCE);
         tags.add(CardTags.HEALING);
     }
@@ -39,7 +40,7 @@ public class RegenerativeEndurance extends CustomFireBladeCard {
         FireBladeCardHelper.checkForEnduranceTip();
     }
 
-    public AbstractCard makeCopy() { return new RegenerativeEndurance(); }
+    public AbstractCard makeCopy() { return new HealthyEndurance(); }
 
     public void upgrade() {
         if (!upgraded) {

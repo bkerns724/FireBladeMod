@@ -20,12 +20,14 @@ public class Refreshment extends CustomFireBladeCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.NONE;
-    private static final int COST = 1;
+    private static final int COST = 2;
 
     public Refreshment() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 2;
         exhaust = true;
+        isEthereal = true;
+        isUnnate = true;
         tags.add(CardTags.HEALING);
     }
 

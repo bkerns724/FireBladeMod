@@ -42,15 +42,6 @@ public class BurnAction extends AbstractGameAction {
         if (burnAmount > 0) {
             addToTop(new ApplyPowerAction(target, source, new BurningPower(target, source, burnAmount), burnAmount));
             CardCrawlGame.sound.play("ATTACK_FIRE", 0.1F);
-
-            if (target.hasPower(SpiritRendPower.POWER_ID)) {
-                AbstractPower rendPower = target.getPower(SpiritRendPower.POWER_ID);
-                if (rendPower.amount > 1) {
-                    rendPower.reducePower(1);
-                    rendPower.updateDescription();
-                } else
-                    addToTop(new RemoveSpecificPowerAction(target, source, SpiritRendPower.POWER_ID));
-            }
         }
 
         this.isDone = true;

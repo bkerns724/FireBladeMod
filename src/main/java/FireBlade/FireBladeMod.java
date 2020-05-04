@@ -1,5 +1,6 @@
 package FireBlade;
 
+import FireBlade.cards.Other.MiracleFireBlade;
 import FireBlade.cards.Other.Swipe;
 import FireBlade.other.FireBladeSettings;
 import FireBlade.other.FireBladeTipTracker;
@@ -107,6 +108,7 @@ public class FireBladeMod implements
         logger.info("Other");
 
         BaseMod.addCard(new Swipe());
+        BaseMod.addCard(new MiracleFireBlade());
 
         logger.info("Starter");
 
@@ -139,7 +141,7 @@ public class FireBladeMod implements
 
         logger.info("Uncommon");
 
-        BaseMod.addCard(new AbsorbEnergy());
+        BaseMod.addCard(new GetPumped());
         BaseMod.addCard(new Accelerant());
         BaseMod.addCard(new AdrenalineBoost());
         BaseMod.addCard(new ArmSmash());
@@ -153,12 +155,12 @@ public class FireBladeMod implements
         BaseMod.addCard(new FlashBang());
         BaseMod.addCard(new FlashPoint());
         BaseMod.addCard(new Flexibility());
+        BaseMod.addCard(new HealthyEndurance());
         BaseMod.addCard(new MomentumStrike());
         BaseMod.addCard(new QuickJabs());
         BaseMod.addCard(new QuickCombo());
         BaseMod.addCard(new RapidDodges());
         BaseMod.addCard(new Refreshment());
-        BaseMod.addCard(new RegenerativeEndurance());
         BaseMod.addCard(new Reposition());
         BaseMod.addCard(new Shell());
         BaseMod.addCard(new SmokeInTheEyes());

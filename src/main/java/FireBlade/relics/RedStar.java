@@ -1,11 +1,9 @@
 package FireBlade.relics;
 
-import FireBlade.actions.DelayedRoarAction;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
@@ -15,7 +13,7 @@ public class RedStar extends CustomRelic {
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/Star_outline.png";
     private static final AbstractRelic.RelicTier TIER = AbstractRelic.RelicTier.STARTER;
     private static final AbstractRelic.LandingSound SOUND = LandingSound.SOLID;
-    private static final int hpGain = 3;
+    private static final int hpGain = 4;
     private int turnCounter;
 
     public RedStar() {

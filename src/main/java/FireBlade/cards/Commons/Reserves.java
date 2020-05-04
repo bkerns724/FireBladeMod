@@ -1,12 +1,12 @@
 package FireBlade.cards.Commons;
 
 import FireBlade.cards.CustomFireBladeCard;
+import FireBlade.cards.Other.MiracleFireBlade;
 import FireBlade.enums.TheFireBladeEnum;
 import FireBlade.powers.ReservesPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -28,7 +28,7 @@ public class Reserves extends CustomFireBladeCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         baseBlock = 5;
         magicNumber = baseMagicNumber = 1;
-        cardsToPreview = new Miracle();
+        cardsToPreview = new MiracleFireBlade();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

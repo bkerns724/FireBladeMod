@@ -38,7 +38,7 @@ public class LayeredDefense extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(1);
+            upgradeBlock(2);
         }
     }
 

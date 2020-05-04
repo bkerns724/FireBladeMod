@@ -26,7 +26,7 @@ public class QuickCombo extends CustomFireBladeCard {
 
     public QuickCombo() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        baseBlock = 2;
+        baseBlock = 3;
         baseDamage = 3;
     }
 

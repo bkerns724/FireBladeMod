@@ -25,10 +25,11 @@
   },
   "FireBladeMod:ExtraStrikesPower": {
     "NAME": "Extra Strikes",
-    "DESCRIPTIONS": ["Whenever you play an attack card, deal ",
-      " damage to a random enemy #b",
-      " time.",
-      " times."
+    "DESCRIPTIONS": ["Your attack cards gain #b",
+      " extra hit.  They deal ",
+      " extra hits.  They deal ",
+      " damage to a random enemy.",
+      " damage to random enemies."
     ]
   },
   "FireBladeMod:AfterBurnPower": {
@@ -41,9 +42,10 @@
   "FireBladeMod:SpiritRendPower": {
     "NAME": "Spirit Rend",
     "DESCRIPTIONS": [
-      "Receives double #yBurning from the next application.",
-      "Receives double #yBurning from the next #b",
-      " applications."
+      "Receives #b",
+      "% more #yBurning for #b",
+      " turn.",
+      " turns."
     ]
   },
   "FireBladeMod:SmokeScreenPower": {
@@ -66,13 +68,6 @@
     "DESCRIPTIONS": [
       "At the start of your turn, gain #b",
       " #yVigor."
-    ]
-  },
-  "FireBladeMod:AbsorbEnergyPower": {
-    "NAME": "Absorb Energy",
-    "DESCRIPTIONS": [
-      "The next time you receive unblocked attack damage, gain #b",
-      " #yStrength."
     ]
   },
   "FireBladeMod:EnergizedFireBladePower": {

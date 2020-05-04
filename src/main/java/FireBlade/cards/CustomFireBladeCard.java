@@ -12,6 +12,7 @@ public abstract class CustomFireBladeCard extends CustomCard {
     public int baseMagicNumberTwo = 0;
     public boolean upgradedMagicNumberTwo = false;
     public boolean isMagicNumberTwoModified = false;
+    public boolean isUnnate = false;
 
     public CustomFireBladeCard(String id, String name, String img, int cost, String description, CardType type, CardColor color, CardRarity rarity, CardTarget target) {
         super(id, name, img, cost, description, type, color, rarity, target);
