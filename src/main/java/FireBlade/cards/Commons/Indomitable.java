@@ -1,7 +1,7 @@
 package FireBlade.cards.Commons;
 
 import FireBlade.cards.CustomFireBladeCard;
-import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.enums.FireBladeEnum;
 import FireBlade.powers.HealthyPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -26,7 +26,7 @@ public class Indomitable extends CustomFireBladeCard {
     private static final int COST = 2;
 
     public Indomitable() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         baseDamage = 14;
         magicNumber = baseMagicNumber = 2;
     }

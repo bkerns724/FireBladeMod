@@ -1,7 +1,7 @@
 package FireBlade.cards.Rares;
 
 import FireBlade.cards.CustomFireBladeCard;
-import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.enums.FireBladeEnum;
 import FireBlade.powers.PyromancerFormPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -23,7 +23,7 @@ public class PyromancerForm extends CustomFireBladeCard {
     private static final int COST = 3;
 
     public PyromancerForm() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 150;
     }
 

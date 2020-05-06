@@ -1,7 +1,7 @@
 package FireBlade.cards.Rares;
 
 import FireBlade.cards.CustomFireBladeCard;
-import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.enums.FireBladeEnum;
 import FireBlade.powers.BattleMagePower;
 import FireBlade.powers.FervorPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -25,7 +25,7 @@ public class BattleMage extends CustomFireBladeCard {
     private static final int COST = 2;
 
     public BattleMage() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 1;
     }
 

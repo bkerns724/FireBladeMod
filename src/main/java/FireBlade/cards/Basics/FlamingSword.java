@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.enums.FireBladeEnum;
 
 public class FlamingSword extends CustomFireBladeCard
 {
@@ -29,7 +29,7 @@ public class FlamingSword extends CustomFireBladeCard
     private static final int COST = 2;
 
     public FlamingSword() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         baseDamage = 12;
         magicNumber = baseMagicNumber = 3;
         tags.add(FireBladeCardTags.FLAME);

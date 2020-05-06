@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.enums.FireBladeEnum;
 
 public class DefendFireBlade extends CustomFireBladeCard
 {
@@ -23,7 +23,7 @@ public class DefendFireBlade extends CustomFireBladeCard
     private static final int COST = 1;
 
     public DefendFireBlade() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
 
         baseBlock = 5;
         tags.add(CardTags.STARTER_DEFEND);

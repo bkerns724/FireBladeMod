@@ -1,7 +1,7 @@
 package FireBlade.cards.Uncommons;
 
 import FireBlade.cards.FireBladeCardTags;
-import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.enums.FireBladeEnum;
 import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -26,7 +26,7 @@ public class FinishingBarrage extends CustomFireBladeCard {
     private static final int COST = 1;
 
     public FinishingBarrage() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         baseDamage = 8;
         exhaust = true;
         isUnnate = true;

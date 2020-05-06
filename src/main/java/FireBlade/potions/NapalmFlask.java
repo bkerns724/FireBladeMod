@@ -1,5 +1,6 @@
 package FireBlade.potions;
 
+import FireBlade.FireBladeMod;
 import FireBlade.actions.BurnAction;
 import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
@@ -7,7 +8,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
@@ -31,12 +31,12 @@ public class NapalmFlask extends CustomPotion {
         tips.clear();
         tips.add(new PowerTip(name, description));
         tips.add(new PowerTip(BaseMod.getKeywordTitle("fireblademod:Burning"), BaseMod.getKeywordDescription("fireblademod:Burning")));
-        labOutlineColor = CardHelper.getColor(246.0F, 154.0F, 45.0F);
+        labOutlineColor = FireBladeMod.FIREBLADE_EYE_COLOR;
     }
 
     public void use(AbstractCreature target) {
         AbstractPlayer p = AbstractDungeon.player;
-        addToBot(new BurnAction(p, target, getPotency(), 1, true));
+        addToBot(new BurnAction(p, target, getPotency(), 1, true, true));
     }
 
     public CustomPotion makeCopy() { return new NapalmFlask();}

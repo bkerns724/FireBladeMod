@@ -1,6 +1,6 @@
 package FireBlade.cards.Uncommons;
 
-import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.enums.FireBladeEnum;
 import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -22,7 +22,7 @@ public class RapidDodges extends CustomFireBladeCard {
     private static final int COST = 1;
 
     public RapidDodges() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         baseBlock = 4;
         magicNumber = baseMagicNumber = 2;
     }

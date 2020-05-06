@@ -4,7 +4,7 @@ import FireBlade.actions.BurnAction;
 import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.cards.FireBladeCardHelper;
 import FireBlade.cards.FireBladeCardTags;
-import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.enums.FireBladeEnum;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -30,7 +30,7 @@ public class Wildfire extends CustomFireBladeCard {
     private static int burnAmount = 2;
 
     public Wildfire() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 12;
         magicNumberTwo = baseMagicNumberTwo = burnAmount;
         tags.add(FireBladeCardTags.FLAME);

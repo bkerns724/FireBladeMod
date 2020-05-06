@@ -1,13 +1,15 @@
 package FireBlade;
 
+import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.cards.Other.MiracleFireBlade;
 import FireBlade.cards.Other.Swipe;
-import FireBlade.other.FireBladeSettings;
-import FireBlade.other.FireBladeTipTracker;
+import FireBlade.ui.FireBladeSettings;
+import FireBlade.ui.FireBladeTipTracker;
 import FireBlade.potions.VigorPotion;
 import FireBlade.potions.NapalmFlask;
 import FireBlade.potions.FervorPotion;
 import FireBlade.variables.MagicNumberTwo;
+import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
@@ -20,10 +22,6 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import FireBlade.cards.Basics.*;
-import FireBlade.cards.Commons.*;
-import FireBlade.cards.Uncommons.*;
-import FireBlade.cards.Rares.*;
 import FireBlade.characters.TheFireBlade;
 import FireBlade.enums.*;
 import FireBlade.relics.*;
@@ -40,10 +38,10 @@ public class FireBladeMod implements
         AddAudioSubscriber,
         PostInitializeSubscriber {
 
-    private static final Logger logger = LogManager.getLogger(FireBladeMod.class.getName());
-    private static String modID;
+    public static final Logger logger = LogManager.getLogger(FireBladeMod.class.getName());
+    private static final String modID = "FireBladeMod";
 
-    private static final Color CUSTOM_COLOR = CardHelper.getColor(246.0F, 154.0F, 45.0F);
+    public static final Color FIREBLADE_EYE_COLOR = CardHelper.getColor(246.0F, 154.0F, 45.0F);
 
     private static TheFireBlade theFireBladeCharacter;
 
@@ -59,7 +57,7 @@ public class FireBladeMod implements
         FireBladeTipTracker.initialize();
         logger.info("Done adding mod settings");
 
-        BaseMod.addColor(TheFireBladeEnum.THE_FIREBLADE_ORANGE, CUSTOM_COLOR, CUSTOM_COLOR, CUSTOM_COLOR, CUSTOM_COLOR, CUSTOM_COLOR, CUSTOM_COLOR, CUSTOM_COLOR,
+        BaseMod.addColor(FireBladeEnum.THE_FIREBLADE_ORANGE, FIREBLADE_EYE_COLOR,
 
                 "theFireBladeResources/images/cardBackgrounds512/bg_attack_orange.png",
                 "theFireBladeResources/images/cardBackgrounds512/bg_skill_orange.png",
@@ -70,12 +68,6 @@ public class FireBladeMod implements
                 "theFireBladeResources/images/cardBackgrounds1024/bg_power_orange.png",
                 "theFireBladeResources/images/cardBackgrounds1024/card_orange_orb.png",
                 "theFireBladeResources/images/cardBackgrounds512/card_small_orb.png");
-
-        setModID("theFireBlade");
-    }
-
-    public static void setModID(String ID) {
-        modID = ID;
     }
 
     public static String getModID() {
@@ -95,7 +87,7 @@ public class FireBladeMod implements
         theFireBladeCharacter = new TheFireBlade("The FireBlade");
 
         BaseMod.addCharacter(theFireBladeCharacter, THE_FIREBLADE_BUTTON,
-                THE_FIREBLADE_PORTRAIT, TheFireBladeEnum.THE_FIREBLADE);
+                THE_FIREBLADE_PORTRAIT, FireBladeEnum.THE_FIREBLADE);
 
         logger.info("Added FireBlade character.");
     }
@@ -104,128 +96,41 @@ public class FireBladeMod implements
         logger.info("Beginning to add FireBlade cards");
 
         BaseMod.addDynamicVariable(new MagicNumberTwo());
-
-        logger.info("Other");
-
-        BaseMod.addCard(new Swipe());
+        (new AutoAdd("FireBladeMod")).packageFilter("FireBlade.cards.Basics").setDefaultSeen(true).cards();
+        (new AutoAdd("FireBladeMod")).packageFilter("FireBlade.cards.Commons").setDefaultSeen(true).cards();
+        (new AutoAdd("FireBladeMod")).packageFilter("FireBlade.cards.Uncommons").setDefaultSeen(true).cards();
+        (new AutoAdd("FireBladeMod")).packageFilter("FireBlade.cards.Rares").setDefaultSeen(true).cards();
         BaseMod.addCard(new MiracleFireBlade());
-
-        logger.info("Starter");
-
-        BaseMod.addCard(new DefendFireBlade());
-        BaseMod.addCard(new FireBarrier());
-        BaseMod.addCard(new FlamingSword());
-        BaseMod.addCard(new StrikeFireBlade());
-
-        logger.info("Common");
-
-        BaseMod.addCard(new BackhandSwing());
-        BaseMod.addCard(new BasicSmash());
-        BaseMod.addCard(new ComboCleave());
-        BaseMod.addCard(new ComboSlashes());
-        BaseMod.addCard(new ComplexAttack());
-        BaseMod.addCard(new ComplexDefense());
-        BaseMod.addCard(new Flames());
-        BaseMod.addCard(new Indomitable());
-        BaseMod.addCard(new IntricateCombo());
-        BaseMod.addCard(new IronEndurance());
-        BaseMod.addCard(new Reserves());
-        BaseMod.addCard(new ScorchingStrike());
-        BaseMod.addCard(new Shove());
-        BaseMod.addCard(new SpinningSmash());
-        BaseMod.addCard(new SpiritBurn());
-        BaseMod.addCard(new SteadyEndurance());
-        BaseMod.addCard(new Turtle());
-        BaseMod.addCard(new UnstoppableThrust());
-        BaseMod.addCard(new WellPrepared());
-
-        logger.info("Uncommon");
-
-        BaseMod.addCard(new GetPumped());
-        BaseMod.addCard(new Accelerant());
-        BaseMod.addCard(new AdrenalineBoost());
-        BaseMod.addCard(new ArmSmash());
-        BaseMod.addCard(new Arson());
-        BaseMod.addCard(new SwordsmanForm());
-        BaseMod.addCard(new CleansingFlame());
-        BaseMod.addCard(new DoubleDash());
-        BaseMod.addCard(new EruptionSlash());
-        BaseMod.addCard(new FinishingBarrage());
-        BaseMod.addCard(new Fireball());
-        BaseMod.addCard(new FlashBang());
-        BaseMod.addCard(new FlashPoint());
-        BaseMod.addCard(new Flexibility());
-        BaseMod.addCard(new HealthyEndurance());
-        BaseMod.addCard(new MomentumStrike());
-        BaseMod.addCard(new QuickJabs());
-        BaseMod.addCard(new QuickCombo());
-        BaseMod.addCard(new RapidDodges());
-        BaseMod.addCard(new Refreshment());
-        BaseMod.addCard(new Reposition());
-        BaseMod.addCard(new Shell());
-        BaseMod.addCard(new SmokeInTheEyes());
-        BaseMod.addCard(new SmokeScreen());
-        BaseMod.addCard(new SmokySwing());
-        BaseMod.addCard(new SoulCut());
-        BaseMod.addCard(new Speed());
-        BaseMod.addCard(new SteelEndurance());
-        BaseMod.addCard(new Tempo());
-        BaseMod.addCard(new ThirdDegree());
-        BaseMod.addCard(new ThirstForBlood());
-        BaseMod.addCard(new TorsoSmash());
-        BaseMod.addCard(new Vitality());
-        BaseMod.addCard(new Wildfire());
-        BaseMod.addCard(new WildSlashes());
-
-        logger.info("Rare");
-
-        BaseMod.addCard(new AfterBurn());
-        BaseMod.addCard(new BattleMage());
-        BaseMod.addCard(new BodyAsFuel());
-        BaseMod.addCard(new DebilitatingBlow());
-        BaseMod.addCard(new DesperateDefense());
-        BaseMod.addCard(new EternalEndurance());
-        BaseMod.addCard(new ExtraStrikes());
-        BaseMod.addCard(new FinalSmash());
-        BaseMod.addCard(new GatherPower());
-        BaseMod.addCard(new GlassGreatsword());
-        BaseMod.addCard(new HellFire());
-        BaseMod.addCard(new Improvise());
-        BaseMod.addCard(new LayeredDefense());
-        BaseMod.addCard(new LightningCombo());
-        BaseMod.addCard(new PyromancerForm());
-        BaseMod.addCard(new SpreadingFlames());
-        BaseMod.addCard(new SwordsmanForm());
-        BaseMod.addCard(new Unbalance());
+        BaseMod.addCard(new Swipe());
 
         logger.info("Added FireBlade cards");
     }
 
     public void receiveEditRelics() {
         logger.info("Beginning to add FireBlade relics");
-        BaseMod.addRelicToCustomPool(new RedStar(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new CrimsonStar(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new Matches(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new BronzeKnuckles(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new WheyBottle(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new FirePoi(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new LegBrace(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new GymTowel(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new TigerClaw(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new Chakram(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new RedStar(), FireBladeEnum.THE_FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new CrimsonStar(), FireBladeEnum.THE_FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new Matches(), FireBladeEnum.THE_FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new BronzeKnuckles(), FireBladeEnum.THE_FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new WheyBottle(), FireBladeEnum.THE_FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new FirePoi(), FireBladeEnum.THE_FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new LegBrace(), FireBladeEnum.THE_FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new GymTowel(), FireBladeEnum.THE_FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new TigerClaw(), FireBladeEnum.THE_FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new Chakram(), FireBladeEnum.THE_FIREBLADE_ORANGE);
 
         if (!FireBladeSettings.isPlannerGlobal())
-            BaseMod.addRelicToCustomPool(new Planner(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
+            BaseMod.addRelicToCustomPool(new Planner(), FireBladeEnum.THE_FIREBLADE_ORANGE);
         else
             BaseMod.addRelic(new Planner(), RelicType.SHARED);
 
         if (!FireBladeSettings.isGoldenStarGlobal())
-            BaseMod.addRelicToCustomPool(new GoldenStar(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
+            BaseMod.addRelicToCustomPool(new GoldenStar(), FireBladeEnum.THE_FIREBLADE_ORANGE);
         else
             BaseMod.addRelic(new GoldenStar(), RelicType.SHARED);
 
         if (!FireBladeSettings.isInnerFlameGlobal())
-            BaseMod.addRelicToCustomPool(new InnerFlame(), TheFireBladeEnum.THE_FIREBLADE_ORANGE);
+            BaseMod.addRelicToCustomPool(new InnerFlame(), FireBladeEnum.THE_FIREBLADE_ORANGE);
         else
             BaseMod.addRelic(new InnerFlame(), RelicType.SHARED);
 
@@ -265,9 +170,9 @@ public class FireBladeMod implements
 
     @Override
     public void receivePostInitialize() {
-        BaseMod.addPotion(NapalmFlask.class, Color.RED.cpy(), null, Color.ORANGE.cpy(), NapalmFlask.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
-        BaseMod.addPotion(FervorPotion.class, Color.PURPLE, null, Color.CYAN, FervorPotion.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
-        BaseMod.addPotion(VigorPotion.class, Color.RED.cpy(), Color.BLACK.cpy(), null, VigorPotion.POTION_ID, TheFireBladeEnum.THE_FIREBLADE);
+        BaseMod.addPotion(NapalmFlask.class, Color.RED.cpy(), null, Color.ORANGE.cpy(), NapalmFlask.POTION_ID, FireBladeEnum.THE_FIREBLADE);
+        BaseMod.addPotion(FervorPotion.class, Color.PURPLE, null, Color.CYAN, FervorPotion.POTION_ID, FireBladeEnum.THE_FIREBLADE);
+        BaseMod.addPotion(VigorPotion.class, Color.RED.cpy(), Color.BLACK.cpy(), null, VigorPotion.POTION_ID, FireBladeEnum.THE_FIREBLADE);
 
         logger.info("Load Badge Image and make settings panel");
         Texture badgeTexture = new Texture("theFireBladeResources/images/Badge.png");

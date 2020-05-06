@@ -2,7 +2,7 @@ package FireBlade.cards.Commons;
 
 import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.cards.Other.MiracleFireBlade;
-import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.enums.FireBladeEnum;
 import FireBlade.powers.ReservesPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -25,7 +25,7 @@ public class Reserves extends CustomFireBladeCard {
     private static final int COST = 1;
 
     public Reserves() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         baseBlock = 5;
         magicNumber = baseMagicNumber = 1;
         cardsToPreview = new MiracleFireBlade();

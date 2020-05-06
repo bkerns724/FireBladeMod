@@ -1,6 +1,7 @@
 package FireBlade.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -28,6 +29,13 @@ public class BattleMagePower extends AbstractPower {
         name = (CardCrawlGame.languagePack.getPowerStrings(ID)).NAME;
 
         updateDescription();
+    }
+
+    public float atDamageGive(float damage, DamageInfo.DamageType type) {
+        if (owner.hasPower(FervorPower.POWER_ID))
+            return type == DamageInfo.DamageType.NORMAL ? damage + (float)owner.getPower(FervorPower.POWER_ID).amount : damage;
+        else
+            return damage;
     }
 
     public void updateDescription() { description = DESCRIPTIONS[0]; }

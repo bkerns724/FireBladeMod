@@ -1,10 +1,7 @@
 package FireBlade.cards.Commons;
 
-import FireBlade.actions.BurnAction;
 import FireBlade.cards.CustomFireBladeCard;
-import FireBlade.cards.FireBladeCardHelper;
-import FireBlade.cards.FireBladeCardTags;
-import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.enums.FireBladeEnum;
 import FireBlade.powers.SpiritRendPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -23,37 +20,17 @@ public class SpiritBurn extends CustomFireBladeCard {
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final int COST = 1;
 
     public SpiritBurn() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 2;
-        magicNumberTwo = baseMagicNumberTwo = 1;
-        tags.add(FireBladeCardTags.FLAME);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new BurnAction(p, m, baseMagicNumber));
-        addToBot(new ApplyPowerAction(m, p, new SpiritRendPower(m, magicNumberTwo), magicNumberTwo));
-        FireBladeCardHelper.checkForBurnerTip();
-    }
-
-    public void applyPowers() {
-        magicNumber = BurnAction.GetEstimate(AbstractDungeon.player, baseMagicNumber);
-        isMagicNumberModified = magicNumber != baseMagicNumber;
-        super.applyPowers();
-    }
-
-    public void onMoveToDiscard() {
-        magicNumber = baseMagicNumber;
-        isMagicNumberModified = false;
-    }
-
-    public void calculateCardDamage(AbstractMonster mo) {
-        super.calculateCardDamage(mo);
-        magicNumber = BurnAction.GetEstimate(AbstractDungeon.player, mo, baseMagicNumber);
-        isMagicNumberModified = magicNumber != baseMagicNumber;
+        for (AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters)
+            addToBot(new ApplyPowerAction(mo, p, new SpiritRendPower(mo, magicNumber), magicNumber));
     }
 
     public AbstractCard makeCopy() { return new SpiritBurn(); }
@@ -61,7 +38,7 @@ public class SpiritBurn extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
         }
     }
 

@@ -14,7 +14,7 @@ public class SpiritRendPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static int bonusAmount = 100;
+    public static float BURN_MULT = 1.5F;
     
     public SpiritRendPower(AbstractCreature owner, int amount) {
         ID = POWER_ID;
@@ -36,8 +36,8 @@ public class SpiritRendPower extends AbstractPower {
 
     public void updateDescription() {
         if (amount == 1)
-            description = DESCRIPTIONS[0] + bonusAmount + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         else
-            description = DESCRIPTIONS[0] + bonusAmount + DESCRIPTIONS[1] + amount + DESCRIPTIONS[3];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
     }
 }

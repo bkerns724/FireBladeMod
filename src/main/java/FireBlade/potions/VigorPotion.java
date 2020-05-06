@@ -1,12 +1,12 @@
 package FireBlade.potions;
 
+import FireBlade.FireBladeMod;
 import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
@@ -29,7 +29,7 @@ public class VigorPotion extends CustomPotion {
         targetRequired = false;
         tips.clear();
         tips.add(new PowerTip(name, description));
-        labOutlineColor = CardHelper.getColor(246.0F, 154.0F, 45.0F);
+        labOutlineColor = FireBladeMod.FIREBLADE_EYE_COLOR;
     }
 
     public void use(AbstractCreature target) {

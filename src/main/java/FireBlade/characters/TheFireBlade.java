@@ -22,6 +22,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.exordium.GremlinNob;
 import com.megacrit.cardcrawl.saveAndContinue.SaveAndContinue;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.screens.stats.CharStat;
@@ -58,7 +59,7 @@ public class TheFireBlade extends CustomPlayer {
             "theFireBladeResources/images/fireBladeCharacter/orb/layer5d.png",};
 
     public TheFireBlade(String playerName) {
-        super(playerName, TheFireBladeEnum.THE_FIREBLADE, orbTextures, "theFireBladeResources/images/fireBladeCharacter/orb/vfx.png", null, (String) null);
+        super(playerName, FireBladeEnum.THE_FIREBLADE, orbTextures, "theFireBladeResources/images/fireBladeCharacter/orb/vfx.png", null, (String) null);
         logger.info("Start TheFireBlade constructor");
         charStat = new CharStat(this);
 
@@ -130,7 +131,7 @@ public class TheFireBlade extends CustomPlayer {
     }
 
     public AbstractCard.CardColor getCardColor() {
-        return TheFireBladeEnum.THE_FIREBLADE_ORANGE;
+        return FireBladeEnum.THE_FIREBLADE_ORANGE;
     }
 
     public Color getCardRenderColor() {
@@ -245,7 +246,7 @@ public class TheFireBlade extends CustomPlayer {
         super.applyStartOfTurnPostDrawRelics();
         if (GameActionManager.turn == 2) {
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                if (m.id.equals("GremlinNob")) {
+                if (m.id.equals(GremlinNob.ID)) {
                     AbstractDungeon.actionManager.addToBottom(new DelayedRoarAction());
                     return;
                 }

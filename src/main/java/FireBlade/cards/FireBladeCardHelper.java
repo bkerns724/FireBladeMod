@@ -1,6 +1,6 @@
 package FireBlade.cards;
 
-import FireBlade.other.FireBladeTipTracker;
+import FireBlade.ui.FireBladeTipTracker;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;

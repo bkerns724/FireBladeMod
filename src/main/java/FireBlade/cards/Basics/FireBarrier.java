@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.enums.FireBladeEnum;
 import com.megacrit.cardcrawl.powers.FlameBarrierPower;
 
 public class FireBarrier extends CustomFireBladeCard {
@@ -24,7 +24,7 @@ public class FireBarrier extends CustomFireBladeCard {
     private static final int COST = 1;
 
     public FireBarrier() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         baseBlock = 6;
         magicNumber = baseMagicNumber = 3;
     }

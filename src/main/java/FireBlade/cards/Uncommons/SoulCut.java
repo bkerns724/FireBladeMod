@@ -1,6 +1,6 @@
 package FireBlade.cards.Uncommons;
 
-import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.enums.FireBladeEnum;
 import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.powers.SpiritRendPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -26,7 +26,7 @@ public class SoulCut extends CustomFireBladeCard {
     private static final int COST = 2;
 
     public SoulCut() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         baseDamage = 14;
         magicNumber = baseMagicNumber = 2;
     }
@@ -41,7 +41,7 @@ public class SoulCut extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(4);
+            upgradeDamage(2);
             upgradeMagicNumber(1);
         }
     }

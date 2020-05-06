@@ -23,8 +23,8 @@
       " #yFervor."
     ]
   },
-  "FireBladeMod:ExtraStrikesPower": {
-    "NAME": "Extra Strikes",
+  "FireBladeMod:ComboHitsPower": {
+    "NAME": "Combo Hits",
     "DESCRIPTIONS": ["Your attack cards gain #b",
       " extra hit.  They deal ",
       " extra hits.  They deal ",
@@ -42,8 +42,7 @@
   "FireBladeMod:SpiritRendPower": {
     "NAME": "Spirit Rend",
     "DESCRIPTIONS": [
-      "Receives #b",
-      "% more #yBurning for #b",
+      "Receives #b50% more #yBurning for #b",
       " turn.",
       " turns."
     ]
@@ -102,22 +101,62 @@
   "FireBladeMod:PyromancerFormPower": {
     "NAME": "Pyromancer Form",
     "DESCRIPTIONS": [
-      "Your #yFlame cards apply #b",
+      "Your #yFlame attacks and skills apply #b",
       "% more #yBurning, but #yExhaust."
     ]
   },
-  "FireBladeMod:DesperateDefensePower": {
-    "NAME": "Desperate Defense",
+  "FireBladeMod:DefensiveSurgePower": {
+    "NAME": "Defensive Surge",
     "DESCRIPTIONS": [
-      "When your HP is at or below 50%, you have #b",
-      " additional #yDexterity."
+      "At the start of your turn, gain #b",
+      " #yVitality."
     ]
   },
-  "FireBladeMod:SpreadingFlamesPower": {
-    "NAME": "Spreading Flames",
+  "FireBladeMod:IgnitionPower": {
+    "NAME": "Ignition",
     "DESCRIPTIONS": [
-      "Whenever you play a #yFlame card, the targets receive extra #yBurning equal to #b",
-      "% of their existing Burning."
+      "When receiving #yBurning, takes damage equal to the amount.",
+      "When receiving #yBurning, takes damage equal to #b",
+      " times the amount."
+    ]
+  },
+  "FireBladeMod:SteelTempestPower": {
+    "NAME": "SteelTempest",
+    "DESCRIPTIONS": [
+      "Whenever you deal attack damage, gain #b",
+      " #yBlock."
+    ]
+  },
+  "FireBladeMod:BlitzkreigPower": {
+    "NAME": "Blitzkreig",
+    "DESCRIPTIONS": [
+      "Whenever a card is exhausted, draw #b",
+      " card and gain #b",
+      " cards and gain #b",
+      " #yEnergy."
+    ]
+  },
+  "FireBladeMod:EnergizingFlamePower": {
+    "NAME": "Energizing Flame",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yFlame card, gain #b",
+      " Vigor."
+    ]
+  },
+  "FireBladeMod:VitalityPower": {
+    "NAME": "Vitality",
+    "DESCRIPTIONS": [
+      "Your next blocking card gives #b",
+      " additional #yBlock."
+    ]
+  },
+  "FireBladeMod:FlingFirePower": {
+    "NAME": "Fling Fire",
+    "DESCRIPTIONS": [
+      "When you deal attack damage #b",
+      " more time, apply #b",
+      " more times, apply #b",
+      " #yBurning to ALL enemies."
     ]
   }
 }

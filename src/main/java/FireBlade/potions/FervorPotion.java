@@ -1,5 +1,6 @@
 package FireBlade.potions;
 
+import FireBlade.FireBladeMod;
 import FireBlade.powers.FervorPower;
 import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
@@ -8,7 +9,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 
@@ -31,7 +31,7 @@ public class FervorPotion extends CustomPotion {
         tips.clear();
         tips.add(new PowerTip(name, description));
         tips.add(new PowerTip(BaseMod.getKeywordTitle("fireblademod:Fervor"), BaseMod.getKeywordDescription("fireblademod:Fervor")));
-        labOutlineColor = CardHelper.getColor(246.0F, 154.0F, 45.0F);
+        labOutlineColor = FireBladeMod.FIREBLADE_EYE_COLOR;
     }
 
     public void use(AbstractCreature target) {

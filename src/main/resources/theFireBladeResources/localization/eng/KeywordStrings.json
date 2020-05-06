@@ -65,7 +65,7 @@
       "Spirit\u00a0rend",
       "spirit\u00a0rend"
     ],
-    "DESCRIPTION": "Spirit Rent creatures receive double #yBurning."
+    "DESCRIPTION": "Spirit Rent creatures receive 50% more #yBurning."
   },
   {
     "PROPER_NAME": "Vigor",
@@ -74,6 +74,14 @@
       "vigor"
     ],
     "DESCRIPTION": "Vigor adds damage to your next attack."
+  },
+  {
+    "PROPER_NAME": "Vitality",
+    "NAMES": [
+      "Vitality",
+      "vitality"
+    ],
+    "DESCRIPTION": "Vitality adds #yBlock to your next blocking card."
   },
   {
     "PROPER_NAME": "Metallicize",

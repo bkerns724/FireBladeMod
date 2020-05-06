@@ -1,7 +1,7 @@
 package FireBlade.cards.Commons;
 
 import FireBlade.cards.CustomFireBladeCard;
-import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.enums.FireBladeEnum;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -23,7 +23,7 @@ public class WellPrepared extends CustomFireBladeCard {
     private static final int COST = 0;
 
     public WellPrepared() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 2;
         magicNumberTwo = baseMagicNumberTwo = 2;
     }

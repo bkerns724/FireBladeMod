@@ -1,7 +1,7 @@
 package FireBlade.cards.Uncommons;
 
 import FireBlade.cards.CustomFireBladeCard;
-import FireBlade.enums.TheFireBladeEnum;
+import FireBlade.enums.FireBladeEnum;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -24,7 +24,7 @@ public class SmokeInTheEyes extends CustomFireBladeCard {
     private static final int COST = 1;
 
     public SmokeInTheEyes() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, TheFireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         baseBlock = 7;
         magicNumber = baseMagicNumber = 1;
     }
