@@ -44,8 +44,7 @@ public class ComboSlashes extends CustomFireBladeCard {
         baseDamage = baseMagicNumberTwo;
         super.applyPowers();
         magicNumberTwo = damage;
-        if (magicNumberTwo != baseMagicNumberTwo)
-            isMagicNumberTwoModified = true;
+        isMagicNumberTwoModified = magicNumberTwo != baseMagicNumberTwo;
         baseDamage = realBaseDamage;
         super.applyPowers();
     }
@@ -54,8 +53,7 @@ public class ComboSlashes extends CustomFireBladeCard {
         baseDamage = baseMagicNumberTwo;
         super.calculateCardDamage(m);
         magicNumberTwo = damage;
-        if (magicNumberTwo != baseMagicNumberTwo)
-            isMagicNumberTwoModified = true;
+        isMagicNumberTwoModified = magicNumberTwo != baseMagicNumberTwo;
         baseDamage = realBaseDamage;
         super.calculateCardDamage(m);
     }

@@ -53,8 +53,7 @@ public class ComboCleave extends CustomFireBladeCard {
         baseDamage = baseMagicNumberTwo;
         super.applyPowers();
         magicNumberTwo = damage;
-        if (magicNumberTwo != baseMagicNumberTwo)
-            isMagicNumberTwoModified = true;
+        isMagicNumberTwoModified = magicNumberTwo != baseMagicNumberTwo;
         baseDamage = realBaseDamage;
         super.applyPowers();
     }
@@ -64,8 +63,7 @@ public class ComboCleave extends CustomFireBladeCard {
         super.calculateCardDamage(m);
         multiDamage2 = multiDamage;
         magicNumberTwo = damage;
-        if (magicNumberTwo != baseMagicNumberTwo)
-            isMagicNumberTwoModified = true;
+        isMagicNumberTwoModified = magicNumberTwo != baseMagicNumberTwo;
         baseDamage = realBaseDamage;
         super.calculateCardDamage(m);
     }

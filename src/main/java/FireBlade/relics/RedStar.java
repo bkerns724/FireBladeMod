@@ -13,7 +13,7 @@ public class RedStar extends CustomRelic {
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/Star_outline.png";
     private static final AbstractRelic.RelicTier TIER = AbstractRelic.RelicTier.STARTER;
     private static final AbstractRelic.LandingSound SOUND = LandingSound.SOLID;
-    private static final int hpGain = 4;
+    private static final int hpGain = 3;
     private int turnCounter;
 
     public RedStar() {

@@ -25,7 +25,7 @@ public class FlingFire extends CustomFireBladeCard {
 
     public FlingFire() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 3;
         magicNumberTwo = baseMagicNumberTwo = FlingFirePower.ATTACKS_TO_TRIGGER;
         tags.add(FireBladeCardTags.FLAME);
     }
@@ -39,7 +39,7 @@ public class FlingFire extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
         }
     }
 
