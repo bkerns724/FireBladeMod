@@ -1,5 +1,6 @@
 package FireBlade.cards.Commons;
 
+import FireBlade.actions.DelayedVigorAction;
 import FireBlade.enums.FireBladeEnum;
 import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -11,8 +12,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 
 public class ComplexAttack extends CustomFireBladeCard {
 
@@ -29,13 +29,12 @@ public class ComplexAttack extends CustomFireBladeCard {
     public ComplexAttack() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         baseDamage = 8;
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
-        addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, magicNumber), magicNumber));
+        addToBot(new DelayedVigorAction(magicNumber));
     }
 
     public AbstractCard makeCopy() { return new ComplexAttack(); }

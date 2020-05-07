@@ -46,7 +46,7 @@
   },
   "FireBladeMod:ComplexAttack": {
     "NAME": "Complex Attack",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL At the end of this turn, lose !M! Strength."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! fireblademod:Vigor."
   },
   "FireBladeMod:ScorchingStrike": {
     "NAME": "Scorching Strike",
@@ -58,7 +58,7 @@
   },
   "FireBladeMod:ComplexDefense": {
     "NAME": "Complex Defense",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Dexterity. NL At the end of this turn, lose !M! Dexterity."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! fireblademod:Vitality."
   },
   "FireBladeMod:RapidDodges": {
     "NAME": "Rapid Dodges",
@@ -191,7 +191,7 @@
   },
   "FireBladeMod:FlingFire": {
     "NAME": "Fling Fire",
-    "DESCRIPTION": "Every time you deal attack damage !FireBladeMod:M2! times, apply !M! fireblademod:Burning to ALL enemies."
+    "DESCRIPTION": "fireblademod:Flame. NL Every time you deal attack damage !FireBladeMod:M2! times, apply !M! fireblademod:Burning to ALL enemies."
   },
   "FireBladeMod:FinalSmash": {
     "NAME": "Final Smash",

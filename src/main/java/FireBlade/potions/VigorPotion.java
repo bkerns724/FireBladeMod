@@ -39,5 +39,5 @@ public class VigorPotion extends CustomPotion {
 
     public CustomPotion makeCopy() { return new VigorPotion();}
 
-    public int getPotency(int ascensionLevel) { return 10; }
+    public int getPotency(int ascensionLevel) { return 12; }
 }
