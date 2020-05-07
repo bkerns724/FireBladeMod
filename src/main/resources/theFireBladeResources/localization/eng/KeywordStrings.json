@@ -98,6 +98,13 @@
       "unnate"
     ],
     "DESCRIPTION": "Start each combat with this card at the bottom of your draw pile."
-
+  },
+  {
+    "PROPER_NAME": "Active",
+    "NAMES": [
+      "Active",
+      "active"
+    ],
+    "DESCRIPTION": "A power is Active if you are currently under its effects."
   }
 ]

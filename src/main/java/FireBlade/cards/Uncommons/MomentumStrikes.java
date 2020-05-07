@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.GainStrengthPower;
 
 public class MomentumStrikes extends CustomFireBladeCard {
 
@@ -33,7 +34,7 @@ public class MomentumStrikes extends CustomFireBladeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         for (AbstractPower power : m.powers) {
-            if (power.type == AbstractPower.PowerType.DEBUFF)
+            if (power.type == AbstractPower.PowerType.DEBUFF && !(power instanceof GainStrengthPower))
                 addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
     }

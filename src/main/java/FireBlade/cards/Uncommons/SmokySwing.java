@@ -3,6 +3,7 @@ package FireBlade.cards.Uncommons;
 import FireBlade.enums.FireBladeEnum;
 import FireBlade.cards.CustomFireBladeCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -12,6 +13,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 
 public class SmokySwing extends CustomFireBladeCard {
 
@@ -32,6 +34,7 @@ public class SmokySwing extends CustomFireBladeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new VFXAction(new SmokeBombEffect(m.hb.cX, m.hb.cY)));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false), magicNumber));
     }

@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class BattleMage extends CustomFireBladeCard {
 
@@ -26,16 +25,16 @@ public class BattleMage extends CustomFireBladeCard {
 
     public BattleMage() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        isEthereal = true;
         magicNumber = baseMagicNumber = 1;
+        magicNumberTwo = baseMagicNumberTwo = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (!p.hasPower(BattleMagePower.POWER_ID))
             addToBot(new ApplyPowerAction(p, p, new BattleMagePower(p), magicNumber));
-        if (upgraded) {
-            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
-            addToBot(new ApplyPowerAction(p, p, new FervorPower(p, magicNumber), magicNumber));
-        }
+        else
+            addToBot(new ApplyPowerAction(p, p, new FervorPower(p, magicNumberTwo), magicNumberTwo));
     }
 
     public AbstractCard makeCopy() { return new BattleMage(); }
@@ -43,6 +42,7 @@ public class BattleMage extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            isEthereal = false;
             rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }

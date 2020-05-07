@@ -34,7 +34,7 @@ public class SteelTempestPower extends AbstractPower {
     }
 
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        if (damageAmount > 0)
+        if (info.type == DamageInfo.DamageType.NORMAL && info.owner == owner)
             addToTop(new GainBlockAction(owner, amount, true));
     }
 

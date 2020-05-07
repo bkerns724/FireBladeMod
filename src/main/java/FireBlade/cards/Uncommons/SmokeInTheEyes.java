@@ -2,6 +2,7 @@ package FireBlade.cards.Uncommons;
 
 import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.enums.FireBladeEnum;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 
 public class SmokeInTheEyes extends CustomFireBladeCard {
 
@@ -30,6 +32,7 @@ public class SmokeInTheEyes extends CustomFireBladeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new VFXAction(new SmokeBombEffect(m.hb.cX, m.hb.cY)));
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false), magicNumber));
     }

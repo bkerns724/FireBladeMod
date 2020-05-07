@@ -23,6 +23,7 @@ public class MiracleFireBlade extends CustomFireBladeCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
         magicNumber = baseMagicNumber = 1;
         selfRetain = true;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

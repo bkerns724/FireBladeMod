@@ -44,13 +44,15 @@ public class FlingFirePower extends TwoAmountPower {
     }
 
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        --amount2;
-        if (amount2 == 0) {
-            flash();
-            amount2 = ATTACKS_TO_TRIGGER;
-            FireBladeCardHelper.checkForBurnerTip();
-            for (AbstractMonster m : AbstractDungeon.getMonsters().monsters)
-                addToBot(new BurnAction(owner, m, amount, 1, false, true));
+        if (info.owner == owner && info.type == DamageInfo.DamageType.NORMAL) {
+            --amount2;
+            if (amount2 == 0) {
+                flash();
+                amount2 = ATTACKS_TO_TRIGGER;
+                FireBladeCardHelper.checkForBurnerTip();
+                for (AbstractMonster m : AbstractDungeon.getMonsters().monsters)
+                    addToBot(new BurnAction(owner, m, amount, 1, false, true));
+            }
         }
 
         this.updateDescription();

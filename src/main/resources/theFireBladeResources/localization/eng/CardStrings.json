@@ -103,7 +103,7 @@
   },
   "FireBladeMod:FireAndFury": {
     "NAME": "Fire and Fury",
-    "DESCRIPTION": "Deal !D! damage X times. NL Apply !M! fireblademod:Burning."
+    "DESCRIPTION": "fireblademod:Flame. NL Deal !D! damage X times. NL Apply !M! fireblademod:Burning."
   },
   "FireBladeMod:QuickJabs": {
     "NAME": "Quick Jabs",
@@ -144,7 +144,8 @@
   },
   "FireBladeMod:Speed": {
     "NAME": "Speed",
-    "DESCRIPTION": "Gain !M! Dexterity."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Dexterity."
   },
   "FireBladeMod:GetPumped": {
     "NAME": "Get Pumped",
@@ -269,8 +270,8 @@
   },
   "FireBladeMod:BattleMage": {
     "NAME": "Battle Mage",
-    "DESCRIPTION": "Your attack damage is increased by fireblademod:Fervor. NL Your fireblademod:Flame cards are improved by Strength.",
-    "UPGRADE_DESCRIPTION": "Your attack damage is increased by fireblademod:Fervor. NL Your fireblademod:Flame cards are improved by Strength. NL Gain 1 fireblademod:Fervor. NL Gain 1 Strength."
+    "DESCRIPTION": "Ethereal. NL Your attack damage is increased by fireblademod:Fervor. NL Your fireblademod:Flame cards are improved by Strength. NL If fireblademod:Active, gain !FireBladeMod:M2! Fervor.",
+    "UPGRADE_DESCRIPTION": "Your attack damage is increased by fireblademod:Fervor. NL Your fireblademod:Flame cards are improved by Strength. NL If fireblademod:Active, gain !FireBladeMod:M2! Fervor."
   },
   "FireBladeMod:FlamingSword": {
     "NAME": "Flaming Sword",
@@ -324,6 +325,6 @@
   },
   "FireBladeMod:MiracleFireBlade": {
     "NAME": "Miracle",
-    "DESCRIPTION": "Retain. NL Gain [E]."
+    "DESCRIPTION": "Retain. NL Gain [E]. NL Exhaust."
   }
 }
