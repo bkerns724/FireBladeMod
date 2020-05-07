@@ -34,6 +34,7 @@ public class ScorchingCleave extends CustomFireBladeCard {
         baseDamage = 8;
         magicNumber = baseMagicNumber = 3;
         tags.add(FireBladeCardTags.FLAME);
+        isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
