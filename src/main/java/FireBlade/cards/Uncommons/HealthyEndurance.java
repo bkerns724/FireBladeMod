@@ -26,10 +26,9 @@ public class HealthyEndurance extends CustomFireBladeCard {
 
     public HealthyEndurance() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        baseBlock = 10;
-        magicNumber = baseMagicNumber = 7;
+        baseBlock = 9;
+        magicNumber = baseMagicNumber = 6;
         exhaust = true;
-        isEthereal = true;
         tags.add(FireBladeCardTags.ENDURANCE);
         tags.add(CardTags.HEALING);
     }

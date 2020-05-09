@@ -36,7 +36,7 @@ public class EnergizingFlame extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
         }
     }
 

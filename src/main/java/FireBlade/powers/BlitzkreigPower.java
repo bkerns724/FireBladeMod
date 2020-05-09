@@ -37,8 +37,8 @@ public class BlitzkreigPower extends AbstractPower {
     }
 
     public void onExhaust(AbstractCard card) {
-        this.flash();
         if(card.hasTag(FireBladeCardTags.FLAME) || card.hasTag(FireBladeCardTags.ENDURANCE) || card.hasTag(FireBladeCardTags.SMASH)) {
+            this.flash();
             addToTop(new GainEnergyAction(amount));
             addToTop(new DrawCardAction(amount));
         }

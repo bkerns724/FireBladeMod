@@ -24,7 +24,6 @@ public class Blitzkreig extends CustomFireBladeCard {
 
     public Blitzkreig() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        isInnate = true;
         baseMagicNumber = magicNumber = 1;
     }
 
@@ -37,7 +36,9 @@ public class Blitzkreig extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(2);
+            isInnate = true;
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

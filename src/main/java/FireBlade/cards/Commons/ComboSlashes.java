@@ -22,8 +22,8 @@ public class ComboSlashes extends CustomFireBladeCard {
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-    private static final int COST = 2;
-    public int realBaseDamage = 4;
+    private static final int COST = 1;
+    public int realBaseDamage = 2;
 
     public ComboSlashes() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
@@ -35,7 +35,8 @@ public class ComboSlashes extends CustomFireBladeCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, magicNumberTwo, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, magicNumberTwo, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        if (upgraded)
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, magicNumberTwo, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 
     public void applyPowers() {
@@ -66,10 +67,8 @@ public class ComboSlashes extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            realBaseDamage += 1;
-            upgradeMagicNumberTwo(1);
-            upgradeDamage(1);
-
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

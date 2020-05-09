@@ -29,7 +29,7 @@ public class ArmSmash extends CustomFireBladeCard {
 
     public ArmSmash() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        baseDamage = 17;
+        baseDamage = 14;
         magicNumber = baseMagicNumber = 3;
         tags.add(FireBladeCardTags.SMASH);
         exhaust = true;
@@ -47,7 +47,7 @@ public class ArmSmash extends CustomFireBladeCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(3);
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
         }
     }
 

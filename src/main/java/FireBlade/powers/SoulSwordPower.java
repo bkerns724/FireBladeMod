@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -38,6 +39,10 @@ public class SoulSwordPower extends TwoAmountPower {
         updateDescription();
     }
 
+    public void atStartOfTurn() {
+        amount2 = ATTACKS_TO_TRIGGER;
+    }
+
     public void onUseCard(AbstractCard card, UseCardAction action) {
     }
 
@@ -47,7 +52,9 @@ public class SoulSwordPower extends TwoAmountPower {
             if (amount2 == 0) {
                 flash();
                 amount2 = ATTACKS_TO_TRIGGER;
-                addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new SpiritRendPower(target, amount), amount));
+                AbstractPlayer p = AbstractDungeon.player;
+                addToBot(new ApplyPowerAction(p, p, new FervorPower(p, amount), amount));
+                addToBot(new ApplyPowerAction(p, p, new LoseFervorPower(p, amount), amount));
             }
         }
 

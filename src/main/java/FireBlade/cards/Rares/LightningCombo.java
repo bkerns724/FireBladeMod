@@ -25,8 +25,8 @@ public class LightningCombo extends CustomFireBladeCard {
 
     public LightningCombo() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        baseDamage = 2;
-        magicNumber = baseMagicNumber = 5;
+        baseDamage = 3;
+        magicNumber = baseMagicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -51,7 +51,7 @@ public class LightningCombo extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(1);
+            upgradeMagicNumber(2);
         }
     }
 

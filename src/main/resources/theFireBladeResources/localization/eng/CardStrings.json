@@ -33,7 +33,8 @@
   },
   "FireBladeMod:ComboSlashes": {
     "NAME": "Combo Slashes",
-    "DESCRIPTION": "Deal !D! damage. NL Deal !FireBladeMod:M2! damage. NL Deal !D! damage. NL Deal !FireBladeMod:M2! damage."
+    "DESCRIPTION": "Deal !D! damage. NL Deal !FireBladeMod:M2! damage. NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Deal !FireBladeMod:M2! damage. NL Deal !D! damage. NL Deal !FireBladeMod:M2! damage."
   },
   "FireBladeMod:SoulStrike": {
     "NAME": "Soul Strike",
@@ -135,7 +136,7 @@
   },
   "FireBladeMod:HealthyEndurance": {
     "NAME": "Healthy Endurance",
-    "DESCRIPTION": "Ethereal. NL fireblademod:Endurance. NL Gain !B! Block. NL Heal !M! HP. NL Exhaust."
+    "DESCRIPTION": "fireblademod:Endurance. NL Gain !B! Block. NL Heal !M! HP. NL Exhaust."
   },
   "FireBladeMod:Arson": {
     "NAME": "Arson",
@@ -190,7 +191,7 @@
   },
   "FireBladeMod:SoulSword": {
     "NAME": "Soul Sword",
-    "DESCRIPTION": "fireblademod:Flame. NL Every third time you deal attack damage, apply 1 fireblademod:Spirit\u00a0Rend."
+    "DESCRIPTION": "Every third time you deal attack damage in a turn, gain !M! fireblademod:Fervor until end of turn."
   },
   "FireBladeMod:FinalSmash": {
     "NAME": "Final Smash",
@@ -291,7 +292,8 @@
   },
   "FireBladeMod:Blitzkreig": {
     "NAME": "Blitzkreig",
-    "DESCRIPTION": "Innate. NL Whenever you exhaust a fireblademod:Smash, fireblademod:Endurance, or fireblademod:Flame card, draw !M! card and gain [E]."
+    "DESCRIPTION": "Whenever you exhaust a fireblademod:Smash, fireblademod:Endurance, or fireblademod:Flame card, draw !M! card and gain [E].",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you exhaust a fireblademod:Smash, fireblademod:Endurance, or fireblademod:Flame card, draw !M! card and gain [E]."
   },
   "FireBladeMod:FlashBang": {
     "NAME": "FlashBang",
