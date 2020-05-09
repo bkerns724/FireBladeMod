@@ -2,7 +2,9 @@ package FireBlade.cards.Commons;
 
 import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.enums.FireBladeEnum;
+import FireBlade.powers.SpiritRendPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -32,6 +34,7 @@ public class SoulStrike extends CustomFireBladeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        addToBot(new ApplyPowerAction(m, p, new SpiritRendPower(m, magicNumber), magicNumber));
     }
 
     public AbstractCard makeCopy() { return new SoulStrike(); }

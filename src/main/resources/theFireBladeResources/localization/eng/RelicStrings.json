@@ -92,7 +92,7 @@
     "FLAVOR": "It makes your fire more potent, but there's a limited amount.",
     "DESCRIPTIONS": [
       "Start each combat with #b",
-      " #yfireblademod:Fervor.  #yfireblademod:Flame attacks and skills #yExhaust."
+      " #yfireblademod:Fervor.  #yfireblademod:Flame cards #yExhaust."
     ]
   },
   "FireBladeMod:Chakram": {
@@ -108,7 +108,7 @@
     "NAME": "Searing Sword",
     "FLAVOR": "It's on fire.",
     "DESCRIPTIONS": [
-      "Whenever you deal unblocked attack damage, apply #b",
+      "Whenever you deal attack damage, apply #b",
       " #yfireblademod:Burning.  Lose #b",
       " #yStrength at the start of combat."
     ]

@@ -136,11 +136,11 @@
       " #yEnergy."
     ]
   },
-  "FireBladeMod:SolidifiedFlamePower": {
-    "NAME": "Solidified Flame",
+  "FireBladeMod:EnergizingFlamePower": {
+    "NAME": "Energizing Flame",
     "DESCRIPTIONS": [
-      "Whenever you play a #yFlame card, add #b",
-      " #yManifest #yFlame into your hand."
+      "Whenever you play a #yFlame card, gain #b",
+      " #yVigor."
     ]
   },
   "FireBladeMod:VitalityPower": {
@@ -150,13 +150,13 @@
       " additional #yBlock."
     ]
   },
-  "FireBladeMod:FlingFirePower": {
-    "NAME": "Fling Fire",
+  "FireBladeMod:SoulSwordPower": {
+    "NAME": "Soul Sword",
     "DESCRIPTIONS": [
-      "When you deal attack damage #b",
-      " more time, apply #b",
-      " more times, apply #b",
-      " #yBurning to ALL enemies."
+      "Every third time you deal attack damage, apply #b",
+      " #ySpirit #yRend. #b",
+      " more attack.",
+      " more attacks."
     ]
   }
 }

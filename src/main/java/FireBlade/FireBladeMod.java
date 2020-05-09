@@ -116,6 +116,8 @@ public class FireBladeMod implements
         BaseMod.addRelicToCustomPool(new TigerClaw(), FireBladeEnum.THE_FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new Chakram(), FireBladeEnum.THE_FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new InnerFlame(), FireBladeEnum.THE_FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new SearingSword(), FireBladeEnum.THE_FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new FlameCatalyst(), FireBladeEnum.THE_FIREBLADE_ORANGE);
 
         if (!FireBladeSettings.isGoldenStarGlobal())
             BaseMod.addRelicToCustomPool(new GoldenStar(), FireBladeEnum.THE_FIREBLADE_ORANGE);

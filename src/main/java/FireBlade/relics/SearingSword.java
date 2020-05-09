@@ -31,7 +31,7 @@ public class SearingSword extends CustomRelic {
 
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         AbstractPlayer p = AbstractDungeon.player;
-        if (damageAmount > 0 && info.owner == p && info.type == DamageInfo.DamageType.NORMAL)
+        if (info.owner == p && info.type == DamageInfo.DamageType.NORMAL)
             addToBot(new BurnAction(p, target, burningAmount, 1, true, true));
     }
 
