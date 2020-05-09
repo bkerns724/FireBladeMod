@@ -1,6 +1,7 @@
 package FireBlade.powers;
 
 import FireBlade.FireBladeMod;
+import FireBlade.cards.FireBladeCardTags;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -37,8 +38,10 @@ public class BlitzkreigPower extends AbstractPower {
 
     public void onExhaust(AbstractCard card) {
         this.flash();
-        addToTop(new GainEnergyAction(amount));
-        addToTop(new DrawCardAction(amount));
+        if(card.hasTag(FireBladeCardTags.FLAME) || card.hasTag(FireBladeCardTags.ENDURANCE) || card.hasTag(FireBladeCardTags.SMASH)) {
+            addToTop(new GainEnergyAction(amount));
+            addToTop(new DrawCardAction(amount));
+        }
     }
 
     public void updateDescription() {

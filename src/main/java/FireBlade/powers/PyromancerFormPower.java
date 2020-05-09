@@ -1,9 +1,6 @@
 package FireBlade.powers;
 
-import FireBlade.cards.FireBladeCardTags;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -32,12 +29,6 @@ public class PyromancerFormPower extends AbstractPower {
         updateDescription();
     }
 
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.hasTag(FireBladeCardTags.FLAME)) {
-            this.flash();
-            action.exhaustCard = true;
-        }
-    }
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }

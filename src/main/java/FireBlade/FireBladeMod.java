@@ -1,7 +1,5 @@
 package FireBlade;
 
-import FireBlade.cards.CustomFireBladeCard;
-import FireBlade.cards.Other.MiracleFireBlade;
 import FireBlade.cards.Other.Swipe;
 import FireBlade.ui.FireBladeSettings;
 import FireBlade.ui.FireBladeTipTracker;
@@ -100,7 +98,6 @@ public class FireBladeMod implements
         (new AutoAdd("FireBladeMod")).packageFilter("FireBlade.cards.Commons").setDefaultSeen(true).cards();
         (new AutoAdd("FireBladeMod")).packageFilter("FireBlade.cards.Uncommons").setDefaultSeen(true).cards();
         (new AutoAdd("FireBladeMod")).packageFilter("FireBlade.cards.Rares").setDefaultSeen(true).cards();
-        BaseMod.addCard(new MiracleFireBlade());
         BaseMod.addCard(new Swipe());
 
         logger.info("Added FireBlade cards");
@@ -118,21 +115,12 @@ public class FireBladeMod implements
         BaseMod.addRelicToCustomPool(new GymTowel(), FireBladeEnum.THE_FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new TigerClaw(), FireBladeEnum.THE_FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new Chakram(), FireBladeEnum.THE_FIREBLADE_ORANGE);
-
-        if (!FireBladeSettings.isPlannerGlobal())
-            BaseMod.addRelicToCustomPool(new Planner(), FireBladeEnum.THE_FIREBLADE_ORANGE);
-        else
-            BaseMod.addRelic(new Planner(), RelicType.SHARED);
+        BaseMod.addRelicToCustomPool(new InnerFlame(), FireBladeEnum.THE_FIREBLADE_ORANGE);
 
         if (!FireBladeSettings.isGoldenStarGlobal())
             BaseMod.addRelicToCustomPool(new GoldenStar(), FireBladeEnum.THE_FIREBLADE_ORANGE);
         else
             BaseMod.addRelic(new GoldenStar(), RelicType.SHARED);
-
-        if (!FireBladeSettings.isInnerFlameGlobal())
-            BaseMod.addRelicToCustomPool(new InnerFlame(), FireBladeEnum.THE_FIREBLADE_ORANGE);
-        else
-            BaseMod.addRelic(new InnerFlame(), RelicType.SHARED);
 
         logger.info("Added FireBlade relics");
     }

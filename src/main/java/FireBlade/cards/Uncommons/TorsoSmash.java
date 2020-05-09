@@ -46,8 +46,8 @@ public class TorsoSmash extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(6);
-            upgradeMagicNumber(1);
+            upgradeDamage(3);
+            upgradeMagicNumber(2);
         }
     }
 

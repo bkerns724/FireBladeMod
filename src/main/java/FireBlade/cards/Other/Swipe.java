@@ -21,7 +21,7 @@ public class Swipe extends CustomFireBladeCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.SPECIAL;
-    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static int COST = 0;
 
     public Swipe() {

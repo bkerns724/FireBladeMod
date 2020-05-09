@@ -87,11 +87,12 @@
       "Remove all #yStrikes.  Gain 5 #ySwipes."
     ]
   },
-  "FireBladeMod:Planner": {
-    "NAME": "Planner",
-    "FLAVOR": "It's filled with meticulous... plans.",
+  "FireBladeMod:FlameCatalyst": {
+    "NAME": "Flame Catalyst",
+    "FLAVOR": "It makes your fire more potent, but there's a limited amount.",
     "DESCRIPTIONS": [
-      "At the end of your turn, you may #yRetain #b1 card."
+      "Start each combat with #b",
+      " #yfireblademod:Fervor.  #yfireblademod:Flame attacks and skills #yExhaust."
     ]
   },
   "FireBladeMod:Chakram": {
@@ -100,7 +101,16 @@
     "DESCRIPTIONS": [
       "Every time you play #b",
       " #yAttacks in a single turn, gain #b",
-      " #yFervor."
+      " #yfireblademod:Fervor."
+    ]
+  },
+  "FireBladeMod:SearingSword": {
+    "NAME": "Searing Sword",
+    "FLAVOR": "It's on fire.",
+    "DESCRIPTIONS": [
+      "Whenever you deal unblocked attack damage, apply #b",
+      " #yfireblademod:Burning.  Lose #b",
+      " #yStrength at the start of combat."
     ]
   }
 }

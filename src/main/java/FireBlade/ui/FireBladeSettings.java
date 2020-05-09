@@ -14,15 +14,11 @@ public class FireBladeSettings
 {
     private static Properties DEFAULT_SETTINGS = new Properties();
     private static final String GoldenStarString = "GoldenStarShared";
-    private static final String InnerFlameString = "InnerFlameShared";
-    private static final String PlannerString = "PlannerShared";
     private static final String MOD_SETTINGS_FILE = "FireBlade_config";
     private static SpireConfig config;
 
     static  {
         DEFAULT_SETTINGS.setProperty(GoldenStarString, "false");
-        DEFAULT_SETTINGS.setProperty(InnerFlameString, "false");
-        DEFAULT_SETTINGS.setProperty(PlannerString, "false");
     }
 
 
@@ -36,30 +32,10 @@ public class FireBladeSettings
     }
 
     public static boolean isGoldenStarGlobal() { return config.getBool(GoldenStarString); }
-    public static boolean isInnerFlameGlobal() { return config.getBool(InnerFlameString); }
-    public static boolean isPlannerGlobal() { return config.getBool(PlannerString); }
 
     public static void onGoldenStarToggle(ModToggleButton toggle) {
         try {
             config.setBool(GoldenStarString, toggle.enabled);
-            config.save();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void onInnerFlameToggle(ModToggleButton toggle) {
-        try {
-            config.setBool(InnerFlameString, toggle.enabled);
-            config.save();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void onPlannerToggle(ModToggleButton toggle) {
-        try {
-            config.setBool(PlannerString, toggle.enabled);
             config.save();
         } catch (Exception e) {
             e.printStackTrace();
@@ -78,30 +54,22 @@ public class FireBladeSettings
                 FontHelper.tipHeaderFont, isGoldenStarGlobal(), settingsPanel, label -> {  }, FireBladeSettings::onGoldenStarToggle);
         settingsPanel.addUIElement(goldenStarToggle);
 
-        ModLabeledToggleButton innerFlameToggle = new ModLabeledToggleButton(ModSettingsText[1], 400.0F, 620.0F, Color.WHITE,
-                FontHelper.tipHeaderFont, isInnerFlameGlobal(), settingsPanel, label -> {  }, FireBladeSettings::onInnerFlameToggle);
-        settingsPanel.addUIElement(innerFlameToggle);
-
-        ModLabeledToggleButton plannerToggle = new ModLabeledToggleButton(ModSettingsText[2], 400.0F, 540.0F, Color.WHITE,
-                FontHelper.tipHeaderFont, isPlannerGlobal(), settingsPanel, label -> {  }, FireBladeSettings::onPlannerToggle);
-        settingsPanel.addUIElement(plannerToggle);
-
-        ModButton resetTipsButton = new ModButton(370.0F, 370.0F, settingsPanel, b -> {
+        ModButton resetTipsButton = new ModButton(370.0F, 530.0F, settingsPanel, b -> {
             FireBladeTipTracker.reset();
             messageLabel.text = ModSettingsText[4];
         });
         settingsPanel.addUIElement(resetTipsButton);
 
-        ModLabel resetTipsLabel = new ModLabel(ModSettingsText[3], 500.0F, 425.0F, Color.WHITE, FontHelper.tipHeaderFont, settingsPanel, label -> { });
+        ModLabel resetTipsLabel = new ModLabel(ModSettingsText[3], 500.0F, 555.0F, Color.WHITE, FontHelper.tipHeaderFont, settingsPanel, label -> { });
         settingsPanel.addUIElement(resetTipsLabel);
 
-        ModButton unlockA20Button = new ModButton(370.0F, 260.0F, settingsPanel, b -> {
+        ModButton unlockA20Button = new ModButton(370.0F, 390.0F, settingsPanel, b -> {
             unlockA20(FireBladeEnum.THE_FIREBLADE);
             messageLabel.text = ModSettingsText[6];
         });
         settingsPanel.addUIElement(unlockA20Button);
 
-        ModLabel unlockA20Label = new ModLabel(ModSettingsText[5], 500.0F, 315.0F, Color.WHITE, FontHelper.tipHeaderFont, settingsPanel, label -> { });
+        ModLabel unlockA20Label = new ModLabel(ModSettingsText[5], 500.0F, 445.0F, Color.WHITE, FontHelper.tipHeaderFont, settingsPanel, label -> { });
         settingsPanel.addUIElement(unlockA20Label);
 
         return settingsPanel;

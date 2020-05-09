@@ -102,7 +102,7 @@
     "NAME": "Pyromancer Form",
     "DESCRIPTIONS": [
       "Your #yFlame attacks and skills apply #b",
-      "% more #yBurning, but #yExhaust."
+      "% more #yBurning."
     ]
   },
   "FireBladeMod:DefensiveSurgePower": {
@@ -130,17 +130,17 @@
   "FireBladeMod:BlitzkreigPower": {
     "NAME": "Blitzkreig",
     "DESCRIPTIONS": [
-      "Whenever a card is exhausted, draw #b",
+      "Whenever a #ySmash, #yEndurance, or #yFlame card is exhausted, draw #b",
       " card and gain #b",
       " cards and gain #b",
       " #yEnergy."
     ]
   },
-  "FireBladeMod:EnergizingFlamePower": {
-    "NAME": "Energizing Flame",
+  "FireBladeMod:SolidifiedFlamePower": {
+    "NAME": "Solidified Flame",
     "DESCRIPTIONS": [
-      "Whenever you play a #yFlame card, gain #b",
-      " Vigor."
+      "Whenever you play a #yFlame card, add #b",
+      " #yManifest #yFlame into your hand."
     ]
   },
   "FireBladeMod:VitalityPower": {

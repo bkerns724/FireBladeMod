@@ -2,42 +2,44 @@ package FireBlade.cards.Commons;
 
 import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.enums.FireBladeEnum;
-import FireBlade.powers.SpiritRendPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class SpiritBurn extends CustomFireBladeCard {
+public class SoulStrike extends CustomFireBladeCard {
 
-    public static final String ID = "FireBladeMod:SpiritBurn";
+    public static final String ID = "FireBladeMod:SoulStrike";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/SpiritBurn.png";
+    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/SoulStrike.png";
     private static final CardStrings cardStrings;
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 1;
 
-    public SpiritBurn() {
+    public SoulStrike() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 2;
+        baseDamage = 8;
+        magicNumber = baseMagicNumber = 1;
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters)
-            addToBot(new ApplyPowerAction(mo, p, new SpiritRendPower(mo, magicNumber), magicNumber));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 
-    public AbstractCard makeCopy() { return new SpiritBurn(); }
+    public AbstractCard makeCopy() { return new SoulStrike(); }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeDamage(2);
             upgradeMagicNumber(1);
         }
     }

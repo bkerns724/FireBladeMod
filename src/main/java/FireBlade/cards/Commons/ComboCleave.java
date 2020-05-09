@@ -26,13 +26,11 @@ public class ComboCleave extends CustomFireBladeCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final int COST = 1;
-    private int realBaseDamage = 3;
-    public int[] multiDamage2;
 
     public ComboCleave() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        baseDamage = realBaseDamage;
-        magicNumberTwo = baseMagicNumberTwo = 4;
+        baseDamage = 3;
+        magicNumber = baseMagicNumber = 2;
         isMultiDamage = true;
     }
 
@@ -46,31 +44,13 @@ public class ComboCleave extends CustomFireBladeCard {
 
         addToBot(new SFXAction("ATTACK_IRON_2"));
         addToBot(new VFXAction(p, new CleaveEffect(), 0.0F));
-        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, multiDamage2, damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
-    }
+        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
 
-    public void applyPowers() {
-        baseDamage = baseMagicNumberTwo;
-        super.applyPowers();
-        magicNumberTwo = damage;
-        isMagicNumberTwoModified = magicNumberTwo != baseMagicNumberTwo;
-        baseDamage = realBaseDamage;
-        super.applyPowers();
-    }
-
-    public void calculateCardDamage(AbstractMonster m) {
-        baseDamage = baseMagicNumberTwo;
-        super.calculateCardDamage(m);
-        multiDamage2 = multiDamage;
-        magicNumberTwo = damage;
-        isMagicNumberTwoModified = magicNumberTwo != baseMagicNumberTwo;
-        baseDamage = realBaseDamage;
-        super.calculateCardDamage(m);
-    }
-
-    public void onMoveToDiscard() {
-        isMagicNumberTwoModified = false;
-        magicNumberTwo = baseMagicNumberTwo;
+        if (upgraded) {
+            addToBot(new SFXAction("ATTACK_IRON_3"));
+            addToBot(new VFXAction(p, new CleaveEffect(), 0.0F));
+            AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+        }
     }
 
     public AbstractCard makeCopy() { return new ComboCleave(); }
@@ -78,9 +58,7 @@ public class ComboCleave extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(1);
-            realBaseDamage += 1;
-            upgradeMagicNumberTwo(1);
+            upgradeMagicNumber(1);
         }
     }
 
