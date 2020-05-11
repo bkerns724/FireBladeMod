@@ -42,9 +42,8 @@
   "FireBladeMod:SpiritRendPower": {
     "NAME": "Spirit Rend",
     "DESCRIPTIONS": [
-      "Receives #b50% more #yBurning for #b",
-      " turn.",
-      " turns."
+      "Receives #b",
+      "% more damage from #yBurning."
     ]
   },
   "FireBladeMod:SmokeScreenPower": {
@@ -65,8 +64,8 @@
   "FireBladeMod:SwordsmanFormPower": {
     "NAME": "Swordsman Form",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b",
-      " #yVigor."
+      "Whenever you play an attack, gain #b",
+      " #yStrength."
     ]
   },
   "FireBladeMod:EnergizedFireBladePower": {
@@ -101,8 +100,8 @@
   "FireBladeMod:PyromancerFormPower": {
     "NAME": "Pyromancer Form",
     "DESCRIPTIONS": [
-      "Your #yFlame attacks and skills apply #b",
-      "% more #yBurning."
+      "Your #yFlame cards apply #b",
+      " #ySpirit #yRend."
     ]
   },
   "FireBladeMod:DefensiveSurgePower": {
@@ -153,8 +152,8 @@
   "FireBladeMod:SoulSwordPower": {
     "NAME": "Soul Sword",
     "DESCRIPTIONS": [
-      "Every third time you deal attack damage in a turn, gain #b",
-      " #yFervor until end of turn. #b",
+      "Every third time you deal attack damage in a turn, apply #b",
+      " #ySpirit #yRend. #b",
       " more attack.",
       " more attacks."
     ]

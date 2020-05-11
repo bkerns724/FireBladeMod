@@ -24,7 +24,7 @@ public class Refreshment extends CustomFireBladeCard {
 
     public Refreshment() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 3;
         exhaust = true;
         isEthereal = true;
         isUnnate = true;

@@ -24,7 +24,7 @@ public class SoulSword extends CustomFireBladeCard {
 
     public SoulSword() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 1;
         magicNumberTwo = baseMagicNumberTwo = SoulSwordPower.ATTACKS_TO_TRIGGER;
     }
 
@@ -37,7 +37,7 @@ public class SoulSword extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeBaseCost(0);
         }
     }
 

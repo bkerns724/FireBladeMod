@@ -42,8 +42,7 @@ public class SoulStrike extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(2);
-            upgradeMagicNumber(1);
+            upgradeDamage(4);
         }
     }
 

@@ -22,7 +22,7 @@ public class SoulSwordPower extends TwoAmountPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final int ATTACKS_TO_TRIGGER = 3;
+    public static final int ATTACKS_TO_TRIGGER = 4;
     
     public SoulSwordPower(AbstractCreature owner, int amount) {
         ID = POWER_ID;
@@ -53,8 +53,7 @@ public class SoulSwordPower extends TwoAmountPower {
                 flash();
                 amount2 = ATTACKS_TO_TRIGGER;
                 AbstractPlayer p = AbstractDungeon.player;
-                addToBot(new ApplyPowerAction(p, p, new FervorPower(p, amount), amount));
-                addToBot(new ApplyPowerAction(p, p, new LoseFervorPower(p, amount), amount));
+                addToBot(new ApplyPowerAction(target, p, new SpiritRendPower(target, amount), amount));
             }
         }
 

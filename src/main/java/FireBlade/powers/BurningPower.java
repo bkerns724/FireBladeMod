@@ -40,19 +40,30 @@ public class BurningPower extends AbstractPower implements HealthBarRenderPower 
     }
 
     public void updateDescription() {
+        int textAmount = getDamageAmount();
         if (owner == AbstractDungeon.player)
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+            description = DESCRIPTIONS[0] + textAmount + DESCRIPTIONS[1];
         else
-            description = DESCRIPTIONS[2] + amount + DESCRIPTIONS[1];
+            description = DESCRIPTIONS[2] + textAmount + DESCRIPTIONS[1];
+    }
+
+    private int getDamageAmount() {
+        int rendAmount = 0;
+        if (owner.hasPower(SpiritRendPower.POWER_ID))
+            rendAmount = owner.getPower(SpiritRendPower.POWER_ID).amount;
+        return (int)Math.floor((1 + SpiritRendPower.BURN_MULT*rendAmount)*amount);
     }
 
     public void atStartOfTurn() {
+        int damage = getDamageAmount();
         if ((AbstractDungeon.getCurrRoom()).phase == AbstractRoom.RoomPhase.COMBAT &&
             !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            addToBot(new LoseHPAction(owner, source, amount, AbstractGameAction.AttackEffect.FIRE));
+            addToBot(new LoseHPAction(owner, source, damage, AbstractGameAction.AttackEffect.FIRE));
         }
     }
     
-    public int getHealthBarAmount() { return amount; }
+    public int getHealthBarAmount() {
+        return getDamageAmount();
+    }
     public Color getColor() { return Color.YELLOW.cpy(); }
 }

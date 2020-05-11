@@ -27,8 +27,8 @@ public class SoulSunder extends CustomFireBladeCard {
 
     public SoulSunder() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        baseDamage = 10;
-        magicNumber = baseMagicNumber = 3;
+        baseDamage = 15;
+        magicNumber = baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -41,8 +41,7 @@ public class SoulSunder extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(3);
-            upgradeMagicNumber(1);
+            upgradeDamage(6);
         }
     }
 

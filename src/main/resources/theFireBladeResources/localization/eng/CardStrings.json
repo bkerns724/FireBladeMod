@@ -103,7 +103,8 @@
   },
   "FireBladeMod:FireAndFury": {
     "NAME": "Fire and Fury",
-    "DESCRIPTION": "fireblademod:Flame. NL Deal !D! damage X times. NL Apply !M! fireblademod:Burning."
+    "DESCRIPTION": "fireblademod:Flame. NL Deal !D! damage X times. NL Apply 2X fireblademod:Burning.",
+    "UPGRADE_DESCRIPTION": "fireblademod:Flame. NL Deal !D! damage X times. NL Apply 3X fireblademod:Burning."
   },
   "FireBladeMod:QuickJabs": {
     "NAME": "Quick Jabs",
@@ -187,11 +188,12 @@
   },
   "FireBladeMod:SwordsmanForm": {
     "NAME": "Swordsman Form",
-    "DESCRIPTION": "At the start of your turn, gain !M! fireblademod:Vigor."
+    "DESCRIPTION": "Gain !M! Strength when you play an Attack.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength when you play an Attack. NL Gain !FireBladeMod:M2! Strength."
   },
   "FireBladeMod:SoulSword": {
     "NAME": "Soul Sword",
-    "DESCRIPTION": "Every third time you deal attack damage in a turn, gain !M! fireblademod:Fervor until end of turn."
+    "DESCRIPTION": "Every fourth time you deal attack damage in a turn, apply !M! fireblademod:Spirit\u00a0Rend."
   },
   "FireBladeMod:FinalSmash": {
     "NAME": "Final Smash",
@@ -283,8 +285,8 @@
   },
   "FireBladeMod:PyromancerForm": {
     "NAME": "Pyromancer Form",
-    "DESCRIPTION": "Your fireblademod:Flame attacks and skills apply 100% more fireblademod:Burning.",
-    "UPGRADE_DESCRIPTION": "Your fireblademod:Flame attacks and skills apply 150% more fireblademod:Burning."
+    "DESCRIPTION": "Your fireblademod:Flame cards apply !M! fireblademod:Spirit\u00a0Rend.",
+    "UPGRADE_DESCRIPTION": "Your fireblademod:Flame cards apply !M! fireblademod:Spirit\u00a0Rend. NL Gain !FireBladeMod:M2! fireblademod:Fervor."
   },
   "FireBladeMod:DefensiveSurge": {
     "NAME": "Defensive Surge",
@@ -292,8 +294,8 @@
   },
   "FireBladeMod:Blitzkreig": {
     "NAME": "Blitzkreig",
-    "DESCRIPTION": "Whenever you exhaust a fireblademod:Smash, fireblademod:Endurance, or fireblademod:Flame card, draw !M! card and gain [E].",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you exhaust a fireblademod:Smash, fireblademod:Endurance, or fireblademod:Flame card, draw !M! card and gain [E]."
+    "DESCRIPTION": "Whenever you Exhaust a fireblademod:Smash, fireblademod:Endurance, or fireblademod:Flame card, draw !M! card and gain [E].",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Exhaust a fireblademod:Smash, fireblademod:Endurance, or fireblademod:Flame card, draw !M! card and gain [E]."
   },
   "FireBladeMod:FlashBang": {
     "NAME": "FlashBang",

@@ -1,9 +1,10 @@
 package FireBlade.potions;
 
 import FireBlade.FireBladeMod;
-import FireBlade.actions.BurnAction;
+import FireBlade.powers.BurningPower;
 import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -36,7 +37,7 @@ public class NapalmFlask extends CustomPotion {
 
     public void use(AbstractCreature target) {
         AbstractPlayer p = AbstractDungeon.player;
-        addToBot(new BurnAction(p, target, getPotency(), 1, true, true));
+        addToBot(new ApplyPowerAction(target, p, new BurningPower(target, p, getPotency()), getPotency()));
     }
 
     public CustomPotion makeCopy() { return new NapalmFlask();}

@@ -28,7 +28,7 @@ public class FireAndFury extends CustomFireBladeCard {
     public FireAndFury() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
         baseDamage = 3;
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 2; // Hardcoded in card strings for formatting reasons
         tags.add(FireBladeCardTags.FLAME);
     }
 
@@ -44,6 +44,8 @@ public class FireAndFury extends CustomFireBladeCard {
             upgradeName();
             upgradeDamage (2);
             upgradeMagicNumber( 1);
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

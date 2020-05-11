@@ -1,6 +1,6 @@
 package FireBlade.relics;
 
-import FireBlade.actions.BurnAction;
+import FireBlade.powers.BurningPower;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -32,7 +32,7 @@ public class SearingSword extends CustomRelic {
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         AbstractPlayer p = AbstractDungeon.player;
         if (info.owner == p && info.type == DamageInfo.DamageType.NORMAL)
-            addToBot(new BurnAction(p, target, burningAmount, 1, true, true));
+            addToBot(new ApplyPowerAction(target, p, new BurningPower(target, p, burningAmount), burningAmount));
     }
 
     public String getUpdatedDescription() { return DESCRIPTIONS[0] + burningAmount + DESCRIPTIONS[1] + strengthAmount + DESCRIPTIONS[2]; }

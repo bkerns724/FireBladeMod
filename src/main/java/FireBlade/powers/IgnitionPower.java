@@ -41,8 +41,13 @@ public class IgnitionPower extends AbstractPower implements OnReceivePowerPower 
     }
 
     public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power instanceof BurningPower && owner == target && !owner.hasPower(ArtifactPower.POWER_ID))
-            addToBot(new LoseHPAction(target, source, power.amount*amount));
+        if (power instanceof BurningPower && owner == target && !owner.hasPower(ArtifactPower.POWER_ID)) {
+            int rendAmount = 0;
+            if (owner.hasPower(SpiritRendPower.POWER_ID))
+                rendAmount = owner.getPower(SpiritRendPower.POWER_ID).amount;
+            int damageAmount = (int)Math.floor((1 + SpiritRendPower.BURN_MULT*rendAmount)*power.amount*amount);
+            addToBot(new LoseHPAction(target, source, damageAmount));
+        }
 
         return true;
     }

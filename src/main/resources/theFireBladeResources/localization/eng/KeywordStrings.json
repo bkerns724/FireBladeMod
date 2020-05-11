@@ -65,7 +65,7 @@
       "Spirit\u00a0rend",
       "spirit\u00a0rend"
     ],
-    "DESCRIPTION": "Spirit Rent creatures receive 50% more #yBurning."
+    "DESCRIPTION": "For each stack of Spirit Rend creatures receive 20% more damage from #yBurning."
   },
   {
     "PROPER_NAME": "Vigor",
