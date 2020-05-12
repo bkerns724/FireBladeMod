@@ -84,6 +84,38 @@
     "DESCRIPTION": "Vitality adds #yBlock to your next blocking card."
   },
   {
+    "PROPER_NAME": "Healthy",
+    "NAMES": [
+      "Healthy",
+      "healthy"
+    ],
+    "DESCRIPTION": "When Healthy, drawing a Status card exhausts it and draws a new card."
+  },
+  {
+    "PROPER_NAME": "Blessed",
+    "NAMES": [
+      "Blessed",
+      "blessed"
+    ],
+    "DESCRIPTION": "When Blessed, drawing a Curse card exhausts it and draws a new card."
+  },
+  {
+    "PROPER_NAME": "Anti-magic",
+    "NAMES": [
+      "Anti-magic",
+      "anti-magic"
+    ],
+    "DESCRIPTION": "Creatures inflicted with Anti-magic take damage when applying buffs or debuffs(including debuffs blocked by artifact)."
+  },
+  {
+    "PROPER_NAME": "Vitality",
+    "NAMES": [
+      "Vitality",
+      "vitality"
+    ],
+    "DESCRIPTION": "Vitality adds #yBlock to your next blocking card."
+  },
+  {
     "PROPER_NAME": "Metallicize",
     "NAMES": [
       "Metallicize",

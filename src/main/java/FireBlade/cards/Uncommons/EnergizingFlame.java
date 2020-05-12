@@ -24,7 +24,7 @@ public class EnergizingFlame extends CustomFireBladeCard {
 
     public EnergizingFlame() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -36,7 +36,7 @@ public class EnergizingFlame extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
         }
     }
 

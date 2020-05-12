@@ -18,7 +18,7 @@ public class FlameCatalyst extends CustomRelic {
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/FlameCatalyst_outline.png";
     private static final RelicTier TIER = RelicTier.SHOP;
     private static final LandingSound SOUND = LandingSound.CLINK;
-    private static final int fervorAmount = 4;
+    private static final int fervorAmount = 3;
 
     public FlameCatalyst() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);

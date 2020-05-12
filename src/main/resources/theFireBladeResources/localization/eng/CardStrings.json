@@ -114,17 +114,17 @@
     "NAME": "Eruption Slash",
     "DESCRIPTION": "Deal !D! damage plus !M! per fireblademod:Burning."
   },
-  "FireBladeMod:SoulSunder": {
-    "NAME": "Soul Sunder",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! fireblademod:Spirit\u00a0Rend."
+  "FireBladeMod:StunningBlow": {
+    "NAME": "Stunning Blow",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! fireblademod:Vitality."
   },
   "FireBladeMod:SmokySwing": {
     "NAME": "Smoky Swing",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
   },
-  "FireBladeMod:SteelEndurance": {
-    "NAME": "Steel Endurance",
-    "DESCRIPTION": "fireblademod:Endurance. NL Gain !B! Block. NL Gain !M! Artifact. NL Exhaust."
+  "FireBladeMod:SpiritEndurance": {
+    "NAME": "Spirit Endurance",
+    "DESCRIPTION": "fireblademod:Endurance. NL Gain !B! Block. NL Gain !M! fireblademod:Blessed. NL Exhaust."
   },
   "FireBladeMod:DoubleDash": {
     "NAME": "Double Dash",
@@ -220,9 +220,10 @@
     "DESCRIPTION": "fireblademod:Endurance. NL Gain !B! Block. NL Block is not removed at the start of your next turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "fireblademod:Endurance. NL Gain !B! Block. NL Block is not removed at the start of your next !M! turns. NL Exhaust."
   },
-  "FireBladeMod:GatherPower": {
-    "NAME": "Gather Power",
-    "DESCRIPTION": "Next turn, gain !M! [E] and draw !FireBladeMod:M2! cards. NL Exhaust."
+  "FireBladeMod:AntiMagic": {
+    "NAME": "Anti-Magic",
+    "DESCRIPTION": "Gain !M! Artifact. NL Apply !FireBladeMod:M2! fireblademod:Anti-magic. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! Artifact. NL Apply !FireBladeMod:M2! fireblademod:Anti-magic. NL Exhaust."
   },
   "FireBladeMod:LayeredDefense": {
     "NAME": "Layered Defense",
@@ -268,7 +269,7 @@
   },
   "FireBladeMod:Indomitable": {
     "NAME": "Indomitable",
-    "DESCRIPTION": "Gain !B! block. NL The next !M! times you draw a Status card, Exhaust it and draw a card."
+    "DESCRIPTION": "Gain !B! block. NL Gain !M! fireblademod:Healthy."
   },
   "FireBladeMod:BattleMage": {
     "NAME": "Battle Mage",
@@ -290,7 +291,7 @@
   },
   "FireBladeMod:DefensiveSurge": {
     "NAME": "Defensive Surge",
-    "DESCRIPTION": "At the start of your turn, gain !M! fireblademod:Vitality."
+    "DESCRIPTION": "Gain !M! Dexterity. NL At the end of your turn, lose 1 Dexterity."
   },
   "FireBladeMod:Blitzkreig": {
     "NAME": "Blitzkreig",

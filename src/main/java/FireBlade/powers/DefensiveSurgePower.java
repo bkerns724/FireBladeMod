@@ -7,9 +7,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.DexterityPower;
 
 public class DefensiveSurgePower extends AbstractPower {
-    public static PowerType POWER_TYPE = PowerType.BUFF;
+    public static PowerType POWER_TYPE = PowerType.DEBUFF;
 
     public static final String POWER_ID = "FireBladeMod:DefensiveSurgePower";
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -30,8 +31,8 @@ public class DefensiveSurgePower extends AbstractPower {
         updateDescription();
     }
 
-    public void atStartOfTurn() {
-        addToBot(new ApplyPowerAction(owner, owner, new VitalityPower(owner, amount), amount));
+    public void atEndOfTurn(boolean isPlayer) {
+        addToBot(new ApplyPowerAction(owner, owner, new DexterityPower(owner, -amount), -amount));
     }
 
     public void updateDescription() {
