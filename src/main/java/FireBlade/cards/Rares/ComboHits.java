@@ -23,7 +23,7 @@ public class ComboHits extends CustomFireBladeCard {
     private static final int COST = 1;
 
     public ComboHits() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         baseDamage = 2;
         magicNumber = baseMagicNumber = 1;
     }

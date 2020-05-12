@@ -23,7 +23,7 @@ public class WellPrepared extends CustomFireBladeCard {
     private static final int COST = 0;
 
     public WellPrepared() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 2;
         magicNumberTwo = baseMagicNumberTwo = 2;
     }

@@ -22,7 +22,7 @@ public class BodyAsFuel extends CustomFireBladeCard {
     private static final int COST = 0;
 
     public BodyAsFuel() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         exhaust = true;
         magicNumber = baseMagicNumber = 3;
     }

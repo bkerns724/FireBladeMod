@@ -28,7 +28,7 @@ public class ArmSmash extends CustomFireBladeCard {
     private static final int COST = 2;
 
     public ArmSmash() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         baseDamage = 14;
         magicNumber = baseMagicNumber = 3;
         tags.add(FireBladeCardTags.SMASH);

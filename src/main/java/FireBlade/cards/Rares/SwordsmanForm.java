@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class SwordsmanForm extends CustomFireBladeCard {
 
@@ -24,15 +23,14 @@ public class SwordsmanForm extends CustomFireBladeCard {
     private static final int COST = 3;
 
     public SwordsmanForm() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 1;
         magicNumberTwo = baseMagicNumberTwo = 2;
+        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new SwordsmanFormPower(p, magicNumber), magicNumber));
-        if (upgraded)
-            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumberTwo), magicNumberTwo));
     }
 
     public AbstractCard makeCopy() { return new SwordsmanForm(); }
@@ -40,6 +38,7 @@ public class SwordsmanForm extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            isEthereal = false;
             rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }

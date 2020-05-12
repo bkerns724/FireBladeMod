@@ -28,7 +28,7 @@ public class TorsoSmash extends CustomFireBladeCard {
     private static final int COST = 2;
 
     public TorsoSmash() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         baseDamage = 14;
         magicNumber = baseMagicNumber = 3;
         tags.add(FireBladeCardTags.SMASH);

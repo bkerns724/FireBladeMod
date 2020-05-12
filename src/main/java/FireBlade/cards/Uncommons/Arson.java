@@ -28,7 +28,7 @@ public class Arson extends CustomFireBladeCard {
     private static final int COST = 1;
 
     public Arson() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         exhaust = true;
     }
 

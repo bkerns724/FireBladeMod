@@ -2,7 +2,6 @@ package FireBlade.cards.Rares;
 
 import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.enums.FireBladeEnum;
-import FireBlade.powers.FervorPower;
 import FireBlade.powers.PyromancerFormPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -24,15 +23,14 @@ public class PyromancerForm extends CustomFireBladeCard {
     private static final int COST = 3;
 
     public PyromancerForm() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 1;
         magicNumberTwo = baseMagicNumberTwo = 2;
+        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new PyromancerFormPower(p, magicNumber), magicNumber));
-        if (upgraded)
-            addToBot (new ApplyPowerAction(p, p, new FervorPower(p, magicNumberTwo), magicNumberTwo));
     }
 
     public AbstractCard makeCopy() { return new PyromancerForm(); }
@@ -40,6 +38,7 @@ public class PyromancerForm extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            isEthereal = false;
             rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }

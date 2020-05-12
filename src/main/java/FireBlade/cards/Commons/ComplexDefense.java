@@ -3,8 +3,6 @@ package FireBlade.cards.Commons;
 import FireBlade.actions.DelayedVitalityAction;
 import FireBlade.enums.FireBladeEnum;
 import FireBlade.cards.CustomFireBladeCard;
-import FireBlade.powers.VitalityPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -25,7 +23,7 @@ public class ComplexDefense extends CustomFireBladeCard {
     private static final int COST = 1;
 
     public ComplexDefense() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         baseBlock = 7;
         magicNumber = baseMagicNumber = 3;
     }

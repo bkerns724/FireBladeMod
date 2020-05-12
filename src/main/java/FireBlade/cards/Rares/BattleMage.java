@@ -24,17 +24,15 @@ public class BattleMage extends CustomFireBladeCard {
     private static final int COST = 2;
 
     public BattleMage() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
-        isEthereal = true;
-        magicNumber = baseMagicNumber = 1;
-        magicNumberTwo = baseMagicNumberTwo = 3;
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
+        magicNumber = baseMagicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (!p.hasPower(BattleMagePower.POWER_ID))
             addToBot(new ApplyPowerAction(p, p, new BattleMagePower(p), magicNumber));
         else
-            addToBot(new ApplyPowerAction(p, p, new FervorPower(p, magicNumberTwo), magicNumberTwo));
+            addToBot(new ApplyPowerAction(p, p, new FervorPower(p, magicNumber), magicNumber));
     }
 
     public AbstractCard makeCopy() { return new BattleMage(); }
@@ -42,7 +40,7 @@ public class BattleMage extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            isEthereal = false;
+            isInnate = true;
             rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }

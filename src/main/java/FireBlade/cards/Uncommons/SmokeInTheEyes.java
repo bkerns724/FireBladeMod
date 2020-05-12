@@ -26,7 +26,7 @@ public class SmokeInTheEyes extends CustomFireBladeCard {
     private static final int COST = 1;
 
     public SmokeInTheEyes() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         baseBlock = 7;
         magicNumber = baseMagicNumber = 1;
     }

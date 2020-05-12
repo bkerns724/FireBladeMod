@@ -188,12 +188,12 @@
   },
   "FireBladeMod:SwordsmanForm": {
     "NAME": "Swordsman Form",
-    "DESCRIPTION": "Gain !M! Strength when you play an Attack.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Strength when you play an Attack. NL Gain !FireBladeMod:M2! Strength."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Strength when you play an Attack.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength when you play an Attack."
   },
   "FireBladeMod:SoulSword": {
     "NAME": "Soul Sword",
-    "DESCRIPTION": "Every fourth time you deal attack damage in a turn, apply !M! fireblademod:Spirit\u00a0Rend."
+    "DESCRIPTION": "Every !FireBladeMod:M2! times you deal attack damage, apply !M! fireblademod:Spirit\u00a0Rend."
   },
   "FireBladeMod:FinalSmash": {
     "NAME": "Final Smash",
@@ -272,8 +272,8 @@
   },
   "FireBladeMod:BattleMage": {
     "NAME": "Battle Mage",
-    "DESCRIPTION": "Ethereal. NL Your attack damage is increased by fireblademod:Fervor. NL Your fireblademod:Flame cards are improved by Strength. NL If fireblademod:Active, gain !FireBladeMod:M2! Fervor.",
-    "UPGRADE_DESCRIPTION": "Your attack damage is increased by fireblademod:Fervor. NL Your fireblademod:Flame cards are improved by Strength. NL If fireblademod:Active, gain !FireBladeMod:M2! Fervor."
+    "DESCRIPTION": "Your attack damage is increased by fireblademod:Fervor. NL Your fireblademod:Flame cards are improved by Strength. NL If fireblademod:Active, gain !M! Fervor.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Your attack damage is increased by fireblademod:Fervor. NL Your fireblademod:Flame cards are improved by Strength. NL If fireblademod:Active, gain !M! Fervor."
   },
   "FireBladeMod:FlamingSword": {
     "NAME": "Flaming Sword",
@@ -285,8 +285,8 @@
   },
   "FireBladeMod:PyromancerForm": {
     "NAME": "Pyromancer Form",
-    "DESCRIPTION": "Your fireblademod:Flame cards apply !M! fireblademod:Spirit\u00a0Rend.",
-    "UPGRADE_DESCRIPTION": "Your fireblademod:Flame cards apply !M! fireblademod:Spirit\u00a0Rend. NL Gain !FireBladeMod:M2! fireblademod:Fervor."
+    "DESCRIPTION": "Ethereal. NL Your fireblademod:Flame cards apply !M! fireblademod:Spirit\u00a0Rend.",
+    "UPGRADE_DESCRIPTION": "Your fireblademod:Flame cards apply !M! fireblademod:Spirit\u00a0Rend."
   },
   "FireBladeMod:DefensiveSurge": {
     "NAME": "Defensive Surge",

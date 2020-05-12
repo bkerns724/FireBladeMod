@@ -22,7 +22,7 @@ public class SoulSwordPower extends TwoAmountPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final int ATTACKS_TO_TRIGGER = 4;
+    public static final int ATTACKS_TO_TRIGGER = 3;
     
     public SoulSwordPower(AbstractCreature owner, int amount) {
         ID = POWER_ID;
@@ -37,10 +37,6 @@ public class SoulSwordPower extends TwoAmountPower {
         name = NAME;
 
         updateDescription();
-    }
-
-    public void atStartOfTurn() {
-        amount2 = ATTACKS_TO_TRIGGER;
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
@@ -62,8 +58,8 @@ public class SoulSwordPower extends TwoAmountPower {
 
     public void updateDescription() {
         if (amount2 == 1)
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount2 + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[0] + ATTACKS_TO_TRIGGER + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2] + amount2 + DESCRIPTIONS[3];
         else
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount2 + DESCRIPTIONS[3];
+            description = DESCRIPTIONS[0] + ATTACKS_TO_TRIGGER + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2] + amount2 + DESCRIPTIONS[4];
     }
 }

@@ -55,7 +55,7 @@ public class FireBladeMod implements
         FireBladeTipTracker.initialize();
         logger.info("Done adding mod settings");
 
-        BaseMod.addColor(FireBladeEnum.THE_FIREBLADE_ORANGE, FIREBLADE_EYE_COLOR,
+        BaseMod.addColor(FireBladeEnum.FIREBLADE_ORANGE, FIREBLADE_EYE_COLOR,
 
                 "theFireBladeResources/images/cardBackgrounds512/bg_attack_orange.png",
                 "theFireBladeResources/images/cardBackgrounds512/bg_skill_orange.png",
@@ -105,24 +105,29 @@ public class FireBladeMod implements
 
     public void receiveEditRelics() {
         logger.info("Beginning to add FireBlade relics");
-        BaseMod.addRelicToCustomPool(new RedStar(), FireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new CrimsonStar(), FireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new Matches(), FireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new BronzeKnuckles(), FireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new WheyBottle(), FireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new FirePoi(), FireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new LegBrace(), FireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new GymTowel(), FireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new TigerClaw(), FireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new Chakram(), FireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new InnerFlame(), FireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new SearingSword(), FireBladeEnum.THE_FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new FlameCatalyst(), FireBladeEnum.THE_FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new EternalTorch(), FireBladeEnum.FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new SoulTorch(), FireBladeEnum.FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new Matches(), FireBladeEnum.FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new BronzeKnuckles(), FireBladeEnum.FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new WheyBottle(), FireBladeEnum.FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new FirePoi(), FireBladeEnum.FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new LegBrace(), FireBladeEnum.FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new GymTowel(), FireBladeEnum.FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new TigerClaw(), FireBladeEnum.FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new Chakram(), FireBladeEnum.FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new InnerFlame(), FireBladeEnum.FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new SearingSword(), FireBladeEnum.FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new FlameCatalyst(), FireBladeEnum.FIREBLADE_ORANGE);
 
         if (!FireBladeSettings.isGoldenStarGlobal())
-            BaseMod.addRelicToCustomPool(new GoldenStar(), FireBladeEnum.THE_FIREBLADE_ORANGE);
+            BaseMod.addRelicToCustomPool(new GoldenStar(), FireBladeEnum.FIREBLADE_ORANGE);
         else
             BaseMod.addRelic(new GoldenStar(), RelicType.SHARED);
+
+        if (!FireBladeSettings.isCrimsonStarGlobal())
+            BaseMod.addRelicToCustomPool(new CrimsonStar(), FireBladeEnum.FIREBLADE_ORANGE);
+        else
+            BaseMod.addRelic(new CrimsonStar(), RelicType.SHARED);
 
         logger.info("Added FireBlade relics");
     }

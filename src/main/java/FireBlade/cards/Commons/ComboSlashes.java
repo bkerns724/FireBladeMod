@@ -26,7 +26,7 @@ public class ComboSlashes extends CustomFireBladeCard {
     public int realBaseDamage = 2;
 
     public ComboSlashes() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         baseDamage = realBaseDamage;
         magicNumberTwo = baseMagicNumberTwo = 3;
     }

@@ -25,7 +25,7 @@ public class BackhandSwing extends CustomFireBladeCard {
     private static final int COST = 1;
 
     public BackhandSwing() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         baseDamage = 6;
         magicNumber = baseMagicNumber = 2;
     }

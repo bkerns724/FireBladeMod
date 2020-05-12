@@ -30,7 +30,7 @@ public class ScorchingCleave extends CustomFireBladeCard {
     private static final int COST = 2;
 
     public ScorchingCleave() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         baseDamage = 8;
         magicNumber = baseMagicNumber = 3;
         tags.add(FireBladeCardTags.FLAME);

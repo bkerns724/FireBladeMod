@@ -152,7 +152,8 @@
   "FireBladeMod:SoulSwordPower": {
     "NAME": "Soul Sword",
     "DESCRIPTIONS": [
-      "Every third time you deal attack damage in a turn, apply #b",
+      "Every ",
+      " times you deal attack damage, apply #b",
       " #ySpirit #yRend. #b",
       " more attack.",
       " more attacks."

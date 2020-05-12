@@ -1,7 +1,11 @@
 package FireBlade.characters;
 
 import FireBlade.actions.DelayedRoarAction;
+import FireBlade.cards.Basics.DefendFireBlade;
+import FireBlade.cards.Basics.FireBarrier;
 import FireBlade.cards.Basics.FlamingSword;
+import FireBlade.cards.Basics.StrikeFireBlade;
+import FireBlade.relics.EternalTorch;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -91,16 +95,12 @@ public class TheFireBlade extends CustomPlayer {
         logger.info("Start TheFireBlade getStartingDeck");
 
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add("FireBladeMod:StrikeFireBlade");
-        retVal.add("FireBladeMod:StrikeFireBlade");
-        retVal.add("FireBladeMod:StrikeFireBlade");
-        retVal.add("FireBladeMod:StrikeFireBlade");
-        retVal.add("FireBladeMod:DefendFireBlade");
-        retVal.add("FireBladeMod:DefendFireBlade");
-        retVal.add("FireBladeMod:DefendFireBlade");
-        retVal.add("FireBladeMod:DefendFireBlade");
-        retVal.add("FireBladeMod:FlamingSword");
-        retVal.add("FireBladeMod:FireBarrier");
+        for (int i = 0; i < 4; i++)
+            retVal.add(StrikeFireBlade.ID);
+        for (int i = 0; i < 4; i++)
+            retVal.add(DefendFireBlade.ID);
+        retVal.add(FlamingSword.ID);
+        retVal.add(FireBarrier.ID);
 
         logger.info("End TheFireBlade getStartingDeck");
 
@@ -115,7 +115,7 @@ public class TheFireBlade extends CustomPlayer {
         logger.info("Start TheFireBlade getStartingRelics");
 
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add("FireBladeMod:RedStar");
+        retVal.add(EternalTorch.ID);
 
         logger.info("End TheFireBlade getStartingRelics");
         return retVal;
@@ -131,7 +131,7 @@ public class TheFireBlade extends CustomPlayer {
     }
 
     public AbstractCard.CardColor getCardColor() {
-        return FireBladeEnum.THE_FIREBLADE_ORANGE;
+        return FireBladeEnum.FIREBLADE_ORANGE;
     }
 
     public Color getCardRenderColor() {

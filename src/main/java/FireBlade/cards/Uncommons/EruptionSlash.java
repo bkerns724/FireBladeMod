@@ -28,7 +28,7 @@ public class EruptionSlash extends CustomFireBladeCard {
     private int realBaseDamage;
 
     public EruptionSlash() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         realBaseDamage = baseDamage = 3;
         magicNumber = baseMagicNumber = 1;
     }

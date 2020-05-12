@@ -1,7 +1,10 @@
 package FireBlade.ui;
 
 import FireBlade.enums.FireBladeEnum;
+import FireBlade.relics.CrimsonStar;
+import FireBlade.relics.GoldenStar;
 import basemod.*;
+import basemod.helpers.RelicType;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,11 +17,13 @@ public class FireBladeSettings
 {
     private static Properties DEFAULT_SETTINGS = new Properties();
     private static final String GoldenStarString = "GoldenStarShared";
+    private static final String CrimsonStarString = "CrimsonStarShared";
     private static final String MOD_SETTINGS_FILE = "FireBlade_config";
     private static SpireConfig config;
 
     static  {
         DEFAULT_SETTINGS.setProperty(GoldenStarString, "false");
+        DEFAULT_SETTINGS.setProperty(CrimsonStarString, "false");
     }
 
 
@@ -32,6 +37,7 @@ public class FireBladeSettings
     }
 
     public static boolean isGoldenStarGlobal() { return config.getBool(GoldenStarString); }
+    public static boolean isCrimsonStarGlobal() { return config.getBool(CrimsonStarString); }
 
     public static void onGoldenStarToggle(ModToggleButton toggle) {
         try {
@@ -39,6 +45,31 @@ public class FireBladeSettings
             config.save();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+        if (toggle.enabled) {
+            BaseMod.removeRelicFromCustomPool(new GoldenStar(), FireBladeEnum.FIREBLADE_ORANGE);
+            BaseMod.addRelic(new GoldenStar(), RelicType.SHARED);
+        }
+        else {
+            BaseMod.removeRelic(new GoldenStar(), RelicType.SHARED);
+            BaseMod.addRelicToCustomPool(new GoldenStar(), FireBladeEnum.FIREBLADE_ORANGE);
+        }
+    }
+
+    public static void onCrimsonStarToggle(ModToggleButton toggle) {
+        try {
+            config.setBool(CrimsonStarString, toggle.enabled);
+            config.save();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (toggle.enabled) {
+            BaseMod.removeRelicFromCustomPool(new CrimsonStar(), FireBladeEnum.FIREBLADE_ORANGE);
+            BaseMod.addRelic(new CrimsonStar(), RelicType.SHARED);
+        }
+        else {
+            BaseMod.removeRelic(new CrimsonStar(), RelicType.SHARED);
+            BaseMod.addRelicToCustomPool(new CrimsonStar(), FireBladeEnum.FIREBLADE_ORANGE);
         }
     }
 
@@ -54,22 +85,26 @@ public class FireBladeSettings
                 FontHelper.tipHeaderFont, isGoldenStarGlobal(), settingsPanel, label -> {  }, FireBladeSettings::onGoldenStarToggle);
         settingsPanel.addUIElement(goldenStarToggle);
 
-        ModButton resetTipsButton = new ModButton(370.0F, 530.0F, settingsPanel, b -> {
+        ModLabeledToggleButton CrimsonStarToggle = new ModLabeledToggleButton(ModSettingsText[1], 400.0F, 620.0F, Color.WHITE,
+                FontHelper.tipHeaderFont, isCrimsonStarGlobal(), settingsPanel, label -> {  }, FireBladeSettings::onCrimsonStarToggle);
+        settingsPanel.addUIElement(CrimsonStarToggle);
+
+        ModButton resetTipsButton = new ModButton(370.0F, 450.0F, settingsPanel, b -> {
             FireBladeTipTracker.reset();
-            messageLabel.text = ModSettingsText[4];
+            messageLabel.text = ModSettingsText[3];
         });
         settingsPanel.addUIElement(resetTipsButton);
 
-        ModLabel resetTipsLabel = new ModLabel(ModSettingsText[3], 500.0F, 555.0F, Color.WHITE, FontHelper.tipHeaderFont, settingsPanel, label -> { });
+        ModLabel resetTipsLabel = new ModLabel(ModSettingsText[2], 500.0F, 475.0F, Color.WHITE, FontHelper.tipHeaderFont, settingsPanel, label -> { });
         settingsPanel.addUIElement(resetTipsLabel);
 
-        ModButton unlockA20Button = new ModButton(370.0F, 390.0F, settingsPanel, b -> {
+        ModButton unlockA20Button = new ModButton(370.0F, 310.0F, settingsPanel, b -> {
             unlockA20(FireBladeEnum.THE_FIREBLADE);
-            messageLabel.text = ModSettingsText[6];
+            messageLabel.text = ModSettingsText[5];
         });
         settingsPanel.addUIElement(unlockA20Button);
 
-        ModLabel unlockA20Label = new ModLabel(ModSettingsText[5], 500.0F, 445.0F, Color.WHITE, FontHelper.tipHeaderFont, settingsPanel, label -> { });
+        ModLabel unlockA20Label = new ModLabel(ModSettingsText[4], 500.0F, 365.0F, Color.WHITE, FontHelper.tipHeaderFont, settingsPanel, label -> { });
         settingsPanel.addUIElement(unlockA20Label);
 
         return settingsPanel;

@@ -9,7 +9,7 @@ public class FireBladeEnum {
     @SpireEnum
     public static AbstractPlayer.PlayerClass THE_FIREBLADE;
     @SpireEnum(name = "FIREBLADE_ORANGE_COLOR") // These two HAVE to have the same absolutely identical name.
-    public static AbstractCard.CardColor THE_FIREBLADE_ORANGE;
+    public static AbstractCard.CardColor FIREBLADE_ORANGE;
     @SpireEnum(name = "FIREBLADE_ORANGE_COLOR") @SuppressWarnings("unused")
     public static CardLibrary.LibraryType LIBRARY_COLOR;
 }

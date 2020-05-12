@@ -15,7 +15,7 @@ public class GoldenStar extends CustomRelic {
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/Star_outline.png";
     private static final RelicTier TIER = RelicTier.UNCOMMON;
     private static final LandingSound SOUND = LandingSound.SOLID;
-    private static final int goldAmount = 60;
+    private static final int goldAmount = 75;
 
     public GoldenStar() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);

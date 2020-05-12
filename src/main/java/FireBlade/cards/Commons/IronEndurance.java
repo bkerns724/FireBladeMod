@@ -24,7 +24,7 @@ public class IronEndurance extends CustomFireBladeCard {
     private static final int COST = 1;
 
     public IronEndurance() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         baseBlock = 11;
         exhaust = true;
         tags.add(FireBladeCardTags.ENDURANCE);

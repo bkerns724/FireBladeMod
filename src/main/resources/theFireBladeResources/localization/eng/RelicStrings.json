@@ -1,17 +1,9 @@
 {
-  "FireBladeMod:RedStar": {
-    "NAME": "Red Star",
+  "FireBladeMod:CrimsonStar": {
+    "NAME": "Crimson Star",
     "FLAVOR": "You feel a desire to feed on the powerful.",
     "DESCRIPTIONS": [
       "Whenever you win an Elite combat, gain #b",
-      " Max HP."
-    ]
-  },
-  "FireBladeMod:CrimsonStar": {
-    "NAME": "Crimson Star",
-    "FLAVOR": "Your hunger grows.",
-    "DESCRIPTIONS": [
-      "Replaces #rRed #rStar. Whenever you win an Elite combat, gain #b",
       " Max HP."
     ]
   },
@@ -111,6 +103,23 @@
       "Whenever you deal attack damage, apply #b",
       " #yfireblademod:Burning.  Lose #b",
       " #yStrength at the start of combat."
+    ]
+  },
+  "FireBladeMod:EternalTorch": {
+    "NAME": "Eternal Torch",
+    "FLAVOR": "The flame never goes out.",
+    "DESCRIPTIONS": [
+      "At the start of battle, apply #b",
+      " #yfireblademod:Burning to all enemies."
+    ]
+  },
+  "FireBladeMod:SoulTorch": {
+    "NAME": "Soul Torch",
+    "FLAVOR": "It can burn even the immaterial.",
+    "DESCRIPTIONS": [
+      "At the start of battle, apply #b",
+      " #yfireblademod:Burning and #b",
+      " #yfireblademod:Spirit\u00a0Rend to all enemies."
     ]
   }
 }

@@ -26,7 +26,7 @@ public class SoulStrike extends CustomFireBladeCard {
     private static final int COST = 1;
 
     public SoulStrike() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.THE_FIREBLADE_ORANGE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         baseDamage = 8;
         magicNumber = baseMagicNumber = 1;
         tags.add(CardTags.STRIKE);
