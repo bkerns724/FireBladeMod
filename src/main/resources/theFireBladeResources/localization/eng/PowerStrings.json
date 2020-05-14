@@ -146,7 +146,7 @@
   "FireBladeMod:EnergizingFlamePower": {
     "NAME": "Energizing Flame",
     "DESCRIPTIONS": [
-      "Whenever you play a #yFlame card, gain #b",
+      "After you play a #yFlame card, gain #b",
       " #yVigor."
     ]
   },

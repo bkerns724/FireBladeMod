@@ -42,7 +42,7 @@ public class SpinningSmash extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(4);
+            upgradeDamage(3);
         }
     }
 

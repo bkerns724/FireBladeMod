@@ -27,12 +27,11 @@ public class MomentumStrikes extends CustomFireBladeCard {
 
     public MomentumStrikes() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        baseDamage = 6;
+        baseDamage = 8;
         tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         for (AbstractPower power : m.powers) {
             if (power.type == AbstractPower.PowerType.DEBUFF && !(power instanceof GainStrengthPower))
                 addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
@@ -44,7 +43,7 @@ public class MomentumStrikes extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(2);
+            upgradeDamage(3);
         }
     }
 

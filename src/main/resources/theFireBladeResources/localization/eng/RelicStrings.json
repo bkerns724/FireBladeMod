@@ -110,16 +110,15 @@
     "FLAVOR": "The flame never goes out.",
     "DESCRIPTIONS": [
       "At the start of battle, apply #b",
-      " #yfireblademod:Burning to all enemies."
+      " #yfireblademod:Burning to ALL enemies."
     ]
   },
   "FireBladeMod:SoulTorch": {
     "NAME": "Soul Torch",
     "FLAVOR": "It can burn even the immaterial.",
     "DESCRIPTIONS": [
-      "Replaces [#F36B08]Eternal [#F36B08]Torch.  At the start of battle, apply #b",
-      " #yfireblademod:Burning and #b",
-      " #yfireblademod:Spirit\u00a0Rend to all enemies."
+      "Replaces [#F36B08]Eternal [#F36B08]Torch.  At the start of battle, remove ALL enemy artifact and apply #b",
+      " #yfireblademod:Spirit\u00a0Rend to ALL enemies."
     ]
   }
 }

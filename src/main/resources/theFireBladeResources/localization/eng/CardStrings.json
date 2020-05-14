@@ -248,7 +248,7 @@
   },
   "FireBladeMod:EnergizingFlame": {
     "NAME": "Energizing Flame",
-    "DESCRIPTION": "Whenever you play a fireblademod:Flame card, gain !M! fireblademod:Vigor."
+    "DESCRIPTION": "After you play a fireblademod:Flame card, gain !M! fireblademod:Vigor."
   },
   "FireBladeMod:TargetWeakness": {
     "NAME": "Target Weakness",
@@ -308,7 +308,7 @@
   },
   "FireBladeMod:MomentumStrikes": {
     "NAME": "Momentum Strikes",
-    "DESCRIPTION": "Deal !D! damage. NL Deal !D! damage for each debuff on the enemy."
+    "DESCRIPTION": "Deal !D! damage for each debuff on the enemy."
   },
   "FireBladeMod:BodyAsFuel": {
     "NAME": "Body As Fuel",

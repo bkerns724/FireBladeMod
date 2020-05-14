@@ -1,14 +1,15 @@
 package FireBlade.relics;
 
-import FireBlade.powers.BurningPower;
 import FireBlade.powers.SpiritRendPower;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class SoulTorch extends CustomRelic {
@@ -41,12 +42,12 @@ public class SoulTorch extends CustomRelic {
         addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
             AbstractPlayer p = AbstractDungeon.player;
-            addToTop(new ApplyPowerAction(m, p, new BurningPower(m, p, burnAmount), burnAmount));
             addToTop(new ApplyPowerAction(m, p, new SpiritRendPower(m, spiritRendAmount), spiritRendAmount));
+            addToTop(new RemoveSpecificPowerAction(m, p, ArtifactPower.POWER_ID));
         }
     }
 
-    public String getUpdatedDescription() { return DESCRIPTIONS[0] + burnAmount + DESCRIPTIONS[1] + spiritRendAmount + DESCRIPTIONS[2]; }
+    public String getUpdatedDescription() { return DESCRIPTIONS[0] + spiritRendAmount + DESCRIPTIONS[1]; }
 
     public AbstractRelic makeCopy() { return new SoulTorch(); }
 
