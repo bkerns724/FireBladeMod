@@ -2,7 +2,7 @@ package FireBlade.cards.Uncommons;
 
 import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.enums.FireBladeEnum;
-import FireBlade.powers.EnergizingFlamePower;
+import FireBlade.powers.RollWithTheBlowPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,33 +10,35 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class EnergizingFlame extends CustomFireBladeCard {
+public class RollWithTheBlow extends CustomFireBladeCard {
 
-    public static final String ID = "FireBladeMod:EnergizingFlame";
+    public static final String ID = "FireBladeMod:RollWithTheBlow";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/EnergizingFlame.png";
+    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/RollWithTheBlow.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
 
-    public EnergizingFlame() {
+    public RollWithTheBlow() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 5;
+        magicNumber = baseMagicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new EnergizingFlamePower(p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new RollWithTheBlowPower(p, magicNumber), magicNumber));
     }
 
-    public AbstractCard makeCopy() { return new EnergizingFlame(); }
+    public AbstractCard makeCopy() { return new RollWithTheBlow(); }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            isInnate = true;
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

@@ -15,6 +15,10 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
+  "FireBladeMod:StingingSlash": {
+    "NAME": "Stinging Slash",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."
+  },
   "FireBladeMod:BasicSmash": {
     "NAME": "Basic Smash",
     "DESCRIPTION": "fireblademod:Smash. NL Deal !D! damage. NL Exhaust."
@@ -101,11 +105,6 @@
     "NAME": "Torso Smash",
     "DESCRIPTION": "fireblademod:Smash. NL Deal !D! damage. NL Apply !M! Vulnerable. NL Exhaust."
   },
-  "FireBladeMod:FireAndFury": {
-    "NAME": "Fire and Fury",
-    "DESCRIPTION": "fireblademod:Flame. NL Deal !D! damage X times. NL Apply 2X fireblademod:Burning.",
-    "UPGRADE_DESCRIPTION": "fireblademod:Flame. NL Deal !D! damage X times. NL Apply 3X fireblademod:Burning."
-  },
   "FireBladeMod:QuickJabs": {
     "NAME": "Quick Jabs",
     "DESCRIPTION": "Deal !D! damage !M! times."
@@ -141,7 +140,7 @@
   },
   "FireBladeMod:Arson": {
     "NAME": "Arson",
-    "DESCRIPTION": "Add a random fireblademod:Flame card into your hand. NL It costs 1 less this turn. NL Exhaust."
+    "DESCRIPTION": "Add a random fireblademod:Flame card into your hand. NL It costs 0 this turn. NL Exhaust."
   },
   "FireBladeMod:Speed": {
     "NAME": "Speed",
@@ -157,9 +156,9 @@
     "DESCRIPTION": "Put a fireblademod:Smash or fireblademod:Endurance card from your draw pile into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Innate. NL Put a fireblademod:Smash or fireblademod:Endurance card from your draw pile into your hand. NL Exhaust."
   },
-  "FireBladeMod:SteelTempest": {
-    "NAME": "Steel Tempest",
-    "DESCRIPTION": "Whenever you deal attack damage, gain !M! Block."
+  "FireBladeMod:Unbalance": {
+    "NAME": "Unbalance",
+    "DESCRIPTION": "Whenever you attack this enemy, gain !M! Block."
   },
   "FireBladeMod:Accelerant": {
     "NAME": "Accelerant",
@@ -246,10 +245,6 @@
     "NAME": "Combo Hits",
     "DESCRIPTION": "Your attack cards gain an extra hit. NL It deals !D! damage to a random enemy."
   },
-  "FireBladeMod:EnergizingFlame": {
-    "NAME": "Energizing Flame",
-    "DESCRIPTION": "After you play a fireblademod:Flame card, gain !M! fireblademod:Vigor."
-  },
   "FireBladeMod:TargetWeakness": {
     "NAME": "Target Weakness",
     "DESCRIPTION": "Deal !D! damage. NL Existing Weak and Vulnerable on the enemy are increased by !M!.",
@@ -273,8 +268,7 @@
   },
   "FireBladeMod:BattleMage": {
     "NAME": "Battle Mage",
-    "DESCRIPTION": "Your attack damage is increased by fireblademod:Fervor. NL Your fireblademod:Flame cards are improved by Strength. NL If fireblademod:Active, gain !M! Fervor.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Your attack damage is increased by fireblademod:Fervor. NL Your fireblademod:Flame cards are improved by Strength. NL If fireblademod:Active, gain !M! Fervor."
+    "DESCRIPTION": "Your attack damage is increased by fireblademod:Fervor. NL Your fireblademod:Flame cards are improved by Strength."
   },
   "FireBladeMod:FlamingSword": {
     "NAME": "Flaming Sword",
@@ -295,8 +289,7 @@
   },
   "FireBladeMod:Blitzkreig": {
     "NAME": "Blitzkreig",
-    "DESCRIPTION": "Whenever you Exhaust a fireblademod:Smash, fireblademod:Endurance, or fireblademod:Flame card, draw !M! card and gain [E].",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Exhaust a fireblademod:Smash, fireblademod:Endurance, or fireblademod:Flame card, draw !M! card and gain [E]."
+    "DESCRIPTION": "Innate. NL The first time each turn you Exhaust a fireblademod:Smash, fireblademod:Endurance, or fireblademod:Flame card, draw !M! card and gain [E]."
   },
   "FireBladeMod:FlashBang": {
     "NAME": "FlashBang",
@@ -323,12 +316,14 @@
     "DESCRIPTION": "Whenever the enemy receives fireblademod:Burning, they lose HP equal to the amount. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Whenever the enemy receives fireblademod:Burning, they lose HP equal to the amount. NL Exhaustive !stslib:ex!."
   },
-  "FireBladeMod:StingingSlash": {
-    "NAME": "Stinging Slash",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."
+  "FireBladeMod:RollWithTheBlow": {
+    "NAME": "Roll With The Blow",
+    "DESCRIPTION": "The first time each turn you take damage, draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time each turn you take damage, draw !M! card."
   },
-  "FireBladeMod:ManifestFlame": {
-    "NAME": "Manifest Flame",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+  "FireBladeMod:AbsorbEnergy": {
+    "NAME": "Absorb Energy",
+    "DESCRIPTION": "The first time each turn you take damage, gain an energy next turn.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time each turn you take damage, gain an energy next turn."
   }
 }

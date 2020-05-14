@@ -127,27 +127,13 @@
       " times the amount."
     ]
   },
-  "FireBladeMod:SteelTempestPower": {
-    "NAME": "SteelTempest",
-    "DESCRIPTIONS": [
-      "Whenever you deal attack damage, gain #b",
-      " #yBlock."
-    ]
-  },
   "FireBladeMod:BlitzkreigPower": {
     "NAME": "Blitzkreig",
     "DESCRIPTIONS": [
-      "Whenever a #ySmash, #yEndurance, or #yFlame card is exhausted, draw #b",
+      "The first time each turn a #ySmash, #yEndurance, or #yFlame card is exhausted, draw #b",
       " card and gain #b",
       " cards and gain #b",
       " #yEnergy."
-    ]
-  },
-  "FireBladeMod:EnergizingFlamePower": {
-    "NAME": "Energizing Flame",
-    "DESCRIPTIONS": [
-      "After you play a #yFlame card, gain #b",
-      " #yVigor."
     ]
   },
   "FireBladeMod:VitalityPower": {
@@ -162,6 +148,21 @@
     "DESCRIPTIONS": [
       "When attempting to apply a buff or debuff, takes #b",
       " damage."
+    ]
+  },
+  "FireBladeMod:AbsorbEnergyPower": {
+    "NAME": "Absorb Energy",
+    "DESCRIPTIONS": [
+      "The first time each turn you take damage, gain #b",
+      " #yEnergy next turn."
+    ]
+  },
+  "FireBladeMod:RollWithTheBlowPower": {
+    "NAME": "Roll With The Blow",
+    "DESCRIPTIONS": [
+      "The first time each turn you take damage, draw #b",
+      " card.",
+      " cards."
     ]
   },
   "FireBladeMod:SoulSwordPower": {

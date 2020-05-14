@@ -58,7 +58,7 @@ public class Arson extends CustomFireBladeCard {
         }
 
         AbstractCard card = list.get(cardRandomRng.random(list.size() - 1));
-        card.setCostForTurn(card.cost - 1);
+        card.setCostForTurn(-99);
         addToBot(new MakeTempCardInHandAction(card, true));
     }
 

@@ -13,7 +13,7 @@ public class SpiritRendPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static float BURN_MULT = 0.2F;  // Hardcoded in keyword strings
+    public static float BURN_MULT = 0.25F;  // Hardcoded in keyword strings
     
     public SpiritRendPower(AbstractCreature owner, int amount) {
         ID = POWER_ID;

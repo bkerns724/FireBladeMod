@@ -29,12 +29,12 @@ public class HellFire extends CustomFireBladeCard {
     public HellFire() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 3;
-        magicNumberTwo = baseMagicNumberTwo = 2;
+        magicNumberTwo = baseMagicNumberTwo = 3;
         tags.add(FireBladeCardTags.FLAME);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (BurnAction.GetEstimate(p, m, baseMagicNumber, baseMagicNumberTwo) >= 50)
+        if (BurnAction.GetEstimate(p, m, baseMagicNumber, baseMagicNumberTwo) >= 25)
             addToBot(new VFXAction(new ScreenOnFireEffect(), 0.6F));
         addToBot(new BurnAction(p, m, baseMagicNumber, baseMagicNumberTwo));
         FireBladeCardHelper.checkForBurnerTip();

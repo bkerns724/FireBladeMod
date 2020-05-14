@@ -42,5 +42,5 @@ public class NapalmFlask extends CustomPotion {
 
     public CustomPotion makeCopy() { return new NapalmFlask();}
 
-    public int getPotency(int ascensionLevel) { return 5; }
+    public int getPotency(int ascensionLevel) { return 4; }
 }

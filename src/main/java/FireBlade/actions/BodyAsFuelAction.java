@@ -40,7 +40,8 @@ public class BodyAsFuelAction extends AbstractGameAction {
                 Iterator iter1 = player.drawPile.group.iterator();
                 while (iter1.hasNext()) {
                     c = (AbstractCard) iter1.next();
-                    tmp.addToRandomSpot(c);
+                    if (c.costForTurn != -2)
+                        tmp.addToRandomSpot(c);
                 }
             }
 

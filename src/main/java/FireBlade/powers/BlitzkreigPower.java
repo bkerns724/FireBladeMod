@@ -22,6 +22,8 @@ public class BlitzkreigPower extends AbstractPower {
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    boolean triggeredThisTurn = false;
+
     public BlitzkreigPower(AbstractCreature owner, int amount) {
         ID = POWER_ID;
         this.owner = owner;
@@ -37,11 +39,18 @@ public class BlitzkreigPower extends AbstractPower {
     }
 
     public void onExhaust(AbstractCard card) {
-        if(card.hasTag(FireBladeCardTags.FLAME) || card.hasTag(FireBladeCardTags.ENDURANCE) || card.hasTag(FireBladeCardTags.SMASH)) {
+        if((card.hasTag(FireBladeCardTags.FLAME) || card.hasTag(FireBladeCardTags.ENDURANCE) || card.hasTag(FireBladeCardTags.SMASH)) && !triggeredThisTurn) {
             this.flash();
             addToTop(new GainEnergyAction(amount));
             addToTop(new DrawCardAction(amount));
+            triggeredThisTurn = true;
         }
+    }
+
+    @Override
+    public void atStartOfTurn() {
+        super.atStartOfTurn();
+        triggeredThisTurn = false;
     }
 
     public void updateDescription() {

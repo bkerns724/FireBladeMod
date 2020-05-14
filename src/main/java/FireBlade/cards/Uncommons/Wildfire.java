@@ -38,11 +38,10 @@ public class Wildfire extends CustomFireBladeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int effectSize = BurnAction.GetEstimate(p, m, baseMagicNumber) - 8;
-        effectSize /= 2;
+        int effectSize = BurnAction.GetEstimate(p, m, baseMagicNumber) - 11;
         if (effectSize < 1)
             effectSize = 1;
-            addToBot(new VFXAction(new SearingBlowEffect(m.hb.cX, m.hb.cY, effectSize)));
+        addToBot(new VFXAction(new SearingBlowEffect(m.hb.cX, m.hb.cY, effectSize)));
         addToBot(new BurnAction(p, m, baseMagicNumber));
         addToBot(new MakeTempCardInDiscardAction(new Burn(), magicNumberTwo));
         FireBladeCardHelper.checkForBurnerTip();

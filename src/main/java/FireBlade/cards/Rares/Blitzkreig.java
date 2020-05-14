@@ -20,11 +20,12 @@ public class Blitzkreig extends CustomFireBladeCard {
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 3;
+    private static final int COST = 2;
 
     public Blitzkreig() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         baseMagicNumber = magicNumber = 1;
+        isInnate = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -36,9 +37,7 @@ public class Blitzkreig extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            isInnate = true;
-            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(1);
         }
     }
 
