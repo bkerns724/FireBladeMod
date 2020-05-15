@@ -127,10 +127,19 @@
       " times the amount."
     ]
   },
-  "FireBladeMod:BlitzkreigPower": {
+  "FireBladeMod:BlitzkreigSmashPower": {
     "NAME": "Blitzkreig",
     "DESCRIPTIONS": [
-      "The first time each turn a #ySmash, #yEndurance, or #yFlame card is exhausted, draw #b",
+      "The first time each turn a #ySmash card is exhausted, draw #b",
+      " card and gain #b",
+      " cards and gain #b",
+      " #yEnergy."
+    ]
+  },
+  "FireBladeMod:BlitzkreigEndurancePower": {
+    "NAME": "Blitzkreig",
+    "DESCRIPTIONS": [
+      "The first time each turn an #yEndurance card is exhausted, draw #b",
       " card and gain #b",
       " cards and gain #b",
       " #yEnergy."

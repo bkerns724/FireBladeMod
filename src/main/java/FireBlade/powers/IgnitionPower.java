@@ -2,9 +2,12 @@ package FireBlade.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -42,13 +45,9 @@ public class IgnitionPower extends AbstractPower implements OnReceivePowerPower 
 
     public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
         if (power instanceof BurningPower && owner == target && !owner.hasPower(ArtifactPower.POWER_ID)) {
-            int rendAmount = 0;
-            if (owner.hasPower(SpiritRendPower.POWER_ID))
-                rendAmount = owner.getPower(SpiritRendPower.POWER_ID).amount;
-            int damageAmount = (int)Math.floor((1 + SpiritRendPower.BURN_MULT*rendAmount)*power.amount*amount);
-            addToBot(new LoseHPAction(target, source, damageAmount));
+            AbstractPlayer p = AbstractDungeon.player;
+            addToBot(new ApplyPowerAction(p, p, new FervorPower(p, amount), amount));
         }
-
         return true;
     }
 }

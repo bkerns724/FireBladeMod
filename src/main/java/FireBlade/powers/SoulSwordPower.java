@@ -22,7 +22,7 @@ public class SoulSwordPower extends TwoAmountPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final String NAME = powerStrings.NAME;
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final int ATTACKS_TO_TRIGGER = 3;
+    public static final int ATTACKS_TO_TRIGGER = 4;
     
     public SoulSwordPower(AbstractCreature owner, int amount) {
         ID = POWER_ID;

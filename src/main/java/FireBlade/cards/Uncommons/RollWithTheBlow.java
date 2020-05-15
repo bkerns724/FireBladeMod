@@ -21,6 +21,7 @@ public class RollWithTheBlow extends CustomFireBladeCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
+    private static final int TITLE_FONT_SIZE = 19;
 
     public RollWithTheBlow() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
@@ -40,6 +41,11 @@ public class RollWithTheBlow extends CustomFireBladeCard {
             rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
+    }
+
+    @Override
+    public float getTitleFontSize() {
+        return TITLE_FONT_SIZE;
     }
 
     static  {

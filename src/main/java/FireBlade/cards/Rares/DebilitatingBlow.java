@@ -28,8 +28,8 @@ public class DebilitatingBlow extends CustomFireBladeCard {
 
     public DebilitatingBlow() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        baseDamage = 9;
-        baseBlock = 9;
+        baseDamage = 8;
+        baseBlock = 8;
         magicNumber = baseMagicNumber = 2;
     }
 
@@ -44,8 +44,8 @@ public class DebilitatingBlow extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(3);
-            upgradeBlock(3);
+            upgradeDamage(2);
+            upgradeBlock(2);
             upgradeMagicNumber(1);
         }
     }

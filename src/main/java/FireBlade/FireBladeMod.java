@@ -18,6 +18,7 @@ import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.relics.ChemicalX;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import FireBlade.characters.TheFireBlade;
@@ -128,6 +129,9 @@ public class FireBladeMod implements
             BaseMod.addRelicToCustomPool(new CrimsonStar(), FireBladeEnum.FIREBLADE_ORANGE);
         else
             BaseMod.addRelic(new CrimsonStar(), RelicType.SHARED);
+
+        // No X cost cards
+        BaseMod.removeRelicFromCustomPool(new ChemicalX(), FireBladeEnum.FIREBLADE_ORANGE);
 
         logger.info("Added FireBlade relics");
     }

@@ -21,10 +21,17 @@ public class Unbalance extends CustomFireBladeCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 1;
+    private static final int TITLE_SIZE = 18;
 
     public Unbalance() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 2;
+        exhaust = true;
+    }
+
+    @Override
+    public float getTitleFontSize() {
+        return TITLE_SIZE;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -2,6 +2,7 @@ package FireBlade.cards.Uncommons;
 
 import FireBlade.enums.FireBladeEnum;
 import FireBlade.cards.CustomFireBladeCard;
+import FireBlade.powers.VitalityPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -25,11 +26,13 @@ public class Speed extends CustomFireBladeCard {
     public Speed() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 2;
-        isEthereal = true;
+        magicNumberTwo = baseMagicNumberTwo = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, magicNumber), magicNumber));
+        if (upgraded)
+            addToBot(new ApplyPowerAction(p, p, new VitalityPower(p, magicNumberTwo), magicNumberTwo));
     }
 
     public AbstractCard makeCopy() { return new Speed(); }
@@ -37,7 +40,6 @@ public class Speed extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            isEthereal = false;
             rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }

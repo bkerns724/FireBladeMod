@@ -3,6 +3,14 @@
     "NAME": "Combo Hits Helper",
     "DESCRIPTION": "Should not be seen."
   },
+  "FireBladeMod:ChooseSmash": {
+    "NAME": "Choose Smash",
+    "DESCRIPTION": "The first time you Exhaust a fireblademod:Smash card each turn, gain [E] and draw 1 card."
+  },
+  "FireBladeMod:ChooseEndurance": {
+    "NAME": "Choose Endurance",
+    "DESCRIPTION": "The first time you Exhaust an fireblademod:Endurance card each turn, gain [E] and draw 1 card."
+  },
   "FireBladeMod:Swipe": {
     "NAME": "Swipe",
     "DESCRIPTION": "Soulbound. NL Deal !D! damage to ALL enemies."
@@ -144,8 +152,8 @@
   },
   "FireBladeMod:Speed": {
     "NAME": "Speed",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Dexterity.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Dexterity."
+    "DESCRIPTION": "Gain !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Dexterity. NL Gain !FireBladeMod:M2! fireblademod:Vitality."
   },
   "FireBladeMod:GetPumped": {
     "NAME": "Get Pumped",
@@ -158,7 +166,7 @@
   },
   "FireBladeMod:Unbalance": {
     "NAME": "Unbalance",
-    "DESCRIPTION": "Whenever you attack this enemy, gain !M! Block."
+    "DESCRIPTION": "Whenever you attack this enemy, gain !M! Block. NL Exhaust."
   },
   "FireBladeMod:Accelerant": {
     "NAME": "Accelerant",
@@ -289,7 +297,7 @@
   },
   "FireBladeMod:Blitzkreig": {
     "NAME": "Blitzkreig",
-    "DESCRIPTION": "Innate. NL The first time each turn you Exhaust a fireblademod:Smash, fireblademod:Endurance, or fireblademod:Flame card, draw !M! card and gain [E]."
+    "DESCRIPTION": "Innate. NL Choose fireblademod:Smash or fireblademod:Endurance. NL Once per turn when the chosen type Exhausts, draw !M! card and gain !M! Energy."
   },
   "FireBladeMod:FlashBang": {
     "NAME": "FlashBang",
@@ -313,8 +321,8 @@
   },
   "FireBladeMod:Ignition": {
     "NAME": "Ignition",
-    "DESCRIPTION": "Whenever the enemy receives fireblademod:Burning, they lose HP equal to the amount. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Whenever the enemy receives fireblademod:Burning, they lose HP equal to the amount. NL Exhaustive !stslib:ex!."
+    "DESCRIPTION": "Ethereal. NL Whenever the enemy receives fireblademod:Burning, gain !M! fireblademod:Fervor. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Whenever the enemy receives fireblademod:Burning, gain !M! fireblademod:Fervor. NL Exhaust."
   },
   "FireBladeMod:RollWithTheBlow": {
     "NAME": "Roll With The Blow",
