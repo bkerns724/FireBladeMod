@@ -26,7 +26,7 @@ public class AntiMagic extends CustomFireBladeCard {
     public AntiMagic() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 1;
-        magicNumberTwo = baseMagicNumberTwo = 10;
+        magicNumberTwo = baseMagicNumberTwo = 8;
         exhaust = true;
     }
 

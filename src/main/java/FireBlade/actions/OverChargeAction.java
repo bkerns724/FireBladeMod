@@ -1,30 +1,25 @@
 package FireBlade.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
-public class FireAndFuryAction extends AbstractGameAction {
+public class OverChargeAction extends AbstractGameAction {
     private AbstractPlayer p;
-    private AbstractMonster m;
     private int energyOnUse;
     private boolean freeToPlayOnce;
-    private DamageInfo damageInfo;
-    private int burnPerEnergy;
+    private int vigorPerEnergy;
 
-    public FireAndFuryAction(AbstractPlayer p, AbstractMonster m, DamageInfo damageInfo, int burnPerEnergy, boolean freeToPlayOnce, int energyOnUse) {
+    public OverChargeAction(AbstractPlayer p, int vigorPerEnergy, boolean freeToPlayOnce, int energyOnUse) {
         this.p = p;
-        this.m = m;
         this.freeToPlayOnce = freeToPlayOnce;
         duration = Settings.ACTION_DUR_XFAST;
         actionType = AbstractGameAction.ActionType.DAMAGE;
         this.energyOnUse = energyOnUse;
-        this.damageInfo = damageInfo;
-        this.burnPerEnergy = burnPerEnergy;
+        this.vigorPerEnergy = vigorPerEnergy;
     }
 
     public void update() {
@@ -39,10 +34,9 @@ public class FireAndFuryAction extends AbstractGameAction {
         }
 
         if (effect > 0) {
-            for (int i = 0; i < effect; i++) {
-                addToBot(new DamageAction(m, damageInfo, AttackEffect.SLASH_DIAGONAL));
-            }
-            addToBot(new BurnAction(p, m, burnPerEnergy*effect));
+            int vigorAmount = effect*vigorPerEnergy;
+
+            addToBot(new ApplyPowerAction(p, p, new VigorPower(p, vigorAmount), vigorAmount));
 
             if (!freeToPlayOnce)
                 p.energy.use(EnergyPanel.totalCount);

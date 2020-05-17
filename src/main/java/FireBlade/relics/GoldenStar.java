@@ -1,5 +1,7 @@
 package FireBlade.relics;
 
+import FireBlade.enums.FireBladeEnum;
+import FireBlade.ui.FireBladeSettings;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
@@ -41,7 +43,9 @@ public class GoldenStar extends CustomRelic {
         }
     }
 
-    public boolean canSpawn() { return (Settings.isEndless || AbstractDungeon.floorNum <= 45); }
+    public boolean canSpawn() {
+        return (Settings.isEndless || AbstractDungeon.floorNum <= 48);
+    }
 
     public String getUpdatedDescription() { return this.DESCRIPTIONS[0] + goldAmount + this.DESCRIPTIONS[1]; }
 

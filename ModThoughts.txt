@@ -1,0 +1,347 @@
+TODO
+	When otherwise finished, create upload for mts-bot.
+	Polish code: Remove .this, remove hardcoded everything
+	Settings condense the toggle code
+	Put super funcs back in overridden functions even if super is empty (cross mod)
+	.equals instead of == for strings
+
+DEBUG
+
+COMMIT
+	Remove Chemical X patch
+
+	Nerf Hellfire
+	Tone down antimagic damage
+
+	Blitzkreig to just smash
+	Battle Stamina
+
+	Cut Cleansing Fire
+	Add Overcharge
+
+POWER CONCERNS
+	Spirit Rend bonus amount
+	Swordsman Form?
+	Pyromancer Form?
+
+OTHER CONCERNS
+	Jason and Charlie
+
+	DarkGlade
+		Tutorial tips unnecessary?
+			Steven liked the tips
+
+	Venim
+		Relics that are archtype focused are :( if you don't have matching cards.
+		Cards that rely on having specific types: i.e. flash point, finishing barrage
+
+Starting Deck
+    4 basic strike
+    4 basic defend
+    Fire Barrier, 1, skill
+	6 block, 3 flame barrier
+	8, 4
+    Flaming Sword, 2, attack
+	12 damage, 3 burning
+	16 damage, 4 burning
+
+Starting Relic
+    Eternal Torch
+	Apply 3 burning to enemies at the start of battle
+    Soul Torch
+	Strips all artifact, applies 1 spirit rend
+
+    Powers to remember
+	Healthy
+	    When you draw a status, exhaust it and draw a card.  Lose one stack when you do.
+	Blessed
+	    When you draw a curse, exhaust it and draw a card.  Lose one stack when you do.
+	Spirit Rend
+	    Target takes 25% more damage from burning.
+	Vigor (basegame)
+	    Deal x more damage on the next attack card.
+	Vitality
+	    Block x more damage on the next block card.	
+
+Commons
+1	Basic Smash, 1, attack, exhaust
+	    Do 13 damage
+	    Do 18 damage
+2	Spinning Smash, 1, attack, exhaust
+	    Do 10 damage to all enemies
+	    Do 14 damage to all enemies
+3	Combo Cleave, 1, attack
+	    Do 3x2 damage to all enemies
+	    Do 3x3 damage to all enemies
+4	Intricate Combo, 1, attack
+	    2 damage twice, 2 block twice
+	    3 damage, 3 block
+5	Unstoppable Thrust, 1, attack
+	    9 damage, +1 energy and draw if enemy was blocking
+	    12
+6	Combo Slashes, 1, attack
+	    2/3/2 damage
+	    2/3/2/3
+7	Shove, 0, attack
+	    2 damage, gain an energy next turn
+	    5 damage	
+8	Complex Attack, 1, attack
+	    8 damage, 3 vigor.
+	    11 damage, 4 vigor.
+9	Scorching Strike, 1, attack
+	    6 damage, 2 burn.
+	    8 damage, 3 burn.
+10	Backhanded Swing, 1, attack
+	    6 damage, Draw 2 cards
+	    9 damage, Draw 2 cards
+11	Hit Funny Bone, 0, attack
+	    2 damage, 1 weak
+	    3 damage, 2 weak
+12	Soul Strike, 1, attack
+	    8 damage, 1 spirit rend
+	    12
+13	Iron Endurance, 1, skill, exhaust
+	    Gain 11 block
+	    Gain 15 block
+14	Steady Endurance, 1, skill, exhaust
+	    Gain 6 block, and 6 block next turn
+	    Gain 8 block, and 8 block next turn
+15	Turtle, 1, skill
+	    8 block, draw a card next turn
+	    12 block
+16	Complex Defense, 1, skill
+	    7 block, gain 3 vitality.
+	    9 block, gain 4 vitality.
+17	Well Prepared, 0, skill
+	    Draw 2, Discard 2
+	    Draw 2, Discard 1
+18	Shoot Flames, 1, skill
+	    4 burning
+	    6 burning
+19	Indomitable, 2, skill
+	    Gain 13 block, 1 healthy
+	    Gain 16 block, 2 healthy
+
+10 attack
+8 skill
+
+Uncommons
+1	Arm Smash, 2, attack, exhaust
+	14 damage.  3 weak.
+	17 damage.  4 weak.
+2	Torso Smash, 2, attack, exhaust
+	14 damage.  3 vuln.
+	17 damage.  4 vuln.
+3	Finishing Barrage, 1, attack, exhaust
+	Unnate.  Deal 7 damage for each exhausted smash
+	9
+4	Momentum Strikes, 1, attack
+	Deal 8 damage for each debuff 
+	11.
+5	Quick Jabs, 0, attack
+	Do 2 damage 2 times
+	2 damage 3 times
+6	Eruption Slash, 1, attack
+	3 damage, +1 per burning.
+	+2 per burning
+7	StunningBlow, 2, attack
+	12 damage, 4 vitality
+	16, 5
+8	Smoky Swing, 0, attack
+	3 damage, 1 vuln
+	4 damage, 2
+9	Thirst for Blood, 1 attack
+	Deal 6 damage.  Gain 1 str.
+	2 str.
+10	Scorching Cleave, 2, attack
+	8 damage, 3 burn to all enemies
+	11, 4
+11	Feint, 1, skill
+	8 block, shuffle card from discard to draw.
+	11
+12	Smoke in the Eyes, 1, skill
+	Gain 7 block, apply 1 vuln.
+	9, 2
+13	Wildfire, 2, skill
+	12 burning, 2 burns in discard pile
+	16 burning
+14	Spiritual Endurance, 2, skill, exhaust
+	15 block.  Gain 1 Blessed.
+	20 block.
+15	Tempo, 0, skill, exhaust
+	Draw 2 cards.
+	Draw 3 cards.
+16	Double Dash, 1, skill
+	Draw 2 cards, Draw 1 next turn
+	2 next turn
+17	Rapid Dodges, 1, skill
+	    4x2 block
+	    5x2 block
+18	Healthy Endurance, 2, skill, exhaust
+	9 block + 6 heal
+	12 block + 8 heal
+19	Arson, 1, skill, exhaust
+	Random flame card.  It costs 1 less this turn.
+	0 cost
+20	Adrenaline Boost, 0, skill, exhaust
+	Seek, but only Smash or Endurance
+	Innate
+21	Accelerant, 1, skill
+	2 burning, 1 fervor
+	2 fervor
+22	Reposition, 0, skill
+	Scry 4
+	Scry 6
+23	Over Charge, X, skill
+	Gain 6X vigor
+	Gain 8X vigor
+24	Flash Point, 1, skill
+	Your next flame card this turn is played twice
+	next two flame cards
+25	Refreshment, 2, skill, exhaust
+	Unnate, Heal 3 hp for each endurance in your exhaust pile.
+	4 hp
+26	Flashbang, 0, skill
+	3 shackle
+	4 shackle
+27	Unbalance, 1, power, exhaust
+	Apply 2 hand to enemy
+	3 hand
+28	Get Pumped, 1, power
+	Gain 2 str.
+	3 str.
+29	3rd degree, 1, power
+	Gain 2 fervor
+	3
+30	Smokescreen, 1, power
+	When you play a Flame card, gain 4 block
+	5 block
+31	Soul Sword, 1, power
+	Every fourth attack, apply 1 spirit rend
+	0 cost
+32	Speed, 1, power
+	Gain 2 Dex
+	Gain 3 vitality
+33	Roll with the blow, 1, power
+	first time taking damage each turn, draw card
+	innate
+34	Absorb Energy, 1, power
+	First time taking damage each turn, gain energy next turn
+	innate
+
+10 attack
+17 skill
+7 power
+
+Rares
+1	Final Smash, 3, exhaust, attack
+	Do 30 damage.  Enemy loses 3 strength
+	40, 4
+2	Glass Greatsword, 1, attack
+	Do 12 damage to all enemies.  Reduce this damage by 3 this combat.
+	18
+3	Lightning Combo, 1, attack
+	Deal 3 damage to a random enemy 4 times.
+	5 times
+4	Debilitating Blow, 2, attack
+	Do 8 damage, gain 8 block, inflict 2 weak
+	10 damage/block, 3 weak
+5	Eternal Endurance, 3, exhaust, skill
+	Gain 32 block.  Gain 1 blur.
+	40, 2 blur
+6	Layered Defense, 2, skill
+	Gain 5 block 3 times.
+	Gain 7 block 3 times.
+7	Improvise, 0, skill, exhaust
+	Put one card from your discard into your hand.  Gain an energy
+	two cards
+8	Anti Magic, 1, skill, exhaust
+	1 artifact.  When the enemy buffs/debuffs, it takes 10 damage.
+	retain.
+9	Hellfire, 1, skill
+	Inflict 3 burn.  This card gains double benefit from fervor.
+	4 burning, triple benefit
+10	Body as Fuel, 0, skill, exhaust;
+	Play a card from your draw pile.  Lose 3 HP per energy cost.
+	2 HP
+11	Ignition, 2, skill, exhaust
+	Ethereal. Whenever you apply burning to this enemy, gain 1 fervor.
+	not ethereal
+12	Blitzkreig, 2, power
+	Innate. (First time each turn) When you exhaust a Smash or Endurance (choose which) card, gain an energy and draw a card.
+	1 cost
+13	Swordsman Form, 3, power
+	Ethereal.  Gain 1 strength when you play an attack card.
+	Not Ethereal
+14	Battle Stamina, 2, power
+	Start of turn gain vitality = to 2 times number of endurance in exhaust pile
+	3.
+15	Battle Mage, 2, power
+	Fervor boosts attacks, Strength boosts Flame.  Active:  Gain 3 Fervor
+	1 cost
+16	Extra Strikes, 1, power
+	Playing an attack card causes an extra hit on random enemies with base damage 2.
+	0 cost
+17	Pyromancer Form, 3, power
+	Ethereal.  Flame cards apply 1 spirit rend.
+	Not Ethereal.
+18	After Burn, 1, power
+	Gain 1 fire shield per card played
+	0 cost
+
+4 attack
+7 skill
+7 power
+
+Total
+27 attack
+34 skill
+14 power
+
+Other
+1	Swipe, 0, attack
+	Soulbound.  Deal 6 damage to all enemies.
+	8.
+
+Relics
+	Matches		Common
+		Start with 1 fervor
+	Whey Bottle	Common
+		Endurances gives four vigor
+	Bronze Knuckles	Common
+		Smashes shackle two strength
+	Chakram		Uncommon
+		Every time you play 3 attacks in one turn, gain 1 fervor
+	Fire Poi	Uncommon
+		When you play a flame card, gain 4 flame barrier
+	Red Star	Uncommon	Shared
+		Gain 5 max hp when you defeat an elite
+	Golden Star	Uncommon	Shared
+		Gain 75 gold when you defeat an elite
+	Gym Towel	Rare
+		Exhausting a smash grants one str.
+	Leg Brace	Rare
+		Exhausting an endurance grants two metallicize.
+	Searing Sword	Rare
+		-1 strength.  Attacks cause 1 burning.
+	Inner Flame	Boss (energy)
+		+1 energy.  Starting on turn 4, gain 1 burning at end of turn
+	Tiger Claw	Boss
+		Remove all strikes.  Gain 5 Swipes.  (0 cost 6 damage all, soulbound)
+	Flame Catalyst	Shop
+		Start with 3 fervor, but flame cards exhaust.
+
+Potions
+	Napalm Flask		Common
+		Apply 5 burning
+	Protein Shake		Uncommon
+		Gain 1 strength, dexterity, and fervor
+	Vigor Potion		Rare
+		Gain 13 vigor
+
+Settings
+	Unlock Asc 20
+	Reset tips
+	Unlock Golden Star for other characters
+	Unlock Inner Flame for other characters
+	Unlock Planner for other characters

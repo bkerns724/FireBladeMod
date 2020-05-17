@@ -3,14 +3,6 @@
     "NAME": "Combo Hits Helper",
     "DESCRIPTION": "Should not be seen."
   },
-  "FireBladeMod:ChooseSmash": {
-    "NAME": "Choose Smash",
-    "DESCRIPTION": "The first time you Exhaust a fireblademod:Smash card each turn, gain [E] and draw 1 card."
-  },
-  "FireBladeMod:ChooseEndurance": {
-    "NAME": "Choose Endurance",
-    "DESCRIPTION": "The first time you Exhaust an fireblademod:Endurance card each turn, gain [E] and draw 1 card."
-  },
   "FireBladeMod:Swipe": {
     "NAME": "Swipe",
     "DESCRIPTION": "Soulbound. NL Deal !D! damage to ALL enemies."
@@ -101,9 +93,9 @@
     "DESCRIPTION": "Draw !M! cards. NL Discard !FireBladeMod:M2! cards.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Discard !FireBladeMod:M2! card."
   },
-  "FireBladeMod:CleansingFire": {
-    "NAME": "Cleansing Fire",
-    "DESCRIPTION": "Draw !M! cards. NL Exhaust !FireBladeMod:M2! card."
+  "FireBladeMod:OverCharge": {
+    "NAME": "Over Charge",
+    "DESCRIPTION": "Gain !M! times X fireblademod:Vigor. NL Exhaust the next attack you play."
   },
   "FireBladeMod:ArmSmash": {
     "NAME": "Arm Smash",
@@ -291,13 +283,13 @@
     "DESCRIPTION": "Ethereal. NL Your fireblademod:Flame cards apply !M! fireblademod:Spirit\u00a0Rend.",
     "UPGRADE_DESCRIPTION": "Your fireblademod:Flame cards apply !M! fireblademod:Spirit\u00a0Rend."
   },
-  "FireBladeMod:DefensiveSurge": {
-    "NAME": "Defensive Surge",
-    "DESCRIPTION": "Gain !M! Dexterity. NL At the end of your turn, lose 1 Dexterity."
+  "FireBladeMod:BattleStamina": {
+    "NAME": "Battle Stamina",
+    "DESCRIPTION": "At the start of your turn, gain fireblademod:Vitality equal to !M! times the number of fireblademod:Endurance cards in your exhaust pile."
   },
   "FireBladeMod:Blitzkreig": {
     "NAME": "Blitzkreig",
-    "DESCRIPTION": "Innate. NL Choose fireblademod:Smash or fireblademod:Endurance. NL Once per turn when the chosen type Exhausts, draw !M! card and gain !M! Energy."
+    "DESCRIPTION": "Innate. NL Once per turn when a fireblademod:Smash card Exhausts, draw !M! card and gain [E]."
   },
   "FireBladeMod:FlashBang": {
     "NAME": "FlashBang",

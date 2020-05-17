@@ -29,7 +29,7 @@ public class HellFire extends CustomFireBladeCard {
     public HellFire() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 3;
-        magicNumberTwo = baseMagicNumberTwo = 3;
+        magicNumberTwo = baseMagicNumberTwo = 2;
         tags.add(FireBladeCardTags.FLAME);
     }
 

@@ -1,39 +1,37 @@
-package FireBlade.cards.Uncommons;
+package FireBlade.cards.Rares;
 
-import FireBlade.enums.FireBladeEnum;
 import FireBlade.cards.CustomFireBladeCard;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
+import FireBlade.enums.FireBladeEnum;
+import FireBlade.powers.BattleStaminaPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class CleansingFire extends CustomFireBladeCard {
+public class BattleStamina extends CustomFireBladeCard {
 
-    public static final String ID = "FireBladeMod:CleansingFire";
+    public static final String ID = "FireBladeMod:BattleStamina";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/CleansingFire.png";
+    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/BattleStamina.png";
     private static final CardStrings cardStrings;
-    private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardType TYPE = CardType.POWER;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 1;
+    private static final int COST = 2;
 
-    public CleansingFire() {
+    public BattleStamina() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 2;
-        magicNumberTwo = baseMagicNumberTwo = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DrawCardAction(magicNumber));
-        addToBot(new ExhaustAction(magicNumberTwo, false));
+        addToBot(new ApplyPowerAction(p, p, new BattleStaminaPower(p, magicNumber), magicNumber));
     }
 
-    public AbstractCard makeCopy() { return new CleansingFire(); }
+    public AbstractCard makeCopy() { return new BattleStamina(); }
 
     public void upgrade() {
         if (!upgraded) {

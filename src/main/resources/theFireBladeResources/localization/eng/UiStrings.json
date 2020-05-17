@@ -1,8 +1,8 @@
 {
   "FireBladeMod:ModSettingsPanel": {
     "TEXT": [
-      "Golden Star relic available for other characters",
-      "Crimson Star relic available for other characters",
+      "Golden Star relic available for other characters (requires restart)",
+      "Crimson Star relic available for other characters (requires restart)",
       "Reset tutorial tips",
       "Tutorial tips reset!",
       "Unlock ascension 20 for FireBlade",

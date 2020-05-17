@@ -1,5 +1,6 @@
 package FireBlade.ui;
 
+import FireBlade.FireBladeMod;
 import FireBlade.enums.FireBladeEnum;
 import FireBlade.relics.CrimsonStar;
 import FireBlade.relics.GoldenStar;
@@ -46,14 +47,6 @@ public class FireBladeSettings
         } catch (Exception e) {
             e.printStackTrace();
         }
-        if (toggle.enabled) {
-            BaseMod.removeRelicFromCustomPool(new GoldenStar(), FireBladeEnum.FIREBLADE_ORANGE);
-            BaseMod.addRelic(new GoldenStar(), RelicType.SHARED);
-        }
-        else {
-            BaseMod.removeRelic(new GoldenStar(), RelicType.SHARED);
-            BaseMod.addRelicToCustomPool(new GoldenStar(), FireBladeEnum.FIREBLADE_ORANGE);
-        }
     }
 
     public static void onCrimsonStarToggle(ModToggleButton toggle) {
@@ -62,14 +55,6 @@ public class FireBladeSettings
             config.save();
         } catch (Exception e) {
             e.printStackTrace();
-        }
-        if (toggle.enabled) {
-            BaseMod.removeRelicFromCustomPool(new CrimsonStar(), FireBladeEnum.FIREBLADE_ORANGE);
-            BaseMod.addRelic(new CrimsonStar(), RelicType.SHARED);
-        }
-        else {
-            BaseMod.removeRelic(new CrimsonStar(), RelicType.SHARED);
-            BaseMod.addRelicToCustomPool(new CrimsonStar(), FireBladeEnum.FIREBLADE_ORANGE);
         }
     }
 

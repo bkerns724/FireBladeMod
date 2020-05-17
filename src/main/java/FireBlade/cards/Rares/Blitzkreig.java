@@ -1,17 +1,14 @@
 package FireBlade.cards.Rares;
 
 import FireBlade.cards.CustomFireBladeCard;
-import FireBlade.cards.Other.ChooseEndurance;
-import FireBlade.cards.Other.ChooseSmash;
 import FireBlade.enums.FireBladeEnum;
-import com.megacrit.cardcrawl.actions.watcher.ChooseOneAction;
+import FireBlade.powers.BlitzkreigPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import java.util.ArrayList;
 
 public class Blitzkreig extends CustomFireBladeCard {
 
@@ -32,10 +29,7 @@ public class Blitzkreig extends CustomFireBladeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ArrayList<AbstractCard> blitzChoices = new ArrayList();
-        blitzChoices.add(new ChooseSmash());
-        blitzChoices.add(new ChooseEndurance());
-        addToBot(new ChooseOneAction(blitzChoices));
+        addToBot(new ApplyPowerAction(p, p, new BlitzkreigPower(p, magicNumber), magicNumber));
     }
 
     public AbstractCard makeCopy() { return new Blitzkreig(); }

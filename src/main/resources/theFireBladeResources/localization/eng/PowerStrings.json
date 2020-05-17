@@ -112,11 +112,11 @@
       " #ySpirit #yRend."
     ]
   },
-  "FireBladeMod:DefensiveSurgePower": {
-    "NAME": "Defensive Surge",
+  "FireBladeMod:BattleStaminaPower": {
+    "NAME": "Battle Stamina",
     "DESCRIPTIONS": [
-      "At the end of your turn, lose #b",
-      " #yDexterity."
+      "At the end of your turn, gain #yVitality equal to #b",
+      " the number of #yEndurance cards in your exhaust pile."
     ]
   },
   "FireBladeMod:IgnitionPower": {
@@ -127,19 +127,10 @@
       " times the amount."
     ]
   },
-  "FireBladeMod:BlitzkreigSmashPower": {
+  "FireBladeMod:BlitzkreigPower": {
     "NAME": "Blitzkreig",
     "DESCRIPTIONS": [
       "The first time each turn a #ySmash card is exhausted, draw #b",
-      " card and gain #b",
-      " cards and gain #b",
-      " #yEnergy."
-    ]
-  },
-  "FireBladeMod:BlitzkreigEndurancePower": {
-    "NAME": "Blitzkreig",
-    "DESCRIPTIONS": [
-      "The first time each turn an #yEndurance card is exhausted, draw #b",
       " card and gain #b",
       " cards and gain #b",
       " #yEnergy."
@@ -182,6 +173,14 @@
       " #ySpirit #yRend. #b",
       " more attack.",
       " more attacks."
+    ]
+  },
+  "FireBladeMod:OverChargePower": {
+    "NAME": "Over Charged",
+    "DESCRIPTIONS": [
+      "Exhaust the next #b",
+      " attack you play.",
+      " attacks you play."
     ]
   }
 }

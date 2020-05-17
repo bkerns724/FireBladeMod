@@ -12,10 +12,10 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-public class BlitzkreigEndurancePower extends AbstractPower {
+public class BlitzkreigPower extends AbstractPower {
     public static PowerType POWER_TYPE = PowerType.BUFF;
 
-    private static final String POWER_NAME = "BlitzkreigEndurance";
+    private static final String POWER_NAME = "Blitzkreig";
     public static final String POWER_ID = FireBladeMod.getModID() + ":" + POWER_NAME + "Power";
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -24,13 +24,13 @@ public class BlitzkreigEndurancePower extends AbstractPower {
 
     boolean triggeredThisTurn = false;
 
-    public BlitzkreigEndurancePower(AbstractCreature owner, int amount) {
+    public BlitzkreigPower(AbstractCreature owner, int amount) {
         ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
 
-        region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/BlitzkreigEndurance32.png"), 0 ,0, 32, 32);
-        region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/BlitzkreigEndurance84.png"), 0, 0, 84, 84);
+        region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/Blitzkreig32.png"), 0 ,0, 32, 32);
+        region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/Blitzkreig84.png"), 0, 0, 84, 84);
 
         type = POWER_TYPE;
         name = NAME;
@@ -39,7 +39,7 @@ public class BlitzkreigEndurancePower extends AbstractPower {
     }
 
     public void onExhaust(AbstractCard card) {
-        if(card.hasTag(FireBladeCardTags.ENDURANCE) && !triggeredThisTurn) {
+        if(card.hasTag(FireBladeCardTags.SMASH) && !triggeredThisTurn) {
             this.flash();
             addToTop(new GainEnergyAction(amount));
             addToTop(new DrawCardAction(amount));
