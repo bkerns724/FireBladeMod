@@ -27,7 +27,7 @@ public class SpiritEndurance extends CustomFireBladeCard {
 
     public SpiritEndurance() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        baseBlock = 15;
+        baseBlock = 17;
         magicNumber = baseMagicNumber = 1;
         exhaust = true;
         tags.add(FireBladeCardTags.ENDURANCE);
@@ -44,7 +44,8 @@ public class SpiritEndurance extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(5);
+            upgradeBlock(3);
+            upgradeMagicNumber(1);
         }
     }
 

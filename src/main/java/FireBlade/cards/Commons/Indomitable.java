@@ -25,7 +25,7 @@ public class Indomitable extends CustomFireBladeCard {
 
     public Indomitable() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        baseBlock = 13;
+        baseBlock = 14;
         magicNumber = baseMagicNumber = 1;
     }
 
@@ -38,7 +38,7 @@ public class Indomitable extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(3);
+            upgradeBlock(2);
             upgradeMagicNumber(1);
         }
     }

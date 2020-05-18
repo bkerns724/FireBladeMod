@@ -8,21 +8,21 @@ TODO
 DEBUG
 
 COMMIT
-	Remove Chemical X patch
-
-	Nerf Hellfire
-	Tone down antimagic damage
-
-	Blitzkreig to just smash
-	Battle Stamina
-
-	Cut Cleansing Fire
-	Add Overcharge
+	Spiritual Endurance buff
+	Buff Indomitable(But not upgrade) a bit more
+	Absorb Energy+ lose innate, 0 cost
+	Buff arm, torso smash
 
 POWER CONCERNS
-	Spirit Rend bonus amount
-	Swordsman Form?
-	Pyromancer Form?
+	Large uncertainty
+		Spirit Rend bonus amount
+		Swordsman Form
+		Pyromancer Form
+		Refreshment
+
+	Strong?
+
+	Weak?
 
 OTHER CONCERNS
 	Jason and Charlie
@@ -119,7 +119,7 @@ Commons
 	    4 burning
 	    6 burning
 19	Indomitable, 2, skill
-	    Gain 13 block, 1 healthy
+	    Gain 14 block, 1 healthy
 	    Gain 16 block, 2 healthy
 
 10 attack
@@ -127,11 +127,11 @@ Commons
 
 Uncommons
 1	Arm Smash, 2, attack, exhaust
-	14 damage.  3 weak.
-	17 damage.  4 weak.
+	15 damage.  3 weak.
+	20 damage.  4 weak.
 2	Torso Smash, 2, attack, exhaust
-	14 damage.  3 vuln.
-	17 damage.  4 vuln.
+	15 damage.  3 vuln.
+	20 damage.  4 vuln.
 3	Finishing Barrage, 1, attack, exhaust
 	Unnate.  Deal 7 damage for each exhausted smash
 	9
@@ -166,8 +166,8 @@ Uncommons
 	12 burning, 2 burns in discard pile
 	16 burning
 14	Spiritual Endurance, 2, skill, exhaust
-	15 block.  Gain 1 Blessed.
-	20 block.
+	17 block.  Gain 1 Blessed.
+	20 block.  Gain 2 Blessed
 15	Tempo, 0, skill, exhaust
 	Draw 2 cards.
 	Draw 3 cards.
@@ -227,7 +227,7 @@ Uncommons
 	innate
 34	Absorb Energy, 1, power
 	First time taking damage each turn, gain energy next turn
-	innate
+	0 cost
 
 10 attack
 17 skill
@@ -277,7 +277,7 @@ Rares
 	Start of turn gain vitality = to 2 times number of endurance in exhaust pile
 	3.
 15	Battle Mage, 2, power
-	Fervor boosts attacks, Strength boosts Flame.  Active:  Gain 3 Fervor
+	Fervor boosts attacks, Strength boosts Flame.
 	1 cost
 16	Extra Strikes, 1, power
 	Playing an attack card causes an extra hit on random enemies with base damage 2.

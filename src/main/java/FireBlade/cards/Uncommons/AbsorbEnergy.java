@@ -36,9 +36,7 @@ public class AbsorbEnergy extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            isInnate = true;
-            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(0);
         }
     }
 
