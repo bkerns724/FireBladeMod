@@ -27,4 +27,6 @@ public abstract class CustomFireBladeCard extends CustomCard {
         this.magicNumberTwo = this.baseMagicNumberTwo;
         this.upgradedMagicNumberTwo = true;
     }
+
+    public void increaseMagicNumber(int increase) {upgradeMagicNumber(increase);}
 }

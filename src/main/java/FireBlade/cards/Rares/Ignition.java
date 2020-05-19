@@ -21,13 +21,12 @@ public class Ignition extends CustomFireBladeCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-    private static final int COST = 2;
+    private static final int COST = 0;
 
     public Ignition() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        isEthereal = true;
         exhaust = true;
-        magicNumber = baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 7;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -39,9 +38,7 @@ public class Ignition extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            isEthereal = false;
-            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(3);
         }
     }
 

@@ -65,18 +65,18 @@
   },
   "FireBladeMod:InnerFlame": {
     "NAME": "Inner Flame",
-    "FLAVOR": "You burn with power inside.  This may not be a good thing.",
+    "FLAVOR": "You burn with power inside.",
     "DESCRIPTIONS": [
-      "Gain 1 [E] at the start of your turn. Starting on turn #b",
-      " gain #b",
-      " #yfireblademod:Burning at the end of your turn."
+      "Remove all basic #yStrikes.  Gain #b",
+      " #yEmbers."
     ]
   },
   "FireBladeMod:TigerClaw": {
     "NAME": "Tiger Claw",
     "FLAVOR": "It's razor sharp.",
     "DESCRIPTIONS": [
-      "Remove all basic #yStrikes.  Gain 5 #ySwipes."
+      "Remove all basic #yStrikes.  Gain #b",
+      " #ySwipes."
     ]
   },
   "FireBladeMod:FlameCatalyst": {
@@ -109,16 +109,16 @@
     "NAME": "Eternal Torch",
     "FLAVOR": "The flame never goes out.",
     "DESCRIPTIONS": [
-      "At the start of battle, apply #b",
-      " #yfireblademod:Burning to ALL enemies."
+      "Apply #b",
+      " #yfireblademod:Burning to the first enemy you strike each combat."
     ]
   },
-  "FireBladeMod:SoulTorch": {
-    "NAME": "Soul Torch",
-    "FLAVOR": "It can burn even the immaterial.",
+  "FireBladeMod:MageTorch": {
+    "NAME": "Mage Torch",
+    "FLAVOR": "The flames constantly search for their next meal.",
     "DESCRIPTIONS": [
-      "Replaces [#F36B08]Eternal [#F36B08]Torch.  At the start of battle, remove ALL enemy artifact and apply #b",
-      " #yfireblademod:Spirit\u00a0Rend to ALL enemies."
+      "Replaces [#FFA500]Eternal [#FFA500]Torch.  At the start of your turn, apply #b",
+      " #yfireblademod:Burning to ALL enemies."
     ]
   }
 }

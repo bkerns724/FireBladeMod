@@ -66,30 +66,22 @@ public class FireBladeSettings
         ModLabel messageLabel = new ModLabel("", 400.0F, 220.0F, Color.GREEN, FontHelper.tipHeaderFont, settingsPanel, label -> { });
         settingsPanel.addUIElement(messageLabel);
 
-        ModLabeledToggleButton goldenStarToggle = new ModLabeledToggleButton(ModSettingsText[0], 400.0F, 700.0F, Color.WHITE,
-                FontHelper.tipHeaderFont, isGoldenStarGlobal(), settingsPanel, label -> {  }, FireBladeSettings::onGoldenStarToggle);
-        settingsPanel.addUIElement(goldenStarToggle);
-
-        ModLabeledToggleButton CrimsonStarToggle = new ModLabeledToggleButton(ModSettingsText[1], 400.0F, 620.0F, Color.WHITE,
-                FontHelper.tipHeaderFont, isCrimsonStarGlobal(), settingsPanel, label -> {  }, FireBladeSettings::onCrimsonStarToggle);
-        settingsPanel.addUIElement(CrimsonStarToggle);
-
-        ModButton resetTipsButton = new ModButton(370.0F, 450.0F, settingsPanel, b -> {
+        ModButton resetTipsButton = new ModButton(370.0F, 610.0F, settingsPanel, b -> {
             FireBladeTipTracker.reset();
             messageLabel.text = ModSettingsText[3];
         });
         settingsPanel.addUIElement(resetTipsButton);
 
-        ModLabel resetTipsLabel = new ModLabel(ModSettingsText[2], 500.0F, 475.0F, Color.WHITE, FontHelper.tipHeaderFont, settingsPanel, label -> { });
+        ModLabel resetTipsLabel = new ModLabel(ModSettingsText[2], 500.0F, 635.0F, Color.WHITE, FontHelper.tipHeaderFont, settingsPanel, label -> { });
         settingsPanel.addUIElement(resetTipsLabel);
 
-        ModButton unlockA20Button = new ModButton(370.0F, 310.0F, settingsPanel, b -> {
+        ModButton unlockA20Button = new ModButton(370.0F, 470.0F, settingsPanel, b -> {
             unlockA20(FireBladeEnum.THE_FIREBLADE);
             messageLabel.text = ModSettingsText[5];
         });
         settingsPanel.addUIElement(unlockA20Button);
 
-        ModLabel unlockA20Label = new ModLabel(ModSettingsText[4], 500.0F, 365.0F, Color.WHITE, FontHelper.tipHeaderFont, settingsPanel, label -> { });
+        ModLabel unlockA20Label = new ModLabel(ModSettingsText[4], 500.0F, 525.0F, Color.WHITE, FontHelper.tipHeaderFont, settingsPanel, label -> { });
         settingsPanel.addUIElement(unlockA20Label);
 
         return settingsPanel;

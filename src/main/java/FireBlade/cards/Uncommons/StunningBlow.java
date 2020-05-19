@@ -27,8 +27,8 @@ public class StunningBlow extends CustomFireBladeCard {
 
     public StunningBlow() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        baseDamage = 12;
-        magicNumber = baseMagicNumber = 4;
+        baseDamage = 13;
+        magicNumber = baseMagicNumber = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -41,8 +41,8 @@ public class StunningBlow extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(4);
-            upgradeMagicNumber(1);
+            upgradeDamage(3);
+            upgradeMagicNumber(2);
         }
     }
 

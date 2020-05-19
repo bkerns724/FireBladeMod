@@ -2,12 +2,11 @@ package FireBlade.powers;
 
 import FireBlade.cards.FireBladeCardTags;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -19,6 +18,7 @@ public class BattleStaminaPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+    private boolean triggeredThisTurn = false;
 
     public BattleStaminaPower(AbstractCreature owner, int amount) {
         ID = POWER_ID;
@@ -34,25 +34,25 @@ public class BattleStaminaPower extends AbstractPower {
         updateDescription();
     }
 
+    public void onExhaust(AbstractCard card) {
+        if(card.hasTag(FireBladeCardTags.ENDURANCE) && !triggeredThisTurn) {
+            this.flash();
+            addToTop(new GainEnergyAction(amount));
+            addToTop(new DrawCardAction(amount));
+            triggeredThisTurn = true;
+        }
+    }
+
     @Override
     public void atStartOfTurn() {
         super.atStartOfTurn();
-        AbstractPlayer p = AbstractDungeon.player;
-        int stacks = getEnduranceInExhaust()*amount;
-        if (stacks > 0)
-            addToBot(new ApplyPowerAction(p, p, new VitalityPower(p, stacks), stacks));
-    }
-
-    private int getEnduranceInExhaust() {
-        int count = 0;
-        for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
-            if (c.hasTag(FireBladeCardTags.ENDURANCE))
-                count++;
-        }
-        return count;
+        triggeredThisTurn = false;
     }
 
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        if (amount == 1)
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount + DESCRIPTIONS[3];
+        else
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2] + amount + DESCRIPTIONS[3];
     }
 }

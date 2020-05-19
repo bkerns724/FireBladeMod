@@ -24,11 +24,12 @@ public class Refreshment extends CustomFireBladeCard {
 
     public Refreshment() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 3;
+        magicNumber = baseMagicNumber = 2;
         exhaust = true;
         isEthereal = true;
         isUnnate = true;
         tags.add(CardTags.HEALING);
+        tags.add(FireBladeCardTags.ENDURANCE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

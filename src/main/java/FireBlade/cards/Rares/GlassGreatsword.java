@@ -22,16 +22,18 @@ public class GlassGreatsword extends CustomFireBladeCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final int COST = 1;
+    private static final String redCode = "[#FF0000]";
 
     public GlassGreatsword() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        baseDamage = 12;
+        baseDamage = 15;
+        magicNumber = baseMagicNumber = 5;
         isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        addToBot(new ModifyDamageAction(uuid, -3));
+        addToBot(new ModifyDamageAction(uuid, -magicNumber));
     }
 
     public AbstractCard makeCopy() { return new GlassGreatsword(); }
@@ -39,8 +41,17 @@ public class GlassGreatsword extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(6);
+            upgradeDamage(3);
+            upgradeMagicNumber(1);
         }
+    }
+
+    @Override
+    public void displayUpgrades() {
+        super.displayUpgrades();
+
+        rawDescription = cardStrings.EXTENDED_DESCRIPTION[0] + redCode + magicNumber + cardStrings.EXTENDED_DESCRIPTION[1];
+        initializeDescription();
     }
 
     static  {

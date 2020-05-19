@@ -35,10 +35,8 @@ public class BurnAction extends AbstractGameAction {
 
         int burnAmount = GetEstimate(source, target, baseBurn, hellfire);
 
-        if (burnAmount > 0) {
+        if (burnAmount > 0)
             addToTop(new ApplyPowerAction(target, source, new BurningPower(target, source, burnAmount), burnAmount));
-            CardCrawlGame.sound.play("ATTACK_FIRE", 0.1F);
-        }
 
         if (source.hasPower(PyromancerFormPower.POWER_ID)) {
             int pyroAmount = source.getPower(PyromancerFormPower.POWER_ID).amount;

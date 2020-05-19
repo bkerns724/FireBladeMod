@@ -30,7 +30,8 @@ public class OverCharge extends CustomFireBladeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new OverChargeAction(p, magicNumber, freeToPlayOnce, energyOnUse));
-        addToBot(new ApplyPowerAction(p, p, new OverChargePower(p, 1), 1));
+        if (!p.hasPower(OverChargePower.POWER_ID))
+            addToBot(new ApplyPowerAction(p, p, new OverChargePower(p)));
     }
 
     public AbstractCard makeCopy() { return new OverCharge(); }

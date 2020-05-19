@@ -8,21 +8,43 @@ TODO
 DEBUG
 
 COMMIT
-	Spiritual Endurance buff
-	Buff Indomitable(But not upgrade) a bit more
-	Absorb Energy+ lose innate, 0 cost
-	Buff arm, torso smash
+	Added increaseMagicNumber to CustomFireBladeCard class
+
+	Burn sfx removed on some applications
+
+	Mage Torch buff
+	Eternal torch change
+	Inner Flame change
+	Cut Red Star, Golden Star
+
+	Buff Stunning Blow a little
+	Soul Sword to every 3 attacks
+	Glass Greatsword (but not upgrade) damage increase.  Damage reduction change
+	Eruption slash to 2(3)
+	Ignition to deal damage directly, cost reduction
+	Improvise to no energy, no exhaust
+	Finishing Blow slight damage decrease, smash
+	Refreshment is endurance, cost and healing decrease
+	Battle Stamina to Blitzkreig mirror
+	Overcharge stacking now only exhausts the next attack, not the next 2/3/4 etc.
+	Cut flash point
+	Add Learn Tells
+	Speed buffed.
 
 POWER CONCERNS
 	Large uncertainty
+		Mage Torch burning amount
 		Spirit Rend bonus amount
 		Swordsman Form
 		Pyromancer Form
 		Refreshment
+		Overcharge
 
-	Strong?
+	Strong
+		Speed! (Synergy with this deck is greater than Footwork/Silent)
+		Learn Tells?
 
-	Weak?
+	Weak
 
 OTHER CONCERNS
 	Jason and Charlie
@@ -48,8 +70,8 @@ Starting Deck
 Starting Relic
     Eternal Torch
 	Apply 3 burning to enemies at the start of battle
-    Soul Torch
-	Strips all artifact, applies 1 spirit rend
+    Mage Torch
+	Applies 2 burning to All enemies at the start of turn
 
     Powers to remember
 	Healthy
@@ -94,7 +116,7 @@ Commons
 10	Backhanded Swing, 1, attack
 	    6 damage, Draw 2 cards
 	    9 damage, Draw 2 cards
-11	Hit Funny Bone, 0, attack
+11	Stinging Slash, 0, attack
 	    2 damage, 1 weak
 	    3 damage, 2 weak
 12	Soul Strike, 1, attack
@@ -133,8 +155,8 @@ Uncommons
 	15 damage.  3 vuln.
 	20 damage.  4 vuln.
 3	Finishing Barrage, 1, attack, exhaust
-	Unnate.  Deal 7 damage for each exhausted smash
-	9
+	Unnate.  Smash.  Deal 6 damage for each exhausted smash
+	8
 4	Momentum Strikes, 1, attack
 	Deal 8 damage for each debuff 
 	11.
@@ -145,8 +167,8 @@ Uncommons
 	3 damage, +1 per burning.
 	+2 per burning
 7	StunningBlow, 2, attack
-	12 damage, 4 vitality
-	16, 5
+	13 damage, 5 vitality
+	16, 7
 8	Smoky Swing, 0, attack
 	3 damage, 1 vuln
 	4 damage, 2
@@ -181,7 +203,7 @@ Uncommons
 	9 block + 6 heal
 	12 block + 8 heal
 19	Arson, 1, skill, exhaust
-	Random flame card.  It costs 1 less this turn.
+	Random flame card.  It costs 0 this turn.
 	0 cost
 20	Adrenaline Boost, 0, skill, exhaust
 	Seek, but only Smash or Endurance
@@ -195,42 +217,39 @@ Uncommons
 23	Over Charge, X, skill
 	Gain 6X vigor
 	Gain 8X vigor
-24	Flash Point, 1, skill
-	Your next flame card this turn is played twice
-	next two flame cards
-25	Refreshment, 2, skill, exhaust
-	Unnate, Heal 3 hp for each endurance in your exhaust pile.
-	4 hp
-26	Flashbang, 0, skill
+24	Refreshment, 1, skill, exhaust
+	Unnate, Endurance.  Heal 2 hp for each endurance in your exhaust pile.
+	3 hp
+25	Flashbang, 0, skill
 	3 shackle
 	4 shackle
-27	Unbalance, 1, power, exhaust
+26	Unbalance, 1, skill, exhaust
 	Apply 2 hand to enemy
 	3 hand
-28	Get Pumped, 1, power
+27	Get Pumped, 1, power
 	Gain 2 str.
 	3 str.
-29	3rd degree, 1, power
+28	3rd degree, 1, power
 	Gain 2 fervor
 	3
-30	Smokescreen, 1, power
+29	Smokescreen, 1, power
 	When you play a Flame card, gain 4 block
 	5 block
-31	Soul Sword, 1, power
-	Every fourth attack, apply 1 spirit rend
+30	Soul Sword, 1, power
+	Every third attack, apply 1 spirit rend
 	0 cost
-32	Speed, 1, power
-	Gain 2 Dex
-	Gain 3 vitality
-33	Roll with the blow, 1, power
+32	Roll with the blow, 1, power
 	first time taking damage each turn, draw card
-	innate
-34	Absorb Energy, 1, power
+	0 cost
+33	Absorb Energy, 1, power
 	First time taking damage each turn, gain energy next turn
 	0 cost
+34	Speed, 1, power
+	Gain 2 Dex
+	3 Dex
 
 10 attack
-17 skill
+16 skill
 7 power
 
 Rares
@@ -238,7 +257,7 @@ Rares
 	Do 30 damage.  Enemy loses 3 strength
 	40, 4
 2	Glass Greatsword, 1, attack
-	Do 12 damage to all enemies.  Reduce this damage by 3 this combat.
+	Do 15 damage to all enemies.  Reduce this damage by 5(6) this combat.
 	18
 3	Lightning Combo, 1, attack
 	Deal 3 damage to a random enemy 4 times.
@@ -252,8 +271,8 @@ Rares
 6	Layered Defense, 2, skill
 	Gain 5 block 3 times.
 	Gain 7 block 3 times.
-7	Improvise, 0, skill, exhaust
-	Put one card from your discard into your hand.  Gain an energy
+7	Improvise, 0, skill
+	Put one card from your discard into your hand.
 	two cards
 8	Anti Magic, 1, skill, exhaust
 	1 artifact.  When the enemy buffs/debuffs, it takes 10 damage.
@@ -264,18 +283,18 @@ Rares
 10	Body as Fuel, 0, skill, exhaust;
 	Play a card from your draw pile.  Lose 3 HP per energy cost.
 	2 HP
-11	Ignition, 2, skill, exhaust
-	Ethereal. Whenever you apply burning to this enemy, gain 1 fervor.
-	not ethereal
+11	Ignition, 0, skill, exhaust
+	Whenever you apply burning to this enemy, deal 8 damage.
+	11 damage.
 12	Blitzkreig, 2, power
-	Innate. (First time each turn) When you exhaust a Smash or Endurance (choose which) card, gain an energy and draw a card.
+	Innate. (First time each turn) When you exhaust a Smash card, gain an energy and draw a card.
 	1 cost
 13	Swordsman Form, 3, power
 	Ethereal.  Gain 1 strength when you play an attack card.
 	Not Ethereal
 14	Battle Stamina, 2, power
-	Start of turn gain vitality = to 2 times number of endurance in exhaust pile
-	3.
+	Innate. (First time each turn) When you exhaust an Endurance card, gain an energy and draw a card.
+	1 cost
 15	Battle Mage, 2, power
 	Fervor boosts attacks, Strength boosts Flame.
 	1 cost
@@ -288,20 +307,26 @@ Rares
 18	After Burn, 1, power
 	Gain 1 fire shield per card played
 	0 cost
+19	Learn Tells, 2, power
+	Ethereal.  Gain 1 dex every turn.
+	Not Ethereal
 
 4 attack
 7 skill
-7 power
+8 power
 
 Total
 27 attack
-34 skill
-14 power
+33 skill
+15 power
 
 Other
-1	Swipe, 0, attack
+	Swipe, 0, attack
 	Soulbound.  Deal 6 damage to all enemies.
 	8.
+	Ember, 0, skill
+	Soulbound.  Flame.  Apply 1 burning.
+	3.
 
 Relics
 	Matches		Common
@@ -324,8 +349,8 @@ Relics
 		Exhausting an endurance grants two metallicize.
 	Searing Sword	Rare
 		-1 strength.  Attacks cause 1 burning.
-	Inner Flame	Boss (energy)
-		+1 energy.  Starting on turn 4, gain 1 burning at end of turn
+	Inner Flame	Boss
+		Remove all strikes.  Gain 5 Embers.  (0 cost 2 burning, soulbound)
 	Tiger Claw	Boss
 		Remove all strikes.  Gain 5 Swipes.  (0 cost 6 damage all, soulbound)
 	Flame Catalyst	Shop

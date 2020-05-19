@@ -57,5 +57,6 @@ public class BlitzkreigPower extends AbstractPower {
         if (amount == 1)
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount + DESCRIPTIONS[3];
         else
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2] + amount + DESCRIPTIONS[3]; }
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2] + amount + DESCRIPTIONS[3];
+    }
 }

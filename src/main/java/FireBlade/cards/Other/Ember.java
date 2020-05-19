@@ -1,33 +1,32 @@
-package FireBlade.cards.Commons;
+package FireBlade.cards.Other;
 
 import FireBlade.actions.BurnAction;
+import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.cards.FireBladeCardHelper;
 import FireBlade.cards.FireBladeCardTags;
-import FireBlade.enums.FireBladeEnum;
-import FireBlade.cards.CustomFireBladeCard;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.SoulboundField;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Flames extends CustomFireBladeCard {
-
-    public static final String ID = "FireBladeMod:Flames";
-    public static final String NAME;
-    public static final String DESCRIPTION;
-    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/Flames.png";
-    private static final CardStrings cardStrings;
+public class Ember extends CustomFireBladeCard {
+    public static final String ID = "FireBladeMod:Ember";
+    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/Ember.png";
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-    private static final int COST = 1;
+    private static int COST = 0;
 
-    public Flames() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 4;
+    public Ember() {
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
+        magicNumber = baseMagicNumber = 2;
         tags.add(FireBladeCardTags.FLAME);
+        SoulboundField.soulbound.set(this, true);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -52,18 +51,8 @@ public class Flames extends CustomFireBladeCard {
         super.calculateCardDamage(mo);
     }
 
-    public AbstractCard makeCopy() { return new Flames(); }
-
     public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            upgradeMagicNumber(2);
-        }
-    }
-
-    static  {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
+        upgradeName();
+        upgradeMagicNumber(1);
     }
 }

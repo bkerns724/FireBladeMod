@@ -2,7 +2,6 @@ package FireBlade.cards.Rares;
 
 import FireBlade.enums.FireBladeEnum;
 import FireBlade.cards.CustomFireBladeCard;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.defect.DiscardPileToHandAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,8 +9,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import static org.apache.commons.lang3.math.NumberUtils.min;
 
 public class Improvise extends CustomFireBladeCard {
 
@@ -28,12 +25,9 @@ public class Improvise extends CustomFireBladeCard {
     public Improvise() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 1;
-        magicNumberTwo = baseMagicNumberTwo = 1;
-        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainEnergyAction(magicNumberTwo));
         int discardSize = p.discardPile.group.size();
         if (discardSize == 0)
             return;

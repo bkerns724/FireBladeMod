@@ -19,7 +19,7 @@ public class OverChargePower extends AbstractPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     public static final String POWER_ID = "FireBladeMod:OverChargePower";
     
-    public OverChargePower(AbstractCreature owner, int amount) {
+    public OverChargePower(AbstractCreature owner) {
         ID = POWER_ID;
         this.owner = owner;
 
@@ -27,7 +27,7 @@ public class OverChargePower extends AbstractPower {
         region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/OverCharge84.png"), 0, 0, 84, 84);
 
         type = POWER_TYPE;
-        this.amount = amount;
+        amount = -1;
         name = (CardCrawlGame.languagePack.getPowerStrings(ID)).NAME;
 
         updateDescription();
@@ -39,18 +39,11 @@ public class OverChargePower extends AbstractPower {
         if (card.type == AbstractCard.CardType.ATTACK) {
             flash();
             action.exhaustCard = true;
-            if (amount <= 0) {
-                addToTop(new RemoveSpecificPowerAction(owner, owner, POWER_ID));
-            } else {
-                addToTop(new ReducePowerAction(owner, owner, POWER_ID, 1));
-            }
+            addToTop(new RemoveSpecificPowerAction(owner, owner, POWER_ID));
         }
     }
 
     public void updateDescription() {
-        if (amount == 1)
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
-        else
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0];
     }
 }

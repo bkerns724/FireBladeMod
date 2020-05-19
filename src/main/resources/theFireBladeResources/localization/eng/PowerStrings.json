@@ -53,14 +53,6 @@
       " #yBlock when you play a #yFlame card."
     ]
   },
-  "FireBladeMod:FlashPointPower": {
-    "NAME": "Flash Point",
-    "DESCRIPTIONS": [
-      "Your next #yFlame card is played twice this turn.",
-      "Your next #b",
-      " #yFlame cards are played twice this turn."
-    ]
-  },
   "FireBladeMod:SwordsmanFormPower": {
     "NAME": "Swordsman Form",
     "DESCRIPTIONS": [
@@ -115,16 +107,17 @@
   "FireBladeMod:BattleStaminaPower": {
     "NAME": "Battle Stamina",
     "DESCRIPTIONS": [
-      "At the end of your turn, gain #yVitality equal to #b",
-      " the number of #yEndurance cards in your exhaust pile."
+      "The first time each turn a #yEndurance card is exhausted, draw #b",
+      " card and gain #b",
+      " cards and gain #b",
+      " #yEnergy."
     ]
   },
   "FireBladeMod:IgnitionPower": {
     "NAME": "Ignition",
     "DESCRIPTIONS": [
-      "When receiving #yBurning, takes damage equal to the amount.",
-      "When receiving #yBurning, takes damage equal to #b",
-      " times the amount."
+      "When receiving #yBurning, takes #b ",
+      " damage."
     ]
   },
   "FireBladeMod:BlitzkreigPower": {
@@ -178,9 +171,14 @@
   "FireBladeMod:OverChargePower": {
     "NAME": "Over Charged",
     "DESCRIPTIONS": [
-      "Exhaust the next #b",
-      " attack you play.",
-      " attacks you play."
+      "Exhaust the next attack you play."
+    ]
+  },
+  "FireBladeMod:LearnTellsPower": {
+    "NAME": "Learn Tells",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yDexterity."
     ]
   }
 }

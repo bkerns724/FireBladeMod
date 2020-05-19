@@ -6,6 +6,7 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -14,8 +15,8 @@ import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
+import java.util.ArrayList;
 
 public class TigerClaw extends CustomRelic {
     public static final String ID = "FireBladeMod:TigerClaw";
@@ -25,8 +26,6 @@ public class TigerClaw extends CustomRelic {
     private static final LandingSound SOUND = LandingSound.CLINK;
     private static final int swipeCount = 5;
 
-    private static final Logger logger = LogManager.getLogger(FireBladeMod.class.getName());
-
     public AbstractCard cardToPreview;
 
     public TigerClaw() {
@@ -34,14 +33,14 @@ public class TigerClaw extends CustomRelic {
         cardToPreview = new Swipe();
     }
 
-    public String getUpdatedDescription() { return DESCRIPTIONS[0]; }
+    public String getUpdatedDescription() { return DESCRIPTIONS[0] + swipeCount + DESCRIPTIONS[1]; }
 
     public void onEquip() {
         AbstractPlayer p = AbstractDungeon.player;
-        for (int i =  p.masterDeck.group.size() - 1; i >= 0; --i) {
-            AbstractCard card = p.masterDeck.group.get(i);
-            if (card.hasTag(AbstractCard.CardTags.STARTER_STRIKE))
-                p.masterDeck.removeCard(card);
+        ArrayList<AbstractCard> cards = CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group;
+        for (AbstractCard c : cards) {
+            if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE))
+                p.masterDeck.removeCard(c);
         }
 
         for(int i = 0; i < swipeCount; ++i) {

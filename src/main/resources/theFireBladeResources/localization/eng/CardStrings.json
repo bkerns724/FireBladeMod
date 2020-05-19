@@ -7,6 +7,10 @@
     "NAME": "Swipe",
     "DESCRIPTION": "Soulbound. NL Deal !D! damage to ALL enemies."
   },
+  "FireBladeMod:Ember": {
+    "NAME": "Ember",
+    "DESCRIPTION": "Soulbound. NL fireblademod:Flame. NL Apply !M! fireblademod:Burning."
+  },
   "FireBladeMod:StrikeFireBlade": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -144,8 +148,7 @@
   },
   "FireBladeMod:Speed": {
     "NAME": "Speed",
-    "DESCRIPTION": "Gain !M! Dexterity.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Dexterity. NL Gain !FireBladeMod:M2! fireblademod:Vitality."
+    "DESCRIPTION": "Gain !M! Dexterity."
   },
   "FireBladeMod:GetPumped": {
     "NAME": "Get Pumped",
@@ -172,11 +175,6 @@
     "NAME": "Fire Barrier",
     "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, deal !M! damage back."
   },
-  "FireBladeMod:FlashPoint": {
-    "NAME": "Flash Point",
-    "DESCRIPTION": "This turn, your next fireblademod:Flame card is played twice.",
-    "UPGRADE_DESCRIPTION": "This turn, your next !M! fireblademod:Flame cards is played twice."
-  },
   "FireBladeMod:SmokeScreen": {
     "NAME": "Smoke Screen",
     "DESCRIPTION": "Whenever you play a fireblademod:Flame card, gain !M! Block."
@@ -200,7 +198,11 @@
   },
   "FireBladeMod:GlassGreatsword": {
     "NAME": "Glass Greatsword",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Decrease the damage of this card by 3 this combat."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Decrease the damage of this card by !M! this combat.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage to ALL enemies. NL Decrease the damage of this card by ",
+      " this combat."
+      ]
   },
   "FireBladeMod:LightningCombo": {
     "NAME": "Lightning Combo",
@@ -230,8 +232,8 @@
   },
   "FireBladeMod:Improvise": {
     "NAME": "Improvise",
-    "DESCRIPTION": "Put !M! card from your discard pile into your hand. NL Gain [E]. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Put !M! cards from your discard pile into your hand. NL Gain [E]. NL Exhaust."
+    "DESCRIPTION": "Put !M! card from your discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Put !M! cards from your discard pile into your hand."
   },
   "FireBladeMod:HellFire": {
     "NAME": "Hellfire",
@@ -256,11 +258,11 @@
   },
   "FireBladeMod:FinishingBarrage": {
     "NAME": "Finishing Barrage",
-    "DESCRIPTION": "fireblademod:Unnate. NL Deal !D! damage for each fireblademod:Smash in your exhaust pile. NL Exhaust."
+    "DESCRIPTION": "fireblademod:Unnate. NL fireblademod:Smash. NL Deal !D! damage for each fireblademod:Smash in your exhaust pile. NL Exhaust."
   },
   "FireBladeMod:Refreshment": {
     "NAME": "Refreshment",
-    "DESCRIPTION": "fireblademod:Unnate. NL Ethereal. NL Heal !M! HP for each fireblademod:Endurance in your exhaust pile. NL Exhaust."
+    "DESCRIPTION": "fireblademod:Unnate, Ethereal. NL fireblademod:Endurance. NL Heal !M! HP for each fireblademod:Endurance in your exhaust pile. NL Exhaust."
   },
   "FireBladeMod:Indomitable": {
     "NAME": "Indomitable",
@@ -285,7 +287,7 @@
   },
   "FireBladeMod:BattleStamina": {
     "NAME": "Battle Stamina",
-    "DESCRIPTION": "At the start of your turn, gain fireblademod:Vitality equal to !M! times the number of fireblademod:Endurance cards in your exhaust pile."
+    "DESCRIPTION": "Innate. NL Once per turn when a fireblademod:Endurance card Exhausts, draw !M! card and gain [E]."
   },
   "FireBladeMod:Blitzkreig": {
     "NAME": "Blitzkreig",
@@ -313,8 +315,7 @@
   },
   "FireBladeMod:Ignition": {
     "NAME": "Ignition",
-    "DESCRIPTION": "Ethereal. NL Whenever the enemy receives fireblademod:Burning, gain !M! fireblademod:Fervor. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Whenever the enemy receives fireblademod:Burning, gain !M! fireblademod:Fervor. NL Exhaust."
+    "DESCRIPTION": "Whenever you apply fireblademod:Burning to this enemy, they take !M! damage. NL Exhaust."
   },
   "FireBladeMod:RollWithTheBlow": {
     "NAME": "Roll With The Blow",
@@ -324,5 +325,10 @@
   "FireBladeMod:AbsorbEnergy": {
     "NAME": "Absorb Energy",
     "DESCRIPTION": "The first time each turn you take damage, gain an energy next turn."
+  },
+  "FireBladeMod:LearnTells": {
+    "NAME": "Learn Tells",
+    "DESCRIPTION": "Ethereal. NL At the start of your turn, gain !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, gain !M! Dexterity."
   }
 }

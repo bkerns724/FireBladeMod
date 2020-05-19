@@ -30,7 +30,7 @@ public class EruptionSlash extends CustomFireBladeCard {
     public EruptionSlash() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         realBaseDamage = baseDamage = 3;
-        magicNumber = baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

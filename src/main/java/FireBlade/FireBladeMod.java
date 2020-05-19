@@ -1,5 +1,6 @@
 package FireBlade;
 
+import FireBlade.cards.Other.Ember;
 import FireBlade.cards.Other.Swipe;
 import FireBlade.ui.FireBladeSettings;
 import FireBlade.ui.FireBladeTipTracker;
@@ -9,7 +10,6 @@ import FireBlade.potions.FervorPotion;
 import FireBlade.variables.MagicNumberTwo;
 import basemod.AutoAdd;
 import basemod.BaseMod;
-import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -100,6 +100,7 @@ public class FireBladeMod implements
         (new AutoAdd("FireBladeMod")).packageFilter("FireBlade.cards.Uncommons").setDefaultSeen(true).cards();
         (new AutoAdd("FireBladeMod")).packageFilter("FireBlade.cards.Rares").setDefaultSeen(true).cards();
         BaseMod.addCard(new Swipe());
+        BaseMod.addCard(new Ember());
 
         logger.info("Added FireBlade cards");
     }
@@ -107,7 +108,7 @@ public class FireBladeMod implements
     public void receiveEditRelics() {
         logger.info("Beginning to add FireBlade relics");
         BaseMod.addRelicToCustomPool(new EternalTorch(), FireBladeEnum.FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new SoulTorch(), FireBladeEnum.FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new MageTorch(), FireBladeEnum.FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new Matches(), FireBladeEnum.FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new BronzeKnuckles(), FireBladeEnum.FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new WheyBottle(), FireBladeEnum.FIREBLADE_ORANGE);
@@ -119,7 +120,7 @@ public class FireBladeMod implements
         BaseMod.addRelicToCustomPool(new InnerFlame(), FireBladeEnum.FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new SearingSword(), FireBladeEnum.FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new FlameCatalyst(), FireBladeEnum.FIREBLADE_ORANGE);
-
+/*
         if (!FireBladeSettings.isGoldenStarGlobal())
             BaseMod.addRelicToCustomPool(new GoldenStar(), FireBladeEnum.FIREBLADE_ORANGE);
         else
@@ -129,7 +130,7 @@ public class FireBladeMod implements
             BaseMod.addRelicToCustomPool(new CrimsonStar(), FireBladeEnum.FIREBLADE_ORANGE);
         else
             BaseMod.addRelic(new CrimsonStar(), RelicType.SHARED);
-
+*/
         logger.info("Added FireBlade relics");
     }
 
