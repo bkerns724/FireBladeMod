@@ -40,7 +40,7 @@ public class EternalTorch extends CustomRelic {
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         super.onAttack(info, damageAmount, target);
-        if (counter == 1) {
+        if (counter == 1 && info.type == DamageInfo.DamageType.NORMAL) {
             AbstractPlayer p = AbstractDungeon.player;
             addToBot(new ApplyPowerAction(target, p, new BurningPower(target, p, burnAmount), burnAmount));
             counter = 0;

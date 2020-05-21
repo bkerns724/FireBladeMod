@@ -120,5 +120,21 @@
       "Replaces [#FFA500]Eternal [#FFA500]Torch.  At the start of your turn, apply #b",
       " #yfireblademod:Burning to ALL enemies."
     ]
+  },
+  "FireBladeMod:DuelistLocket": {
+    "NAME": "Duelist Locket",
+    "FLAVOR": "The ceremonial amulet of a skilled swordsman.",
+    "DESCRIPTIONS": [
+      "At the start of each turn, gain #b",
+      " #yfireblademod:Vigor and #yfireblademod:Vitality."
+    ]
+  },
+  "FireBladeMod:BladeMasterLocket": {
+    "NAME": "Blade Master Locket",
+    "FLAVOR": "The ceremonial amulet of a peerless swordsman.",
+    "DESCRIPTIONS": [
+      "At the start of each turn, gain #b",
+      " #yfireblademod:Vigor and #yfireblademod:Vitality."
+    ]
   }
 }

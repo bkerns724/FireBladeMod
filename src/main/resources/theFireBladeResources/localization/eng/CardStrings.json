@@ -1,6 +1,6 @@
 {
-  "FireBladeMod:ComboHitsHelper": {
-    "NAME": "Combo Hits Helper",
+  "FireBladeMod:CleavingHitsHelper": {
+    "NAME": "Cleaving Hits Helper",
     "DESCRIPTION": "Should not be seen."
   },
   "FireBladeMod:Swipe": {
@@ -41,8 +41,7 @@
   },
   "FireBladeMod:ComboSlashes": {
     "NAME": "Combo Slashes",
-    "DESCRIPTION": "Deal !D! damage. NL Deal !FireBladeMod:M2! damage. NL Deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Deal !FireBladeMod:M2! damage. NL Deal !D! damage. NL Deal !FireBladeMod:M2! damage."
+    "DESCRIPTION": "Deal !D! damage !M! times."
   },
   "FireBladeMod:SoulStrike": {
     "NAME": "Soul Strike",
@@ -243,9 +242,9 @@
     "NAME": "After Burn",
     "DESCRIPTION": "Whenever you play a card, gain !M! fireblademod:Flame\u00a0Barrier."
   },
-  "FireBladeMod:ComboHits": {
-    "NAME": "Combo Hits",
-    "DESCRIPTION": "Your attack cards gain an extra hit. NL It deals !D! damage to a random enemy."
+  "FireBladeMod:CleavingHits": {
+    "NAME": "Cleaving Hits",
+    "DESCRIPTION": "Once per turn when an attack card is played it gains an extra hit which deals !D! damage ALL random enemies."
   },
   "FireBladeMod:TargetWeakness": {
     "NAME": "Target Weakness",
@@ -319,12 +318,12 @@
   },
   "FireBladeMod:RollWithTheBlow": {
     "NAME": "Roll With The Blow",
-    "DESCRIPTION": "The first time each turn you take damage, draw !M! card.",
+    "DESCRIPTION": "Once per turn when you take damage, draw !M! card.",
     "UPGRADE_DESCRIPTION": "Innate. NL The first time each turn you take damage, draw !M! card."
   },
   "FireBladeMod:AbsorbEnergy": {
     "NAME": "Absorb Energy",
-    "DESCRIPTION": "The first time each turn you take damage, gain an energy next turn."
+    "DESCRIPTION": "Once per turn when you take damage, gain an energy next turn."
   },
   "FireBladeMod:LearnTells": {
     "NAME": "Learn Tells",

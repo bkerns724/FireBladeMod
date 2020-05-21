@@ -5,7 +5,7 @@ import FireBlade.cards.Basics.DefendFireBlade;
 import FireBlade.cards.Basics.FireBarrier;
 import FireBlade.cards.Basics.FlamingSword;
 import FireBlade.cards.Basics.StrikeFireBlade;
-import FireBlade.relics.EternalTorch;
+import FireBlade.relics.DuelistLocket;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -115,7 +115,7 @@ public class TheFireBlade extends CustomPlayer {
         logger.info("Start TheFireBlade getStartingRelics");
 
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(EternalTorch.ID);
+        retVal.add(DuelistLocket.ID);
 
         logger.info("End TheFireBlade getStartingRelics");
         return retVal;

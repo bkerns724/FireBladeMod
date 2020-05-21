@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.StrikeDummy;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class ComboHitsAction extends AbstractGameAction {
     private AbstractCreature owner;
@@ -32,15 +31,10 @@ public class ComboHitsAction extends AbstractGameAction {
 
         ArrayList<AbstractMonster> potentialMonsters = new ArrayList<AbstractMonster>();
         for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-            if (!m.isDeadOrEscaped() && !m.halfDead)
-                potentialMonsters.add(m);
-        }
-        if (potentialMonsters.size() > 0) {
-            Random rand = new Random();
-            int i = rand.nextInt(potentialMonsters.size());
-            AbstractMonster mo = potentialMonsters.get(i);
-            card.calculateCardDamage(mo);
-            addToTop(new DamageAction(mo, new DamageInfo(owner, card.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+            if (!m.isDeadOrEscaped() && !m.halfDead) {
+                card.calculateCardDamage(m);
+                addToTop(new DamageAction(m, new DamageInfo(owner, card.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+            }
         }
 
         if (strike && AbstractDungeon.player.hasRelic(StrikeDummy.ID))

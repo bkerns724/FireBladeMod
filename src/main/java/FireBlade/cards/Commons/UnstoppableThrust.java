@@ -27,7 +27,7 @@ public class UnstoppableThrust extends CustomFireBladeCard {
 
     public UnstoppableThrust() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        baseDamage = 9;
+        baseDamage = 10;
         magicNumber = baseMagicNumber = 1;
     }
 

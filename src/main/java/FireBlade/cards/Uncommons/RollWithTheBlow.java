@@ -20,7 +20,7 @@ public class RollWithTheBlow extends CustomFireBladeCard {
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int TITLE_FONT_SIZE = 19;
 
     public RollWithTheBlow() {

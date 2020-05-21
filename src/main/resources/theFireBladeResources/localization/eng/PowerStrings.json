@@ -23,13 +23,12 @@
       " #yFervor."
     ]
   },
-  "FireBladeMod:ComboHitsPower": {
-    "NAME": "Combo Hits",
-    "DESCRIPTIONS": ["Your attack cards gain #b",
-      " extra hit.  They deal ",
+  "FireBladeMod:CleavingHitsPower": {
+    "NAME": "Cleaving Hits",
+    "DESCRIPTIONS": ["Once per turn when an attack card is played it gains #b",
+      " extra hit.  It deals ",
       " extra hits.  They deal ",
-      " damage to a random enemy.",
-      " damage to random enemies."
+      " damage to ALL enemies."
     ]
   },
   "FireBladeMod:AfterBurnPower": {
@@ -146,14 +145,14 @@
   "FireBladeMod:AbsorbEnergyPower": {
     "NAME": "Absorb Energy",
     "DESCRIPTIONS": [
-      "The first time each turn you take damage, gain #b",
+      "Once per turn when you take damage, gain #b",
       " #yEnergy next turn."
     ]
   },
   "FireBladeMod:RollWithTheBlowPower": {
     "NAME": "Roll With The Blow",
     "DESCRIPTIONS": [
-      "The first time each turn you take damage, draw #b",
+      "Once per turn when you take damage, draw #b",
       " card.",
       " cards."
     ]

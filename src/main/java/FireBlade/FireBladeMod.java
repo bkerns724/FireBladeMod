@@ -23,9 +23,7 @@ import org.apache.logging.log4j.Logger;
 import FireBlade.characters.TheFireBlade;
 import FireBlade.enums.*;
 import FireBlade.relics.*;
-
 import java.nio.charset.StandardCharsets;
-
 
 @SpireInitializer
 public class FireBladeMod implements
@@ -107,8 +105,10 @@ public class FireBladeMod implements
 
     public void receiveEditRelics() {
         logger.info("Beginning to add FireBlade relics");
-        BaseMod.addRelicToCustomPool(new EternalTorch(), FireBladeEnum.FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new MageTorch(), FireBladeEnum.FIREBLADE_ORANGE);
+//        BaseMod.addRelicToCustomPool(new EternalTorch(), FireBladeEnum.FIREBLADE_ORANGE);
+//        BaseMod.addRelicToCustomPool(new MageTorch(), FireBladeEnum.FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new DuelistLocket(), FireBladeEnum.FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new BladeMasterLocket(), FireBladeEnum.FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new Matches(), FireBladeEnum.FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new BronzeKnuckles(), FireBladeEnum.FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new WheyBottle(), FireBladeEnum.FIREBLADE_ORANGE);

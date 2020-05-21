@@ -27,7 +27,7 @@ public class MomentumStrikes extends CustomFireBladeCard {
 
     public MomentumStrikes() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        baseDamage = 8;
+        baseDamage = 10;
         tags.add(CardTags.STRIKE);
     }
 

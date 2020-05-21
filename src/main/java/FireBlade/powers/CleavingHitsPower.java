@@ -15,27 +15,29 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-public class ComboHitsPower extends AbstractPower implements OnPowersModifiedSubscriber {
+public class CleavingHitsPower extends AbstractPower implements OnPowersModifiedSubscriber {
     public static PowerType POWER_TYPE = PowerType.BUFF;
 
-    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("FireBladeMod:ComboHitsPower");
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings("FireBladeMod:CleavingHitsPower");
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     private ComboHitsHelper helperCard;
+    private boolean triggeredThisTurn;
 
-    public ComboHitsPower(AbstractCreature owner, int amount) {
-        this.ID = "FireBladeMod:ComboHitsPower";
+    public CleavingHitsPower(AbstractCreature owner, int amount) {
+        this.ID = "FireBladeMod:CleavingHitsPower";
         this.owner = owner;
 
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/ComboHits32.png"), 0 ,0, 32, 32);
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/ComboHits84.png"), 0, 0, 84, 84);
+        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/CleavingHits32.png"), 0 ,0, 32, 32);
+        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/CleavingHits84.png"), 0, 0, 84, 84);
 
         this.type = POWER_TYPE;
         this.amount = amount;
         this.name = (CardCrawlGame.languagePack.getPowerStrings(this.ID)).NAME;
 
         this.helperCard = new ComboHitsHelper();
+        triggeredThisTurn = false;
 
         BaseMod.subscribe(this);
 
@@ -44,10 +46,17 @@ public class ComboHitsPower extends AbstractPower implements OnPowersModifiedSub
 
     public void receivePowersModified() { updateDescription(); }
 
+    @Override
+    public void atStartOfTurn() {
+        super.atStartOfTurn();
+        triggeredThisTurn = false;
+    }
+
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type != AbstractCard.CardType.ATTACK)
+        if (card.type != AbstractCard.CardType.ATTACK || triggeredThisTurn)
             return;
 
+        triggeredThisTurn = true;
         AbstractPlayer p = AbstractDungeon.player;
         for (int i = 0; i < this.amount; i++) {
             addToBot(new ComboHitsAction(p, helperCard, card.hasTag(AbstractCard.CardTags.STRIKE)));
@@ -67,6 +76,6 @@ public class ComboHitsPower extends AbstractPower implements OnPowersModifiedSub
         if (amount == 1)
             this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + colorString + helperCard.damage + DESCRIPTIONS[3];
         else
-            this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2] + colorString + helperCard.damage + DESCRIPTIONS[4];
+            this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2] + colorString + helperCard.damage + DESCRIPTIONS[3];
     }
 }

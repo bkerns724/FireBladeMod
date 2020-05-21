@@ -1,6 +1,5 @@
 package FireBlade.powers;
 
-import basemod.BaseMod;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;

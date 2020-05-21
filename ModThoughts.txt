@@ -1,39 +1,25 @@
-TODO
+Things to be done
 	When otherwise finished, create upload for mts-bot.
 	Polish code: Remove .this, remove hardcoded everything
-	Settings condense the toggle code
 	Put super funcs back in overridden functions even if super is empty (cross mod)
 	.equals instead of == for strings
+	Switch to fetch actions
 
 DEBUG
 
 COMMIT
-	Added increaseMagicNumber to CustomFireBladeCard class
+	Locket relics replacing Torch relics
 
-	Burn sfx removed on some applications
+	Card preview interface
+	Card preview on relics in boss select screen (need to save on boss relic select screen)
 
-	Mage Torch buff
-	Eternal torch change
-	Inner Flame change
-	Cut Red Star, Golden Star
-
-	Buff Stunning Blow a little
-	Soul Sword to every 3 attacks
-	Glass Greatsword (but not upgrade) damage increase.  Damage reduction change
-	Eruption slash to 2(3)
-	Ignition to deal damage directly, cost reduction
-	Improvise to no energy, no exhaust
-	Finishing Blow slight damage decrease, smash
-	Refreshment is endurance, cost and healing decrease
-	Battle Stamina to Blitzkreig mirror
-	Overcharge stacking now only exhausts the next attack, not the next 2/3/4 etc.
-	Cut flash point
-	Add Learn Tells
-	Speed buffed.
+	Roll with the blow cost reduction
+	Extra Strikes modification
+	Buff Unstoppable Thrust
+	Combo Slashes, Lightning Combo, Momentum Strikes, and Layered Defense changed.
 
 POWER CONCERNS
 	Large uncertainty
-		Mage Torch burning amount
 		Spirit Rend bonus amount
 		Swordsman Form
 		Pyromancer Form
@@ -99,11 +85,11 @@ Commons
 	    2 damage twice, 2 block twice
 	    3 damage, 3 block
 5	Unstoppable Thrust, 1, attack
-	    9 damage, +1 energy and draw if enemy was blocking
-	    12
+	    10 damage, +1 energy and draw if enemy was blocking
+	    13
 6	Combo Slashes, 1, attack
-	    2/3/2 damage
-	    2/3/2/3
+	    2 x 3 damage
+	    2 x 4
 7	Shove, 0, attack
 	    2 damage, gain an energy next turn
 	    5 damage	
@@ -158,8 +144,8 @@ Uncommons
 	Unnate.  Smash.  Deal 6 damage for each exhausted smash
 	8
 4	Momentum Strikes, 1, attack
-	Deal 8 damage for each debuff 
-	11.
+	Deal 10 damage for each debuff 
+	13.
 5	Quick Jabs, 0, attack
 	Do 2 damage 2 times
 	2 damage 3 times
@@ -197,8 +183,8 @@ Uncommons
 	Draw 2 cards, Draw 1 next turn
 	2 next turn
 17	Rapid Dodges, 1, skill
-	    4x2 block
-	    5x2 block
+	4x2 block
+	5x2 block
 18	Healthy Endurance, 2, skill, exhaust
 	9 block + 6 heal
 	12 block + 8 heal
@@ -238,9 +224,9 @@ Uncommons
 30	Soul Sword, 1, power
 	Every third attack, apply 1 spirit rend
 	0 cost
-32	Roll with the blow, 1, power
+32	Roll with the blow, 0, power
 	first time taking damage each turn, draw card
-	0 cost
+	innate
 33	Absorb Energy, 1, power
 	First time taking damage each turn, gain energy next turn
 	0 cost
@@ -260,7 +246,7 @@ Rares
 	Do 15 damage to all enemies.  Reduce this damage by 5(6) this combat.
 	18
 3	Lightning Combo, 1, attack
-	Deal 3 damage to a random enemy 4 times.
+	Deal 2 damage to a random enemy 4 times.
 	5 times
 4	Debilitating Blow, 2, attack
 	Do 8 damage, gain 8 block, inflict 2 weak
@@ -269,8 +255,8 @@ Rares
 	Gain 32 block.  Gain 1 blur.
 	40, 2 blur
 6	Layered Defense, 2, skill
-	Gain 5 block 3 times.
-	Gain 7 block 3 times.
+	Gain 4 block 3 times.
+	Gain 6 block 3 times.
 7	Improvise, 0, skill
 	Put one card from your discard into your hand.
 	two cards
@@ -299,7 +285,7 @@ Rares
 	Fervor boosts attacks, Strength boosts Flame.
 	1 cost
 16	Extra Strikes, 1, power
-	Playing an attack card causes an extra hit on random enemies with base damage 2.
+	First attack card causes an extra hit on ALL enemies with base damage 3.
 	0 cost
 17	Pyromancer Form, 3, power
 	Ethereal.  Flame cards apply 1 spirit rend.
