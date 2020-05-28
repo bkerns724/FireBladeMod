@@ -1,6 +1,7 @@
 package FireBlade.cards.Commons;
 
 import FireBlade.cards.CustomFireBladeCard;
+import FireBlade.cards.FireBladeCardTags;
 import FireBlade.enums.FireBladeEnum;
 import FireBlade.powers.HealthyPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -11,29 +12,31 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Indomitable extends CustomFireBladeCard {
+public class RobustEndurance extends CustomFireBladeCard {
 
-    public static final String ID = "FireBladeMod:Indomitable";
+    public static final String ID = "FireBladeMod:RobustEndurance";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/Indomitable.png";
+    public static final String IMG_PATH = "theFireBladeResources/images/cardImages/RobustEndurance.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
+    private static final int COST = 1;
 
-    public Indomitable() {
+    public RobustEndurance() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        baseBlock = 14;
-        magicNumber = baseMagicNumber = 1;
+        baseBlock = 8;
+        magicNumber = baseMagicNumber = 2;
+        tags.add(FireBladeCardTags.ENDURANCE);
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, block));
         addToBot(new ApplyPowerAction(p, p, new HealthyPower(p, magicNumber), magicNumber));
     }
-    public AbstractCard makeCopy() { return new Indomitable(); }
+    public AbstractCard makeCopy() { return new RobustEndurance(); }
 
     public void upgrade() {
         if (!upgraded) {

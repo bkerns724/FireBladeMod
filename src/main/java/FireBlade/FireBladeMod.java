@@ -105,10 +105,9 @@ public class FireBladeMod implements
 
     public void receiveEditRelics() {
         logger.info("Beginning to add FireBlade relics");
-//        BaseMod.addRelicToCustomPool(new EternalTorch(), FireBladeEnum.FIREBLADE_ORANGE);
-//        BaseMod.addRelicToCustomPool(new MageTorch(), FireBladeEnum.FIREBLADE_ORANGE);
+
         BaseMod.addRelicToCustomPool(new DuelistLocket(), FireBladeEnum.FIREBLADE_ORANGE);
-        BaseMod.addRelicToCustomPool(new BladeMasterLocket(), FireBladeEnum.FIREBLADE_ORANGE);
+        BaseMod.addRelicToCustomPool(new BattleMasterLocket(), FireBladeEnum.FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new Matches(), FireBladeEnum.FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new BronzeKnuckles(), FireBladeEnum.FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new WheyBottle(), FireBladeEnum.FIREBLADE_ORANGE);
@@ -120,17 +119,7 @@ public class FireBladeMod implements
         BaseMod.addRelicToCustomPool(new InnerFlame(), FireBladeEnum.FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new SearingSword(), FireBladeEnum.FIREBLADE_ORANGE);
         BaseMod.addRelicToCustomPool(new FlameCatalyst(), FireBladeEnum.FIREBLADE_ORANGE);
-/*
-        if (!FireBladeSettings.isGoldenStarGlobal())
-            BaseMod.addRelicToCustomPool(new GoldenStar(), FireBladeEnum.FIREBLADE_ORANGE);
-        else
-            BaseMod.addRelic(new GoldenStar(), RelicType.SHARED);
 
-        if (!FireBladeSettings.isCrimsonStarGlobal())
-            BaseMod.addRelicToCustomPool(new CrimsonStar(), FireBladeEnum.FIREBLADE_ORANGE);
-        else
-            BaseMod.addRelic(new CrimsonStar(), RelicType.SHARED);
-*/
         logger.info("Added FireBlade relics");
     }
 

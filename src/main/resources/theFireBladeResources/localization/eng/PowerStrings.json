@@ -106,7 +106,7 @@
   "FireBladeMod:BattleStaminaPower": {
     "NAME": "Battle Stamina",
     "DESCRIPTIONS": [
-      "The first time each turn a #yEndurance card is exhausted, draw #b",
+      "Whenever you #yExhaust an #yEndurance card, draw #b",
       " card and gain #b",
       " cards and gain #b",
       " #yEnergy."
@@ -122,7 +122,7 @@
   "FireBladeMod:BlitzkreigPower": {
     "NAME": "Blitzkreig",
     "DESCRIPTIONS": [
-      "The first time each turn a #ySmash card is exhausted, draw #b",
+      "Whenever you #yExhaust a #ySmash card, draw #b",
       " card and gain #b",
       " cards and gain #b",
       " #yEnergy."

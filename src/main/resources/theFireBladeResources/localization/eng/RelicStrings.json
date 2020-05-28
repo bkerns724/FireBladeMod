@@ -1,20 +1,4 @@
 {
-  "FireBladeMod:CrimsonStar": {
-    "NAME": "Crimson Star",
-    "FLAVOR": "You feel a desire to feed on the powerful.",
-    "DESCRIPTIONS": [
-      "Whenever you win an Elite combat, gain #b",
-      " Max HP."
-    ]
-  },
-  "FireBladeMod:GoldenStar": {
-    "NAME": "Golden Star",
-    "FLAVOR": "You feel greedier just holding it.",
-    "DESCRIPTIONS": [
-      "Whenever you win an Elite combat, gain #b",
-      " #yGold."
-    ]
-  },
   "FireBladeMod:Matches": {
     "NAME": "Matches",
     "FLAVOR": "You could start a fire with these.",
@@ -105,36 +89,20 @@
       " #yStrength at the start of combat."
     ]
   },
-  "FireBladeMod:EternalTorch": {
-    "NAME": "Eternal Torch",
-    "FLAVOR": "The flame never goes out.",
-    "DESCRIPTIONS": [
-      "Apply #b",
-      " #yfireblademod:Burning to the first enemy you strike each combat."
-    ]
-  },
-  "FireBladeMod:MageTorch": {
-    "NAME": "Mage Torch",
-    "FLAVOR": "The flames constantly search for their next meal.",
-    "DESCRIPTIONS": [
-      "Replaces [#FFA500]Eternal [#FFA500]Torch.  At the start of your turn, apply #b",
-      " #yfireblademod:Burning to ALL enemies."
-    ]
-  },
   "FireBladeMod:DuelistLocket": {
     "NAME": "Duelist Locket",
-    "FLAVOR": "The ceremonial amulet of a skilled swordsman.",
+    "FLAVOR": "The ceremonial amulet of a skilled combatant.",
     "DESCRIPTIONS": [
-      "At the start of each turn, gain #b",
-      " #yfireblademod:Vigor and #yfireblademod:Vitality."
+      "Gain #b",
+      " #yBlock when you target an enemy."
     ]
   },
-  "FireBladeMod:BladeMasterLocket": {
-    "NAME": "Blade Master Locket",
-    "FLAVOR": "The ceremonial amulet of a peerless swordsman.",
+  "FireBladeMod:BattleMasterLocket": {
+    "NAME": "Battle Master Locket",
+    "FLAVOR": "The ceremonial amulet of a peerless warrior.",
     "DESCRIPTIONS": [
-      "At the start of each turn, gain #b",
-      " #yfireblademod:Vigor and #yfireblademod:Vitality."
+      "Gain #b",
+      " #yBlock when you target an enemy."
     ]
   }
 }

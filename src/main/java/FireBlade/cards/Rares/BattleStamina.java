@@ -3,12 +3,14 @@ package FireBlade.cards.Rares;
 import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.enums.FireBladeEnum;
 import FireBlade.powers.BattleStaminaPower;
+import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class BattleStamina extends CustomFireBladeCard {
 
@@ -25,11 +27,18 @@ public class BattleStamina extends CustomFireBladeCard {
     public BattleStamina() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 1;
+        magicNumberTwo = baseMagicNumberTwo = 0;
         isInnate = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new BattleStaminaPower(p, magicNumber), magicNumber));
+        if (!p.hasPower(BattleStaminaPower.POWER_ID))
+            addToBot(new ApplyPowerAction(p, p, new BattleStaminaPower(p, magicNumber, magicNumberTwo)));
+        else {
+            TwoAmountPower power = (TwoAmountPower) p.getPower(BattleStaminaPower.POWER_ID);
+            power.amount += magicNumber;
+            power.amount2 += magicNumberTwo;
+        }
     }
 
     public AbstractCard makeCopy() { return new BattleStamina(); }
@@ -37,7 +46,9 @@ public class BattleStamina extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeMagicNumberTwo(1);
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 
