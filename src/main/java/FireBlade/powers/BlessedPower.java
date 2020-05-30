@@ -38,8 +38,8 @@ public class BlessedPower extends AbstractPower {
     public void onCardDraw(AbstractCard card) {
         AbstractPlayer p = AbstractDungeon.player;
         if (card.type == AbstractCard.CardType.CURSE && amount > 0) {
-            addToBot(new ExhaustCardInHandAction(card));
-            addToBot(new DrawCardAction(1));
+            addToTop(new ExhaustCardInHandAction(card));
+            addToTop(new DrawCardAction(1));
             amount--;
         }
         if (amount == 0)

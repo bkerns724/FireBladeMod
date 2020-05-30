@@ -35,9 +35,9 @@
     "NAME": "Combo Cleave",
     "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times."
   },
-  "FireBladeMod:FerventSmash": {
-    "NAME": "Fervent Smash",
-    "DESCRIPTION": "fireblademod:Smash. NL Deal !D! damage. NL Gain !M! fireblademod:Fervor. NL Exhaust."
+  "FireBladeMod:SmashingEndurance": {
+    "NAME": "Smashing Endurance",
+    "DESCRIPTION": "fireblademod:Smash, fireblademod:Endurance. NL Deal !D! damage. NL Gain !B! block. NL Exhaust."
   },
   "FireBladeMod:ComboSlashes": {
     "NAME": "Combo Slashes",
@@ -184,8 +184,8 @@
   },
   "FireBladeMod:SwordsmanForm": {
     "NAME": "Swordsman Form",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Strength when you play an Attack.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Strength when you play an Attack."
+    "DESCRIPTION": "Ethereal. NL Whenever you play an attack, draw !M! card next turn and gain [E].",
+    "UPGRADE_DESCRIPTION": "Whenever you play an attack, draw !M! card next turn and gain [E]."
   },
   "FireBladeMod:SoulSword": {
     "NAME": "Soul Sword",
@@ -242,18 +242,18 @@
     "NAME": "After Burn",
     "DESCRIPTION": "Whenever you play a card, gain !M! fireblademod:Flame\u00a0Barrier."
   },
-  "FireBladeMod:CleavingHits": {
-    "NAME": "Cleaving Hits",
-    "DESCRIPTION": "Once per turn when an attack card is played it gains an extra hit which deals !D! damage ALL random enemies."
+  "FireBladeMod:RapidHits": {
+    "NAME": "Rapid Hits",
+    "DESCRIPTION": "Once per turn when an attack card is played it deals an extra hit. NL The hit deals !D! damage to ALL enemies."
   },
   "FireBladeMod:TargetWeakness": {
     "NAME": "Target Weakness",
     "DESCRIPTION": "Deal !D! damage. NL Existing Weak and Vulnerable on the enemy are increased by !M!.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Existing Weak, Vulnerable, and fireblademod:Spirit\u00a0Rend on the enemy are increased by !M!."
   },
-  "FireBladeMod:IntricateCombo": {
-    "NAME": "Intricate Combo",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Gain !B! Block !M! times."
+  "FireBladeMod:FerventSlash": {
+    "NAME": "Fervent Slash",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! fireblademod:Fervor. NL At the end of this turn, lose !M! fireblademod:Fervor."
   },
   "FireBladeMod:FinishingBarrage": {
     "NAME": "Finishing Barrage",
@@ -263,9 +263,9 @@
     "NAME": "Refreshment",
     "DESCRIPTION": "fireblademod:Unnate. NL Ethereal. NL Heal !M! HP for each fireblademod:Endurance in your exhaust pile. NL Exhaust."
   },
-  "FireBladeMod:RobustEndurance": {
-    "NAME": "Robust Endurance",
-    "DESCRIPTION": "fireblademod:Endurance. NL Gain !B! block. NL Gain !M! fireblademod:Robust. NL Exhaust."
+  "FireBladeMod:Robust": {
+    "NAME": "Robust",
+    "DESCRIPTION": "Gain !B! block. NL Gain !M! fireblademod:Robust."
   },
   "FireBladeMod:BattleMage": {
     "NAME": "Battle Mage",
@@ -286,8 +286,7 @@
   },
   "FireBladeMod:BattleStamina": {
     "NAME": "Battle Stamina",
-    "DESCRIPTION": "Innate. NL Whenever you Exhaust an fireblademod:Endurance card, gain [E].",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Exhaust an fireblademod:Endurance card, draw !M! card and gain [E]."
+    "DESCRIPTION": "Innate. NL Whenever you Exhaust an fireblademod:Endurance card, Block is not removed for !M! turn."
   },
   "FireBladeMod:Blitzkreig": {
     "NAME": "Blitzkreig",

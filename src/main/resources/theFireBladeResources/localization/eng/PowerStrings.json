@@ -23,8 +23,8 @@
       " #yFervor."
     ]
   },
-  "FireBladeMod:CleavingHitsPower": {
-    "NAME": "Cleaving Hits",
+  "FireBladeMod:RapidHitsPower": {
+    "NAME": "Rapid Hits",
     "DESCRIPTIONS": ["Once per turn when an attack card is played it gains #b",
       " extra hit.  It deals ",
       " extra hits.  They deal ",
@@ -55,8 +55,10 @@
   "FireBladeMod:SwordsmanFormPower": {
     "NAME": "Swordsman Form",
     "DESCRIPTIONS": [
-      "Whenever you play an attack, gain #b",
-      " #yStrength."
+      "Attacks cost #b",
+      " less. Whenever you play an attack, draw #b",
+      " card next turn.",
+      " cards next turn."
     ]
   },
   "FireBladeMod:EnergizedFireBladePower": {
@@ -74,8 +76,8 @@
       " #yMiracles to your hand next turn."
     ]
   },
-  "FireBladeMod:HealthyPower": {
-    "NAME": "Healthy",
+  "FireBladeMod:RobustPower": {
+    "NAME": "Robust",
     "DESCRIPTIONS": [
       "The next time you draw a #yStatus card, #yExhaust it and draw a card.",
       "The next #b",
@@ -106,10 +108,9 @@
   "FireBladeMod:BattleStaminaPower": {
     "NAME": "Battle Stamina",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust an #yEndurance card, draw #b",
-      " card and gain #b",
-      " cards and gain #b",
-      " #yEnergy."
+      "Whenever you #yExhaust an #yEndurance card, #yBlock is not removed for #b",
+      " turn.",
+      " turns."
     ]
   },
   "FireBladeMod:IgnitionPower": {

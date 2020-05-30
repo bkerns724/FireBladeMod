@@ -25,7 +25,6 @@ public class SwordsmanForm extends CustomFireBladeCard {
     public SwordsmanForm() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
         magicNumber = baseMagicNumber = 1;
-        magicNumberTwo = baseMagicNumberTwo = 2;
         isEthereal = true;
     }
 

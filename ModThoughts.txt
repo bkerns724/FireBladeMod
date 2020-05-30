@@ -5,27 +5,22 @@ Things to be done
 	.equals instead of == for strings
 	Switch to fetch actions
 
-	Battle Stamina changes
-
-	
+	Consider renaming smashing endurance
 
 DEBUG
-	relic changes
-	Robust buff
 
 COMMIT
-	Reset Tutorial Tips string position fixed
-	Feint to top of draw pile (bug fix)
-	Blitzkreig, Battle Stamina card strings
-	Blitzkreig, Battle Stamina replace upgrade, two amount power
-	Refreshment, Finishing barrage not Smash, Endurance.
-	New Adrenaline Boost
-	Fervent Smash from Unstoppable Thrust
-	Robust Endurance from Indomitable
-
+	Healthy activates before discard of Prepared
+	Battle Stamina changes
+	Cleaving Hits to Rapid Hits
 	Relic changes
-
-	Flaming Sword Changes
+	Fervent Smash -> Smashing Endurance
+	Robust Endurance -> Robust
+	Intricate Combo -> Fervent Slash
+	Swordsman Form changes
+	Turtle nerf
+	Rapid Hits card art change
+	Swordsman Form card art change
 
 
 POWER CONCERNS
@@ -56,21 +51,21 @@ OTHER CONCERNS
 Starting Deck
     4 basic strike
     4 basic defend
+    Flaming Sword, 2, attack
+	12 damage, 3 burning
+	16 damage, 4 burning
     Fire Barrier, 1, skill
 	6 block, 3 flame barrier
 	8, 4
-    Flaming Sword, 2, attack
-	10 damage, 4 burning
-	12 damage, 6 burning
 
 Starting Relic
     Duelist Locket
-	Gain
+	Apply 4 anti-magic to all enemies.
     Blademaster Locket
-	2 block
+	twice
 
     Powers to remember
-	Healthy
+	Robust
 	    When you draw a status, exhaust it and draw a card.  Lose one stack when you do.
 	Blessed
 	    When you draw a curse, exhaust it and draw a card.  Lose one stack when you do.
@@ -91,12 +86,12 @@ Commons
 3	Combo Cleave, 1, attack
 	    Do 3x2 damage to all enemies
 	    Do 3x3 damage to all enemies
-4	Intricate Combo, 1, attack
-	    2 damage twice, 2 block twice
-	    3 damage, 3 block
-5	Fervent Smash, 1, attack, exhaust
-	    10 damage, 1 fervor
-	    14 damage, 1 fervor
+4	Fervent Slash, 1, attack
+	    8 damage, 2 temp fervor
+	    10 damage, 3 temp fervor
+5	Smashing Endurance, 1, attack, exhaust
+	    6 damage, 6 block, both Smash and Endurance
+	    8, 8
 6	Combo Slashes, 1, attack
 	    2 x 3 damage
 	    2 x 4
@@ -119,14 +114,14 @@ Commons
 	    8 damage, 1 spirit rend
 	    12 damage
 13	Iron Endurance, 1, skill, exhaust
-	    Gain 11 block, startup shuffle copy into draw pile.
+	    Gain 11 block
 	    Gain 14 block
 14	Steady Endurance, 1, skill, exhaust
 	    Gain 6 block, and 6 block next turn
 	    Gain 8 block, and 8 block next turn
 15	Turtle, 1, skill
-	    8 block, draw a card next turn
-	    12 block
+	    7 block, draw a card next turn
+	    10 block
 16	Complex Defense, 1, skill
 	    7 block, gain 3 vitality.
 	    9 block, gain 4 vitality.
@@ -136,9 +131,9 @@ Commons
 18	Shoot Flames, 1, skill
 	    4 burning
 	    6 burning
-19	Healthy Endurance, 1, skill
-	    Gain 8 block, 2 healthy
-	    Gain 10 block, 3 healthy
+19	Indomitable, 1, skill
+	    Gain 6 block, 2 healthy
+	    Gain 9 block
 
 12 attack
 7 skill
@@ -283,11 +278,11 @@ Rares
 	Whenever you apply burning to this enemy, deal 8 damage.
 	11 damage.
 12	Blitzkreig, 2, power
-	Innate. When you exhaust a Smash card, gain an energy and draw a card.
-	???
+	Innate. When you exhaust a Smash card, gain an energy
+	also when exhaust, draw a card.
 13	Swordsman Form, 3, power
-	Ethereal.  Gain 1 strength when you play an attack card.
-	Not Ethereal
+	Ethereal.  Whenever you play an attack, draw a card next turn and gain energy.
+	Not Ethereal.
 14	Battle Stamina, 2, power
 	Innate. When you exhaust an Endurance card, gain 1 blur.
 	1 cost.

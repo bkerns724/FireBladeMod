@@ -23,10 +23,8 @@ public class Matches extends CustomRelic {
 
     public void atBattleStart() {
         flash();
-        addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-
         AbstractPlayer p = AbstractDungeon.player;
-
+        addToBot(new RelicAboveCreatureAction(p, this));
         addToBot(new ApplyPowerAction(p, p, new FervorPower(p, fervorAmount), fervorAmount));
     }
 
