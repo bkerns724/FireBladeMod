@@ -158,16 +158,6 @@
       " cards."
     ]
   },
-  "FireBladeMod:SoulSwordPower": {
-    "NAME": "Soul Sword",
-    "DESCRIPTIONS": [
-      "Every ",
-      " times you deal attack damage, apply #b",
-      " #ySpirit #yRend. #b",
-      " more attack.",
-      " more attacks."
-    ]
-  },
   "FireBladeMod:OverChargePower": {
     "NAME": "Over Charged",
     "DESCRIPTIONS": [
@@ -179,6 +169,16 @@
     "DESCRIPTIONS": [
       "At the start of your turn, gain #b",
       " #yDexterity."
+    ]
+  },
+  "FireBladeMod:SoulSwordPower": {
+    "NAME": "Soul Sword",
+    "DESCRIPTIONS": [
+      "Every #b",
+      " times you deal attack damage, apply #b",
+      " #ySpirit #yRend. #b",
+      " more attack to apply.",
+      " more attacks to apply."
     ]
   }
 }

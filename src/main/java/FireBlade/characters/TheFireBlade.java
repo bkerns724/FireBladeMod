@@ -5,6 +5,7 @@ import FireBlade.cards.Basics.DefendFireBlade;
 import FireBlade.cards.Basics.FireBarrier;
 import FireBlade.cards.Basics.FlamingSword;
 import FireBlade.cards.Basics.StrikeFireBlade;
+import FireBlade.cards.Other.Necronomisword;
 import FireBlade.relics.DuelistLocket;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
@@ -13,6 +14,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.esotericsoftware.spine.AnimationState;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -32,6 +34,7 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.screens.stats.CharStat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -252,5 +255,15 @@ public class TheFireBlade extends CustomPlayer {
                 }
             }
         }
+    }
+
+    @Override
+    public void applyStartOfTurnPreDrawCards() {
+        super.applyStartOfTurnPreDrawCards();
+        Predicate<AbstractCard> necroPredicate = (card) -> card instanceof Necronomisword;
+        AbstractPlayer p = AbstractDungeon.player;
+        AbstractDungeon.actionManager.addToBottom(new FetchAction(p.drawPile, necroPredicate, 10));
+        AbstractDungeon.actionManager.addToBottom(new FetchAction(p.discardPile, necroPredicate, 10));
+        AbstractDungeon.actionManager.addToBottom(new FetchAction(p.exhaustPile, necroPredicate, 10));
     }
 }

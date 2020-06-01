@@ -1,6 +1,7 @@
 package FireBlade;
 
 import FireBlade.cards.Other.Ember;
+import FireBlade.cards.Other.Necronomisword;
 import FireBlade.cards.Other.Swipe;
 import FireBlade.ui.FireBladeSettings;
 import FireBlade.ui.FireBladeTipTracker;
@@ -99,6 +100,7 @@ public class FireBladeMod implements
         (new AutoAdd("FireBladeMod")).packageFilter("FireBlade.cards.Rares").setDefaultSeen(true).cards();
         BaseMod.addCard(new Swipe());
         BaseMod.addCard(new Ember());
+        BaseMod.addCard(new Necronomisword());
 
         logger.info("Added FireBlade cards");
     }

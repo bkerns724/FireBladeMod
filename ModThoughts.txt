@@ -10,17 +10,8 @@ Things to be done
 DEBUG
 
 COMMIT
-	Healthy activates before discard of Prepared
-	Battle Stamina changes
-	Cleaving Hits to Rapid Hits
-	Relic changes
-	Fervent Smash -> Smashing Endurance
-	Robust Endurance -> Robust
-	Intricate Combo -> Fervent Slash
-	Swordsman Form changes
-	Turtle nerf
-	Rapid Hits card art change
-	Swordsman Form card art change
+	Momentum Strikes nerf
+	Swordsman Form -> Death Blade
 
 
 POWER CONCERNS
@@ -149,8 +140,8 @@ Uncommons
 	Unnate.  Deal 6 damage for each exhausted smash
 	8
 4	Momentum Strikes, 1, attack
-	Deal 10 damage for each debuff 
-	13.
+	Deal 7 damage for each debuff 
+	10.
 5	Quick Jabs, 0, attack
 	Do 2 damage 2 times
 	2 damage 3 times
@@ -277,12 +268,12 @@ Rares
 11	Ignition, 0, skill, exhaust
 	Whenever you apply burning to this enemy, deal 8 damage.
 	11 damage.
-12	Blitzkreig, 2, power
+12	Death Blade, 3, skill, exhaust
+	Gain a necronomisword
+	Gain a necronomisword+
+13	Blitzkreig, 2, power
 	Innate. When you exhaust a Smash card, gain an energy
 	also when exhaust, draw a card.
-13	Swordsman Form, 3, power
-	Ethereal.  Whenever you play an attack, draw a card next turn and gain energy.
-	Not Ethereal.
 14	Battle Stamina, 2, power
 	Innate. When you exhaust an Endurance card, gain 1 blur.
 	1 cost.
@@ -302,7 +293,7 @@ Rares
 	Ethereal.  Gain 1 dex every turn.
 	Not Ethereal
 
-4 attack
+5 attack
 7 skill
 8 power
 
@@ -314,10 +305,13 @@ Total
 Other
 	Swipe, 0, attack
 	Soulbound.  Deal 6 damage to all enemies.
-	8.
+	8 damage.
 	Ember, 0, skill
-	Soulbound.  Flame.  Apply 1 burning.
-	3.
+	Soulbound.  Flame.  Apply 2 burning.
+	3 burning.
+	Necronomisword, 2, attack
+	There is no escaping this sword.  Deal 9x3 damage to an enemy.
+	12x3 damage
 
 Relics
 	Matches		Common

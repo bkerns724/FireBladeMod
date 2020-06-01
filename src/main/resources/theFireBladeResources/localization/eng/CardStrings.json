@@ -11,6 +11,10 @@
     "NAME": "Ember",
     "DESCRIPTION": "Soulbound. NL fireblademod:Flame. NL Apply !M! fireblademod:Burning."
   },
+  "FireBladeMod:Necronomisword": {
+    "NAME": "Necronomisword",
+    "DESCRIPTION": "There is no escape from this sword. NL Deal !D! damage !M! times."
+  },
   "FireBladeMod:StrikeFireBlade": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -182,10 +186,10 @@
     "NAME": "Third Degree",
     "DESCRIPTION": "Gain !M! fireblademod:Fervor."
   },
-  "FireBladeMod:SwordsmanForm": {
-    "NAME": "Swordsman Form",
-    "DESCRIPTION": "Ethereal. NL Whenever you play an attack, draw !M! card next turn and gain [E].",
-    "UPGRADE_DESCRIPTION": "Whenever you play an attack, draw !M! card next turn and gain [E]."
+  "FireBladeMod:DeathBlade": {
+    "NAME": "Death Blade",
+    "DESCRIPTION": "Gain a *Necronomisword. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain a *Necronomisword+. NL Exhaust."
   },
   "FireBladeMod:SoulSword": {
     "NAME": "Soul Sword",
