@@ -256,14 +256,4 @@ public class TheFireBlade extends CustomPlayer {
             }
         }
     }
-
-    @Override
-    public void applyStartOfTurnPreDrawCards() {
-        super.applyStartOfTurnPreDrawCards();
-        Predicate<AbstractCard> necroPredicate = (card) -> card instanceof Necronomisword;
-        AbstractPlayer p = AbstractDungeon.player;
-        AbstractDungeon.actionManager.addToBottom(new FetchAction(p.drawPile, necroPredicate, 10));
-        AbstractDungeon.actionManager.addToBottom(new FetchAction(p.discardPile, necroPredicate, 10));
-        AbstractDungeon.actionManager.addToBottom(new FetchAction(p.exhaustPile, necroPredicate, 10));
-    }
 }

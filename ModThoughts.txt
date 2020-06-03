@@ -8,10 +8,14 @@ Things to be done
 	Consider renaming smashing endurance
 
 DEBUG
+	Adrenaline boost card string.  Draw pile, not deck
+	Tiny nerf overcharge
 
 COMMIT
-	Momentum Strikes nerf
-	Swordsman Form -> Death Blade
+	Adrenaline boost card string.  Draw pile, not deck
+	Tiny nerf overcharge
+	Necronomisword buff
+	Some Necronomisword code moved from character to card
 
 
 POWER CONCERNS

@@ -5,6 +5,7 @@ import basemod.helpers.TooltipInfo;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -35,9 +36,11 @@ public class Necronomisword extends CustomFireBladeCard {
 
     public Necronomisword() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-        baseDamage = 10;
+        baseDamage = 15;
         magicNumber = baseMagicNumber = 3;
         selfRetain = true;
+        exhaust = true;
+        purgeOnUse = true;
     }
 
     @Override
@@ -49,6 +52,11 @@ public class Necronomisword extends CustomFireBladeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++)
             addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+
+        AbstractCard tempCard = new Necronomisword();
+        if (upgraded)
+            tempCard.upgrade();
+        addToBot(new MakeTempCardInHandAction(tempCard));
     }
 
     @Override
@@ -67,7 +75,10 @@ public class Necronomisword extends CustomFireBladeCard {
 
     @Override
     public void triggerOnExhaust() {
-        addToBot(new FetchAction(AbstractDungeon.player.exhaustPile, necroPredicate, 1));
+        AbstractCard tempCard = new Necronomisword();
+        if (upgraded)
+            tempCard.upgrade();
+        addToBot(new MakeTempCardInHandAction(tempCard));
     }
 
     @Override
@@ -79,6 +90,6 @@ public class Necronomisword extends CustomFireBladeCard {
 
     public void upgrade() {
         upgradeName();
-        upgradeDamage(3);
+        upgradeDamage(5);
     }
 }
