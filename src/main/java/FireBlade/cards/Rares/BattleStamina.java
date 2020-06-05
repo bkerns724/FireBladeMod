@@ -29,7 +29,7 @@ public class BattleStamina extends CustomFireBladeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new BattleStaminaPower(p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new BattleStaminaPower(p, magicNumber)));
     }
 
     public AbstractCard makeCopy() { return new BattleStamina(); }

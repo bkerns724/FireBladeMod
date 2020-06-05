@@ -1,9 +1,9 @@
 package FireBlade.cards.Uncommons;
 
-import FireBlade.actions.DiscardPileToDeckAction;
 import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.enums.FireBladeEnum;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.unique.DiscardPileToTopOfDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -29,7 +29,7 @@ public class Feint extends CustomFireBladeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
-        addToBot(new DiscardPileToDeckAction(p));
+        addToBot(new DiscardPileToTopOfDeckAction(p));
     }
 
     public AbstractCard makeCopy() { return new Feint(); }

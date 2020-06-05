@@ -29,7 +29,6 @@ public class Refreshment extends CustomFireBladeCard {
         isEthereal = true;
         isUnnate = true;
         tags.add(CardTags.HEALING);
-        tags.add(FireBladeCardTags.ENDURANCE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

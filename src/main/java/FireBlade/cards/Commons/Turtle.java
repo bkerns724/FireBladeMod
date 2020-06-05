@@ -25,7 +25,7 @@ public class Turtle extends CustomFireBladeCard {
 
     public Turtle() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        baseBlock = 8;
+        baseBlock = 7;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

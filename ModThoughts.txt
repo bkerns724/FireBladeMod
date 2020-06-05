@@ -5,18 +5,18 @@ Things to be done
 	.equals instead of == for strings
 	Switch to fetch actions
 
+	Consider renaming smashing endurance
+
 DEBUG
+	Adrenaline boost card string.  Draw pile, not deck
+	Tiny nerf overcharge
 
 COMMIT
-	Locket relics replacing Torch relics
+	Adrenaline boost card string.  Draw pile, not deck
+	Tiny nerf overcharge
+	Necronomisword buff
+	Some Necronomisword code moved from character to card
 
-	Card preview interface
-	Card preview on relics in boss select screen (need to save on boss relic select screen)
-
-	Roll with the blow cost reduction
-	Extra Strikes modification
-	Buff Unstoppable Thrust
-	Combo Slashes, Lightning Combo, Momentum Strikes, and Layered Defense changed.
 
 POWER CONCERNS
 	Large uncertainty
@@ -33,7 +33,7 @@ POWER CONCERNS
 	Weak
 
 OTHER CONCERNS
-	Jason and Charlie
+	3 innate/upgrade to innate cards
 
 	DarkGlade
 		Tutorial tips unnecessary?
@@ -46,21 +46,21 @@ OTHER CONCERNS
 Starting Deck
     4 basic strike
     4 basic defend
-    Fire Barrier, 1, skill
-	6 block, 3 flame barrier
-	8, 4
     Flaming Sword, 2, attack
 	12 damage, 3 burning
 	16 damage, 4 burning
+    Fire Barrier, 1, skill
+	6 block, 3 flame barrier
+	8, 4
 
 Starting Relic
-    Eternal Torch
-	Apply 3 burning to enemies at the start of battle
-    Mage Torch
-	Applies 2 burning to All enemies at the start of turn
+    Duelist Locket
+	Apply 4 anti-magic to all enemies.
+    Blademaster Locket
+	twice
 
     Powers to remember
-	Healthy
+	Robust
 	    When you draw a status, exhaust it and draw a card.  Lose one stack when you do.
 	Blessed
 	    When you draw a curse, exhaust it and draw a card.  Lose one stack when you do.
@@ -77,16 +77,16 @@ Commons
 	    Do 18 damage
 2	Spinning Smash, 1, attack, exhaust
 	    Do 10 damage to all enemies
-	    Do 14 damage to all enemies
+	    Do 13 damage to all enemies
 3	Combo Cleave, 1, attack
 	    Do 3x2 damage to all enemies
 	    Do 3x3 damage to all enemies
-4	Intricate Combo, 1, attack
-	    2 damage twice, 2 block twice
-	    3 damage, 3 block
-5	Unstoppable Thrust, 1, attack
-	    10 damage, +1 energy and draw if enemy was blocking
-	    13
+4	Fervent Slash, 1, attack
+	    8 damage, 2 temp fervor
+	    10 damage, 3 temp fervor
+5	Smashing Endurance, 1, attack, exhaust
+	    6 damage, 6 block, both Smash and Endurance
+	    8, 8
 6	Combo Slashes, 1, attack
 	    2 x 3 damage
 	    2 x 4
@@ -105,18 +105,18 @@ Commons
 11	Stinging Slash, 0, attack
 	    2 damage, 1 weak
 	    3 damage, 2 weak
-12	Soul Strike, 1, attack
+12	Soul Strike, 1, attack, exhaust
 	    8 damage, 1 spirit rend
-	    12
+	    12 damage
 13	Iron Endurance, 1, skill, exhaust
 	    Gain 11 block
-	    Gain 15 block
+	    Gain 14 block
 14	Steady Endurance, 1, skill, exhaust
 	    Gain 6 block, and 6 block next turn
 	    Gain 8 block, and 8 block next turn
 15	Turtle, 1, skill
-	    8 block, draw a card next turn
-	    12 block
+	    7 block, draw a card next turn
+	    10 block
 16	Complex Defense, 1, skill
 	    7 block, gain 3 vitality.
 	    9 block, gain 4 vitality.
@@ -126,12 +126,12 @@ Commons
 18	Shoot Flames, 1, skill
 	    4 burning
 	    6 burning
-19	Indomitable, 2, skill
-	    Gain 14 block, 1 healthy
-	    Gain 16 block, 2 healthy
+19	Indomitable, 1, skill
+	    Gain 6 block, 2 healthy
+	    Gain 9 block
 
-10 attack
-8 skill
+12 attack
+7 skill
 
 Uncommons
 1	Arm Smash, 2, attack, exhaust
@@ -141,11 +141,11 @@ Uncommons
 	15 damage.  3 vuln.
 	20 damage.  4 vuln.
 3	Finishing Barrage, 1, attack, exhaust
-	Unnate.  Smash.  Deal 6 damage for each exhausted smash
+	Unnate.  Deal 6 damage for each exhausted smash
 	8
 4	Momentum Strikes, 1, attack
-	Deal 10 damage for each debuff 
-	13.
+	Deal 7 damage for each debuff 
+	10.
 5	Quick Jabs, 0, attack
 	Do 2 damage 2 times
 	2 damage 3 times
@@ -165,7 +165,7 @@ Uncommons
 	8 damage, 3 burn to all enemies
 	11, 4
 11	Feint, 1, skill
-	8 block, shuffle card from discard to draw.
+	8 block, shuffle card from discard to top of draw.
 	11
 12	Smoke in the Eyes, 1, skill
 	Gain 7 block, apply 1 vuln.
@@ -192,8 +192,8 @@ Uncommons
 	Random flame card.  It costs 0 this turn.
 	0 cost
 20	Adrenaline Boost, 0, skill, exhaust
-	Seek, but only Smash or Endurance
-	Innate
+	Shuffle a random Smash and a random Endurance into your deck.
+	Cards are upgraded.
 21	Accelerant, 1, skill
 	2 burning, 1 fervor
 	2 fervor
@@ -204,7 +204,7 @@ Uncommons
 	Gain 6X vigor
 	Gain 8X vigor
 24	Refreshment, 1, skill, exhaust
-	Unnate, Endurance.  Heal 2 hp for each endurance in your exhaust pile.
+	Unnate.  Heal 2 hp for each endurance in your exhaust pile.
 	3 hp
 25	Flashbang, 0, skill
 	3 shackle
@@ -272,15 +272,15 @@ Rares
 11	Ignition, 0, skill, exhaust
 	Whenever you apply burning to this enemy, deal 8 damage.
 	11 damage.
-12	Blitzkreig, 2, power
-	Innate. (First time each turn) When you exhaust a Smash card, gain an energy and draw a card.
-	1 cost
-13	Swordsman Form, 3, power
-	Ethereal.  Gain 1 strength when you play an attack card.
-	Not Ethereal
+12	Death Blade, 3, skill, exhaust
+	Gain a necronomisword
+	Gain a necronomisword+
+13	Blitzkreig, 2, power
+	Innate. When you exhaust a Smash card, gain an energy
+	also when exhaust, draw a card.
 14	Battle Stamina, 2, power
-	Innate. (First time each turn) When you exhaust an Endurance card, gain an energy and draw a card.
-	1 cost
+	Innate. When you exhaust an Endurance card, gain 1 blur.
+	1 cost.
 15	Battle Mage, 2, power
 	Fervor boosts attacks, Strength boosts Flame.
 	1 cost
@@ -297,7 +297,7 @@ Rares
 	Ethereal.  Gain 1 dex every turn.
 	Not Ethereal
 
-4 attack
+5 attack
 7 skill
 8 power
 
@@ -309,10 +309,13 @@ Total
 Other
 	Swipe, 0, attack
 	Soulbound.  Deal 6 damage to all enemies.
-	8.
+	8 damage.
 	Ember, 0, skill
-	Soulbound.  Flame.  Apply 1 burning.
-	3.
+	Soulbound.  Flame.  Apply 2 burning.
+	3 burning.
+	Necronomisword, 2, attack
+	There is no escaping this sword.  Deal 9x3 damage to an enemy.
+	12x3 damage
 
 Relics
 	Matches		Common

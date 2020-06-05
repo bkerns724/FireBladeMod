@@ -23,8 +23,8 @@
       " #yFervor."
     ]
   },
-  "FireBladeMod:CleavingHitsPower": {
-    "NAME": "Cleaving Hits",
+  "FireBladeMod:RapidHitsPower": {
+    "NAME": "Rapid Hits",
     "DESCRIPTIONS": ["Once per turn when an attack card is played it gains #b",
       " extra hit.  It deals ",
       " extra hits.  They deal ",
@@ -55,8 +55,10 @@
   "FireBladeMod:SwordsmanFormPower": {
     "NAME": "Swordsman Form",
     "DESCRIPTIONS": [
-      "Whenever you play an attack, gain #b",
-      " #yStrength."
+      "Attacks cost #b",
+      " less. Whenever you play an attack, draw #b",
+      " card next turn.",
+      " cards next turn."
     ]
   },
   "FireBladeMod:EnergizedFireBladePower": {
@@ -74,8 +76,8 @@
       " #yMiracles to your hand next turn."
     ]
   },
-  "FireBladeMod:HealthyPower": {
-    "NAME": "Healthy",
+  "FireBladeMod:RobustPower": {
+    "NAME": "Robust",
     "DESCRIPTIONS": [
       "The next time you draw a #yStatus card, #yExhaust it and draw a card.",
       "The next #b",
@@ -106,10 +108,9 @@
   "FireBladeMod:BattleStaminaPower": {
     "NAME": "Battle Stamina",
     "DESCRIPTIONS": [
-      "The first time each turn a #yEndurance card is exhausted, draw #b",
-      " card and gain #b",
-      " cards and gain #b",
-      " #yEnergy."
+      "Whenever you #yExhaust an #yEndurance card, #yBlock is not removed for #b",
+      " turn.",
+      " turns."
     ]
   },
   "FireBladeMod:IgnitionPower": {
@@ -122,7 +123,7 @@
   "FireBladeMod:BlitzkreigPower": {
     "NAME": "Blitzkreig",
     "DESCRIPTIONS": [
-      "The first time each turn a #ySmash card is exhausted, draw #b",
+      "Whenever you #yExhaust a #ySmash card, draw #b",
       " card and gain #b",
       " cards and gain #b",
       " #yEnergy."
@@ -157,16 +158,6 @@
       " cards."
     ]
   },
-  "FireBladeMod:SoulSwordPower": {
-    "NAME": "Soul Sword",
-    "DESCRIPTIONS": [
-      "Every ",
-      " times you deal attack damage, apply #b",
-      " #ySpirit #yRend. #b",
-      " more attack.",
-      " more attacks."
-    ]
-  },
   "FireBladeMod:OverChargePower": {
     "NAME": "Over Charged",
     "DESCRIPTIONS": [
@@ -178,6 +169,16 @@
     "DESCRIPTIONS": [
       "At the start of your turn, gain #b",
       " #yDexterity."
+    ]
+  },
+  "FireBladeMod:SoulSwordPower": {
+    "NAME": "Soul Sword",
+    "DESCRIPTIONS": [
+      "Every #b",
+      " times you deal attack damage, apply #b",
+      " #ySpirit #yRend. #b",
+      " more attack to apply.",
+      " more attacks to apply."
     ]
   }
 }

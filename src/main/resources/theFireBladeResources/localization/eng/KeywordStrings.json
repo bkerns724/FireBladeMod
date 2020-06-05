@@ -46,7 +46,7 @@
       "Endurance",
       "endurance"
     ],
-    "DESCRIPTION": "Endurance cards are powerful Blocking skills that exhaust."
+    "DESCRIPTION": "Endurance cards are powerful Blocking cards that exhaust."
   },
   {
     "PROPER_NAME": "Swipe",
@@ -84,12 +84,12 @@
     "DESCRIPTION": "Vitality adds #yBlock to your next blocking card."
   },
   {
-    "PROPER_NAME": "Healthy",
+    "PROPER_NAME": "Robust",
     "NAMES": [
-      "Healthy",
-      "healthy"
+      "Robust",
+      "robust"
     ],
-    "DESCRIPTION": "When Healthy, drawing a Status card exhausts it and draws a new card."
+    "DESCRIPTION": "When Robust, drawing a Status card exhausts it and draws a new card."
   },
   {
     "PROPER_NAME": "Blessed",

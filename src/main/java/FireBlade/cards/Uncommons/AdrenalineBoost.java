@@ -1,13 +1,20 @@
 package FireBlade.cards.Uncommons;
 
-import FireBlade.actions.AdrenalineBoostAction;
+import FireBlade.cards.FireBladeCardTags;
 import FireBlade.enums.FireBladeEnum;
 import FireBlade.cards.CustomFireBladeCard;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.*;
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 
 public class AdrenalineBoost extends CustomFireBladeCard {
 
@@ -27,7 +34,34 @@ public class AdrenalineBoost extends CustomFireBladeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new AdrenalineBoostAction());
+        ArrayList<AbstractCard> list = new ArrayList<>();
+        AbstractCard c;
+
+        Iterator var2 = srcCommonCardPool.group.iterator();
+        while(var2.hasNext()) {
+            c = (AbstractCard)var2.next();
+            if (c.hasTag(FireBladeCardTags.SMASH))
+                list.add(c);
+        }
+
+        AbstractCard card = list.get(cardRandomRng.random(list.size() - 1));
+        if (upgraded)
+            card.upgrade();
+        addToBot(new MakeTempCardInDrawPileAction(card, 1, true, false));
+
+        list.clear();
+
+        var2 = srcCommonCardPool.group.iterator();
+        while(var2.hasNext()) {
+            c = (AbstractCard)var2.next();
+            if (c.hasTag(FireBladeCardTags.ENDURANCE))
+                list.add(c);
+        }
+
+        card = list.get(cardRandomRng.random(list.size() - 1));
+        if (upgraded)
+            card.upgrade();
+        addToBot(new MakeTempCardInDrawPileAction(card, 1, true, false));
     }
 
     public AbstractCard makeCopy() { return new AdrenalineBoost(); }
@@ -35,7 +69,6 @@ public class AdrenalineBoost extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            isInnate = true;
             rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }

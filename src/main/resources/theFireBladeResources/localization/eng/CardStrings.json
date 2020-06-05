@@ -11,6 +11,10 @@
     "NAME": "Ember",
     "DESCRIPTION": "Soulbound. NL fireblademod:Flame. NL Apply !M! fireblademod:Burning."
   },
+  "FireBladeMod:Necronomisword": {
+    "NAME": "Necronomisword",
+    "DESCRIPTION": "There is no escape from this sword. NL Deal !D! damage !M! times."
+  },
   "FireBladeMod:StrikeFireBlade": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -35,9 +39,9 @@
     "NAME": "Combo Cleave",
     "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times."
   },
-  "FireBladeMod:UnstoppableThrust": {
-    "NAME": "Unstoppable Thrust",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy had Block, gain [E] and Draw !M! card."
+  "FireBladeMod:SmashingEndurance": {
+    "NAME": "Smashing Endurance",
+    "DESCRIPTION": "fireblademod:Smash, fireblademod:Endurance. NL Deal !D! damage. NL Gain !B! block. NL Exhaust."
   },
   "FireBladeMod:ComboSlashes": {
     "NAME": "Combo Slashes",
@@ -155,8 +159,8 @@
   },
   "FireBladeMod:AdrenalineBoost": {
     "NAME": "Adrenaline Boost",
-    "DESCRIPTION": "Put a fireblademod:Smash or fireblademod:Endurance card from your draw pile into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Put a fireblademod:Smash or fireblademod:Endurance card from your draw pile into your hand. NL Exhaust."
+    "DESCRIPTION": "Shuffle a random common fireblademod:Smash and fireblademod:Endurance card into your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Shuffle a random common Upgraded fireblademod:Smash and fireblademod:Endurance into your draw pile. NL Exhaust."
   },
   "FireBladeMod:Unbalance": {
     "NAME": "Unbalance",
@@ -182,10 +186,10 @@
     "NAME": "Third Degree",
     "DESCRIPTION": "Gain !M! fireblademod:Fervor."
   },
-  "FireBladeMod:SwordsmanForm": {
-    "NAME": "Swordsman Form",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Strength when you play an Attack.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Strength when you play an Attack."
+  "FireBladeMod:DeathBlade": {
+    "NAME": "Death Blade",
+    "DESCRIPTION": "Gain a *Necronomisword. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain a *Necronomisword+. NL Exhaust."
   },
   "FireBladeMod:SoulSword": {
     "NAME": "Soul Sword",
@@ -242,30 +246,30 @@
     "NAME": "After Burn",
     "DESCRIPTION": "Whenever you play a card, gain !M! fireblademod:Flame\u00a0Barrier."
   },
-  "FireBladeMod:CleavingHits": {
-    "NAME": "Cleaving Hits",
-    "DESCRIPTION": "Once per turn when an attack card is played it gains an extra hit which deals !D! damage ALL random enemies."
+  "FireBladeMod:RapidHits": {
+    "NAME": "Rapid Hits",
+    "DESCRIPTION": "Once per turn when an attack card is played it deals an extra hit. NL The hit deals !D! damage to ALL enemies."
   },
   "FireBladeMod:TargetWeakness": {
     "NAME": "Target Weakness",
     "DESCRIPTION": "Deal !D! damage. NL Existing Weak and Vulnerable on the enemy are increased by !M!.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Existing Weak, Vulnerable, and fireblademod:Spirit\u00a0Rend on the enemy are increased by !M!."
   },
-  "FireBladeMod:IntricateCombo": {
-    "NAME": "Intricate Combo",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Gain !B! Block !M! times."
+  "FireBladeMod:FerventSlash": {
+    "NAME": "Fervent Slash",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! fireblademod:Fervor. NL At the end of this turn, lose !M! fireblademod:Fervor."
   },
   "FireBladeMod:FinishingBarrage": {
     "NAME": "Finishing Barrage",
-    "DESCRIPTION": "fireblademod:Unnate. NL fireblademod:Smash. NL Deal !D! damage for each fireblademod:Smash in your exhaust pile. NL Exhaust."
+    "DESCRIPTION": "fireblademod:Unnate. NL Deal !D! damage for each fireblademod:Smash in your exhaust pile. NL Exhaust."
   },
   "FireBladeMod:Refreshment": {
     "NAME": "Refreshment",
-    "DESCRIPTION": "fireblademod:Unnate, Ethereal. NL fireblademod:Endurance. NL Heal !M! HP for each fireblademod:Endurance in your exhaust pile. NL Exhaust."
+    "DESCRIPTION": "fireblademod:Unnate. NL Ethereal. NL Heal !M! HP for each fireblademod:Endurance in your exhaust pile. NL Exhaust."
   },
-  "FireBladeMod:Indomitable": {
-    "NAME": "Indomitable",
-    "DESCRIPTION": "Gain !B! block. NL Gain !M! fireblademod:Healthy."
+  "FireBladeMod:Robust": {
+    "NAME": "Robust",
+    "DESCRIPTION": "Gain !B! block. NL Gain !M! fireblademod:Robust."
   },
   "FireBladeMod:BattleMage": {
     "NAME": "Battle Mage",
@@ -286,11 +290,12 @@
   },
   "FireBladeMod:BattleStamina": {
     "NAME": "Battle Stamina",
-    "DESCRIPTION": "Innate. NL Once per turn when a fireblademod:Endurance card Exhausts, draw !M! card and gain [E]."
+    "DESCRIPTION": "Innate. NL Whenever you Exhaust an fireblademod:Endurance card, Block is not removed for !M! turn."
   },
   "FireBladeMod:Blitzkreig": {
     "NAME": "Blitzkreig",
-    "DESCRIPTION": "Innate. NL Once per turn when a fireblademod:Smash card Exhausts, draw !M! card and gain [E]."
+    "DESCRIPTION": "Innate. NL Whenever you Exhaust a fireblademod:Smash card, gain [E].",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Exhaust a fireblademod:Smash card, draw !M! card and gain [E]."
   },
   "FireBladeMod:FlashBang": {
     "NAME": "FlashBang",
