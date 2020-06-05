@@ -4,7 +4,7 @@
     <groupId>fireblademod</groupId>
     <artifactId>FireBladeMod</artifactId>
     <name>Fireblade Mod</name>
-    <version>0.3.5</version>
+    <version>0.3.7</version>
     <description>Adds the FireBlade, a swordsman with prowess in fire magic.  His complexity and power level is around that of the original characters.</description>
 
     <properties>

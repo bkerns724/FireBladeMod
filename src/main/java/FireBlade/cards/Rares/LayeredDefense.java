@@ -23,7 +23,7 @@ public class LayeredDefense extends CustomFireBladeCard {
 
     public LayeredDefense() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        baseBlock = 4;
+        baseBlock = 5;
         magicNumber = baseMagicNumber = 3;
     }
 

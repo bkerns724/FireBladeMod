@@ -159,8 +159,8 @@
   },
   "FireBladeMod:AdrenalineBoost": {
     "NAME": "Adrenaline Boost",
-    "DESCRIPTION": "Shuffle a random common fireblademod:Smash and fireblademod:Endurance card into your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Shuffle a random common Upgraded fireblademod:Smash and fireblademod:Endurance into your draw pile. NL Exhaust."
+    "DESCRIPTION": "Shuffle a random fireblademod:Smash and a random fireblademod:Endurance card into your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Shuffle a random Upgraded fireblademod:Smash and a random Upgraded fireblademod:Endurance into your draw pile. NL Exhaust."
   },
   "FireBladeMod:Unbalance": {
     "NAME": "Unbalance",

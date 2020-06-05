@@ -28,7 +28,7 @@ public class FerventSlash extends CustomFireBladeCard {
 
     public FerventSlash() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        baseDamage = 8;
+        baseDamage = 9;
         magicNumber = baseMagicNumber = 2;
     }
 
@@ -42,7 +42,7 @@ public class FerventSlash extends CustomFireBladeCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(2);
+            upgradeDamage(3);
             upgradeMagicNumber(1);
         }
     }
