@@ -17,8 +17,8 @@ public class SearingSword extends CustomRelic {
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/SearingSword_outline.png";
     private static final RelicTier TIER = RelicTier.RARE;
     private static final LandingSound SOUND = LandingSound.CLINK;
-    private static final int strengthAmount = 1;
-    private static final int burningAmount = 1;
+    private static final int STRENGTH_AMOUNT = 1;
+    private static final int BURNING_AMOUNT = 1;
 
     public SearingSword() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
@@ -26,16 +26,16 @@ public class SearingSword extends CustomRelic {
 
     public void atBattleStart() {
         AbstractPlayer p = AbstractDungeon.player;
-        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, -strengthAmount), -strengthAmount));
+        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, -STRENGTH_AMOUNT), -STRENGTH_AMOUNT));
     }
 
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         AbstractPlayer p = AbstractDungeon.player;
         if (info.owner == p && info.type == DamageInfo.DamageType.NORMAL)
-            addToBot(new ApplyPowerAction(target, p, new BurningPower(target, p, burningAmount), burningAmount));
+            addToBot(new ApplyPowerAction(target, p, new BurningPower(target, p, BURNING_AMOUNT), BURNING_AMOUNT));
     }
 
-    public String getUpdatedDescription() { return DESCRIPTIONS[0] + burningAmount + DESCRIPTIONS[1] + strengthAmount + DESCRIPTIONS[2]; }
+    public String getUpdatedDescription() { return DESCRIPTIONS[0] + BURNING_AMOUNT + DESCRIPTIONS[1] + STRENGTH_AMOUNT + DESCRIPTIONS[2]; }
 
     public AbstractRelic makeCopy() { return new SearingSword(); }
 }

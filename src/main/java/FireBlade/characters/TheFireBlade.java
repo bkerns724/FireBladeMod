@@ -5,7 +5,6 @@ import FireBlade.cards.Basics.DefendFireBlade;
 import FireBlade.cards.Basics.FireBarrier;
 import FireBlade.cards.Basics.FlamingSword;
 import FireBlade.cards.Basics.StrikeFireBlade;
-import FireBlade.cards.Other.Necronomisword;
 import FireBlade.relics.DuelistLocket;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
@@ -14,7 +13,6 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.esotericsoftware.spine.AnimationState;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -24,6 +22,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
+import com.megacrit.cardcrawl.daily.mods.BlueCards;
+import com.megacrit.cardcrawl.daily.mods.Chimera;
+import com.megacrit.cardcrawl.daily.mods.Diverse;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
@@ -34,9 +35,7 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.screens.stats.CharStat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 
-import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import FireBlade.enums.*;
@@ -44,15 +43,15 @@ import FireBlade.FireBladeMod;
 
 public class TheFireBlade extends CustomPlayer {
 
-    public static final Logger logger = LogManager.getLogger(FireBladeMod.class.getName());
+    private static final Logger logger = FireBladeMod.logger;
 
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString("FireBladeMod:FireBladeCharacter");
-    public static final String[] NAMES = characterStrings.NAMES;
-    public static final String[] TEXT = characterStrings.TEXT;
+    private static final String[] NAMES = characterStrings.NAMES;
+    private static final String[] TEXT = characterStrings.TEXT;
 
     private CharStat charStat;
 
-    public static final String[] orbTextures = {
+    private static final String[] ORB_TEXTURES = {
             "theFireBladeResources/images/fireBladeCharacter/orb/layer1.png",
             "theFireBladeResources/images/fireBladeCharacter/orb/layer2.png",
             "theFireBladeResources/images/fireBladeCharacter/orb/layer3.png",
@@ -65,8 +64,30 @@ public class TheFireBlade extends CustomPlayer {
             "theFireBladeResources/images/fireBladeCharacter/orb/layer4d.png",
             "theFireBladeResources/images/fireBladeCharacter/orb/layer5d.png",};
 
+    private static final String[] VICTORY_PANELS = {
+            "theFireBladeResources/images/fireBladeCharacter/victory/panel_1.png",
+            "theFireBladeResources/images/fireBladeCharacter/victory/panel_2.png",
+            "theFireBladeResources/images/fireBladeCharacter/victory/panel_3.png"
+    };
+
+    private static final String VICTORY_BACKGROUND = "theFireBladeResources/images/fireBladeCharacter/victory/background.png";
+
+    private static final String ORB_VFX = "theFireBladeResources/images/fireBladeCharacter/orb/vfx.png";
+    private static final String SHOULDER_IMG_1 = "theFireBladeResources/images/fireBladeCharacter/shoulder.png";
+    private static final String SHOULDER_IMG_2 = "theFireBladeResources/images/fireBladeCharacter/shoulder2.png";
+    private static final String CORPSE_IMG = "theFireBladeResources/images/fireBladeCharacter/corpse.png";
+
+    private static final String SKELETON_ATLAS = "theFireBladeResources/images/fireBladeCharacter/idle/skeleton.atlas";
+    private static final String SKELETON_JSON = "theFireBladeResources/images/fireBladeCharacter/idle/skeleton.json";
+
+    private static final int MAX_HP = 70;
+    private static final int STARTING_GOLD = 99;
+    private static final int ORB_SLOTS = 0;
+    private static final int CARD_DRAW = 5;
+    private static final int ASC_MAX_HP_LOSS = MAX_HP/20;
+
     public TheFireBlade(String playerName) {
-        super(playerName, FireBladeEnum.THE_FIREBLADE, orbTextures, "theFireBladeResources/images/fireBladeCharacter/orb/vfx.png", null, (String) null);
+        super(playerName, FireBladeEnum.THE_FIREBLADE, ORB_TEXTURES, ORB_VFX, null, (String) null);
         logger.info("Start TheFireBlade constructor");
         charStat = new CharStat(this);
 
@@ -74,20 +95,20 @@ public class TheFireBlade extends CustomPlayer {
         dialogY = drawY + 220.0F * Settings.scale;
 
         logger.info("Start TheFireBlade initializeClass");
-        initializeClass(null, "theFireBladeResources/images/fireBladeCharacter/shoulder2.png",
-                "theFireBladeResources/images/fireBladeCharacter/shoulder.png",
-                "theFireBladeResources/images/fireBladeCharacter/corpse.png",
+        initializeClass(null, SHOULDER_IMG_2,
+                SHOULDER_IMG_1,
+                CORPSE_IMG,
                 getLoadout(), -4.0F, -16.0F, 220.0F, 290.0F, new EnergyManager(3));
 
         logger.info("Start TheFireBlade animation");
-        loadAnimation("theFireBladeResources/images/fireBladeCharacter/idle/skeleton.atlas", "theFireBladeResources/images/fireBladeCharacter/idle/skeleton.json", 1.0F);
+        loadAnimation(SKELETON_ATLAS, SKELETON_JSON, 1.0F);
         AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
         stateData.setMix("Hit", "Idle", 0.1F);
         e.setTimeScale(0.6F);
 
         logger.info("Start TheFireBlade modHelper");
-        if (ModHelper.enabledMods.size() > 0 && (ModHelper.isModEnabled("Diverse") || ModHelper.isModEnabled("Chimera") ||
-                ModHelper.isModEnabled("Blue Cards"))) {
+        if (ModHelper.enabledMods.size() > 0 && (ModHelper.isModEnabled(Diverse.ID) || ModHelper.isModEnabled(Chimera.ID) ||
+                ModHelper.isModEnabled(BlueCards.ID))) {
             masterMaxOrbs = 1;
         }
 
@@ -125,7 +146,7 @@ public class TheFireBlade extends CustomPlayer {
     }
 
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo(NAMES[0], TEXT[0], 70, 70, 0, 99, 5, this,
+        return new CharSelectInfo(NAMES[0], TEXT[0], MAX_HP, MAX_HP, ORB_SLOTS, STARTING_GOLD, CARD_DRAW, this,
                 getStartingRelics(), getStartingDeck(), false);
     }
 
@@ -150,7 +171,7 @@ public class TheFireBlade extends CustomPlayer {
     }
 
     public int getAscensionMaxHPLoss() {
-        return 5;
+        return ASC_MAX_HP_LOSS;
     }
 
     public BitmapFont getEnergyNumFont() {
@@ -182,7 +203,7 @@ public class TheFireBlade extends CustomPlayer {
     }
 
     public CharacterStrings getCharacterString() {
-        return this.characterStrings;
+        return characterStrings;
     }
 
     public String getLocalizedCharacterName() {
@@ -234,14 +255,14 @@ public class TheFireBlade extends CustomPlayer {
 
     public List<CutscenePanel> getCutscenePanels() {
         List<CutscenePanel> panels = new ArrayList<>();
-        panels.add(new CutscenePanel("theFireBladeResources/images/fireBladeCharacter/victory/panel_1.png"));
-        panels.add(new CutscenePanel("theFireBladeResources/images/fireBladeCharacter/victory/panel_2.png"));
-        panels.add(new CutscenePanel("theFireBladeResources/images/fireBladeCharacter/victory/panel_3.png", "FireBladeMod:PartyHorn"));
+        panels.add(new CutscenePanel(VICTORY_PANELS[0]));
+        panels.add(new CutscenePanel(VICTORY_PANELS[1]));
+        panels.add(new CutscenePanel(VICTORY_PANELS[2], FireBladeMod.PARTY_HORN_KEY));
         return panels;
     }
 
     public Texture getCutsceneBg() {
-        return ImageMaster.loadImage("theFireBladeResources/images/fireBladeCharacter/victory/background.png");
+        return ImageMaster.loadImage(VICTORY_BACKGROUND);
     }
 
     @Override

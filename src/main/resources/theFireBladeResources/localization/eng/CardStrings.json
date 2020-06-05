@@ -176,7 +176,7 @@
   },
   "FireBladeMod:FireBarrier": {
     "NAME": "Fire Barrier",
-    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, deal !M! damage back."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! fireblademod:Flame\u00a0Barrier."
   },
   "FireBladeMod:SmokeScreen": {
     "NAME": "Smoke Screen",

@@ -43,12 +43,12 @@ public class VitalityPower extends AbstractPower {
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.baseBlock > 0) {
-            this.flash();
-            this.addToBot(new RemoveSpecificPowerAction(owner, owner, POWER_ID));
+            flash();
+            addToBot(new RemoveSpecificPowerAction(owner, owner, POWER_ID));
         }
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 }

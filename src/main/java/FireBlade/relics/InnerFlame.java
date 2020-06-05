@@ -18,7 +18,7 @@ public class InnerFlame extends CardPreviewRelic {
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/InnerFlame_outline.png";
     private static final RelicTier TIER = RelicTier.BOSS;
     private static final LandingSound SOUND = LandingSound.FLAT;
-    private static final int emberCount = 5;
+    private static final int EMBER_COUNT = 5;
 
     public InnerFlame() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
@@ -33,13 +33,13 @@ public class InnerFlame extends CardPreviewRelic {
                 p.masterDeck.removeCard(c);
         }
 
-        for(int i = 0; i < emberCount; ++i) {
+        for(int i = 0; i < EMBER_COUNT; ++i) {
             AbstractCard c = new Ember();
             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
         }
     }
 
-    public String getUpdatedDescription() { return DESCRIPTIONS[0] + emberCount + DESCRIPTIONS[1]; }
+    public String getUpdatedDescription() { return DESCRIPTIONS[0] + EMBER_COUNT + DESCRIPTIONS[1]; }
 
     public AbstractRelic makeCopy() { return new InnerFlame(); }
 }

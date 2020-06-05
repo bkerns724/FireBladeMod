@@ -12,21 +12,10 @@ import java.util.Properties;
 
 public class FireBladeSettings
 {
-    private static Properties DEFAULT_SETTINGS = new Properties();
-    private static final String MOD_SETTINGS_FILE = "FireBlade_config";
-    private static SpireConfig config;
-
-    public static void initialize() {
-        try {
-            config = new SpireConfig("The FireBlade", MOD_SETTINGS_FILE, DEFAULT_SETTINGS);
-            config.load();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+    private static final String UI_ID = "FireBladeMod:ModSettingsPanel";
 
     public static ModPanel createSettingsPanel() {
-        String[] ModSettingsText = (CardCrawlGame.languagePack.getUIString("FireBladeMod:ModSettingsPanel").TEXT);
+        String[] ModSettingsText = (CardCrawlGame.languagePack.getUIString(UI_ID).TEXT);
 
         ModPanel settingsPanel = new ModPanel();
 

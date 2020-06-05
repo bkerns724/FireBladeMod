@@ -22,6 +22,7 @@ public class NapalmFlask extends CustomPotion {
     public static final AbstractPotion.PotionRarity RARITY = PotionRarity.COMMON;
     public static final AbstractPotion.PotionSize SIZE = PotionSize.M;
     public static final AbstractPotion.PotionColor COLOR = PotionColor.FIRE;
+    private static final String KEYWORD_FOR_TIP = "fireblademod:Burning";
 
     public NapalmFlask() {
         super(NAME, POTION_ID, RARITY, SIZE, COLOR);
@@ -31,7 +32,7 @@ public class NapalmFlask extends CustomPotion {
         targetRequired = true;
         tips.clear();
         tips.add(new PowerTip(name, description));
-        tips.add(new PowerTip(BaseMod.getKeywordTitle("fireblademod:Burning"), BaseMod.getKeywordDescription("fireblademod:Burning")));
+        tips.add(new PowerTip(BaseMod.getKeywordTitle(KEYWORD_FOR_TIP), BaseMod.getKeywordDescription(KEYWORD_FOR_TIP)));
         labOutlineColor = FireBladeMod.FIREBLADE_EYE_COLOR;
     }
 

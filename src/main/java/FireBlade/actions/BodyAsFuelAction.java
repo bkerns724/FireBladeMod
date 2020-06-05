@@ -1,7 +1,5 @@
 package FireBlade.actions;
 
-import FireBlade.cards.FireBladeCardTags;
-import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
@@ -31,7 +29,6 @@ public class BodyAsFuelAction extends AbstractGameAction {
     }
 
     public void update() {
-
         if (duration == startDuration) {
             CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
 
@@ -88,12 +85,12 @@ public class BodyAsFuelAction extends AbstractGameAction {
             addToTop(new LoseHPAction(player, player, EnergyPanel.totalCount*hpCost));
         else if (card.cost*hpCost > 0)
             addToTop(new LoseHPAction(player, player, card.cost*hpCost));
-        this.addToTop(new NewQueueCardAction(card, true, false, true));
-        this.addToTop(new UnlimboAction(card));
+        addToTop(new NewQueueCardAction(card, true, false, true));
+        addToTop(new UnlimboAction(card));
         if (!Settings.FAST_MODE) {
-            this.addToTop(new WaitAction(Settings.ACTION_DUR_MED));
+            addToTop(new WaitAction(Settings.ACTION_DUR_MED));
         } else {
-            this.addToTop(new WaitAction(Settings.ACTION_DUR_FASTER));
+            addToTop(new WaitAction(Settings.ACTION_DUR_FASTER));
         }
     }
 

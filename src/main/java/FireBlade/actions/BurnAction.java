@@ -29,7 +29,7 @@ public class BurnAction extends AbstractGameAction {
 
     public void update() {
         if (target == null || target.isDeadOrEscaped()) {
-            this.isDone = true;
+            isDone = true;
             return;
         }
 
@@ -43,7 +43,7 @@ public class BurnAction extends AbstractGameAction {
             addToTop(new ApplyPowerAction(target, source, new SpiritRendPower(target, pyroAmount), pyroAmount));
         }
 
-        this.isDone = true;
+        isDone = true;
     }
 
     public static int GetEstimate(AbstractCreature source, int realMagicNumber, int hell) {

@@ -16,15 +16,14 @@ Things to be done
 		4 Self-damage
 
 	Make preview videos and pictures
-	Polish code: Remove .this, remove hardcoded everything
-	Put super funcs back in overridden functions even if super is empty (cross mod)
-	.equals instead of == for strings
-	Switch to fetch actions
 	Create upload for mts-bot.
 
 DEBUG
+	Consistency between Fire Barrier and After Burn
 
 COMMIT
+	Consistency between Fire Barrier and After Burn
+	Code cleanup
 
 
 POWER CONCERNS

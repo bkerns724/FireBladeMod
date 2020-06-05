@@ -18,7 +18,7 @@ public class FirePoi extends CustomRelic {
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/FirePoi_outline.png";
     private static final RelicTier TIER = RelicTier.UNCOMMON;
     private static final LandingSound SOUND = LandingSound.FLAT;
-    private static final int fireThorns = 4;
+    private static final int FIRE_THORNS = 4;
 
     public FirePoi() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
@@ -32,10 +32,10 @@ public class FirePoi extends CustomRelic {
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 
         AbstractPlayer p = AbstractDungeon.player;
-        addToBot(new ApplyPowerAction(p, p, new FlameBarrierPower(p, fireThorns), fireThorns));
+        addToBot(new ApplyPowerAction(p, p, new FlameBarrierPower(p, FIRE_THORNS), FIRE_THORNS));
     }
 
-    public String getUpdatedDescription() { return this.DESCRIPTIONS[0] + fireThorns + this.DESCRIPTIONS[1]; }
+    public String getUpdatedDescription() { return DESCRIPTIONS[0] + FIRE_THORNS + DESCRIPTIONS[1]; }
 
     public AbstractRelic makeCopy() { return new FirePoi(); }
 }

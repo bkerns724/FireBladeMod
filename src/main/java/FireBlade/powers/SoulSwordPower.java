@@ -53,7 +53,7 @@ public class SoulSwordPower extends TwoAmountPower {
             }
         }
 
-        this.updateDescription();
+        updateDescription();
     }
 
     public void updateDescription() {

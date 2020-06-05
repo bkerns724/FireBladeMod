@@ -1,6 +1,5 @@
 package FireBlade.powers;
 
-import basemod.BaseMod;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -22,15 +21,15 @@ public class AbsorbEnergyPower extends AbstractPower {
     private boolean triggeredThisTurn = false;
 
     public AbsorbEnergyPower(AbstractCreature owner, int amount) {
-        this.ID = "FireBladeMod:AbsorbEnergyPower";
+        ID = "FireBladeMod:AbsorbEnergyPower";
         this.owner = owner;
 
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/AbsorbEnergy32.png"), 0 ,0, 32, 32);
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/AbsorbEnergy84.png"), 0, 0, 84, 84);
+        region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/AbsorbEnergy32.png"), 0 ,0, 32, 32);
+        region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/AbsorbEnergy84.png"), 0, 0, 84, 84);
 
-        this.type = POWER_TYPE;
+        type = POWER_TYPE;
         this.amount = amount;
-        this.name = (CardCrawlGame.languagePack.getPowerStrings(this.ID)).NAME;
+        name = (CardCrawlGame.languagePack.getPowerStrings(ID)).NAME;
 
         updateDescription();
     }
@@ -53,6 +52,6 @@ public class AbsorbEnergyPower extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 }

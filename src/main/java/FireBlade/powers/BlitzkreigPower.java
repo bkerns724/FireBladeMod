@@ -36,7 +36,7 @@ public class BlitzkreigPower extends TwoAmountPower {
 
     public void onExhaust(AbstractCard card) {
         if(card.hasTag(FireBladeCardTags.SMASH)) {
-            this.flash();
+            flash();
             addToTop(new GainEnergyAction(amount));
             addToTop(new DrawCardAction(amount2));
         }
