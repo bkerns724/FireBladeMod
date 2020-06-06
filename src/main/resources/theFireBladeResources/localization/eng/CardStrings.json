@@ -13,7 +13,7 @@
   },
   "FireBladeMod:Necronomisword": {
     "NAME": "Necronomisword",
-    "DESCRIPTION": "There is no escape from this sword. NL Deal !D! damage !M! times."
+    "DESCRIPTION": "This card never leaves your hand. NL Deal !D! damage !M! times."
   },
   "FireBladeMod:StrikeFireBlade": {
     "NAME": "Strike",
@@ -188,8 +188,8 @@
   },
   "FireBladeMod:DeathBlade": {
     "NAME": "Death Blade",
-    "DESCRIPTION": "Gain a *Necronomisword. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain a *Necronomisword+. NL Exhaust."
+    "DESCRIPTION": "Add a *Necronomisword into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Necronomisword+ into your hand. NL Exhaust."
   },
   "FireBladeMod:SoulSword": {
     "NAME": "Soul Sword",
@@ -235,8 +235,8 @@
   },
   "FireBladeMod:Improvise": {
     "NAME": "Improvise",
-    "DESCRIPTION": "Put !M! card from your discard pile into your hand.",
-    "UPGRADE_DESCRIPTION": "Put !M! cards from your discard pile into your hand."
+    "DESCRIPTION": "Put !M! card from your discard pile into your hand. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Put !M! cards from your discard pile into your hand. NL Exhaust"
   },
   "FireBladeMod:HellFire": {
     "NAME": "Hellfire",
@@ -269,7 +269,7 @@
   },
   "FireBladeMod:Robust": {
     "NAME": "Robust",
-    "DESCRIPTION": "Gain !B! block. NL Gain !M! fireblademod:Robust."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! fireblademod:Robust."
   },
   "FireBladeMod:BattleMage": {
     "NAME": "Battle Mage",

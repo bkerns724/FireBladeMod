@@ -31,8 +31,6 @@ public class Necronomisword extends CustomFireBladeCard {
     private static int COST = 2;
 
     private Predicate<AbstractCard> necroPredicate = (card) -> card == this;
-    private static final String TIP_TITLE = "No Escape";
-    private static final String TIP_DESCRIPTION = "There is no escape from this sword.";
 
     public Necronomisword() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
@@ -43,12 +41,6 @@ public class Necronomisword extends CustomFireBladeCard {
         purgeOnUse = true;
     }
 
-    @Override
-    public List<TooltipInfo> getCustomTooltips() {
-        TooltipInfo tip = new TooltipInfo(TIP_TITLE, TIP_DESCRIPTION);
-        return new ArrayList<TooltipInfo>() {{ add(tip); }};
-    }
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++)
             addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
@@ -57,20 +49,6 @@ public class Necronomisword extends CustomFireBladeCard {
         if (upgraded)
             tempCard.upgrade();
         addToBot(new MakeTempCardInHandAction(tempCard));
-    }
-
-    @Override
-    public boolean hasEnoughEnergy() {
-        if (AbstractDungeon.actionManager.turnHasEnded) {
-            cantUseMessage = TEXT[9];
-            return false;
-        } else {
-            if (EnergyPanel.totalCount < this.costForTurn && !freeToPlay() && !isInAutoplay) {
-                cantUseMessage = TEXT[11];
-                return false;
-            }
-            return true;
-        }
     }
 
     @Override

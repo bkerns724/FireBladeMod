@@ -1,29 +1,34 @@
 Things to be done
+	Create upload for mts-bot after large updates
 
 	Lightning Combo/Combo Slashes too similar
 		Combo Slashes -> Wild Slashes, 2 damage per enemy, random enemies, 3 swings
 	Change Fervent Slash to Vim
 	Starting relic/deck change
 		Flaming Sword -> Common
-		Fire Barrier -> block, Common
+		Fire Barrier -> Common
 		Robust -> +1 block, Uncommon
 		Scorching Strike -> 4 damage, 3 burning, 2 starter copies
 		Starting relic -> 1 block when play attack or cause burning
 	Sensory stone text
 		Anxiety
 			Promotion ceremony, other commanders perished, responsibility of dealing with Spire
-	New wildfire downside
-		4 Self-damage
+	Count dexterity/vitality and blocking cards, compare to base game characters
+	Count value cards and synergy cards, compare to base game
 
-	Make preview videos and pictures
-	Create upload for mts-bot.
+	Eruption Slash better hover update.
+	Arson causing 0 cost cards in compendium.
+	Buff embers?
+	Burning make two amount, display damage prediction without mouseover
 
 DEBUG
-	Consistency between Fire Barrier and After Burn
 
 COMMIT
-	Consistency between Fire Barrier and After Burn
-	Code cleanup
+	Robust has lower case block in card string.
+	Spirit rend 20% in keyword.
+	Necronomisword remove custom tooltips, no override enough energy, better card string
+	Death sword card string
+	Improvise fix
 
 
 POWER CONCERNS
@@ -46,6 +51,12 @@ OTHER CONCERNS
 	Venim
 		Relics that are archtype focused are :( if you don't have matching cards.
 		Cards that rely on having specific types: i.e. flash point, finishing barrage
+
+	Lobbien
+		too many block/dexterity cards.
+		some of the multi hit attacks are on the strong side too.
+		Too many value cards, too few synergy cards.
+		I think he only played once, so grain of salt.
 
 Starting Deck
     4 basic strike
