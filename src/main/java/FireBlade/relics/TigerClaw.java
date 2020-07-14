@@ -1,12 +1,14 @@
 package FireBlade.relics;
 
 import FireBlade.cards.Other.Swipe;
+import basemod.BaseMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 
@@ -19,9 +21,12 @@ public class TigerClaw extends CardPreviewRelic {
     private static final RelicTier TIER = RelicTier.BOSS;
     private static final LandingSound SOUND = LandingSound.CLINK;
     private static final int SWIPE_COUNT = 5;
+    private static final String KEYWORD_FOR_TIP = "soulbound";
 
     public TigerClaw() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
+        tips.add(new PowerTip(BaseMod.getKeywordTitle(KEYWORD_FOR_TIP), BaseMod.getKeywordDescription(KEYWORD_FOR_TIP)));
+        initializeTips();
         cardToPreview = new Swipe();
     }
 

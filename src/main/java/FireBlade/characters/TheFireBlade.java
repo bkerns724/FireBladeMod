@@ -2,8 +2,9 @@ package FireBlade.characters;
 
 import FireBlade.actions.DelayedRoarAction;
 import FireBlade.cards.Basics.DefendFireBlade;
-import FireBlade.cards.Basics.FireBarrier;
-import FireBlade.cards.Basics.FlamingSword;
+import FireBlade.cards.Basics.ScorchingStrike;
+import FireBlade.cards.Commons.FireBarrier;
+import FireBlade.cards.Commons.FlamingSword;
 import FireBlade.cards.Basics.StrikeFireBlade;
 import FireBlade.relics.DuelistLocket;
 import basemod.abstracts.CustomPlayer;
@@ -123,8 +124,8 @@ public class TheFireBlade extends CustomPlayer {
             retVal.add(StrikeFireBlade.ID);
         for (int i = 0; i < 4; i++)
             retVal.add(DefendFireBlade.ID);
-        retVal.add(FlamingSword.ID);
-        retVal.add(FireBarrier.ID);
+        retVal.add(ScorchingStrike.ID);
+        retVal.add(ScorchingStrike.ID);
 
         logger.info("End TheFireBlade getStartingDeck");
 
@@ -132,7 +133,7 @@ public class TheFireBlade extends CustomPlayer {
     }
 
     public AbstractCard getStartCardForEvent() {
-        return new FlamingSword();
+        return new ScorchingStrike();
     }
 
     public ArrayList<String> getStartingRelics() {

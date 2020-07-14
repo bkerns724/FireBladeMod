@@ -136,6 +136,13 @@
       " additional #yBlock."
     ]
   },
+  "FireBladeMod:VimPower": {
+    "NAME": "Vim",
+    "DESCRIPTIONS": [
+      "Your next #yFlame card applies #b",
+      " extra #yBurning."
+    ]
+  },
   "FireBladeMod:AntiMagicPower": {
     "NAME": "Anti Magic",
     "DESCRIPTIONS": [

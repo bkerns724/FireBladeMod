@@ -1,4 +1,4 @@
-package FireBlade.cards.Basics;
+package FireBlade.cards.Commons;
 
 import FireBlade.actions.BurnAction;
 import FireBlade.cards.CustomFireBladeCard;
@@ -23,7 +23,7 @@ public class FlamingSword extends CustomFireBladeCard
     public static final String IMG_PATH = "theFireBladeResources/images/cardImages/FlamingSword.png";
     private static final CardStrings cardStrings;
     private static final AbstractCard.CardType TYPE = AbstractCard.CardType.ATTACK;
-    private static final AbstractCard.CardRarity RARITY = CardRarity.BASIC;
+    private static final AbstractCard.CardRarity RARITY = CardRarity.COMMON;
     private static final AbstractCard.CardTarget TARGET = CardTarget.ENEMY;
 
     private static final int COST = 2;

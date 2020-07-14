@@ -93,17 +93,16 @@
     "NAME": "Duelist Locket",
     "FLAVOR": "The ceremonial amulet of a skilled combatant.",
     "DESCRIPTIONS": [
-      "At the start of each combat, apply #b",
-      " #yfireblademod:Anti-magic to each enemy."
+      "Whenever you play a #yFlame or Attack card, gain #b",
+      " #yBlock."
     ]
   },
   "FireBladeMod:BattleMasterLocket": {
     "NAME": "Battle Master Locket",
     "FLAVOR": "The ceremonial amulet of a peerless warrior.",
     "DESCRIPTIONS": [
-      "At the start of each combat, apply #b",
-      " #yfireblademod:Anti-magic to each enemy #b",
-      " times."
+      "Replaces [#F36B08]Duelist [#F36B08]Locket.  Whenever you play a #yFlame or Attack card, gain #b",
+      " #yBlock."
     ]
   }
 }
