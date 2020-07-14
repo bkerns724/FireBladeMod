@@ -30,12 +30,12 @@ public class EnergizedFireBladePower extends AbstractPower {
     }
 
     public void onEnergyRecharge() {
-        this.flash();
+        flash();
         AbstractDungeon.player.gainEnergy(amount);
-        this.addToBot(new RemoveSpecificPowerAction(owner, owner, ID));
+        addToBot(new RemoveSpecificPowerAction(owner, owner, ID));
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 }

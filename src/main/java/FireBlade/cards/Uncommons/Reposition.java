@@ -23,7 +23,7 @@ public class Reposition extends CustomFireBladeCard {
 
     public Reposition() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 4;
+        magicNumber = baseMagicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

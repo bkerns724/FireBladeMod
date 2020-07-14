@@ -22,7 +22,7 @@ public class BronzeKnuckles extends CustomRelic {
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/BronzeKnuckles_outline.png";
     private static final RelicTier TIER = RelicTier.COMMON;
     private static final LandingSound SOUND = LandingSound.CLINK;
-    private static final int strengthLoss = 2;
+    private static final int STRENGTH_LOSS = 2;
 
     public BronzeKnuckles() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
@@ -39,23 +39,23 @@ public class BronzeKnuckles extends CustomRelic {
         AbstractPlayer p = AbstractDungeon.player;
 
         if (!card.target.equals(AbstractCard.CardTarget.ALL_ENEMY)) {
-            addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, -strengthLoss), -strengthLoss, true, AbstractGameAction.AttackEffect.NONE));
+            addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, -STRENGTH_LOSS), -STRENGTH_LOSS, true, AbstractGameAction.AttackEffect.NONE));
             if (!m.hasPower("Artifact")) {
-                addToBot(new ApplyPowerAction(m, p, new GainStrengthPower(m, strengthLoss), strengthLoss, true, AbstractGameAction.AttackEffect.NONE));
+                addToBot(new ApplyPowerAction(m, p, new GainStrengthPower(m, STRENGTH_LOSS), STRENGTH_LOSS, true, AbstractGameAction.AttackEffect.NONE));
             }
         }
         else
         {
             for (AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
-                addToBot(new ApplyPowerAction(mo, p, new StrengthPower(mo, -strengthLoss), -strengthLoss, true, AbstractGameAction.AttackEffect.NONE));
+                addToBot(new ApplyPowerAction(mo, p, new StrengthPower(mo, -STRENGTH_LOSS), -STRENGTH_LOSS, true, AbstractGameAction.AttackEffect.NONE));
                 if (!mo.hasPower("Artifact")) {
-                    addToBot(new ApplyPowerAction(mo, p, new GainStrengthPower(mo, strengthLoss), strengthLoss, true, AbstractGameAction.AttackEffect.NONE));
+                    addToBot(new ApplyPowerAction(mo, p, new GainStrengthPower(mo, STRENGTH_LOSS), STRENGTH_LOSS, true, AbstractGameAction.AttackEffect.NONE));
                 }
             }
         }
     }
 
-    public String getUpdatedDescription() { return this.DESCRIPTIONS[0] + strengthLoss + this.DESCRIPTIONS[1]; }
+    public String getUpdatedDescription() { return DESCRIPTIONS[0] + STRENGTH_LOSS + DESCRIPTIONS[1]; }
 
     public AbstractRelic makeCopy() { return new BronzeKnuckles(); }
 }

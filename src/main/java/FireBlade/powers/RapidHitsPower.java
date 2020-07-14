@@ -26,17 +26,17 @@ public class RapidHitsPower extends AbstractPower implements OnPowersModifiedSub
     private boolean triggeredThisTurn;
 
     public RapidHitsPower(AbstractCreature owner, int amount) {
-        this.ID = "FireBladeMod:RapidHitsPower";
+        ID = "FireBladeMod:RapidHitsPower";
         this.owner = owner;
 
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/RapidHits32.png"), 0 ,0, 32, 32);
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/RapidHits84.png"), 0, 0, 84, 84);
+        region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/RapidHits32.png"), 0 ,0, 32, 32);
+        region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/RapidHits84.png"), 0, 0, 84, 84);
 
-        this.type = POWER_TYPE;
+        type = POWER_TYPE;
         this.amount = amount;
-        this.name = (CardCrawlGame.languagePack.getPowerStrings(this.ID)).NAME;
+        name = (CardCrawlGame.languagePack.getPowerStrings(ID)).NAME;
 
-        this.helperCard = new ComboHitsHelper();
+        helperCard = new ComboHitsHelper();
         triggeredThisTurn = false;
 
         BaseMod.subscribe(this);
@@ -58,7 +58,7 @@ public class RapidHitsPower extends AbstractPower implements OnPowersModifiedSub
 
         triggeredThisTurn = true;
         AbstractPlayer p = AbstractDungeon.player;
-        for (int i = 0; i < this.amount; i++) {
+        for (int i = 0; i < amount; i++) {
             addToBot(new ComboHitsAction(p, helperCard, card.hasTag(AbstractCard.CardTags.STRIKE)));
         }
     }
@@ -74,8 +74,8 @@ public class RapidHitsPower extends AbstractPower implements OnPowersModifiedSub
             colorString = "#r";
 
         if (amount == 1)
-            this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + colorString + helperCard.damage + DESCRIPTIONS[3];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + colorString + helperCard.damage + DESCRIPTIONS[3];
         else
-            this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2] + colorString + helperCard.damage + DESCRIPTIONS[3];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2] + colorString + helperCard.damage + DESCRIPTIONS[3];
     }
 }

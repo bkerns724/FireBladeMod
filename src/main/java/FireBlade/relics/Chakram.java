@@ -17,8 +17,8 @@ public class Chakram extends CustomRelic {
     private static final RelicTier TIER = RelicTier.UNCOMMON;
     private static final LandingSound SOUND = LandingSound.CLINK;
 
-    public static final int numAttacks = 3;
-    public static final int fervorAmount = 1;
+    public static final int NUM_ATTACKS = 3;
+    public static final int FERVOR_AMOUNT = 1;
 
     public Chakram() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
@@ -37,17 +37,17 @@ public class Chakram extends CustomRelic {
                 counter = 0;
                 flash();
                 addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new FervorPower(AbstractDungeon.player, fervorAmount), fervorAmount));
+                addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new FervorPower(AbstractDungeon.player, FERVOR_AMOUNT), FERVOR_AMOUNT));
             }
         }
     }
 
     public void onVictory() {
-        this.counter = -1;
+        counter = -1;
     }
 
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0] + numAttacks + DESCRIPTIONS[1] + fervorAmount + DESCRIPTIONS[2];
+        return DESCRIPTIONS[0] + NUM_ATTACKS + DESCRIPTIONS[1] + FERVOR_AMOUNT + DESCRIPTIONS[2];
     }
 
     public AbstractRelic makeCopy() { return new Chakram(); }

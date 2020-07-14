@@ -53,7 +53,7 @@ public abstract class CardPreviewRelic extends CustomRelic {
             cardToPreview.current_x = Settings.WIDTH - 380 * Settings.scale;
             cardToPreview.current_y = Settings.HEIGHT * 0.65F - cardToPreview.hb.width/2.0F;
         }
-        else if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic(this.relicId))
+        else if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic(relicId))
         {
             if (InputHelper.mX >= 1400.0F * Settings.scale)
             {

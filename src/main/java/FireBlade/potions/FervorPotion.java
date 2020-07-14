@@ -21,6 +21,7 @@ public class FervorPotion extends CustomPotion {
     public static final PotionRarity RARITY = PotionRarity.UNCOMMON;
     public static final PotionSize SIZE = PotionSize.S;
     public static final PotionColor COLOR = PotionColor.POWER;
+    private static final String KEYWORD_FOR_TIP = "fireblademod:Fervor";
 
     public FervorPotion() {
         super(NAME, POTION_ID, RARITY, SIZE, COLOR);
@@ -30,7 +31,7 @@ public class FervorPotion extends CustomPotion {
         targetRequired = false;
         tips.clear();
         tips.add(new PowerTip(name, description));
-        tips.add(new PowerTip(BaseMod.getKeywordTitle("fireblademod:Fervor"), BaseMod.getKeywordDescription("fireblademod:Fervor")));
+        tips.add(new PowerTip(BaseMod.getKeywordTitle(KEYWORD_FOR_TIP), BaseMod.getKeywordDescription(KEYWORD_FOR_TIP)));
         labOutlineColor = FireBladeMod.FIREBLADE_EYE_COLOR;
     }
 

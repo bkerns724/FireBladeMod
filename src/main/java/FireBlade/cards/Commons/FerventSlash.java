@@ -2,8 +2,7 @@ package FireBlade.cards.Commons;
 
 import FireBlade.enums.FireBladeEnum;
 import FireBlade.cards.CustomFireBladeCard;
-import FireBlade.powers.FervorPower;
-import FireBlade.powers.LoseFervorPower;
+import FireBlade.powers.VimPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -28,21 +27,20 @@ public class FerventSlash extends CustomFireBladeCard {
 
     public FerventSlash() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        baseDamage = 8;
+        baseDamage = 9;
         magicNumber = baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        addToBot(new ApplyPowerAction(p, p, new FervorPower(p, magicNumber), magicNumber));
-        addToBot(new ApplyPowerAction(p, p, new LoseFervorPower(p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new VimPower(p, magicNumber), magicNumber));
     }
     public AbstractCard makeCopy() { return new FerventSlash(); }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(2);
+            upgradeDamage(3);
             upgradeMagicNumber(1);
         }
     }

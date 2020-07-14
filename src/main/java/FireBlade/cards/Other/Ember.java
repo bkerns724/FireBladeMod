@@ -24,7 +24,7 @@ public class Ember extends CustomFireBladeCard {
 
     public Ember() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 3;
         tags.add(FireBladeCardTags.FLAME);
         SoulboundField.soulbound.set(this, true);
     }

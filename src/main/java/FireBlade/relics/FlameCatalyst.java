@@ -18,7 +18,7 @@ public class FlameCatalyst extends CustomRelic {
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/FlameCatalyst_outline.png";
     private static final RelicTier TIER = RelicTier.SHOP;
     private static final LandingSound SOUND = LandingSound.CLINK;
-    private static final int fervorAmount = 3;
+    private static final int FERVOR_AMOUNT = 3;
 
     public FlameCatalyst() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
@@ -26,7 +26,7 @@ public class FlameCatalyst extends CustomRelic {
 
     public void atBattleStart() {
         AbstractPlayer p = AbstractDungeon.player;
-        addToBot(new ApplyPowerAction(p, p, new FervorPower(p, fervorAmount), fervorAmount));
+        addToBot(new ApplyPowerAction(p, p, new FervorPower(p, FERVOR_AMOUNT), FERVOR_AMOUNT));
     }
 
     public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
@@ -38,7 +38,7 @@ public class FlameCatalyst extends CustomRelic {
         useCardAction.exhaustCard = true;
     }
 
-    public String getUpdatedDescription() { return DESCRIPTIONS[0] + fervorAmount + DESCRIPTIONS[1]; }
+    public String getUpdatedDescription() { return DESCRIPTIONS[0] + FERVOR_AMOUNT + DESCRIPTIONS[1]; }
 
     public AbstractRelic makeCopy() { return new FlameCatalyst(); }
 }

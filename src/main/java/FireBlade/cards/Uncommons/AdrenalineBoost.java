@@ -40,8 +40,25 @@ public class AdrenalineBoost extends CustomFireBladeCard {
         Iterator var2 = srcCommonCardPool.group.iterator();
         while(var2.hasNext()) {
             c = (AbstractCard)var2.next();
-            if (c.hasTag(FireBladeCardTags.SMASH))
+            if (c.hasTag(FireBladeCardTags.SMASH)) {
                 list.add(c);
+            }
+        }
+
+        var2 = srcUncommonCardPool.group.iterator();
+        while(var2.hasNext()) {
+            c = (AbstractCard)var2.next();
+            if (c.hasTag(FireBladeCardTags.SMASH)) {
+                list.add(c);
+            }
+        }
+
+        var2 = srcRareCardPool.group.iterator();
+        while(var2.hasNext()) {
+            c = (AbstractCard)var2.next();
+            if (c.hasTag(FireBladeCardTags.SMASH)) {
+                list.add(c);
+            }
         }
 
         AbstractCard card = list.get(cardRandomRng.random(list.size() - 1));
@@ -54,8 +71,25 @@ public class AdrenalineBoost extends CustomFireBladeCard {
         var2 = srcCommonCardPool.group.iterator();
         while(var2.hasNext()) {
             c = (AbstractCard)var2.next();
-            if (c.hasTag(FireBladeCardTags.ENDURANCE))
+            if (c.hasTag(FireBladeCardTags.ENDURANCE)) {
                 list.add(c);
+            }
+        }
+
+        var2 = srcUncommonCardPool.group.iterator();
+        while(var2.hasNext()) {
+            c = (AbstractCard)var2.next();
+            if (c.hasTag(FireBladeCardTags.ENDURANCE)) {
+                list.add(c);
+            }
+        }
+
+        var2 = srcRareCardPool.group.iterator();
+        while(var2.hasNext()) {
+            c = (AbstractCard)var2.next();
+            if (c.hasTag(FireBladeCardTags.ENDURANCE)) {
+                list.add(c);
+            }
         }
 
         card = list.get(cardRandomRng.random(list.size() - 1));

@@ -40,7 +40,7 @@ public class BattleStaminaPower extends AbstractPower {
 
     public void onExhaust(AbstractCard card) {
         if(card.hasTag(FireBladeCardTags.ENDURANCE)) {
-            this.flash();
+            flash();
             AbstractPlayer p = AbstractDungeon.player;
             addToTop(new ApplyPowerAction(p, p, new BlurPower(p, amount), amount));
         }

@@ -1,36 +1,39 @@
 Things to be done
-	When otherwise finished, create upload for mts-bot.
-	Polish code: Remove .this, remove hardcoded everything
-	Put super funcs back in overridden functions even if super is empty (cross mod)
-	.equals instead of == for strings
-	Switch to fetch actions
-
-	Consider renaming smashing endurance
+	Create upload for mts-bot after large updates
 
 DEBUG
-	Adrenaline boost card string.  Draw pile, not deck
-	Tiny nerf overcharge
 
 COMMIT
-	Adrenaline boost card string.  Draw pile, not deck
-	Tiny nerf overcharge
-	Necronomisword buff
-	Some Necronomisword code moved from character to card
+	Soulbound tip on Tiger Claw, Inner Flame
+
+	Starting relic -> 1 block when play attack or cause burning
+		upgrade to 3 block
+		upgrade has orange replace text
+
+	Eruption Slash hover update
+
+	Arson no longer causes 0 cost cards in compendium
+
+	Lightning Combo/Combo Slashes too similar
+		Combo Slashes -> Wild Slashes, 2 damage per enemy, random enemies, 3 swings
+	Change Fervent Slash to Vim
+	Card changes
+		Flaming Sword -> Common
+		Fire Barrier -> Common
+		Robust -> +1 block, Uncommon
+		Scorching Strike -> 4 damage, 3 burning, 2 starter copies
+	Ember buff
 
 
 POWER CONCERNS
 	Large uncertainty
-		Spirit Rend bonus amount
-		Swordsman Form
-		Pyromancer Form
-		Refreshment
-		Overcharge
 
 	Strong
 		Speed! (Synergy with this deck is greater than Footwork/Silent)
 		Learn Tells?
 
 	Weak
+		Fervent Slash
 
 OTHER CONCERNS
 	3 innate/upgrade to innate cards
@@ -42,6 +45,18 @@ OTHER CONCERNS
 	Venim
 		Relics that are archtype focused are :( if you don't have matching cards.
 		Cards that rely on having specific types: i.e. flash point, finishing barrage
+
+	Lobbien
+		too many block/dexterity cards.
+		some of the multi hit attacks are on the strong side too.
+		Too many value cards, too few synergy cards.
+		I think he only played once, so grain of salt.
+
+	Charlie
+		Description of antimagic is missing a space before first '('.
+		Starting relic feels a little weak. It's probably still better than trading though. On the other hand, it's thematically quite wierd, so maybe consider a change?
+		Tiger claw sounds real real bad.
+		No big non-exhaust block cards? Adding one might inprove diversity of blocking options.
 
 Starting Deck
     4 basic strike
@@ -55,9 +70,9 @@ Starting Deck
 
 Starting Relic
     Duelist Locket
-	Apply 4 anti-magic to all enemies.
+	1 block if play flame or attack card
     Blademaster Locket
-	twice
+	3 block
 
     Powers to remember
 	Robust
@@ -126,7 +141,7 @@ Commons
 18	Shoot Flames, 1, skill
 	    4 burning
 	    6 burning
-19	Indomitable, 1, skill
+19	Robust, 1, skill
 	    Gain 6 block, 2 healthy
 	    Gain 9 block
 
@@ -311,7 +326,7 @@ Other
 	Soulbound.  Deal 6 damage to all enemies.
 	8 damage.
 	Ember, 0, skill
-	Soulbound.  Flame.  Apply 2 burning.
+	Soulbound.  Flame.  Apply 3 burning.
 	3 burning.
 	Necronomisword, 2, attack
 	There is no escaping this sword.  Deal 9x3 damage to an enemy.
@@ -326,12 +341,8 @@ Relics
 		Smashes shackle two strength
 	Chakram		Uncommon
 		Every time you play 3 attacks in one turn, gain 1 fervor
-	Fire Poi	Uncommon
+5	Fire Poi	Uncommon
 		When you play a flame card, gain 4 flame barrier
-	Red Star	Uncommon	Shared
-		Gain 5 max hp when you defeat an elite
-	Golden Star	Uncommon	Shared
-		Gain 75 gold when you defeat an elite
 	Gym Towel	Rare
 		Exhausting a smash grants one str.
 	Leg Brace	Rare
@@ -340,7 +351,7 @@ Relics
 		-1 strength.  Attacks cause 1 burning.
 	Inner Flame	Boss
 		Remove all strikes.  Gain 5 Embers.  (0 cost 2 burning, soulbound)
-	Tiger Claw	Boss
+10	Tiger Claw	Boss
 		Remove all strikes.  Gain 5 Swipes.  (0 cost 6 damage all, soulbound)
 	Flame Catalyst	Shop
 		Start with 3 fervor, but flame cards exhaust.

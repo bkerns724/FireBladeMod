@@ -13,7 +13,7 @@
   },
   "FireBladeMod:Necronomisword": {
     "NAME": "Necronomisword",
-    "DESCRIPTION": "There is no escape from this sword. NL Deal !D! damage !M! times."
+    "DESCRIPTION": "This card never leaves your hand. NL Deal !D! damage !M! times."
   },
   "FireBladeMod:StrikeFireBlade": {
     "NAME": "Strike",
@@ -43,9 +43,9 @@
     "NAME": "Smashing Endurance",
     "DESCRIPTION": "fireblademod:Smash, fireblademod:Endurance. NL Deal !D! damage. NL Gain !B! block. NL Exhaust."
   },
-  "FireBladeMod:ComboSlashes": {
-    "NAME": "Combo Slashes",
-    "DESCRIPTION": "Deal !D! damage !M! times."
+  "FireBladeMod:WildSlashes": {
+    "NAME": "Wild Slashes",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times.  Base damage is twice the number of enemies."
   },
   "FireBladeMod:SoulStrike": {
     "NAME": "Soul Strike",
@@ -159,8 +159,8 @@
   },
   "FireBladeMod:AdrenalineBoost": {
     "NAME": "Adrenaline Boost",
-    "DESCRIPTION": "Shuffle a random common fireblademod:Smash and fireblademod:Endurance card into your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Shuffle a random common Upgraded fireblademod:Smash and fireblademod:Endurance into your draw pile. NL Exhaust."
+    "DESCRIPTION": "Shuffle a random fireblademod:Smash and a random fireblademod:Endurance card into your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Shuffle a random Upgraded fireblademod:Smash and a random Upgraded fireblademod:Endurance into your draw pile. NL Exhaust."
   },
   "FireBladeMod:Unbalance": {
     "NAME": "Unbalance",
@@ -176,7 +176,7 @@
   },
   "FireBladeMod:FireBarrier": {
     "NAME": "Fire Barrier",
-    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, deal !M! damage back."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! fireblademod:Flame\u00a0Barrier."
   },
   "FireBladeMod:SmokeScreen": {
     "NAME": "Smoke Screen",
@@ -188,8 +188,8 @@
   },
   "FireBladeMod:DeathBlade": {
     "NAME": "Death Blade",
-    "DESCRIPTION": "Gain a *Necronomisword. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain a *Necronomisword+. NL Exhaust."
+    "DESCRIPTION": "Add a *Necronomisword into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a *Necronomisword+ into your hand. NL Exhaust."
   },
   "FireBladeMod:SoulSword": {
     "NAME": "Soul Sword",
@@ -235,8 +235,8 @@
   },
   "FireBladeMod:Improvise": {
     "NAME": "Improvise",
-    "DESCRIPTION": "Put !M! card from your discard pile into your hand.",
-    "UPGRADE_DESCRIPTION": "Put !M! cards from your discard pile into your hand."
+    "DESCRIPTION": "Put !M! card from your discard pile into your hand. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Put !M! cards from your discard pile into your hand. NL Exhaust"
   },
   "FireBladeMod:HellFire": {
     "NAME": "Hellfire",
@@ -257,7 +257,7 @@
   },
   "FireBladeMod:FerventSlash": {
     "NAME": "Fervent Slash",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! fireblademod:Fervor. NL At the end of this turn, lose !M! fireblademod:Fervor."
+    "DESCRIPTION": "Deal !D! damage. NL Your next fireblademod:Flame card applies !M! extra fireblademod:Burning."
   },
   "FireBladeMod:FinishingBarrage": {
     "NAME": "Finishing Barrage",
@@ -269,7 +269,7 @@
   },
   "FireBladeMod:Robust": {
     "NAME": "Robust",
-    "DESCRIPTION": "Gain !B! block. NL Gain !M! fireblademod:Robust."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! fireblademod:Robust."
   },
   "FireBladeMod:BattleMage": {
     "NAME": "Battle Mage",

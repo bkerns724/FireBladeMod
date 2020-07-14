@@ -1,4 +1,4 @@
-package FireBlade.cards.Commons;
+package FireBlade.cards.Basics;
 
 import FireBlade.actions.BurnAction;
 import FireBlade.cards.FireBladeCardHelper;
@@ -23,14 +23,14 @@ public class ScorchingStrike extends CustomFireBladeCard {
     public static final String IMG_PATH = "theFireBladeResources/images/cardImages/ScorchingStrike.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 1;
 
     public ScorchingStrike() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        baseDamage = 6;
-        baseMagicNumber = magicNumber = 2;
+        baseDamage = 4;
+        baseMagicNumber = magicNumber = 3;
         tags.add(AbstractCard.CardTags.STRIKE);
         tags.add(FireBladeCardTags.FLAME);
     }

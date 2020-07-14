@@ -24,7 +24,8 @@ public class Improvise extends CustomFireBladeCard {
 
     public Improvise() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 2;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -19,15 +19,15 @@ public class RollWithTheBlowPower extends AbstractPower {
     private boolean triggeredThisTurn = false;
 
     public RollWithTheBlowPower(AbstractCreature owner, int amount) {
-        this.ID = "FireBladeMod:RollWithTheBlowPower";
+        ID = "FireBladeMod:RollWithTheBlowPower";
         this.owner = owner;
 
-        this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/RollWithTheBlow32.png"), 0 ,0, 32, 32);
-        this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/RollWithTheBlow84.png"), 0, 0, 84, 84);
+        region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/RollWithTheBlow32.png"), 0 ,0, 32, 32);
+        region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage("theFireBladeResources/images/powers/RollWithTheBlow84.png"), 0, 0, 84, 84);
 
-        this.type = POWER_TYPE;
+        type = POWER_TYPE;
         this.amount = amount;
-        this.name = (CardCrawlGame.languagePack.getPowerStrings(this.ID)).NAME;
+        name = (CardCrawlGame.languagePack.getPowerStrings(ID)).NAME;
 
         updateDescription();
     }
@@ -50,8 +50,8 @@ public class RollWithTheBlowPower extends AbstractPower {
 
     public void updateDescription() {
         if (amount == 1)
-            this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         else
-            this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
     }
 }

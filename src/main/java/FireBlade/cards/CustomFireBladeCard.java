@@ -16,16 +16,16 @@ public abstract class CustomFireBladeCard extends CustomCard {
     public void displayUpgrades() {
         super.displayUpgrades();
 
-        if (this.upgradedMagicNumberTwo) {
-            this.magicNumberTwo = this.baseMagicNumberTwo;
-            this.isMagicNumberTwoModified = true;
+        if (upgradedMagicNumberTwo) {
+            magicNumberTwo = baseMagicNumberTwo;
+            isMagicNumberTwoModified = true;
         }
     }
 
     public void upgradeMagicNumberTwo(int amount) {
-        this.baseMagicNumberTwo += amount;
-        this.magicNumberTwo = this.baseMagicNumberTwo;
-        this.upgradedMagicNumberTwo = true;
+        baseMagicNumberTwo += amount;
+        magicNumberTwo = baseMagicNumberTwo;
+        upgradedMagicNumberTwo = true;
     }
 
     public void increaseMagicNumber(int increase) {upgradeMagicNumber(increase);}

@@ -37,39 +37,70 @@ public class FireBladeMod implements
         PostInitializeSubscriber {
 
     public static final Logger logger = LogManager.getLogger(FireBladeMod.class.getName());
-    private static final String modID = "FireBladeMod";
+    private static final String MOD_ID = "FireBladeMod";
 
     public static final Color FIREBLADE_EYE_COLOR = CardHelper.getColor(246.0F, 154.0F, 45.0F);
 
-    private static TheFireBlade theFireBladeCharacter;
+    private static final String RELIC_STRINGS = "theFireBladeResources/localization/eng/RelicStrings.json";
+    private static final String CARD_STRINGS = "theFireBladeResources/localization/eng/CardStrings.json";
+    private static final String CHARACTER_STRINGS = "theFireBladeResources/localization/eng/CharacterStrings.json";
+    private static final String POWER_STRINGS = "theFireBladeResources/localization/eng/PowerStrings.json";
+    private static final String POTION_STRINGS = "theFireBladeResources/localization/eng/PotionStrings.json";
+    private static final String UI_STRINGS = "theFireBladeResources/localization/eng/UiStrings.json";
+    private static final String TUTORIAL_STRINGS = "theFireBladeResources/localization/eng/TutorialStrings.json";
+    private static final String KEYWORD_STRINGS = "theFireBladeResources/localization/eng/KeywordStrings.json";
 
     // Character assets
-    public static final String THE_FIREBLADE_BUTTON = "theFireBladeResources/images/charSelect/FireBladeCharacterButton.png";
-    public static final String THE_FIREBLADE_PORTRAIT = "theFireBladeResources/images/charSelect/FireBladeCharacterPortrait.png";
+    private static final String THE_FIREBLADE_BUTTON = "theFireBladeResources/images/charSelect/FireBladeCharacterButton.png";
+    private static final String THE_FIREBLADE_PORTRAIT = "theFireBladeResources/images/charSelect/FireBladeCharacterPortrait.png";
+
+    public static final String PARTY_HORN_KEY = "FireBladeMod:PartyHorn";
+    private static final String PARTY_HORN_OGG = "theFireBladeResources/audio/PartyHorn.ogg";
+    public static final String ROAR_KEY = "FireBladeMod:CounterRawr";
+    private static final String ROAR_OGG = "theFireBladeResources/audio/FireBladeRawr.ogg";
+
+    private static final String ATTACK_BACKGROUND = "theFireBladeResources/images/cardBackgrounds512/bg_attack_orange.png";
+    private static final String SKILL_BACKGROUND = "theFireBladeResources/images/cardBackgrounds512/bg_skill_orange.png";
+    private static final String POWER_BACKGROUND = "theFireBladeResources/images/cardBackgrounds512/bg_power_orange.png";
+    private static final String ATTACK_BACKGROUND_PORTRAIT = "theFireBladeResources/images/cardBackgrounds1024/bg_attack_orange.png";
+    private static final String SKILL_BACKGROUND_PORTRAIT = "theFireBladeResources/images/cardBackgrounds1024/bg_skill_orange.png";
+    private static final String POWER_BACKGROUND_PORTRAIT = "theFireBladeResources/images/cardBackgrounds1024/bg_power_orange.png";
+    private static final String ORB_IMG = "theFireBladeResources/images/cardBackgrounds512/card_orange_orb.png";
+    private static final String ORB_PORTRAIT = "theFireBladeResources/images/cardBackgrounds1024/card_orange_orb.png";
+    private static final String ORB_SMALL_IMG = "theFireBladeResources/images/cardBackgrounds512/card_small_orb.png";
+
+    private static final String BADGE_IMG = "theFireBladeResources/images/Badge.png";
+    private static final String[] REGISTRATION_STRINGS = {
+            "The FireBlade", "Bryan", "This mod adds a new character, the FireBlade."
+    };
+
+    private static final String[] CARD_PACKAGES = {
+        "FireBlade.cards.Basics", "FireBlade.cards.Commons", "FireBlade.cards.Uncommons", "FireBlade.cards.Rares"
+        };
 
     public FireBladeMod() {
         BaseMod.subscribe(this);
 
         logger.info("Adding mod settings");
-        FireBladeSettings.initialize();
         FireBladeTipTracker.initialize();
         logger.info("Done adding mod settings");
 
         BaseMod.addColor(FireBladeEnum.FIREBLADE_ORANGE, FIREBLADE_EYE_COLOR,
 
-                "theFireBladeResources/images/cardBackgrounds512/bg_attack_orange.png",
-                "theFireBladeResources/images/cardBackgrounds512/bg_skill_orange.png",
-                "theFireBladeResources/images/cardBackgrounds512/bg_power_orange.png",
-                "theFireBladeResources/images/cardBackgrounds512/card_orange_orb.png",
-                "theFireBladeResources/images/cardBackgrounds1024/bg_attack_orange.png",
-                "theFireBladeResources/images/cardBackgrounds1024/bg_skill_orange.png",
-                "theFireBladeResources/images/cardBackgrounds1024/bg_power_orange.png",
-                "theFireBladeResources/images/cardBackgrounds1024/card_orange_orb.png",
-                "theFireBladeResources/images/cardBackgrounds512/card_small_orb.png");
+                ATTACK_BACKGROUND,
+                SKILL_BACKGROUND,
+                POWER_BACKGROUND,
+                ORB_IMG,
+                ATTACK_BACKGROUND_PORTRAIT,
+                SKILL_BACKGROUND_PORTRAIT,
+                POWER_BACKGROUND_PORTRAIT,
+                ORB_PORTRAIT,
+                ORB_SMALL_IMG
+                );
     }
 
     public static String getModID() {
-        return modID;
+        return MOD_ID;
     }
 
     public static void initialize() {
@@ -82,7 +113,7 @@ public class FireBladeMod implements
     public void receiveEditCharacters() {
         logger.info("Beginning to add FireBlade character");
 
-        theFireBladeCharacter = new TheFireBlade("The FireBlade");
+        TheFireBlade theFireBladeCharacter = new TheFireBlade("The FireBlade");
 
         BaseMod.addCharacter(theFireBladeCharacter, THE_FIREBLADE_BUTTON,
                 THE_FIREBLADE_PORTRAIT, FireBladeEnum.THE_FIREBLADE);
@@ -94,10 +125,9 @@ public class FireBladeMod implements
         logger.info("Beginning to add FireBlade cards");
 
         BaseMod.addDynamicVariable(new MagicNumberTwo());
-        (new AutoAdd("FireBladeMod")).packageFilter("FireBlade.cards.Basics").setDefaultSeen(true).cards();
-        (new AutoAdd("FireBladeMod")).packageFilter("FireBlade.cards.Commons").setDefaultSeen(true).cards();
-        (new AutoAdd("FireBladeMod")).packageFilter("FireBlade.cards.Uncommons").setDefaultSeen(true).cards();
-        (new AutoAdd("FireBladeMod")).packageFilter("FireBlade.cards.Rares").setDefaultSeen(true).cards();
+        for (String cardPackage : CARD_PACKAGES)
+            (new AutoAdd(MOD_ID)).packageFilter(cardPackage).setDefaultSeen(true).cards();
+
         BaseMod.addCard(new Swipe());
         BaseMod.addCard(new Ember());
         BaseMod.addCard(new Necronomisword());
@@ -127,32 +157,32 @@ public class FireBladeMod implements
 
     public void receiveEditStrings() {
         logger.info("Beginning to add FireBlade strings");
-        BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.RelicStrings.class, "theFireBladeResources/localization/eng/RelicStrings.json");
-        BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.CardStrings.class, "theFireBladeResources/localization/eng/CardStrings.json");
-        BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.CharacterStrings.class, "theFireBladeResources/localization/eng/CharacterStrings.json");
-        BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.PowerStrings.class, "theFireBladeResources/localization/eng/PowerStrings.json");
-        BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.PotionStrings.class, "theFireBladeResources/localization/eng/PotionStrings.json");
-        BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.UIStrings.class, "theFireBladeResources/localization/eng/UiStrings.json");
-        BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.TutorialStrings.class, "theFireBladeResources/localization/eng/TutorialStrings.json");
+        BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.RelicStrings.class, RELIC_STRINGS);
+        BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.CardStrings.class, CARD_STRINGS);
+        BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.CharacterStrings.class, CHARACTER_STRINGS);
+        BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.PowerStrings.class, POWER_STRINGS);
+        BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.PotionStrings.class, POTION_STRINGS);
+        BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.UIStrings.class, UI_STRINGS);
+        BaseMod.loadCustomStringsFile(com.megacrit.cardcrawl.localization.TutorialStrings.class, TUTORIAL_STRINGS);
         logger.info("Added FireBlade strings");
     }
 
     @Override
     public void receiveAddAudio() {
-        BaseMod.addAudio("FireBladeMod:PartyHorn", "theFireBladeResources/audio/PartyHorn.ogg");
-        BaseMod.addAudio("FireBladeMod:CounterRawr", "theFireBladeResources/audio/FireBladeRawr.ogg");
+        BaseMod.addAudio(PARTY_HORN_KEY, PARTY_HORN_OGG);
+        BaseMod.addAudio(ROAR_KEY, ROAR_OGG);
     }
 
     public void receiveEditKeywords() {
         Gson gson = new Gson();
 
         logger.info("begin editing strings");
-        String json = Gdx.files.internal("theFireBladeResources/localization/eng/KeywordStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String json = Gdx.files.internal(KEYWORD_STRINGS).readString(String.valueOf(StandardCharsets.UTF_8));
         Keyword[] keywords = gson.fromJson(json, Keyword[].class);
 
         if (keywords != null) {
             for (Keyword keyword : keywords)
-                BaseMod.addKeyword("fireblademod", keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
+                BaseMod.addKeyword(MOD_ID.toLowerCase(), keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
         }
     }
 
@@ -163,8 +193,8 @@ public class FireBladeMod implements
         BaseMod.addPotion(VigorPotion.class, Color.RED.cpy(), Color.BLACK.cpy(), null, VigorPotion.POTION_ID, FireBladeEnum.THE_FIREBLADE);
 
         logger.info("Load Badge Image and make settings panel");
-        Texture badgeTexture = new Texture("theFireBladeResources/images/Badge.png");
-        BaseMod.registerModBadge(badgeTexture, "The FireBlade", "Bryan", "This mod adds a new character, the FireBlade.",
+        Texture badgeTexture = new Texture(BADGE_IMG);
+        BaseMod.registerModBadge(badgeTexture, REGISTRATION_STRINGS[0], REGISTRATION_STRINGS[1], REGISTRATION_STRINGS[2],
                 FireBladeSettings.createSettingsPanel());
         logger.info("Done loading badge Image");
     }

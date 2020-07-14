@@ -18,7 +18,7 @@ public class LegBrace extends CustomRelic {
     public static final String OUTLINE_IMG_PATH = "theFireBladeResources/images/relics/LegBrace_outline.png";
     private static final RelicTier TIER = RelicTier.RARE;
     private static final LandingSound SOUND = LandingSound.FLAT;
-    private static final int armorGain = 2;
+    private static final int ARMOR_GAIN = 2;
 
     public LegBrace() {
         super(ID, new Texture(IMG_PATH), new Texture(OUTLINE_IMG_PATH), TIER, SOUND);
@@ -33,10 +33,10 @@ public class LegBrace extends CustomRelic {
 
         AbstractPlayer p = AbstractDungeon.player;
 
-        addToBot(new ApplyPowerAction(p, p, new MetallicizePower(p, armorGain), armorGain));
+        addToBot(new ApplyPowerAction(p, p, new MetallicizePower(p, ARMOR_GAIN), ARMOR_GAIN));
     }
 
-    public String getUpdatedDescription() { return this.DESCRIPTIONS[0] + armorGain + this.DESCRIPTIONS[1]; }
+    public String getUpdatedDescription() { return DESCRIPTIONS[0] + ARMOR_GAIN + DESCRIPTIONS[1]; }
 
     public AbstractRelic makeCopy() { return new LegBrace(); }
 }

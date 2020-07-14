@@ -52,9 +52,7 @@ public class EruptionSlash extends CustomFireBladeCard {
         }
         super.calculateCardDamage(mo);
         baseDamage = realBaseDamage;
-        if (damage != baseDamage) {
-            isDamageModified = true;
-        }
+        isDamageModified = damage != baseDamage;
     }
 
     public AbstractCard makeCopy() { return new EruptionSlash(); }

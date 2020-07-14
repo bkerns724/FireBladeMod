@@ -1,4 +1,4 @@
-package FireBlade.cards.Commons;
+package FireBlade.cards.Uncommons;
 
 import FireBlade.cards.CustomFireBladeCard;
 import FireBlade.enums.FireBladeEnum;
@@ -19,13 +19,13 @@ public class Robust extends CustomFireBladeCard {
     public static final String IMG_PATH = "theFireBladeResources/images/cardImages/Robust.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
 
     public Robust() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, FireBladeEnum.FIREBLADE_ORANGE, RARITY, TARGET);
-        baseBlock = 6;
+        baseBlock = 7;
         magicNumber = baseMagicNumber = 2;
     }
 
